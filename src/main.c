@@ -12,8 +12,21 @@
 
 #include "lem_in.h"
 
-int 	main(void)
+int main(int ac, char	**av)
 {
-	ft_printf("check\n");
+	int fd;
+	t_rlist *rooms;
+
+	rooms = NULL;
+	if (ac > 0)
+	{
+		fd = open(av[1], O_RDONLY);
+		printf("st = %d\n", check_room(fd, &rooms));
+	}
+	while(rooms)
+	{
+		printf("%p, name = %d\n", rooms, ((rooms->content->x)));
+		rooms = rooms->next;
+	}
 	return (0);
 }

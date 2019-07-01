@@ -15,7 +15,7 @@
 NAME = lem-in
 
 # src / obj files
-SRC = main.c
+SRC = main.c start.c
 
 OBJ = $(addprefix $(OBJDIR), $(SRC:.c=.o))
 
