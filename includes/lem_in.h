@@ -25,7 +25,7 @@ typedef struct	s_map
 	int			fd;
 	int			c_room;//кол - во комнат
 	int		**matrix;//матрица смежности
-	t_rlist		rooms;//лист всех комнат
+	t_rlist		**rooms;//лист всех комнат
 }				t_map;
 
 typedef struct	s_room
