@@ -19,15 +19,21 @@
 # include "libft.h"
 # include "ft_printf.h"
 
-
-
+//главная структура, которую везде передавать
+typedef struct	s_map
+{
+	int			fd;
+	int			c_room;//кол - во комнат
+	int		**matrix;//матрица смежности
+	t_rlist		rooms;//лист всех комнат
+}				t_map;
 
 typedef struct	s_room
 {
-	int			x;
+	int			x;//координаты комнаты
 	int			y;
 	char		*name;
-	int			number;
+	int			number;// у первой №0, у последней № c_room
 }				t_room;
 
 typedef struct		s_rlist
