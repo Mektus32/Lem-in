@@ -20,12 +20,13 @@
 # include "ft_printf.h"
 
 //главная структура, которую везде передавать
+
 typedef struct	s_map
 {
 	int			fd;
 	int			c_room;//кол - во комнат
 	int		**matrix;//матрица смежности
-	t_rlist		**rooms;//лист всех комнат
+	t_room		**rooms;//лист всех комнат
 }				t_map;
 
 typedef struct	s_room
@@ -34,14 +35,33 @@ typedef struct	s_room
 	int			y;
 	char		*name;
 	int			number;// у первой №0, у последней № c_room
+	struct s_rlist	*next;
 }				t_room;
 
-typedef struct		s_rlist
-{
-	t_room			*content;
-	size_t			content_size;
-	struct s_rlist	*next;
-}					t_rlist;
+
+
+// typedef struct	s_map
+// {
+// 	int			fd;
+// 	int			c_room;//кол - во комнат
+// 	int		**matrix;//матрица смежности
+// 	t_rlist		**rooms;//лист всех комнат
+// }				t_map;
+
+// typedef struct	s_room
+// {
+// 	int			x;//координаты комнаты
+// 	int			y;
+// 	char		*name;
+// 	int			number;// у первой №0, у последней № c_room
+// }				t_room;
+
+// typedef struct		s_rlist
+// {
+// 	t_room			*content;
+// 	size_t			content_size;
+// 	struct s_rlist	*next;
+// }					t_rlist;
 
 int	check_room(int fd, t_rlist **rooms);
 
