@@ -17,3 +17,32 @@ int 	main(void)
 	ft_printf("check\n");
 	return (0);
 }
+
+t_room	*ft_create_ele(int x, int y, char *name, int number)
+{
+	t_room	*list;
+
+	if (!(list = ft_memalloc(sizeof(t_room))))
+		return (NULL);
+	list->x = x;
+	list->y = y;
+	list->name = name;
+	list->number = number;
+	list->next = NULL;
+	return (list);
+}
+
+t_room	*ft_pushback(t_room **head, t_room *new)
+{
+	if (!head)
+		return (NULL);
+	else if (!*head)
+		*head = new;
+	else
+	{
+		while ((*head)->next)
+			*head = (*head)->next;
+		*head = new;
+	}
+	return (*head);
+}

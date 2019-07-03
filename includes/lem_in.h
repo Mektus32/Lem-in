@@ -16,4 +16,21 @@
 # include "libft.h"
 # include "ft_printf.h"
 
+typedef struct 		s_room
+{
+	int 			x;
+	int 			y;
+	char 			*name;
+	int 			number;
+	struct s_room	*next;
+}					t_room;
+
+typedef struct 		s_map
+{
+	int 	fd;
+	int 	roomcount;
+	int 	**matrix;
+	t_room	**rooms;
+}					t_map;
+
 #endif
