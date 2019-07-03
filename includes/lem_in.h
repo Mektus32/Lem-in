@@ -19,6 +19,7 @@
 # include "libft.h"
 # include "ft_printf.h"
 
+
 typedef struct		s_room
 {
 	int				x;//координаты комнаты
@@ -27,7 +28,7 @@ typedef struct		s_room
 	int				number;// у первой №0, у последней № c_room
 	struct s_room	*next;
 }					t_room;
-
+//главная структура, которую везде передавать
 typedef struct		s_map
 {
 	int				fd;
@@ -38,25 +39,9 @@ typedef struct		s_map
 
 
 
-// typedef struct	s_room
-// {
-// 	int			x;
-// 	int			y;
-// 	char		*name;
-// 	int			number;
-// }				t_room;
-
-// typedef struct		s_rlist
-// {
-// 	t_room			*content;
-// 	size_t			content_size;
-// 	struct s_rlist	*next;
-// }					t_rlist;
-
 int	check_room(t_map *map);
 int		ft_len_int(int num);
 t_room	*ft_create_ele(char *line, int number);
 void ft_pushback(t_room **head, t_room *new);
-
 
 #endif
