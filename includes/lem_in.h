@@ -19,24 +19,44 @@
 # include "libft.h"
 # include "ft_printf.h"
 
-
-
-
-typedef struct	s_room
+typedef struct		s_room
 {
-	int			x;
-	int			y;
-	char		*name;
-	int			number;
-}				t_room;
+	int				x;//координаты комнаты
+	int				y;
+	char			*name;
+	int				number;// у первой №0, у последней № c_room
+	struct s_room	*next;
+}					t_room;
 
-typedef struct		s_rlist
+typedef struct		s_map
 {
-	t_room			*content;
-	size_t			content_size;
-	struct s_rlist	*next;
-}					t_rlist;
+	int				fd;
+	int				c_room;//кол - во комнат
+	int				**matr;//матрица смежности
+	t_room			*rooms;//лист всех комнат
+}					t_map;
 
-int	check_room(int fd, t_rlist **rooms);
+
+
+// typedef struct	s_room
+// {
+// 	int			x;
+// 	int			y;
+// 	char		*name;
+// 	int			number;
+// }				t_room;
+
+// typedef struct		s_rlist
+// {
+// 	t_room			*content;
+// 	size_t			content_size;
+// 	struct s_rlist	*next;
+// }					t_rlist;
+
+int	check_room(t_map *map);
+int		ft_len_int(int num);
+t_room	*ft_create_ele(char *line, int number);
+void ft_pushback(t_room **head, t_room *new);
+
 
 #endif
