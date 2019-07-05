@@ -35,7 +35,6 @@ int check_links(char *line, t_map *map)
 			}
 			if (pr == 0)//если комнаты закончались раньше, чем мы её нашли
 				return (-1);
-			//*start = map->rooms;
 		}
 		*start = start->next;
 	}

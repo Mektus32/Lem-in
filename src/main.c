@@ -33,6 +33,9 @@ t_room	*ft_create_ele(char *line, int number)
 	room->y = ft_atoi(line + ft_len_int(room->x) + i);
 	room->number = number;
 	room->next = NULL;
+	room->dist = 0;
+	room->par_num = -1;
+
 	free(line);
 	return (room);
 }
@@ -67,7 +70,8 @@ int main(int ac, char	**av)
 {
 	int fd;
 	t_map *map;
-	//t_room *rooms;
+	int status;
+	t_room *rooms;
 
 	map = (t_map*)malloc(sizeof(t_map));
 	if (ac > 0)
@@ -77,12 +81,18 @@ int main(int ac, char	**av)
 		make_map(fd, map);
 		check_room(map);
 		//printf("st = %d\n", check_room(map));
+	// теперь нужен поиск в ширину
+	status = ft_bfs(map);
 	}
-	// rooms = map->rooms;
-	// while(rooms)
-	// {
-	// 	printf("%p, name = %d\n", rooms, ((rooms->number)));
-	// 	rooms = rooms->next;
-	// }
+
+
+
+	rooms = map->rooms;
+	while(rooms)
+	{
+		printf("num = %d,  dist = %d\n", rooms->number,  rooms->dist);
+		printf("name_par = %d, dist = %d\n", rooms->par_num, rooms->dist);
+		rooms = rooms->next;
+	}
 	return (0);
 }

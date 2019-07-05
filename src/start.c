@@ -76,7 +76,7 @@ int check_links(char *line, t_map *map)
 				{
 					map->matr[i1][tmp->number] = 1;
 					map->matr[tmp->number][i1] = 1;
-					printf("i1 ==== %d\n", i1);
+					//printf("i1 ==== %d\n", i1);
 					pr = 1;
 					return (1);
 				}
@@ -167,7 +167,7 @@ int	check_room(t_map *map)
 				free(line);
 		}
 		else if (ft_strstr(line, "-"))//надеюсь этого не может быть в имени!!!
-		{
+		{//если после всех даннык комнат
 			if (one_room)
 			{
 				ft_lstadd_r(&map->rooms, one_room);

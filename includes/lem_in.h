@@ -26,6 +26,8 @@ typedef struct		s_room
 	int				y;
 	char			*name;
 	int				number;// у первой №0, у последней № c_room
+	int 			par_num;
+	int 			dist;
 	struct s_room	*next;
 }					t_room;
 //главная структура, которую везде передавать
@@ -43,5 +45,14 @@ int	check_room(t_map *map);
 int		ft_len_int(int num);
 t_room	*ft_create_ele(char *line, int number);
 void ft_pushback(t_room **head, t_room *new);
+int ft_bfs(t_map *map);
+typedef struct		s_list_i
+{
+	int			content;
+	struct s_list_i	*next;
+}					t_list_i;
 
+
+t_list_i	*ft_lstnew_i(int content);
+void	ft_lstaddback_i(t_list_i **alst, t_list_i *new);
 #endif
