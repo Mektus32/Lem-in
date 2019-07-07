@@ -1,10 +1,5 @@
 #include "lem_in.h"
 //-1 если не найдкм ни одного пути
-// typedef struct		s_list_i
-// {
-// 	int			content;
-// 	struct s_list_i	*next;
-// }					t_list_i;
 
 
 t_list_i	*ft_lstnew_i(int content)
@@ -47,6 +42,8 @@ void	ft_lstaddback_i(t_list_i **alst, t_list_i *new)
 		*alst = new;
 }
 
+
+
 int ft_bfs(t_map *map)
 {
 	// со старта надо начать просматривать граф
@@ -57,53 +54,79 @@ int ft_bfs(t_map *map)
 	// но у нас только матрица и лист
 //раньше найти родителей не можем
 	int i;
-	int j;
-	int dist;
+	//int pr_end;
+	int *dist;
+	int len;
+	int k;
 	//t_room *room;
-	t_room *start;
-	t_list_i *vis;
-
-	t_list_i *new;
+	t_list_i *order;
+	t_list_i *start;
+	t_list_i *tmp;
+	len = 0;
+	i = 0;
+	//массиы интов
+	dist = (int*)malloc(sizeof(int) * map->c_room);
+	while (i <= map->c_room)
+		dist[i++] = 100;
+	order = ft_lstnew_i(0);
 
 	i = 0;
-
-	vis = ft_lstnew_i(0);
-	start = map->rooms;
-	// while (i <= map->c_room)
-	// {
-	while (vis)
+	dist[0] = 0;
+	while (order && len == 0)
 	{
-		j = 0;
-		while (j <= map->c_room)
+		tmp = map->matr[i];
+		tmp = tmp->next;//надо пропустить себя же или удалить себя когда строим список смежости
+		while (tmp)
 		{
-			//printf("ii = %d, jj = %d\n", i,j);
-			if (map->matr[vis->content][j] == 1)
-			{	//надо ли делать граф направленным?
-				map->matr[j][vis->content] = 0;
-			// 	//комната с индексом j будет иметь родителя i
-				new = ft_lstnew_i(j);
-				ft_lstaddback_i(&vis, new);
-				while (map->rooms && (map->rooms->number != j))
+			if (dist[tmp->content] > dist[i] + 1)
+				dist[tmp->content] = dist[i] + 1;
+			if (tmp->content == map->c_room)//нашли короткий путь
 				{
-					//printf("i = %d, j = %d, num = %d, %d\n", i, j, map->rooms->number, map->rooms->number == j );
-
-					dist = map->rooms->dist;
-					map->rooms = map->rooms->next;
-					//break ;
+					k = 0;
+					while (k <= map->c_room)
+						printf("%d ", dist[k++]); // есть даже не помеченные вершины
+					len = dist[tmp->content];
+					//return (dist[tmp->content]);
 				}
-				map->rooms->par_num = i;
-				map->rooms->dist = dist + 1;//тк вес ребра = 1 прибавляем его к весу в предыдущей точке
-				map->rooms = start;
-				
-			}
-			j++;
+			//для каждого узла добавляем очередь соседей
+			ft_lstaddback_i(&order, ft_lstnew_i(tmp->content));
+			tmp = tmp->next;
+
 		}
-		//i++;
-		printf("v->n  = %d\n", vis->content);
-		vis = vis->next;
-		i++;
-		
+
+		printf("o_c = %d\n", order->content);
+		order = order->next;
+		i = order->content;
 	}
-	map->rooms = start;
-	return(1);
+	free(order);
+	//востановление кратчайшего пути 
+	tmp = map->matr[map->c_room];
+	tmp = tmp->next;//первая связанная комната
+	//новая очередб как путь (обратный путь)
+	order = ft_lstnew_i(map->c_room);
+	start = order;
+	//если предыдущих ячеек несколько нам не важно, тк путь все = будет кротчайший
+	while (order && order->content != 0)
+	{
+		tmp = map->matr[order->content];
+		tmp = tmp->next;
+		while (tmp)
+		{
+			if (dist[tmp->content] == (dist[order->content] - 1))
+			{
+				printf("aaa\n");
+				ft_lstaddback_i(&order, ft_lstnew_i(tmp->content));
+				break ;
+			}
+			tmp = tmp->next;
+		}
+		order = order->next;
+		printf("o_c1 = %d\n", order->content);
+	}
+	//ft_lstaddback_i(&start, ft_lstnew_i(0));
+	map->sh = start;
+
+
+	return(len);
 }
+

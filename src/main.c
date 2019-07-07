@@ -71,7 +71,8 @@ int main(int ac, char	**av)
 	int fd;
 	t_map *map;
 	int status;
-	t_room *rooms;
+	//t_room *rooms;
+	t_list_i *tmp;
 
 	map = (t_map*)malloc(sizeof(t_map));
 	if (ac > 0)
@@ -83,16 +84,36 @@ int main(int ac, char	**av)
 		//printf("st = %d\n", check_room(map));
 	// теперь нужен поиск в ширину
 	status = ft_bfs(map);
+	printf("status = %d\n", status);
 	}
-
-
-
-	rooms = map->rooms;
-	while(rooms)
+	int i;
+	i = 0;
+	while (map->matr[i])
 	{
-		printf("num = %d,  dist = %d\n", rooms->number,  rooms->dist);
-		printf("name_par = %d, dist = %d\n", rooms->par_num, rooms->dist);
-		rooms = rooms->next;
+		printf("i = %d\n", i);
+		tmp = map->matr[i];
+		while (tmp)
+		{
+			printf("n - %d\n", tmp->content);
+			tmp = tmp->next;
+		}
+		i++;
 	}
+
+	// rooms = map->rooms;
+	// while(rooms)
+	// {
+	// 	printf("num = %d,  dist = %d\n", rooms->number,  rooms->dist);
+	// 	printf("name_par = %d, dist = %d\n", rooms->par_num, rooms->dist);
+	// 	rooms = rooms->next;
+	// }
+	tmp = map->sh;
+	printf("path:\n");
+	while (tmp)
+	{
+		printf("%d ", tmp->content);
+		tmp = tmp->next;
+	}
+
 	return (0);
 }

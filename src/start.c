@@ -47,6 +47,8 @@ int check_links(char *line, t_map *map)
 	//МАТРИЦА СМЕЖНОСТИ
 	t_room *start;
 	t_room *tmp;
+	// t_list_i *tmp_i;
+	// t_list_i *tmp_s;
 	
 	int i1;
 
@@ -74,9 +76,13 @@ int check_links(char *line, t_map *map)
 			{
 				if (ft_strequ(tmp->name, line + len + 1))
 				{
-					map->matr[i1][tmp->number] = 1;
-					map->matr[tmp->number][i1] = 1;
-					//printf("i1 ==== %d\n", i1);
+					if (map->matr[i1] == NULL)
+						map->matr[i1] = ft_lstnew_i(i1);
+					if (map->matr[tmp->number] == NULL)
+						map->matr[tmp->number] = ft_lstnew_i(tmp->number);
+					ft_lstaddback_i(&map->matr[i1], ft_lstnew_i(tmp->number));
+					ft_lstaddback_i(&map->matr[tmp->number], ft_lstnew_i(i1));
+					printf("i1 ==== %d, line = %s, tmp->number = %d\n", i1, line,tmp->number);
 					pr = 1;
 					return (1);
 				}
@@ -84,7 +90,6 @@ int check_links(char *line, t_map *map)
 			}
 			if (pr == 0)//если комнаты закончались раньше, чем мы её нашли
 				return (-1);
-			//*start = map->rooms;
 		}
 		start = start->next;
 	}
@@ -96,14 +101,16 @@ void created_matrix(char *line, t_map *map)
 {
 	int i;
 	int j;
-	map->matr = (int**)malloc(sizeof(int*) * (map->c_room + 1));
+
+	map->matr = (t_list_i**)malloc(sizeof(t_list_i*) * (map->c_room + 1));
 	i = 0;
 	while (i <= map->c_room)
 	{
 		j = 0;
-		map->matr[i] = (int*)malloc(sizeof(int) * (map->c_room + 1));
-		while(j <= map->c_room)
-			map->matr[i][j++] = 0;
+		map->matr[i] = (t_list_i*)malloc(sizeof(t_list_i));
+		map->matr[i] = NULL;
+		// while(j <= map->c_room)
+		// 	map->matr[i][j++] = 0;
 		i++;
 	}
 	check_links(line, map);
@@ -116,21 +123,21 @@ void created_matrix(char *line, t_map *map)
 		free(line);
 	}
 	//free(line);
-	printf("priwli %d \n", map->c_room);
-	i = 0;
-	j = 0;
+	// printf("priwli %d \n", map->c_room);
+	// i = 0;
+	// j = 0;
 
-	while (i <= map->c_room)
-	{
-		j = 0;
-		while (j <= map->c_room)
-		{
-			printf("%d ", map->matr[i][j]);
-			j++;
-		}
-		printf("\n");
-		i++;
-	}
+	// while (i <= map->c_room)
+	// {
+	// 	j = 0;
+	// 	while (j <= map->c_room)
+	// 	{
+	// 		printf("%d ", map->matr[i][j]);
+	// 		j++;
+	// 	}
+	// 	printf("\n");
+	// 	i++;
+	// }
 }
 
 int	check_room(t_map *map)

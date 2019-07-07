@@ -19,6 +19,12 @@
 # include "libft.h"
 # include "ft_printf.h"
 
+typedef struct		s_list_i
+{
+	int			content;
+	struct s_list_i	*next;
+}					t_list_i;
+
 
 typedef struct		s_room
 {
@@ -29,14 +35,16 @@ typedef struct		s_room
 	int 			par_num;
 	int 			dist;
 	struct s_room	*next;
+
 }					t_room;
 //главная структура, которую везде передавать
 typedef struct		s_map
 {
 	int				fd;
 	int				c_room;//кол - во комнат
-	int				**matr;//матрица смежности
+	t_list_i			**matr;//списки смежности
 	t_room			*rooms;//лист всех комнат
+	t_list_i		*sh;
 }					t_map;
 
 
@@ -46,11 +54,9 @@ int		ft_len_int(int num);
 t_room	*ft_create_ele(char *line, int number);
 void ft_pushback(t_room **head, t_room *new);
 int ft_bfs(t_map *map);
-typedef struct		s_list_i
-{
-	int			content;
-	struct s_list_i	*next;
-}					t_list_i;
+
+
+
 
 
 t_list_i	*ft_lstnew_i(int content);
