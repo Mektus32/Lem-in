@@ -15,14 +15,16 @@
 
 #include <stdio.h>
 #include <fcntl.h>
+#include <gssapi.h>
 
 # include "libft.h"
 # include "ft_printf.h"
 
 typedef struct		s_list_i
 {
-	int			content;
+	int				content;
 	struct s_list_i	*next;
+	struct s_list_i	*io;
 }					t_list_i;
 
 
@@ -45,6 +47,7 @@ typedef struct		s_map
 	t_list_i			**matr;//списки смежности
 	t_room			*rooms;//лист всех комнат
 	t_list_i		*sh;
+	t_list_i		*split;
 }					t_map;
 
 

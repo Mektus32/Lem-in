@@ -22,6 +22,7 @@ t_list_i	*ft_lstnew_i(int content)
 		list->content = content;
 	}
 	list->next = NULL;
+	list->io = NULL;
 	return (list);
 }
 
@@ -123,8 +124,6 @@ int ft_bfs(t_map *map)
 	}
 	//ft_lstaddback_i(&start, ft_lstnew_i(0));
 	map->sh = start;
-
-
 	return(len);
 }
 

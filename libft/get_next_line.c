@@ -12,123 +12,102 @@
 
 #include "get_next_line.h"
 
-int		len(char *s, int c)
+static	char	*ft_free_joint(char *new, char *src)
 {
+	char		*tmp;
+
+	if (!(tmp = ft_strjoin(new, src)))
+		return (NULL);
+	free(new);
+	new = NULL;
+	return (tmp);
+}
+
+static	char	*ft_del(char *str)
+{
+	char	*new;
 	int		i;
 
 	i = 0;
-	while (s[i] != '\0' && s[i] != (char)c)
+	while (str[i] != '\n' && str[i])
 		i++;
-	return (i);
-}
-
-char	*ft_str_ljoin(char **s1, char **s2)
-{
-	char	*without_leaks;
-
-	without_leaks = NULL;
-	if (!s1 && !s2)
+	if ((str[i] && !str[i + 1]) || !str[i])
+	{
+		ft_strdel(&str);
 		return (NULL);
-	else if (!*s1 && *s2)
-	{
-		without_leaks = *s2;
-		*s2 = NULL;
 	}
-	else if (!*s2 && *s1)
-	{
-		without_leaks = *s1;
-		*s1 = NULL;
-	}
-	else
-	{
-		without_leaks = ft_strjoin(*s1, *s2);
-		ft_strdel(s1);
-		ft_strdel(s2);
-	}
-	return (without_leaks);
+	new = ft_strdup(str + i + 1);
+	ft_strdel(&str);
+	return (new);
 }
 
-void	get_tail(const int fd, char *buf, t_line **head)
+static	char	*ft_fill_line(char **str)
 {
-	t_line	*tail;
-	t_line	*ptr;
-	char	*tmp;
-	int		start;
+	int			i;
+	int			len;
+	char		*new;
 
-	tail = NULL;
-	ptr = *head;
-	start = len(buf, '\n') + 1;
-	while (ptr && ptr->fd != fd)
-		ptr = ptr->next;
-	if (ptr == NULL || *head == NULL)
+	i = 0;
+	len = 0;
+	while ((*str)[i])
 	{
-		tail = (t_line*)malloc(sizeof(t_line) * 1);
-		tail->fd = fd;
-		tail->next = *head ? *head : NULL;
-		if (!(tail->str = ft_strsub(buf, start, ft_strlen(buf) - start)))
-			ft_memdel((void**)tail);
-		*head = tail;
+		i++;
+		len++;
 	}
-	if (ptr)
+	new = (char*)malloc(sizeof(char) * len + 1);
+	i = 0;
+	while ((*str)[i] != '\n' && i < len)
 	{
-		tmp = ptr->str;
-		ptr->str = ft_strsub(buf, start, ft_strlen(buf) - start);
-		tmp ? ft_strdel(&tmp) : 0;
+		new[i] = (*str)[i];
+		i++;
 	}
+	*str = ft_del(*str);
+	new[i] = '\0';
+	return (new);
 }
 
-int		reading(int fd, char **line, t_line **head)
+static	t_list	*ft_return_list(t_list **begin_list, int fd,
+									char **line)
 {
-	int		ret;
-	char	buf[BUFF_SIZE + 1];
-	char	*tmp;
+	t_list		*list;
+	t_list		*cur;
 
-	while ((ret = read(fd, buf, BUFF_SIZE)) > 0)
+	if (fd < 0 || BUFF_SIZE < 0 || !line)
+		return (NULL);
+	list = *begin_list;
+	if (!(cur = ft_list_foreach_if(list, fd)))
+		if (!(cur = ft_list_push_back(&list, NULL, fd)))
+			return (NULL);
+	if (!cur->content)
+		cur->content = ft_strnew(1);
+	return (cur);
+}
+
+int				get_next_line(const int fd, char **line)
+{
+	static	t_list	*list = NULL;
+	int				ret;
+	char			buf[BUFF_SIZE + 1];
+	t_list			*cur;
+
+	if (!list)
+		list = ft_list_add(NULL, fd);
+	if (!(cur = ft_return_list(&list, fd, line)))
+		return (-1);
+	while (!(ft_strchr(cur->content, '\n')))
 	{
+		if ((ret = read(fd, buf, BUFF_SIZE)) == -1)
+			return (-1);
 		buf[ret] = '\0';
-		if (ft_strchr(buf, '\n') != NULL)
+		cur->content = ft_free_joint(cur->content, buf);
+		if (ret == 0 && *((char*)cur->content) == '\0')
 		{
-			tmp = ft_strsub(buf, 0, len(buf, '\n'));
-			*line = ft_str_ljoin(line, &tmp);
-			get_tail(fd, buf, head);
-			return (1);
+			ft_list_remove_free_if(&list, fd);
+			return (0);
 		}
-		else
-		{
-			tmp = ft_strdup(buf);
-			*line = ft_str_ljoin(line, &tmp);
-		}
+		if (ret == 0)
+			break ;
 	}
-	if (ret < 0)
-		return (-1);
-	return (*line ? 1 : 0);
-}
-
-int		get_next_line(const int fd, char **line)
-{
-	static	t_line	*head = NULL;
-	t_line			*ptr;
-
-	if (fd < 0 || line == NULL)
-		return (-1);
-	*line = NULL;
-	if (head)
-	{
-		ptr = head;
-		while (ptr && ptr->fd != fd)
-			ptr = ptr->next;
-		if (ptr && ptr->str && ft_strchr(ptr->str, '\n') != NULL)
-		{
-			*line = ft_strsub(ptr->str, 0, len(ptr->str, '\n'));
-			get_tail(fd, ptr->str, &head);
-			return (1);
-		}
-		if (ptr && ptr->str && !ft_strchr(ptr->str, '\n')
-			&& !ft_strequ(ptr->str, ""))
-		{
-			*line = ptr->str;
-			ptr->str = NULL;
-		}
-	}
-	return (reading(fd, line, &head));
+	*line = ft_fill_line((char**)(&(cur->content)));
+	return (1);
 }
