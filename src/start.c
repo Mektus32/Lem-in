@@ -76,12 +76,25 @@ int check_links(char *line, t_map *map)
 			{
 				if (ft_strequ(tmp->name, line + len + 1))
 				{
+					// ВОТ ТУТ ХОТЕЛА ЗАМЕНИТЬ 
 					if (map->matr[i1] == NULL)
 						map->matr[i1] = ft_lstnew_i(i1);
 					if (map->matr[tmp->number] == NULL)
 						map->matr[tmp->number] = ft_lstnew_i(tmp->number);
 					ft_lstaddback_i(&map->matr[i1], ft_lstnew_i(tmp->number));
 					ft_lstaddback_i(&map->matr[tmp->number], ft_lstnew_i(i1));
+					// НА:
+					// 
+// 					if (map->matr[i1] == NULL)
+// 						map->matr[i1] = ft_lstnew_i(tmp->number);
+// 					else
+// 						ft_lstaddback_i(&map->matr[i1], ft_lstnew_i(tmp->number));
+// 					if (map->matr[tmp->number] == NULL)
+// 						map->matr[tmp->number] = ft_lstnew_i(i1);
+// 					else
+// 						ft_lstaddback_i(&map->matr[tmp->number], ft_lstnew_i(i1));
+					
+					
 					printf("i1 ==== %d, line = %s, tmp->number = %d\n", i1, line,tmp->number);
 					pr = 1;
 					return (1);
