@@ -46,13 +46,6 @@ void	ft_lstaddback_i(t_list_i **alst, t_list_i *new)
 
 int ft_bfs(t_map *map)
 {
-	// со старта надо начать просматривать граф
-	// если есть ребро, токда присваеваем родителя
-	// туда, куда ребро и сохраняем расстояние до starta/
-	// путей может быть несколько
-	// может ли быть несколько родителей
-	// но у нас только матрица и лист
-//раньше найти родителей не можем
 	int i;
 	//int pr_end;
 	int *dist;
@@ -64,7 +57,7 @@ int ft_bfs(t_map *map)
 	t_list_i *tmp;
 	len = 0;
 	i = 0;
-	//массиы интов
+	//массив интов
 	dist = (int*)malloc(sizeof(int) * map->c_room);
 	while (i <= map->c_room)
 		dist[i++] = 100;
@@ -75,6 +68,7 @@ int ft_bfs(t_map *map)
 	while (order && len == 0)
 	{
 		tmp = map->matr[i];
+		//ВОТ ТУТ НАДО ДЕЛАТЬ ЛИШНЕЕ ДЕЙСТВИЕ ПО ПЕРЕХОДУ К СЛЕД СВЯЗИ, ТК ПЕРВАЯ КОМНАТА ССЫЛАЕТСЯ НА СЕБЯ 
 		tmp = tmp->next;//надо пропустить себя же или удалить себя когда строим список смежости
 		while (tmp)
 		{
@@ -99,15 +93,19 @@ int ft_bfs(t_map *map)
 		i = order->content;
 	}
 	free(order);
+	
 	//востановление кратчайшего пути 
 	tmp = map->matr[map->c_room];
+	// И ВОТ ТУТ
 	tmp = tmp->next;//первая связанная комната
 	//новая очередб как путь (обратный путь)
 	order = ft_lstnew_i(map->c_room);
+	//ссылка на начало, что б вернуть
 	start = order;
 	//если предыдущих ячеек несколько нам не важно, тк путь все = будет кротчайший
 	while (order && order->content != 0)
 	{
+		// И ВОТ ТУТ
 		tmp = map->matr[order->content];
 		tmp = tmp->next;
 		while (tmp)
