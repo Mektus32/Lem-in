@@ -1,3 +1,4 @@
+#include "lem_in.h"
 // ищем длину инта, для прохождение по строке
 int		ft_len_int(int num)
 {

@@ -1,9 +1,10 @@
-// заполним начальнуб струкруру map 
+#include "lem_in.h"
+// заполним начальнуб струкруру map
 // проверим на валидность первую строку (кол-во муравьев)
 // ? если муравьев 0 кидать ошибку?
 int		make_map(int fd, t_map *map)
 {
-	char *line;
+	char	*line;
 	int		i;
 
 	map->fd = fd;
@@ -11,25 +12,26 @@ int		make_map(int fd, t_map *map)
 	map->rooms = NULL;//лист всех комнат
 	if (get_next_line(map->fd, &line) == 1)
 	{
+		//ft_printf("%s\n", line);
 		i = 0;
 		while (ft_isdigit(line[i]))
 			i++;
 		// если кол-во чисел не совпадает с длинной строки
 		// кидаем ошибку.
 		// длина строки не может быть 0 тут, тк гнл вернул нам 1
-		if (ft_strlen(line) == i)
+		/* Ты уверена что не может быть такого что там просто пробелы, которые не играют роли? */
+		if ((int)ft_strlen(line) == i)
 		{
 			map->c_ant = ft_atoi(line);
 			// if (map->c_ant == 0)
-			// мне все-таки кажется, что ошибка		
+			// мне все-таки кажется, что ошибка /* Согласен */
+			ft_strdel(&line);
 			return (1);
 		}
-		else
-			return (0);
-		free(line);
-	}
-	else
+		ft_strdel(&line);
 		return (0);
+	}
+	return (0);
 }
 
 /*
@@ -50,29 +52,47 @@ int		make_map(int fd, t_map *map)
 
 int	check_room(t_map *map)
 {
-	char *line;
-	int number;
-	t_room *last_room;
+	char	*line;
+	int		number;
+	t_room	*last_room;
 
 	number = 1;
 	last_room = NULL;
-	while (get_next_line(map->fd, &line) && ft_strlen(line) >= 3)
+	while (get_next_line(map->fd, &line) > 0 && ft_strlen(line) >= 3)/* Почему именно 3? минимум же 5 получается, 3 символа и два пробела */
 	{
+		//ft_printf("%s\n", line);
 		if (ft_strnequ(line, "#", 1))
 		{
 			if (ft_strequ(line, "##start") || ft_strequ(line, "##end"))
 			{
-				free(line);
-				get_next_line(map->fd, &line);
-				if (ft_strequ(line, "##start") == 1) //добавляем в начало сразу
-					ft_lstadd_r(&map->rooms, ft_create_ele(line, 0));
+				if (ft_strequ(line, "##start") == 1)
+				{//добавляем в начало сразу
+					ft_strdel(&line);
+					if (get_next_line(map->fd, &line) > 0)
+					{
+						//ft_printf("%s\n", line);
+						ft_lstadd_r(&map->rooms, ft_create_ele(line, 0));
+					}
+					else
+						return (0);
+				}
 				else
-					last_room = ft_create_ele(line, -1);
+				{
+					ft_strdel(&line);
+					if (get_next_line(map->fd, &line) > 0)
+					{
+						//ft_printf("%s\n", line);
+						last_room = ft_create_ele(line, -1);
+					}
+					else
+						return (0);
+				}
 			}
 			else
-				free(line);
+				ft_strdel(&line);
 		}
-		else if (ft_strstr(line, "-") && ft_strstr(line, " ") == NULL)
+		/* Вместо ft_strstr наверное логичнее ft_strchr использовать */
+		else if (ft_strchr(line, '-') && ft_strchr(line, ' ') == NULL)
 		{
 			if (last_room) 
 			{
@@ -83,7 +103,7 @@ int	check_room(t_map *map)
 				return (0);
 			map->c_room = number;
 			// до ссылок все прошло успешно, переходим к ссылкам
-			return (created_matrix(line, map));
+			return (created_links(line, map));
 		}
 		else
 		{
@@ -100,9 +120,12 @@ int	check_room(t_map *map)
 */
 int check_links(char *line, t_map *map)
 {
-	t_room *start; // комната до знака '-'
-	t_room *tmp; // комната после '-'
-	int len; // длина имени первой комнаты
+	t_room			*start; // комната до знака '-'
+	t_room			*tmp; // комната после '-'
+	int				len; // длина имени первой комнаты
+	t_list_down		*first;
+	t_list_down		*second;
+
 
 	start = map->rooms;
 	//находим комнату из строки до '-' во всем списке комнат
@@ -120,9 +143,10 @@ int check_links(char *line, t_map *map)
 				if (ft_strequ(tmp->name, line + len + 1))
 				{
 					// если нашли комнаты запихиваем в список (для каждой комнаты свой)
-					ft_lstaddback_i(ft_list_i_head(start->number, &map->link), ft_lstnew_i(tmp->number));
-					ft_lstaddback_i(ft_list_i_head(tmp->number, &map->link), ft_lstnew_i(start->number));
-					pr = 1;
+					first = ft_list_i_head(start->number, map->link);
+					second = ft_list_i_head(tmp->number, map->link);
+					ft_lstaddback_i(&first->next, ft_lstnew_i(tmp->number));
+					ft_lstaddback_i(&second->next, ft_lstnew_i(start->number));
 					return (1);
 				}
 				tmp = tmp->next;
@@ -143,25 +167,35 @@ int check_links(char *line, t_map *map)
 */
 int created_links(char *line, t_map *map)
 {
-	int i;
-	int st; // - статус, если что-то пошло не так в лайнах, вернем ошибку (0)
+	t_room	*tmp;
+	int		st; // - статус, если что-то пошло не так в лайнах, вернем ошибку (0)
 	//создаем новый список под СТОЛБЕЦ
-	map->link = (t_list_down*)malloc(sizeof(t_list_down) * (map->c_room + 1));
-	i = 0;
-	//переписываем в список столбцов список комнат
-	while (i <= map->c_room)
+	/* Ты опять создала массив, а ниже к нему обращаешься как к списку(при добавлении/копированиии элементов) */
+	/*
+	 * map->link = (t_list_down*)malloc(sizeof(t_list_down) * (map->c_room + 1));
+	 * i = 0;
+	 * //переписываем в список столбцов список комнат
+	 * while (i <= map->c_room)
+	 * {
+	 * 		ft_lstaddback_down(&map->link, ft_lstnew_down(map->rooms->number));
+	 * 		map->rooms = map->rooms->next;
+	 * 		i++;
+	 * }
+	 */
+	tmp = map->rooms;
+	while (tmp)
 	{
-		ft_lstaddback_down(&map->link, ft_lstnew_down(map->rooms->content));
-		map->rooms = map->rooms->next;
-		i++;
+		ft_lstaddback_down(&map->link, ft_lstnew_down(tmp->number));
+		tmp = tmp->next;
 	}
 	st = check_links(line, map);
-	free(line);
+	ft_strdel(&line);
 	while (get_next_line(map->fd, &line) && st)
 	{
+		//ft_printf("%s\n", line);
 		if (!ft_strnequ(line, "#", 1))
 			st = check_links(line, map);
-		free(line);
+		ft_strdel(&line);
 	}
 	return (st);
 }

@@ -1,18 +1,19 @@
+#include "lem_in.h"
 // возвращает ссылку на элемент s_list_i
 // от номера комнаты
 
-t_list_i *ft_list_i_head(int num, t_list_down **alst)
+t_list_down *ft_list_i_head(int num, t_list_down *alst)
 {
 	t_list_down *list;
 
 	if (!alst)
 		return (NULL);
-	list = *alst;
+	list = alst;
 	while (list)
 	{
 		if (list->content == num)
 		{
-			return (list->next);
+			return (list);
 		}
 		list = list->down;
 	}

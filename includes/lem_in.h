@@ -90,7 +90,7 @@ void ft_pushback(t_room **head, t_room *new);
 void	ft_lstadd_r(t_room **alst, t_room *new);
 
 	//ft_list_down.c
-t_list_i *ft_list_i_head(int num, t_list_down **alst);
+t_list_down *ft_list_i_head(int num, t_list_down *alst);
 t_list_down	*ft_lstnew_down(int content);
 void	ft_lstaddback_down(t_list_down **alst, t_list_down *new);
 

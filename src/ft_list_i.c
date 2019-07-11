@@ -1,3 +1,4 @@
+#include "lem_in.h"
 //Создание нового элемента списка
 t_list_i	*ft_lstnew_i(int content)
 {
@@ -86,24 +87,24 @@ void	ft_add_list_if(t_list_i **head, int content, t_list_i *new)
 	}
 	free(new);
 }
-/* Функция добавления элемента в список типа t_list_i при равенстве "content" */
-void	ft_add_list_if(t_list_i **head, int content, t_list_i *new)
-{
-	if (!head)
-		return ;
-	if (!*head)
-		return ;
-	while (*head)
-	{
-		if ((*head)->content == content)
-		{
-			(*head)->next = new;
-			return ;
-		}
-		(*head) = (*head)->next;
-	}
-	free(new);
-}
+///* Функция добавления элемента в список типа t_list_i при равенстве "content" */
+//void	ft_add_list_if(t_list_i **head, int content, t_list_i *new)
+//{
+//	if (!head)
+//		return ;
+//	if (!*head)
+//		return ;
+//	while (*head)
+//	{
+//		if ((*head)->content == content)
+//		{
+//			(*head)->next = new;
+//			return ;
+//		}
+//		(*head) = (*head)->next;
+//	}
+//	free(new);
+//}
 
 /* Функция разворота списка */
 void	ft_list_revers(t_list_i **begin_list)
@@ -126,4 +127,3 @@ void	ft_list_revers(t_list_i **begin_list)
  * так как тот день у меня не скомпилился из-за .h файла.
  * Проверь по своему(Day11, ex08)*/
 
- 

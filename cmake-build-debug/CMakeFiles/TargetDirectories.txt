@@ -1,0 +1,3 @@
+/Users/ojessi/Desktop/Arina/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/ojessi/Desktop/Arina/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/ojessi/Desktop/Arina/cmake-build-debug/CMakeFiles/Arina.dir

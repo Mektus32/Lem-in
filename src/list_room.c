@@ -1,3 +1,4 @@
+#include "lem_in.h"
 // создание элемента списка комнат, на вход получаем строку из консоли
 // и порядковый номер комнаты
 // в лайне содержится ИМЯ комнаты и ее координаты
@@ -15,8 +16,8 @@ t_room	*ft_create_ele(char *line, int number)
 	room->name = (char*)malloc(sizeof(char) * i + 1);
 	room->name[i] = '\0';
 	ft_strncpy(room->name, line, i);
-	room->x = ft_atoi(line + i);
-	room->y = ft_atoi(line + ft_len_int(room->x) + i);
+	room->x = ft_atoi(line + i + 1);
+	room->y = ft_atoi(line + ft_len_int(room->x) + i + 2);
 	room->number = number;
 	room->next = NULL;
 	room->dist = 0;
