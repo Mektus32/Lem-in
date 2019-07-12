@@ -8,6 +8,7 @@ int		make_map(int fd, t_map *map)
 	int		i;
 
 	map->fd = fd;
+	map->len_sh = 0;
 	map->c_room = 0;//кол - во комнат
 	map->rooms = NULL;//лист всех комнат
 	if (get_next_line(map->fd, &line) == 1)
@@ -107,7 +108,7 @@ int	check_room(t_map *map)
 		}
 		else
 		{
-			ft_lstadd_r(&map->rooms, ft_create_ele(line, number));
+			ft_pushback(&map->rooms, ft_create_ele(line, number));
 			number++;
 		}
 	}

@@ -33,24 +33,41 @@ void	ft_pri(t_map *map)
 	}
 }
 
+void	ft_pri_sh(t_map *map)
+{
+	t_list_i	*sh;
+
+	sh = map->sh;
+	ft_printf("sh = ");
+	while (sh)
+	{
+		ft_printf("%d-", sh->content);
+		sh = sh->next;
+	}
+	ft_printf("\n");
+}
+
+
 int main(int ac, char	**av)
 {
 	int		fd;
 	t_map	*map;
 	char	*str;
 
-	fd = ac;
+	//fd = ac;"/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/test_3"
 	str = av[1];
 	map = (t_map*)malloc(sizeof(t_map));
 	map->rooms = NULL;
 	map->link = NULL;
 	map->sh = NULL;
-	fd = open("/Users/ojessi/Desktop/Arina/test_2", O_RDONLY);
+	fd = open(str, O_RDONLY);
 	if (make_map(fd, map) && check_room(map))
 	{
 		// теперь нужен поиск в ширину
 		ft_pri(map);
 		//ft_bfs(map);
+		ft_bfs(map);
+		ft_pri_sh(map);
 	}
 	else// и все почистить бы
 	{

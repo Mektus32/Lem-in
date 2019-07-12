@@ -57,6 +57,7 @@ typedef struct		s_map
 	t_list_down		*link;//лист - столбец для указания связей
 	t_room			*rooms;//лист всех комнат
 	t_list_i		*sh;//кротчайший путь
+	int				len_sh;//длина кратчайшего пути
 }					t_map;
 
 	// (valid.c)
@@ -74,9 +75,11 @@ int check_links(char *line, t_map *map);
 
 
 
-
+	// (bfs.c)
+// 0 - путь не нашли, 1 - есть путь
 int ft_bfs(t_map *map);
-
+//помогает найти обратный путь, записывает его в map->sh
+int ft_path(t_map *map, int *dist);
 
 
 	// (liba.c)
