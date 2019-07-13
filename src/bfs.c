@@ -26,7 +26,6 @@ int ft_path(t_map *map, int *dist)
 		path = path->next;//переход к комнате, которую добавили
 	}
 	map->sh = start;
-	//free(path); не должны ж чистить? на негго ссылается sh
 	free(dist);
 	return (1);
 }
@@ -58,14 +57,14 @@ int ft_bfs(t_map *map)
 		//tmp_i = ft_list_i_head(order->content, map->link)->next;
 		//пока есть комнаты(tmp), связанные с комнатой в очереди
 		//перезаписываем расстояние, если до этого оно было больше
-		while (tmp_i)
+		while (tmp_i && map->len_sh == 0)
 		{
 			//если в комнате, которую мы проверяем растояние от начала больше, чем от соседа которого мы можем дотянуться
 			if (dist[tmp_i->content] > dist[order->content] + 1 && (tmp_i->content != order->content))
 				dist[tmp_i->content] = dist[order->content] + 1;
 			if (tmp_i->content == map->c_room)//нашли короткий путь, если пришли в последнюю комнату
 				map->len_sh = dist[tmp_i->content]; // надо выходить из цикла while(order && !len)
-			//else //для каждого узла добавляем очередь соседей
+			else //для каждого узла добавляем очередь соседей
 				ft_lstaddback_i(&order, ft_lstnew_i(tmp_i->content));
 			tmp_i = tmp_i->next;
 		}
