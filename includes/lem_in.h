@@ -31,8 +31,9 @@ typedef struct		s_list_i
 typedef struct			s_list_down
 {
 	int					content;
-	struct s_list_i		*next; // из каждого столбца в право начинается лист.
+	struct s_list_i		*next; // из каждого столбца в право начинается лист (t_list_i).
 	struct s_list_down	*down;
+	struct s_list_down	*right; // из каждого столбца в право начинается лист (t_list_down).
 
 }						t_list_down;
 
@@ -58,52 +59,54 @@ typedef struct		s_map
 	t_room			*rooms;//лист всех комнат
 	t_list_i		*sh;//кротчайший путь
 	int				len_sh;//длина кратчайшего пути
+	t_list_down		*two_path;//
 }					t_map;
 
 	// (valid.c)
 // ф., которые проверяют на валидность  - возвращают 1 если все хорошо,
 // и 0 еслигде то эрор
 //проверяет на валидность первую строку, инициализируя структуру map
-int 	make_map(int fd, t_map *map);
+int					make_map(int fd, t_map *map);
 //проверяет на валидность список комнат, заполняя лист room,
 // пока не нашли первую ссылку
-int	check_room(t_map *map);
+int					check_room(t_map *map);
 
-int created_links(char *line, t_map *map);
+int					created_links(char *line, t_map *map);
 //записывает по две связи для каждой комнаты
-int check_links(char *line, t_map *map);
-
-
+int					check_links(char *line, t_map *map);
 
 	// (bfs.c)
 // 0 - путь не нашли, 1 - есть путь
-int ft_bfs(t_map *map);
+t_list_i			*ft_bfs(t_map *map);
 //помогает найти обратный путь, записывает его в map->sh
-int ft_path(t_map *map, int *dist);
+t_list_i			*ft_path(t_map *map, int *dist);
 
 
 	// (liba.c)
 //ф, которые претендуют на звание стандартных 
-int		ft_len_int(int num);
+int					ft_len_int(int num);
 
 	//(list_room.c)
 //ф для списка комнат
-t_room	*ft_create_ele(char *line, int number);
-void ft_pushback(t_room **head, t_room *new);
-void	ft_lstadd_r(t_room **alst, t_room *new);
+t_room				*ft_create_ele(char *line, int number);
+void				ft_pushback(t_room **head, t_room *new);
+void				ft_lstadd_r(t_room **alst, t_room *new);
 
 	//ft_list_down.c
-t_list_down *ft_list_i_head(int num, t_list_down *alst);
-t_list_down	*ft_lstnew_down(int content);
-void	ft_lstaddback_down(t_list_down **alst, t_list_down *new);
+t_list_down			*ft_list_i_head(int num, t_list_down *alst);
+t_list_down			*ft_lstnew_down(int content);
+void				ft_lstaddback_down(t_list_down **alst, t_list_down *new);
+t_list_down			*ft_lstnewpointer_down(t_list_i	*next);
+void				ft_lstaddbackright_down(t_list_down **alst, t_list_down *new);
 
 	// (ft_list_i.c)
 //ф для работы с односвязным списком
-t_list_i	*ft_lstnew_i(int content);
-void	ft_lstaddback_i(t_list_i **alst, t_list_i *new);
+t_list_i			*ft_lstnew_i(int content);
+void				ft_lstaddback_i(t_list_i **alst, t_list_i *new);
+int					ft_listlen_i(t_list_i	*head)
 
-void	ft_remove_list_if(t_list_i **head, int content);
-void	ft_add_list_if(t_list_i **head, int content, t_list_i *new);
-void	ft_add_list_if(t_list_i **head, int content, t_list_i *new);
-void	ft_list_revers(t_list_i **begin_list);
+void				ft_remove_list_if(t_list_i **head, int content);
+void				ft_add_list_if(t_list_i **head, int content, t_list_i *new);
+void				ft_add_list_if(t_list_i **head, int content, t_list_i *new);
+void				ft_list_revers(t_list_i **begin_list);
 #endif

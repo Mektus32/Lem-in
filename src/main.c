@@ -61,21 +61,24 @@ int main(int ac, char	**av)
 	map->rooms = NULL;
 	map->link = NULL;
 	map->sh = NULL;
+	map->two_path = NULL;
 	fd = open(str, O_RDONLY);
 	if (make_map(fd, map) && check_room(map))
 	{
+		sh = ft_bfs(map);
+		//вместо следующей надо использовать добавление при движении вправо!!
+		ft_lstaddback_down(&map->two_path, ft_lstnew_down(ft_listlen_i(sh)));
+		ft_lstaddback_down(&map->two_path, ft_lstnewpointer_down(sh));
 		// теперь нужен поиск в ширину
-		ft_pri(map);
+		//ft_pri(map);
 		//ft_bfs(map);
-		ft_bfs(map);
-		ft_pri_sh(map);
-		ft_list_revers(&map->sh);
-		sh = map->sh;
-		while(sh)
-		{
-			printf("%d - ", sh->content);
-			sh = sh->next;
-		}
+		//ft_bfs(map);
+		//ft_pri_sh(map);
+		//while(sh)
+		//{
+		//	printf("%d - ", sh->content);
+		//	sh = sh->next;
+		//}
 		//проверить достаточно ли путей для муравьев
 
 		//удалить связи, которые есть в списке

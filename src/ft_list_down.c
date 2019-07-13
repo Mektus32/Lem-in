@@ -29,10 +29,8 @@ t_list_down	*ft_lstnew_down(int content)
 	list = (t_list_down*)malloc(sizeof(t_list_down));
 	if (!list)
 		return (NULL);
-	if (!content)
-		list->content = 0;
-	else
-		list->content = content;
+
+	list->content = content;
 	list->next = NULL;
 	list->down = NULL;
 	return (list);
@@ -52,6 +50,36 @@ void	ft_lstaddback_down(t_list_down **alst, t_list_down *new)
 		while (list->down)
 			list = list->down;
 		list->down = new;
+	}
+	else
+		*alst = new;
+}
+
+/* Функция добавляения элемента в конец списка и записи туда кратчайшего пути*/
+t_list_down	*ft_lstnewpointer_down(t_list_i	*next)
+{
+	t_list_down	*list;
+
+	if (!(list = (t_list_down*)malloc(sizeof(t_list_down))))
+		return (NULL);
+	list->content = ft_listlen_i(next);
+	list->next = next;
+	list->down = NULL;
+	return (list);
+}
+
+void	ft_lstaddbackright_down(t_list_down **alst, t_list_down *new)
+{
+	t_list_down	*list;
+
+	if (!(list = (t_list_down*)malloc(sizeof(t_list_down))))
+		return ;
+	list = *alst;
+	if (*alst)
+	{
+		while (list->right)
+			list = list->right;
+		list->right = new;
 	}
 	else
 		*alst = new;

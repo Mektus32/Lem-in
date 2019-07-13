@@ -1,6 +1,6 @@
 #include "lem_in.h"
 
-int ft_path(t_map *map, int *dist)
+t_list_i	*ft_path(t_map *map, int *dist)
 {
 	t_list_i *start;
 	t_list_i *path;
@@ -25,13 +25,13 @@ int ft_path(t_map *map, int *dist)
 		}
 		path = path->next;//переход к комнате, которую добавили
 	}
-	map->sh = start;
+	ft_list_revers(&start);
 	free(dist);
-	return (1);
+	return (start);
 }
 
 //0 если не найдкм ни одного пути
-int ft_bfs(t_map *map)
+t_list_i	*ft_bfs(t_map *map)
 {
 	int i;
 	int *dist; //массив интов - расстояние от старта
@@ -76,7 +76,7 @@ int ft_bfs(t_map *map)
 		free(order);//знаю что не чищу
 		free (dist);
 		printf("no path\n");
-		return (0);
+		return (NULL);
 	}
 	else //найдем коротуий путь (реверс) и вернем 1 оттуда
 		return (ft_path(map, dist));
