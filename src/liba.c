@@ -14,3 +14,19 @@ int		ft_len_int(int num)
 		return (1);
 	return (len);
 }
+
+int ft_max_mass(int *mass)
+{
+	int max;
+	int i;
+
+	i = 0;
+	max = mass[i++];
+	while (mass[i])
+	{
+		if(mass[i] > max)
+			max = mass[i];
+		i++;
+	}
+	return (max);
+}

@@ -1,4 +1,19 @@
 #include "lem_in.h"
+
+//считаем колличество путей в состоянии
+int len_down(t_list_down *path)
+{
+	int k;
+
+	k = 0;
+	while(path->down)
+	{
+		k++;
+		path = path->down;
+	}
+	return (k);
+}
+
 // возвращает ссылку на элемент s_list_i
 // от номера комнаты
 

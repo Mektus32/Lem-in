@@ -85,6 +85,7 @@ int ft_path(t_map *map, int *dist);
 	// (liba.c)
 //ф, которые претендуют на звание стандартных 
 int		ft_len_int(int num);
+int ft_max_mass(int *mass); // максимальное в массиве int
 
 	//(list_room.c)
 //ф для списка комнат
@@ -93,6 +94,7 @@ void ft_pushback(t_room **head, t_room *new);
 void	ft_lstadd_r(t_room **alst, t_room *new);
 
 	//ft_list_down.c
+int len_down(t_list_down *path);
 t_list_down *ft_list_i_head(int num, t_list_down *alst);
 t_list_down	*ft_lstnew_down(int content);
 void	ft_lstaddback_down(t_list_down **alst, t_list_down *new);
