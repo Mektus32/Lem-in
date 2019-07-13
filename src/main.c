@@ -53,8 +53,9 @@ int main(int ac, char	**av)
 	int		fd;
 	t_map	*map;
 	char	*str;
+	t_list_i *sh;
 
-	//fd = ac;"/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/test_3"
+	//str = "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/test_4";//;ac;
 	str = av[1];
 	map = (t_map*)malloc(sizeof(t_map));
 	map->rooms = NULL;
@@ -68,6 +69,17 @@ int main(int ac, char	**av)
 		//ft_bfs(map);
 		ft_bfs(map);
 		ft_pri_sh(map);
+		ft_list_revers(&map->sh);
+		sh = map->sh;
+		while(sh)
+		{
+			printf("%d - ", sh->content);
+			sh = sh->next;
+		}
+		//проверить достаточно ли путей для муравьев
+
+		//удалить связи, которые есть в списке
+
 	}
 	else// и все почистить бы
 	{

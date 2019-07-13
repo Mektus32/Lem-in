@@ -106,6 +106,8 @@ void	ft_add_list_if(t_list_i **head, int content, t_list_i *new)
 //	free(new);
 //}
 
+
+
 /* Функция разворота списка */
 void	ft_list_revers(t_list_i **begin_list)
 {
@@ -122,8 +124,9 @@ void	ft_list_revers(t_list_i **begin_list)
 		tmp = list;
 		list = next;
 	}
-	list = tmp;
-}/*Я это взял с бассейна поэтому не уверен что рабоатет,
+	*begin_list = tmp;
+}
+/*Я это взял с бассейна поэтому не уверен что рабоатет,
  * так как тот день у меня не скомпилился из-за .h файла.
  * Проверь по своему(Day11, ex08)*/
 
