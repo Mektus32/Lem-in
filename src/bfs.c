@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   bfs.c                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/07/14 15:04:37 by ojessi            #+#    #+#             */
+/*   Updated: 2019/07/14 15:04:38 by ojessi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "lem_in.h"
 
 t_list_i	*ft_path(t_map *map, int *dist)
@@ -8,7 +20,7 @@ t_list_i	*ft_path(t_map *map, int *dist)
 
 	tmp_i = ft_list_i_head(map->c_room, map->link)->next;
 	//обратный путь начинается с последней комнаты
-	path = ft_lstnew_i(map->c_room);
+	path = ft_list_new_i(map->c_room);
 	//ссылка на начало, что б вернуть
 	start = path;
 	while (path->content != 0)// пока не придем в комнату старта ищем путь
@@ -18,7 +30,7 @@ t_list_i	*ft_path(t_map *map, int *dist)
 		{//если предыдущих ячеек несколько нам не важно, тк путь все = будет кротчайший
 			if (dist[tmp_i->content] == (dist[path->content] - 1))
 			{
-				ft_lstaddback_i(&path, ft_lstnew_i(tmp_i->content));
+				ft_list_add_back_i(&path, ft_list_new_i(tmp_i->content));
 				break ; // добавили одну комнату и успокоились - переходим к ней
 			}
 			tmp_i = tmp_i->next;
@@ -46,7 +58,7 @@ t_list_i	*ft_bfs(t_map *map)
 	while (i <= map->c_room)
 		dist[i++] = map->c_room + 1;
 	//начинаем очередь в очередь добавляем все вершины, которые встретелись на пути
-	order = ft_lstnew_i(0);
+	order = ft_list_new_i(0);
 	dist[0] = 0;
 	// будем продолжать пока есть очередь или пока не нашли кратчайший путь (нашли комнатц энд)
 	while (order && !(map->len_sh))
@@ -65,7 +77,7 @@ t_list_i	*ft_bfs(t_map *map)
 			if (tmp_i->content == map->c_room)//нашли короткий путь, если пришли в последнюю комнату
 				map->len_sh = dist[tmp_i->content]; // надо выходить из цикла while(order && !len)
 			else //для каждого узла добавляем очередь соседей
-				ft_lstaddback_i(&order, ft_lstnew_i(tmp_i->content));
+				ft_list_add_back_i(&order, ft_list_new_i(tmp_i->content));
 			tmp_i = tmp_i->next;
 		}
 		//free(tmp);

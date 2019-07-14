@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_list_down.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/07/14 15:04:50 by ojessi            #+#    #+#             */
+/*   Updated: 2019/07/14 15:04:51 by ojessi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "lem_in.h"
 
 //считаем колличество путей в состоянии
-int len_down(t_list_down *path)
+int ft_list_len_down(t_list_down *path)
 {
 	int k;
 
@@ -36,7 +48,7 @@ t_list_down *ft_list_i_head(int num, t_list_down *alst)
 }
 
 // создание нового листа
-t_list_down	*ft_lstnew_down(int content)
+t_list_down	*ft_list_new_down(int content)
 {
 	t_list_down	*list;
 
@@ -48,12 +60,13 @@ t_list_down	*ft_lstnew_down(int content)
 	list->content = content;
 	list->next = NULL;
 	list->down = NULL;
+	list->right = NULL;
 	return (list);
 }
 
 //добавление вниз нового элемента
 /* Функция добавления элемента в конец массива/списка в указатель "down" */
-void	ft_lstaddback_down(t_list_down **alst, t_list_down *new)
+void	ft_list_add_back_down(t_list_down **alst, t_list_down *new)
 {
 	t_list_down *list;
 
@@ -71,19 +84,19 @@ void	ft_lstaddback_down(t_list_down **alst, t_list_down *new)
 }
 
 /* Функция добавляения элемента в конец списка и записи туда кратчайшего пути*/
-t_list_down	*ft_lstnewpointer_down(t_list_i	*next)
+t_list_down	*ft_list_new_pointer_down(t_list_i *next)
 {
 	t_list_down	*list;
 
 	if (!(list = (t_list_down*)malloc(sizeof(t_list_down))))
 		return (NULL);
-	list->content = ft_listlen_i(next);
+	list->content = ft_list_len_i(next);
 	list->next = next;
 	list->down = NULL;
 	return (list);
 }
 
-void	ft_lstaddbackright_down(t_list_down **alst, t_list_down *new)
+void	ft_list_add_back_right_down(t_list_down **alst, t_list_down *new)
 {
 	t_list_down	*list;
 
@@ -98,4 +111,20 @@ void	ft_lstaddbackright_down(t_list_down **alst, t_list_down *new)
 	}
 	else
 		*alst = new;
+}
+
+/* Функция копирования списка down */
+t_list_down	*ft_copy_list_down(t_list_down *head)
+{
+	t_list_down	*copy;
+
+	copy = NULL;
+	if (!head)
+		return (NULL);
+	while (head)
+	{
+		ft_list_add_back_down(&copy, ft_list_new_pointer_down(ft_list_copy_i(head->next)));
+		head = head->down;
+	}
+	return (copy);
 }

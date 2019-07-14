@@ -63,9 +63,9 @@ int ft_check_path_n(t_list_down *two_path, t_map *map)
 
 	t1 = two_path->content;
 	//кол-во путей в новом стостоянии
-	path_new = two_path->next;
+	path_new = two_path->right;
 	//path_new->content; пока равен 0, надо перезаписать тужа время
-	c_path = len_down(path_new);
+	c_path = ft_list_len_down(path_new);
 	//
 	d = (int *)malloc(sizeof(int) * c_path);
 	path_new = path_new->down;
@@ -101,7 +101,7 @@ int ft_check_path_n(t_list_down *two_path, t_map *map)
 	//добавляем 1, если колличество муравьев не 0 осталось
 	t_now = len_max + n_ant/c_path + ((n_ant == 0) ? 0 : 1);
 	if (t_now < t1)//выбираем этот путь
-		return (1);
+		return (t_now);
 	return (0);
 }
 
@@ -123,7 +123,7 @@ int main(int ac, char	**av)
 	t_list_i *sh;
 	t_list_i *link;//связи ля конкретной комнаты
 
-	str = "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/test_3";//;ac;
+	str = "/Users/ojessi/Desktop/Arina/test_3";//;ac;
 	//str = av[1];
 	map = (t_map*)malloc(sizeof(t_map));
 	map->rooms = NULL;
@@ -133,10 +133,10 @@ int main(int ac, char	**av)
 	fd = open(str, O_RDONLY);
 	if (make_map(fd, map) && check_room(map))
 	{
-		map->sh = ft_bfs(map);
+		sh = ft_bfs(map);
 		//вместо следующей надо использовать добавление при движении вправо!!
-//		ft_lstaddback_down(&map->two_path, ft_lstnew_down(ft_listlen_i(sh)));
-//		ft_lstaddback_down(&map->two_path, ft_lstnewpointer_down(sh));
+		ft_list_add_back_right_down(&map->two_path, ft_list_new_down(ft_list_len_i(sh)));
+		ft_list_add_back_down(&map->two_path, ft_list_new_pointer_down(sh));
 		// теперь нужен поиск в ширину
 		//ft_pri(map);
 		//ft_bfs(map);
@@ -152,19 +152,19 @@ int main(int ac, char	**av)
 		//ft_check_path_n(t_list_down);
 
 		//удалить связи, которые есть в кратсайшем пути, если время второго больше первого
-		sh = map->sh;
-		while(sh->next)
-		{
-			printf("====%d\n",sh->content);
-			//найдем указатель на список связей комныта в пути
-			link =  ft_list_i_head(sh->content, map->link)->next;
-			pr_list(link);
-			//и теперь должны удалить указатель на следующую
-			printf("iz = %d = %d, v = %d\n",sh->content, link->content ,sh->next->content);
-			ft_remove_list_if(&link, sh->next->content);
-			sh = sh->next;
-
-		}
+//		sh = map->sh;
+//		while(sh->next)
+//		{
+//			printf("====%d\n",sh->content);
+//			//найдем указатель на список связей комныта в пути
+//			link =  ft_list_i_head(sh->content, map->link)->next;
+//			pr_list(link);
+//			//и теперь должны удалить указатель на следующую
+//			printf("iz = %d = %d, v = %d\n",sh->content, link->content ,sh->next->content);
+//			ft_remove_list_if(&link, sh->next->content);
+//			sh = sh->next;
+//
+//		}
 		//ft_pri(map);
 
 //		link =  ft_list_i_head(0, map->link)->next;

@@ -1,6 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_list_i.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/07/14 15:04:21 by ojessi            #+#    #+#             */
+/*   Updated: 2019/07/14 15:04:23 by ojessi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "lem_in.h"
+
 //Создание нового элемента списка
-t_list_i	*ft_lstnew_i(int content)
+t_list_i	*ft_list_new_i(int content)
 {
 	t_list_i	*list;
 
@@ -21,7 +34,7 @@ t_list_i	*ft_lstnew_i(int content)
 }
 
 //Добавление эдемента списка в конец
-void	ft_lstaddback_i(t_list_i **alst, t_list_i *new)
+void	ft_list_add_back_i(t_list_i **alst, t_list_i *new)
 {
 	t_list_i *list;
 
@@ -69,8 +82,6 @@ void	ft_remove_list_if(t_list_i **head, int content)
 	}
 }
 
-
-
 /* Функция добавления элемента в список типа t_list_i при равенстве "content" */
 void	ft_add_list_if(t_list_i **head, int content, t_list_i *new)
 {
@@ -89,24 +100,6 @@ void	ft_add_list_if(t_list_i **head, int content, t_list_i *new)
 	}
 	free(new);
 }
-///* Функция добавления элемента в список типа t_list_i при равенстве "content" */
-//void	ft_add_list_if(t_list_i **head, int content, t_list_i *new)
-//{
-//	if (!head)
-//		return ;
-//	if (!*head)
-//		return ;
-//	while (*head)
-//	{
-//		if ((*head)->content == content)
-//		{
-//			(*head)->next = new;
-//			return ;
-//		}
-//		(*head) = (*head)->next;
-//	}
-//	free(new);
-//}
 
 /* Функция разворота списка */
 void	ft_list_revers(t_list_i **begin_list)
@@ -128,7 +121,7 @@ void	ft_list_revers(t_list_i **begin_list)
 }
 
 /* Функция вычисления длины списка */
-int		ft_listlen_i(t_list_i	*head)
+int		ft_list_len_i(t_list_i *head)
 {
 	int 	i;
 
@@ -140,7 +133,19 @@ int		ft_listlen_i(t_list_i	*head)
 	}
 	return (i);
 }
-/*Я это взял с бассейна поэтому не уверен что рабоатет,
- * так как тот день у меня не скомпилился из-за .h файла.
- * Проверь по своему(Day11, ex08)*/
 
+/* Функция копирования списка i */
+t_list_i	*ft_list_copy_i(t_list_i *head)
+{
+	t_list_i	*copy;
+
+	copy = NULL;
+	if (!head)
+		return (NULL);
+	while (head)
+	{
+		ft_list_add_back_i(&copy, ft_list_new_i(head->content));
+		head = head->next;
+	}
+	return (copy);
+}

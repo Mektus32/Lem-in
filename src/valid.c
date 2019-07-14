@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   valid.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/07/14 15:05:39 by ojessi            #+#    #+#             */
+/*   Updated: 2019/07/14 15:05:46 by ojessi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "lem_in.h"
 // заполним начальнуб струкруру map
 // проверим на валидность первую строку (кол-во муравьев)
@@ -72,7 +84,7 @@ int	check_room(t_map *map)
 					if (get_next_line(map->fd, &line) > 0)
 					{
 						//ft_printf("%s\n", line);
-						ft_lstadd_r(&map->rooms, ft_create_ele(line, 0));
+						ft_list_add_room(&map->rooms, ft_create_ele(line, 0));
 					}
 					else
 						return (0);
@@ -98,7 +110,7 @@ int	check_room(t_map *map)
 			if (last_room) 
 			{
 				last_room->number = number;
-				ft_pushback(&map->rooms, last_room);	
+				ft_push_back_room(&map->rooms, last_room);
 			}
 			else
 				return (0);
@@ -108,7 +120,7 @@ int	check_room(t_map *map)
 		}
 		else
 		{
-			ft_pushback(&map->rooms, ft_create_ele(line, number));
+			ft_push_back_room(&map->rooms, ft_create_ele(line, number));
 			number++;
 		}
 	}
@@ -146,8 +158,8 @@ int check_links(char *line, t_map *map)
 					// если нашли комнаты запихиваем в список (для каждой комнаты свой)
 					first = ft_list_i_head(start->number, map->link);
 					second = ft_list_i_head(tmp->number, map->link);
-					ft_lstaddback_i(&first->next, ft_lstnew_i(tmp->number));
-					ft_lstaddback_i(&second->next, ft_lstnew_i(start->number));
+					ft_list_add_back_i(&first->next, ft_list_new_i(tmp->number));
+					ft_list_add_back_i(&second->next, ft_list_new_i(start->number));
 					return (1);
 				}
 				tmp = tmp->next;
@@ -178,7 +190,7 @@ int created_links(char *line, t_map *map)
 	 * //переписываем в список столбцов список комнат
 	 * while (i <= map->c_room)
 	 * {
-	 * 		ft_lstaddback_down(&map->link, ft_lstnew_down(map->rooms->number));
+	 * 		ft_list_add_back_down(&map->link, ft_list_new_down(map->rooms->number));
 	 * 		map->rooms = map->rooms->next;
 	 * 		i++;
 	 * }
@@ -186,7 +198,7 @@ int created_links(char *line, t_map *map)
 	tmp = map->rooms;
 	while (tmp)
 	{
-		ft_lstaddback_down(&map->link, ft_lstnew_down(tmp->number));
+		ft_list_add_back_down(&map->link, ft_list_new_down(tmp->number));
 		tmp = tmp->next;
 	}
 	st = check_links(line, map);

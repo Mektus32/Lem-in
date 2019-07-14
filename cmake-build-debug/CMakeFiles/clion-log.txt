@@ -1,4 +1,4 @@
-/Users/qgilbert/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in
+/Users/ojessi/Desktop/00..00.0.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/ojessi/Desktop/Arina
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug
+-- Build files have been written to: /Users/ojessi/Desktop/Arina/cmake-build-debug
