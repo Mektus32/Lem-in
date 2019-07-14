@@ -3,338 +3,338 @@
 
 CMakeFiles/School21_Lem_in.dir/ft_printf/src/check_args.c.o
  ../ft_printf/includes/ft_printf.h
- /Users/ojessi/Desktop/Arina/ft_printf/src/check_args.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/src/check_args.c
 CMakeFiles/School21_Lem_in.dir/ft_printf/src/choise_spec.c.o
  ../ft_printf/includes/ft_printf.h
- /Users/ojessi/Desktop/Arina/ft_printf/src/choise_spec.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/src/choise_spec.c
 CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.o
  ../ft_printf/includes/ft_printf.h
- /Users/ojessi/Desktop/Arina/ft_printf/src/ft_free_strncpy.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/src/ft_free_strncpy.c
 CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_printf.c.o
  ../ft_printf/includes/ft_printf.h
- /Users/ojessi/Desktop/Arina/ft_printf/src/ft_printf.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/src/ft_printf.c
 CMakeFiles/School21_Lem_in.dir/ft_printf/src/init_arg.c.o
  ../ft_printf/includes/ft_printf.h
- /Users/ojessi/Desktop/Arina/ft_printf/src/init_arg.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/src/init_arg.c
 CMakeFiles/School21_Lem_in.dir/ft_printf/src/print_digit.c.o
  ../ft_printf/includes/ft_printf.h
- /Users/ojessi/Desktop/Arina/ft_printf/src/print_digit.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/src/print_digit.c
 CMakeFiles/School21_Lem_in.dir/ft_printf/src/print_double.c.o
  ../ft_printf/includes/ft_printf.h
- /Users/ojessi/Desktop/Arina/ft_printf/src/print_double.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/src/print_double.c
 CMakeFiles/School21_Lem_in.dir/ft_printf/src/print_non_printabl.c.o
  ../ft_printf/includes/ft_printf.h
- /Users/ojessi/Desktop/Arina/ft_printf/src/print_non_printabl.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/src/print_non_printabl.c
 CMakeFiles/School21_Lem_in.dir/ft_printf/src/print_spec.c.o
  ../ft_printf/includes/ft_printf.h
- /Users/ojessi/Desktop/Arina/ft_printf/src/print_spec.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/src/print_spec.c
 CMakeFiles/School21_Lem_in.dir/ft_printf/src/print_spec_etc.c.o
  ../ft_printf/includes/ft_printf.h
- /Users/ojessi/Desktop/Arina/ft_printf/src/print_spec_etc.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/src/print_spec_etc.c
 CMakeFiles/School21_Lem_in.dir/ft_printf/src/print_xox.c.o
  ../ft_printf/includes/ft_printf.h
- /Users/ojessi/Desktop/Arina/ft_printf/src/print_xox.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/src/print_xox.c
 CMakeFiles/School21_Lem_in.dir/ft_printf/src/settings.c.o
  ../ft_printf/includes/ft_printf.h
- /Users/ojessi/Desktop/Arina/ft_printf/src/settings.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/src/settings.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_abs.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_abs.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_abs.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_absf.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_absf.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_absf.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_atoi.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_atoi.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_atoi.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_bzero.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_bzero.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_bzero.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_count_words.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_count_words.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_count_words.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_free_join.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_free_join.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_free_join.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_free_strjoin_duo.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_free_strjoin_duo.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_free_strjoin_duo.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_free_strjoin_rev.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_free_strjoin_rev.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_free_strjoin_rev.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_frtwarr.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_frtwarr.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_frtwarr.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_ftoa.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_ftoa.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_ftoa.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_isalnum.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_isalnum.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_isalnum.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_isalpha.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_isalpha.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_isalpha.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_isascii.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_isascii.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_isascii.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_isdigit.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_isdigit.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_isdigit.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_isprint.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_isprint.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_isprint.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_isspace.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_isspace.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_isspace.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_itoa.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_itoa.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_itoa.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_list_add.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_list_add.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_list_add.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_list_foreach_if.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_list_foreach_if.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_list_foreach_if.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_list_push_back.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_list_push_back.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_list_push_back.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_list_remove_free_if.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_list_remove_free_if.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_list_remove_free_if.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_lstadd.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_lstadd.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_lstadd.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_lstaddback.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_lstaddback.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_lstaddback.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_lstdel.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_lstdel.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_lstdel.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_lstdelone.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_lstdelone.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_lstdelone.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_lstiter.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_lstiter.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_lstiter.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_lstmap.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_lstmap.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_lstmap.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_lstnew.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_lstnew.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_lstnew.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_ltoa.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_ltoa.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_ltoa.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_ltoa_base.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_ltoa_base.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_ltoa_base.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_max.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_max.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_max.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_memalloc.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_memalloc.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_memalloc.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_memccpy.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_memccpy.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_memccpy.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_memchr.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_memchr.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_memchr.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_memcmp.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_memcmp.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_memcmp.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_memcpy.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_memcpy.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_memcpy.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_memdel.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_memdel.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_memdel.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_memmove.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_memmove.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_memmove.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_memset.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_memset.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_memset.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_min.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_min.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_min.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_pow.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_pow.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_pow.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_putchar.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_putchar.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_putchar.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_putchar_fd.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_putchar_fd.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_putchar_fd.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_putendl.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_putendl.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_putendl.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_putendl_fd.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_putendl_fd.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_putendl_fd.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_putnbr.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_putnbr.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_putnbr.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_putnbr_fd.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_putnbr_fd.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_putnbr_fd.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_putstr.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_putstr.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_putstr.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_putstr_fd.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_putstr_fd.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_putstr_fd.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_setbackground_fd.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_setbackground_fd.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_setbackground_fd.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strcat.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strcat.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strcat.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strchr.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strchr.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strchr.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strclr.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strclr.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strclr.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strcmp.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strcmp.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strcmp.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strcpy.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strcpy.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strcpy.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strdel.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strdel.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strdel.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strdup.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strdup.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strdup.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strequ.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strequ.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strequ.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_striter.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_striter.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_striter.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_striteri.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_striteri.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_striteri.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strjoin.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strjoin.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strjoin.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strlcat.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strlcat.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strlcat.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strlcpy.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strlcpy.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strlcpy.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strlen.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strlen.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strlen.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strmap.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strmap.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strmap.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strmapi.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strmapi.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strmapi.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strncat.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strncat.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strncat.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strncmp.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strncmp.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strncmp.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strncpy.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strncpy.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strncpy.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strnequ.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strnequ.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strnequ.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strnew.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strnew.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strnew.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strnstr.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strnstr.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strnstr.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strrchr.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strrchr.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strrchr.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strrev.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strrev.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strrev.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strsplit.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strsplit.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strsplit.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strstr.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strstr.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strstr.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strsub.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strsub.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strsub.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strtolower.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strtolower.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strtolower.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_strtrim.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_strtrim.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_strtrim.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_tolower.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_tolower.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_tolower.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_toupper.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_toupper.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_toupper.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_truncf.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_truncf.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_truncf.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_ultoa.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_ultoa.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_ultoa.c
 CMakeFiles/School21_Lem_in.dir/libft/ft_ultoa_base.c.o
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/ft_ultoa_base.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_ultoa_base.c
 CMakeFiles/School21_Lem_in.dir/libft/get_next_line.c.o
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
- /Users/ojessi/Desktop/Arina/libft/get_next_line.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/get_next_line.c
 CMakeFiles/School21_Lem_in.dir/src/bfs.c.o
  ../includes/ft_printf.h
  ../includes/lem_in.h
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/src/bfs.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/bfs.c
 CMakeFiles/School21_Lem_in.dir/src/free.c.o
  ../includes/ft_printf.h
  ../includes/lem_in.h
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/src/free.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/free.c
 CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.o
  ../includes/ft_printf.h
  ../includes/lem_in.h
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/src/ft_bfs_k.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_bfs_k.c
 CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.o
  ../includes/ft_printf.h
  ../includes/lem_in.h
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/src/ft_list_down.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_list_down.c
 CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.o
  ../includes/ft_printf.h
  ../includes/lem_in.h
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/src/ft_list_i.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_list_i.c
 CMakeFiles/School21_Lem_in.dir/src/liba.c.o
  ../includes/ft_printf.h
  ../includes/lem_in.h
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/src/liba.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/liba.c
 CMakeFiles/School21_Lem_in.dir/src/list_room.c.o
  ../includes/ft_printf.h
  ../includes/lem_in.h
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/src/list_room.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/list_room.c
 CMakeFiles/School21_Lem_in.dir/src/main.c.o
  ../includes/ft_printf.h
  ../includes/lem_in.h
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/src/main.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/main.c
 CMakeFiles/School21_Lem_in.dir/src/valid.c.o
  ../includes/ft_printf.h
  ../includes/lem_in.h
  ../includes/libft.h
- /Users/ojessi/Desktop/Arina/src/valid.c
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/valid.c

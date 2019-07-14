@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/ojessi/Desktop/Arina/ft_printf/includes -I/Users/ojessi/Desktop/Arina/includes -I/Users/ojessi/Desktop/Arina/libft/includes 
+C_INCLUDES = -I/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/includes -I/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/includes -I/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/includes 
 

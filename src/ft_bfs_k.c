@@ -58,9 +58,9 @@ t_list_i 		*bfs_k_path(t_map *map, t_list_i *cant_go, t_list_down *path_down)
 		dist[i++] = map->c_room + 1;
 	i = 0;
 	//есди комната в списке занятых, дам ей вес -1, что б больше не ходить по ней
-	while (i <= map->c_room)
+	while (i < map->c_room)
 	{
-		if (find_room(cant_go, i))
+		if (find_room(cant_go, i) && i != 0)
 			dist[i] = -1;
 		i++;
 	}
@@ -103,7 +103,9 @@ t_list_i 		*bfs_k_path(t_map *map, t_list_i *cant_go, t_list_down *path_down)
 	else //найдем коротуий путь (реверс) и вернем 1 оттуда
 	{
 		printf("oooo");
-		path_down->down->content = len;
+//		while (path_down && path_down->down && path_down->down->content != -10)
+//			path_down = path_down->down;
+//		path_down->down->content = len;
 		return (ft_path_k(map, dist));
 	}
 }
@@ -120,19 +122,17 @@ t_list_down		*ft_bfs_k(t_map *map, int k)
 	write(1, "ttt1", 4);
 	p = 0;
 	path_down = ft_list_new_down(10);//(t_list_down*)malloc(sizeof(t_list_down));
-	tmp = path_down;
 	ft_list_add_back_down(&path_down, ft_list_new_down(0));//path_down->down = (t_list_down*)malloc(sizeof(t_list_down));
+	tmp = path_down;
 	//path_down->down->next = NULL;
 	cant_go = ft_list_new_i(0);//cant_go = (t_list_i*)malloc(sizeof(t_list_i));
 
-	while ((path_tek = bfs_k_path(map, cant_go, path_down)) && p < k)
+	while (p < k && (path_tek = bfs_k_path(map, cant_go, path_down)))
 	{
-		//переходимк след пути6 пока они есть
-//		while(path_down->down->next)
-//			path_down = path_down->down;
 		//самого себя можно передаь для записи длины?
-		ft_list_add_back_i(&tmp->next, path_tek);//path_down->down->next = path_tek;
-
+		ft_list_add_back_i(&tmp->down->next, path_tek);//path_down->down->next = path_tek;
+		tmp->down->content = ft_list_len_i(path_tek) - 1;
+		//ft_list_add_back_down(&path_down,)
 		//дополним список по которому нельзя ходить
 		ft_list_add_back_i(&cant_go , path_tek);
 		while(path_tek)
@@ -140,7 +140,7 @@ t_list_down		*ft_bfs_k(t_map *map, int k)
 			printf("ppp = %d - ",path_tek->content);
 			path_tek = path_tek->next;
 		}
-		ft_printf("\n\n");
+		printf("\n\n");
 		ft_list_add_back_down(&path_down, ft_list_new_down(-10));//path_down->down = (t_list_down*)malloc(sizeof(t_list_down));
 		//path_down->down->next = NULL;
 		tmp = tmp->down;
