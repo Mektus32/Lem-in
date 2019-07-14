@@ -96,6 +96,18 @@ t_list_down	*ft_list_new_pointer_down(t_list_i *next)
 	return (list);
 }
 
+t_list_down	*ft_list_new_pointer_content_down(t_list_i *next, int content)
+{
+	t_list_down	*list;
+
+	if (!(list = (t_list_down*)malloc(sizeof(t_list_down))))
+		return (NULL);
+	list->content = content;
+	list->next = next;
+	list->down = NULL;
+	return (list);
+}
+
 void	ft_list_add_back_right_down(t_list_down **alst, t_list_down *new)
 {
 	t_list_down	*list;
@@ -123,7 +135,7 @@ t_list_down	*ft_copy_list_down(t_list_down *head)
 		return (NULL);
 	while (head)
 	{
-		ft_list_add_back_down(&copy, ft_list_new_pointer_down(ft_list_copy_i(head->next)));
+		ft_list_add_back_down(&copy, ft_list_new_pointer_content_down(ft_list_copy_i(head->next), head->content));
 		head = head->down;
 	}
 	return (copy);

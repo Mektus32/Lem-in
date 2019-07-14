@@ -86,10 +86,10 @@ t_list_i			*ft_bfs(t_map *map);
 t_list_i			*ft_path(t_map *map, int *dist);
 
 	// (ft_bfs_k.c)
-t_list_down		*ft_bfs_k(t_map *map, int k);
-t_list_i 		*bfs_k_path(t_map *map, t_list_i *cant_go, t_list_down *path_down);
-t_list_i	*ft_path_k(t_map *map, int *dist);
-int find_room(t_list_i *room, int num);
+t_list_down			*ft_bfs_k(t_map *map, int k);
+t_list_i 			*bfs_k_path(t_map *map, t_list_i *cant_go, t_list_down *path_down);
+t_list_i			*ft_path_k(t_map *map, int *dist);
+int 				find_room(t_list_i *room, int num);
 	// (liba.c)
 //ф, которые претендуют на звание стандартных 
 
@@ -110,6 +110,7 @@ t_list_down			*ft_list_new_down(int content);
 void				ft_list_add_back_down(t_list_down **alst, t_list_down *new);
 t_list_down			*ft_list_new_pointer_down(t_list_i *next);
 void				ft_list_add_back_right_down(t_list_down **alst, t_list_down *new);
+t_list_down			*ft_list_new_pointer_content_down(t_list_i *next, int content);
 int					ft_list_len_down(t_list_down *path);
 void				ft_free_first_in_two_path(t_list_down **first);
 void				ft_free_list_i(t_list_i **head);

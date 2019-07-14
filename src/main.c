@@ -33,6 +33,26 @@ void	ft_pri(t_map *map)
 	}
 }
 
+void	ft_pri_cop(t_map *map)
+{
+	t_list_down	*tmp;
+	t_list_i	*right;
+
+	tmp = map->link_new;
+	while (tmp)
+	{
+		ft_printf("room[%d]->", tmp->content);
+		right = tmp->next;
+		while (right)
+		{
+			ft_printf("%d->", right->content);
+			right = right->next;
+		}
+		ft_printf("\n");
+		tmp = tmp->down;
+	}
+}
+
 //принт путь
 void	ft_pri_sh(t_map *map)
 {
@@ -123,8 +143,8 @@ int main(int ac, char	**av)
 	t_list_i *sh;
 	t_list_i *link;//связи ля конкретной комнаты
 
-	//str = "/Users/ojessi/Desktop/Arina/test_3";//;ac;
-	str = av[1];
+	str = "/Users/ojessi/Desktop/Arina/test_3";//;ac;
+	//str = av[1];
 	map = (t_map*)malloc(sizeof(t_map));
 	map->rooms = NULL;
 	map->link = NULL;
@@ -134,42 +154,25 @@ int main(int ac, char	**av)
 	if (make_map(fd, map) && check_room(map))
 	{
 		sh = ft_bfs(map);
-		//вместо следующей надо использовать добавление при движении вправо!!
-		ft_list_add_back_right_down(&map->two_path, ft_list_new_down(ft_list_len_i(sh)));
-		ft_list_add_back_down(&map->two_path, ft_list_new_pointer_down(sh));
-		// теперь нужен поиск в ширину
-		//ft_pri(map);
-		//ft_bfs(map);
-		//ft_bfs(map);
-		ft_pri_sh(map);
+//		//вместо следующей надо использовать добавление при движении вправо!!
+//		ft_list_add_back_right_down(&map->two_path, ft_list_new_down(ft_list_len_i(sh)));
+//		ft_list_add_back_down(&map->two_path, ft_list_new_pointer_down(sh));
+
+//		ft_pri_sh(map);
 		ft_pri(map);
-//		while(sh)
-//		{
-//			printf("%d - ", sh->content);
-//			sh = sh->next;
-//		}
-		//проверить достаточно ли путей для муравьев
-		//ft_check_path_n(t_list_down);
+		map->link_new = ft_copy_list_down(map->link);
+		ft_printf("\n\n");
+//		ft_pri_cop(map);
 
-		//удалить связи, которые есть в кратсайшем пути, если время второго больше первого
-//		sh = map->sh;
-//
-//		while(sh->next)
-//		{
-//			printf("==== %d\n",sh->content);
-//			//найдем указатель на список связей комныта в пути
-//			//link =  ft_list_i_head(sh->content, map->link)->next;
-//			//pr_list(link);
-//			//и теперь должны удалить указатель на следующую
-//			//printf("iz = %d = %d, v = %d\n",sh->content, link->content ,sh->next->content);
-//			ft_remove_list_if(&(ft_list_i_head(sh->content, map->link)->next), sh->next->content);
-//			sh = sh->next;
-//
-//		}
-		//ft_pri(map);
-
-//		link =  ft_list_i_head(0, map->link);
-//		pr_list(link);
+		while(sh->next)
+		{
+			ft_printf("ppp - %d  ", sh->content);
+			ft_remove_list_if(&(ft_list_i_head(sh->content, map->link_new)->next), sh->next->content);
+			sh = sh->next;
+		}
+		ft_printf("\n\n");
+		ft_pri_cop(map);
+		ft_bfs_k(map, 2);
 	}
 	else// и все почистить бы
 	{

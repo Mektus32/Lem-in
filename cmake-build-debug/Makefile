@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/qgilbert/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Users/ojessi/Desktop/00..00.0.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/qgilbert/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Users/ojessi/Desktop/00..00.0.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in
+CMAKE_SOURCE_DIR = /Users/ojessi/Desktop/Arina
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ojessi/Desktop/Arina/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-bui
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/qgilbert/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Users/ojessi/Desktop/00..00.0.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/qgilbert/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Users/ojessi/Desktop/00..00.0.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ojessi/Desktop/Arina/cmake-build-debug/CMakeFiles /Users/ojessi/Desktop/Arina/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ojessi/Desktop/Arina/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -2796,6 +2796,33 @@ src/free.c.s:
 	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/free.c.s
 .PHONY : src/free.c.s
 
+src/ft_bfs_k.o: src/ft_bfs_k.c.o
+
+.PHONY : src/ft_bfs_k.o
+
+# target to build an object file
+src/ft_bfs_k.c.o:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.o
+.PHONY : src/ft_bfs_k.c.o
+
+src/ft_bfs_k.i: src/ft_bfs_k.c.i
+
+.PHONY : src/ft_bfs_k.i
+
+# target to preprocess a source file
+src/ft_bfs_k.c.i:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.i
+.PHONY : src/ft_bfs_k.c.i
+
+src/ft_bfs_k.s: src/ft_bfs_k.c.s
+
+.PHONY : src/ft_bfs_k.s
+
+# target to generate assembly for a file
+src/ft_bfs_k.c.s:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.s
+.PHONY : src/ft_bfs_k.c.s
+
 src/ft_list_down.o: src/ft_list_down.c.o
 
 .PHONY : src/ft_list_down.o
@@ -3264,6 +3291,9 @@ help:
 	@echo "... src/free.o"
 	@echo "... src/free.i"
 	@echo "... src/free.s"
+	@echo "... src/ft_bfs_k.o"
+	@echo "... src/ft_bfs_k.i"
+	@echo "... src/ft_bfs_k.s"
 	@echo "... src/ft_list_down.o"
 	@echo "... src/ft_list_down.i"
 	@echo "... src/ft_list_down.s"

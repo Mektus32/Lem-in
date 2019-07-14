@@ -19,17 +19,17 @@ t_list_i	*ft_path_k(t_map *map, int *dist)
 	t_list_i *tmp_i;
 
 	//обратный путь начинается с последней комнаты
-	path = ft_lstnew_i(map->c_room);
+	path = ft_list_new_i(map->c_room);
 	//ссылка на начало, что б вернуть
 	start = path;
-	while (path->content != 0)// пока не придем в комнату старта ищем путь
+	while (path && path->content != 0)// пока не придем в комнату старта ищем путь
 	{
 		tmp_i = (ft_list_i_head(path->content, map->link_new))->next;
 		while (tmp_i)// ищем комнату с весом на 1 меньше, чем текущая
 		{//если предыдущих ячеек несколько нам не важно, тк путь все = будет кротчайший
 			if (dist[tmp_i->content] == (dist[path->content] - 1))
 			{
-				ft_lstaddback_i(&path, ft_lstnew_i(tmp_i->content));
+				ft_list_add_back_i(&path, ft_list_new_i(tmp_i->content));
 				break ; // добавили одну комнату и успокоились - переходим к ней
 			}
 			tmp_i = tmp_i->next;
@@ -62,21 +62,23 @@ t_list_i 		*bfs_k_path(t_map *map, t_list_i *cant_go, t_list_down *path_down)
 	{
 		if (find_room(cant_go, i))
 			dist[i] = -1;
+		i++;
 	}
 
 	//начинаем очередь в очередь добавляем все вершины, которые встретелись на пути
-	order = ft_lstnew_i(0);
+	order = ft_list_new_i(0);
 	dist[0] = 0;
 	// будем продолжать пока есть очередь или пока не нашли кратчайший путь (нашли комнатц энд)
 	while (order && !len)
 	{
+
 		//возвращаем ссылку на комнату
 		tmp = ft_list_i_head(order->content, map->link_new);
 		tmp_i = tmp->next;//надо пропустить себя же ! ЗАПИСЬ НИЖЕ РАБОТАЕТ -2строки =)
 		//tmp_i = ft_list_i_head(order->content, map->link)->next;
 		//пока есть комнаты(tmp), связанные с комнатой в очереди
 		//перезаписываем расстояние, если до этого оно было больше
-		while (tmp_i && map->two_path->down->content == 0)
+		while (tmp_i && len == 0)
 		{
 			//если в комнате, которую мы проверяем растояние от начала больше, чем от соседа которого мы можем дотянуться
 			if (dist[tmp_i->content] > dist[order->content] + 1 && (tmp_i->content != order->content))
@@ -85,7 +87,7 @@ t_list_i 		*bfs_k_path(t_map *map, t_list_i *cant_go, t_list_down *path_down)
 				len = dist[tmp_i->content]; // надо выходить из цикла while(order && !len)
 			//для каждого узла добавляем очередь соседей если нет в запрещеном списке
 			else if (dist[tmp_i->content] != -1)
-				ft_lstaddback_i(&order, ft_lstnew_i(tmp_i->content));
+				ft_list_add_back_i(&order, ft_list_new_i(tmp_i->content));
 			tmp_i = tmp_i->next;
 		}
 		//free(tmp);
@@ -100,6 +102,7 @@ t_list_i 		*bfs_k_path(t_map *map, t_list_i *cant_go, t_list_down *path_down)
 	}
 	else //найдем коротуий путь (реверс) и вернем 1 оттуда
 	{
+		printf("oooo");
 		path_down->down->content = len;
 		return (ft_path_k(map, dist));
 	}
@@ -112,26 +115,36 @@ t_list_down		*ft_bfs_k(t_map *map, int k)
 	t_list_i	*path_tek;
 	t_list_down *path_down;
 	t_list_i	*cant_go;//список по которому нельзя ходить
+	t_list_down	*tmp;
 	int p;
-
+	write(1, "ttt1", 4);
 	p = 0;
-	path_down = (t_list_down*)malloc(sizeof(t_list_down));
-	path_down->down = (t_list_down*)malloc(sizeof(t_list_down));
-	path_down->down->next = NULL;
-	cant_go = (t_list_i*)malloc(sizeof(t_list_i));
+	path_down = ft_list_new_down(10);//(t_list_down*)malloc(sizeof(t_list_down));
+	tmp = path_down;
+	ft_list_add_back_down(&path_down, ft_list_new_down(0));//path_down->down = (t_list_down*)malloc(sizeof(t_list_down));
+	//path_down->down->next = NULL;
+	cant_go = ft_list_new_i(0);//cant_go = (t_list_i*)malloc(sizeof(t_list_i));
 
-	while (path_tek = bfs_k_path(map, cant_go, path_down) && p < k)
+	while ((path_tek = bfs_k_path(map, cant_go, path_down)) && p < k)
 	{
 		//переходимк след пути6 пока они есть
 //		while(path_down->down->next)
 //			path_down = path_down->down;
 		//самого себя можно передаь для записи длины?
-		path_down->down->next = path_tek;
+		ft_list_add_back_i(&tmp->next, path_tek);//path_down->down->next = path_tek;
+
 		//дополним список по которому нельзя ходить
-		ft_lstaddback_i(cant_go , path_tek);
-		path_down->down = (t_list_down*)malloc(sizeof(t_list_down));
-		path_down->down->next = NULL;
-		path_down = path_down->down;
+		ft_list_add_back_i(&cant_go , path_tek);
+		while(path_tek)
+		{
+			printf("ppp = %d - ",path_tek->content);
+			path_tek = path_tek->next;
+		}
+		ft_printf("\n\n");
+		ft_list_add_back_down(&path_down, ft_list_new_down(-10));//path_down->down = (t_list_down*)malloc(sizeof(t_list_down));
+		//path_down->down->next = NULL;
+		tmp = tmp->down;
+		p++;
 	}
 	return (path_down);
 }

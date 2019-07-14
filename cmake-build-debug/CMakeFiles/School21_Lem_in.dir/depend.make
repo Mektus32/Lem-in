@@ -303,6 +303,11 @@ CMakeFiles/School21_Lem_in.dir/src/free.c.o: ../includes/lem_in.h
 CMakeFiles/School21_Lem_in.dir/src/free.c.o: ../includes/libft.h
 CMakeFiles/School21_Lem_in.dir/src/free.c.o: ../src/free.c
 
+CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.o: ../includes/ft_printf.h
+CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.o: ../includes/lem_in.h
+CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.o: ../includes/libft.h
+CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.o: ../src/ft_bfs_k.c
+
 CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.o: ../includes/ft_printf.h
 CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.o: ../includes/lem_in.h
 CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.o: ../includes/libft.h
