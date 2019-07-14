@@ -298,6 +298,11 @@ CMakeFiles/School21_Lem_in.dir/src/bfs.c.o
  ../includes/lem_in.h
  ../includes/libft.h
  /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/bfs.c
+CMakeFiles/School21_Lem_in.dir/src/free.c.o
+ ../includes/ft_printf.h
+ ../includes/lem_in.h
+ ../includes/libft.h
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/free.c
 CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.o
  ../includes/ft_printf.h
  ../includes/lem_in.h

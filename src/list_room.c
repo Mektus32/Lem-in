@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   list_room.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/07/14 15:05:24 by ojessi            #+#    #+#             */
+/*   Updated: 2019/07/14 15:05:25 by ojessi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "lem_in.h"
 // создание элемента списка комнат, на вход получаем строку из консоли
 // и порядковый номер комнаты
@@ -25,7 +37,7 @@ t_room	*ft_create_ele(char *line, int number)
 	return (room);
 }
 //добавление комнаты в конец списка
-void ft_pushback(t_room **head, t_room *new)
+void ft_push_back_room(t_room **head, t_room *new)
 {
 	t_room *list;
 
@@ -42,7 +54,7 @@ void ft_pushback(t_room **head, t_room *new)
 		*head = new;
 }
 //добавление комнаты в начало
-void	ft_lstadd_r(t_room **alst, t_room *new)
+void	ft_list_add_room(t_room **alst, t_room *new)
 {
 	if (!alst)
 		return ;

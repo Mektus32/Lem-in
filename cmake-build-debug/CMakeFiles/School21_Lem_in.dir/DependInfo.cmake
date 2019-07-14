@@ -102,7 +102,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/ft_ultoa_base.c" "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles/School21_Lem_in.dir/libft/ft_ultoa_base.c.o"
   "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/libft/get_next_line.c" "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles/School21_Lem_in.dir/libft/get_next_line.c.o"
   "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/bfs.c" "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles/School21_Lem_in.dir/src/bfs.c.o"
-  "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_bfs_k.c" "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.o"
+  "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/free.c" "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles/School21_Lem_in.dir/src/free.c.o"
   "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_list_down.c" "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.o"
   "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_list_i.c" "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.o"
   "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/liba.c" "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles/School21_Lem_in.dir/src/liba.c.o"

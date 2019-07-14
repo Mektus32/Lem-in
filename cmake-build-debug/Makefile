@@ -2769,32 +2769,32 @@ src/bfs.c.s:
 	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/bfs.c.s
 .PHONY : src/bfs.c.s
 
-src/ft_bfs_k.o: src/ft_bfs_k.c.o
+src/free.o: src/free.c.o
 
-.PHONY : src/ft_bfs_k.o
+.PHONY : src/free.o
 
 # target to build an object file
-src/ft_bfs_k.c.o:
-	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.o
-.PHONY : src/ft_bfs_k.c.o
+src/free.c.o:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/free.c.o
+.PHONY : src/free.c.o
 
-src/ft_bfs_k.i: src/ft_bfs_k.c.i
+src/free.i: src/free.c.i
 
-.PHONY : src/ft_bfs_k.i
+.PHONY : src/free.i
 
 # target to preprocess a source file
-src/ft_bfs_k.c.i:
-	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.i
-.PHONY : src/ft_bfs_k.c.i
+src/free.c.i:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/free.c.i
+.PHONY : src/free.c.i
 
-src/ft_bfs_k.s: src/ft_bfs_k.c.s
+src/free.s: src/free.c.s
 
-.PHONY : src/ft_bfs_k.s
+.PHONY : src/free.s
 
 # target to generate assembly for a file
-src/ft_bfs_k.c.s:
-	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.s
-.PHONY : src/ft_bfs_k.c.s
+src/free.c.s:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/free.c.s
+.PHONY : src/free.c.s
 
 src/ft_list_down.o: src/ft_list_down.c.o
 
@@ -3261,9 +3261,9 @@ help:
 	@echo "... src/bfs.o"
 	@echo "... src/bfs.i"
 	@echo "... src/bfs.s"
-	@echo "... src/ft_bfs_k.o"
-	@echo "... src/ft_bfs_k.i"
-	@echo "... src/ft_bfs_k.s"
+	@echo "... src/free.o"
+	@echo "... src/free.i"
+	@echo "... src/free.s"
 	@echo "... src/ft_list_down.o"
 	@echo "... src/ft_list_down.i"
 	@echo "... src/ft_list_down.s"
