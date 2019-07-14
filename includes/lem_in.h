@@ -56,6 +56,7 @@ typedef struct		s_map
 	int				c_room;//кол - во комнат
 	int 			c_ant;//кол-во муравьев
 	t_list_down		*link;//лист - столбец для указания связей
+	t_list_down  	*link_new;//новые ссылки после удвление путей
 	t_room			*rooms;//лист всех комнат
 	t_list_i		*sh;//кротчайший путь
 	int				len_sh;//длина кратчайшего пути
@@ -81,7 +82,11 @@ t_list_i			*ft_bfs(t_map *map);
 //помогает найти обратный путь, записывает его в map->sh
 t_list_i			*ft_path(t_map *map, int *dist);
 
-
+	// (ft_bfs_k.c)
+t_list_down		*ft_bfs_k(t_map *map, int k);
+t_list_i 		*bfs_k_path(t_map *map, t_list_i *cant_go, t_list_down *path_down);
+t_list_i	*ft_path_k(t_map *map, int *dist);
+int find_room(t_list_i *room, int num);
 	// (liba.c)
 //ф, которые претендуют на звание стандартных 
 
@@ -102,7 +107,7 @@ t_list_down			*ft_lstnew_down(int content);
 void				ft_lstaddback_down(t_list_down **alst, t_list_down *new);
 t_list_down			*ft_lstnewpointer_down(t_list_i	*next);
 void				ft_lstaddbackright_down(t_list_down **alst, t_list_down *new);
-
+int len_down(t_list_down *path);
 
 	// (ft_list_i.c)
 //ф для работы с односвязным списком
@@ -112,6 +117,7 @@ int					ft_listlen_i(t_list_i	*head);
 
 void				ft_remove_list_if(t_list_i **head, int content);
 void				ft_add_list_if(t_list_i **head, int content, t_list_i *new);
-void				ft_add_list_if(t_list_i **head, int content, t_list_i *new);
 void				ft_list_revers(t_list_i **begin_list);
+
+
 #endif

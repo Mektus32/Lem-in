@@ -49,10 +49,11 @@ void	ft_remove_list_if(t_list_i **head, int content)
 	if (!*head)
 		return ;
 	list = *head;
-	if ((*head)->content == content)
+	if (list->content == content)
 	{
-		*head = list->next;
-		free(list);
+		list = list->next;
+		free(*head);
+		*head = (list);
 		return ;
 	}
 	tmp = list;

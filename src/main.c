@@ -63,7 +63,7 @@ int ft_check_path_n(t_list_down *two_path, t_map *map)
 
 	t1 = two_path->content;
 	//кол-во путей в новом стостоянии
-	path_new = two_path->next;
+	path_new = two_path->right;
 	//path_new->content; пока равен 0, надо перезаписать тужа время
 	c_path = len_down(path_new);
 	//
@@ -109,7 +109,7 @@ void pr_list(t_list_i *new)
 {
 	while (new)
 	{
-		printf("lll = %d",new->content);
+		printf("l_c = %d, ",new->content);
 		new = new->next;
 	}
 	printf("\n");
@@ -153,22 +153,23 @@ int main(int ac, char	**av)
 
 		//удалить связи, которые есть в кратсайшем пути, если время второго больше первого
 		sh = map->sh;
+
 		while(sh->next)
 		{
-			printf("====%d\n",sh->content);
+			printf("==== %d\n",sh->content);
 			//найдем указатель на список связей комныта в пути
-			link =  ft_list_i_head(sh->content, map->link)->next;
-			pr_list(link);
+			//link =  ft_list_i_head(sh->content, map->link)->next;
+			//pr_list(link);
 			//и теперь должны удалить указатель на следующую
-			printf("iz = %d = %d, v = %d\n",sh->content, link->content ,sh->next->content);
-			ft_remove_list_if(&link, sh->next->content);
+			//printf("iz = %d = %d, v = %d\n",sh->content, link->content ,sh->next->content);
+			ft_remove_list_if(&(ft_list_i_head(sh->content, map->link)->next), sh->next->content);
 			sh = sh->next;
 
 		}
 		//ft_pri(map);
 
-//		link =  ft_list_i_head(0, map->link)->next;
-//		pr_list(link);
+		link =  ft_list_i_head(0, map->link);
+		pr_list(link);
 	}
 	else// и все почистить бы
 	{

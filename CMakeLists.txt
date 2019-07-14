@@ -134,4 +134,4 @@ add_executable(School21_Lem_in
         src/liba.c
         src/list_room.c
         src/main.c
-        src/valid.c)
+        src/valid.c src/ft_bfs_k.c)
