@@ -69,6 +69,8 @@ void	ft_remove_list_if(t_list_i **head, int content)
 	}
 }
 
+
+
 /* Функция добавления элемента в список типа t_list_i при равенстве "content" */
 void	ft_add_list_if(t_list_i **head, int content, t_list_i *new)
 {

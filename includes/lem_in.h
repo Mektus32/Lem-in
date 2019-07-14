@@ -108,7 +108,7 @@ void				ft_lstaddbackright_down(t_list_down **alst, t_list_down *new);
 //ф для работы с односвязным списком
 t_list_i			*ft_lstnew_i(int content);
 void				ft_lstaddback_i(t_list_i **alst, t_list_i *new);
-int					ft_listlen_i(t_list_i	*head)
+int					ft_listlen_i(t_list_i	*head);
 
 void				ft_remove_list_if(t_list_i **head, int content);
 void				ft_add_list_if(t_list_i **head, int content, t_list_i *new);
