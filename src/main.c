@@ -37,7 +37,9 @@ void	ft_pri_cop(t_map *map)
 {
 	t_list_down	*tmp;
 	t_list_i	*right;
+	int 		i;
 
+	i = 0;
 	tmp = map->link_new;
 	while (tmp)
 	{
@@ -47,9 +49,13 @@ void	ft_pri_cop(t_map *map)
 		{
 			ft_printf("%d->", right->content);
 			right = right->next;
+//			i++;
+//			if (i == 15)
+//				return ;
 		}
 		ft_printf("\n");
 		tmp = tmp->down;
+
 	}
 }
 
@@ -135,16 +141,94 @@ void pr_list(t_list_i *new)
 	printf("\n");
 }
 
+void ft_new_room(t_map *map, t_list_i *sh)
+{
+	t_list_down *tek_down;
+	t_list_i *in;//c_room + номер комнаты
+	int 	tek_content;
+	t_list_i *tek_next;
+	t_list_i *sh_tmp;
+	//t_list_i *out;//оставим себя, тк добавляется просто новая связь
+
+	//исключая первую и последнюю вершину
+	sh = sh->next;
+	while (sh->next)
+	{
+		sh_tmp = sh;
+		//проверяем комнату в пути
+		//если оставшихся связей больше 1, удаляем существующую и заменяем 2умя новыми (in - out)
+		if (ft_list_len_i(ft_list_i_head(sh->content, map->link_new)->next) > 1)
+		{
+			//tek_i = ft_list_i_head(sh->content, map->link_new)->next;
+
+			// в 2 новые записываем существовавшие связи
+			//in = ft_list_new_i(sh->content + map->c_room);
+
+			// добавить ИН - комнату в лист линк нью
+			ft_list_add_back_down(&map->link_new, ft_list_new_down(sh->content + map->c_room));
+			// в конец исходного СС - нынешнего АУТ добавим ИН
+			ft_list_add_back_i(&(ft_list_i_head(sh->content, map->link_new)->next), ft_list_new_i(sh->content + map->c_room));
+			//должна удалить из АУТА в текущую комнату
+			ft_remove_list_if(&(ft_list_i_head(sh->content, map->link_new)->next) , sh->content);
+			//удалить из АУТА комннаты которые есть в пути
+
+
+			// в ИН комнату добавить все связи, которые были (входили в неё)
+			//для всех комнат, которые ссфлались на текущую - заменить на ИН
+			tek_down = map->link_new;
+			//ПОКА есть комнаты в СС
+			int i;
+			i = 0;
+			//удалить из пути
+			while (i <= map->c_room)
+			{
+				tek_content = tek_down->content;//комната из которой ищем ссылки
+				tek_next = tek_down->next;
+				while(tek_next)
+				{
+
+					//если была связь на комнату
+					if (tek_next->content == sh->content )//&&  tek_content <= map->c_room
+					{
+						// перезапишим старую связь в новую комнату
+						ft_list_add_back_i(&(ft_list_i_head(sh->content +  map->c_room, map->link_new)->next), ft_list_new_i(tek_content));
+						//и из комныты запишем на ИН
+						ft_list_add_back_i(&(ft_list_i_head(tek_content, map->link_new)->next),ft_list_new_i(sh->content + map->c_room));
+						//из комнаты удалим на АУТ
+						ft_remove_list_if(&(ft_list_i_head(tek_content, map->link_new)->next) , sh->content);
+						//
+						//ft_remove_list_if(&(ft_list_i_head(tek_content, map->link_new)->next) , sh->content + map->c_room);
+
+//						while (sh_tmp)
+//						{
+//							ft_remove_list_if(&(ft_list_i_head(sh->content, map->link_new)->next) , sh_tmp->content);
+//							sh_tmp = sh_tmp->next;
+//						}
+						//break ;
+					}
+					tek_next = tek_next->next;
+				}
+				tek_down = tek_down->down;
+
+				i++;
+			}
+		}
+			//printf("c = %d, len = %d...", sh->content, ft_list_len_i(ft_list_i_head(sh->content, map->link_new)->next));
+		sh = sh->next;
+	}
+}
+
 int main(int ac, char	**av)
 {
 	int		fd;
 	t_map	*map;
 	char	*str;
 	t_list_i *sh;
+	t_list_i *sh_1;//копия
 	t_list_i *link;//связи ля конкретной комнаты
 
 	//str = "/Users/ojessi/Desktop/Arina/test_3";//;ac;
-	str = "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/test_3";
+	str = "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/a_test";
 	//str = av[1];
 	map = (t_map*)malloc(sizeof(t_map));
 	map->rooms = NULL;
@@ -155,6 +239,7 @@ int main(int ac, char	**av)
 	if (make_map(fd, map) && check_room(map))
 	{
 		sh = ft_bfs(map);
+		sh_1 = ft_list_copy_i(sh);
 //		//вместо следующей надо использовать добавление при движении вправо!!
 //		ft_list_add_back_right_down(&map->two_path, ft_list_new_down(ft_list_len_i(sh)));
 //		ft_list_add_back_down(&map->two_path, ft_list_new_pointer_down(sh));
@@ -171,9 +256,12 @@ int main(int ac, char	**av)
 			ft_remove_list_if(&(ft_list_i_head(sh->content, map->link_new)->next), sh->next->content);
 			sh = sh->next;
 		}
+		//надо добавить в линк новых комнат (ин-аут)
+		//
+		ft_new_room(map, sh_1);
 		ft_printf("\n\n");
 		ft_pri_cop(map);
-		ft_bfs_k(map, 2);
+		//ft_bfs_k(map, 2);
 	}
 	else// и все почистить бы
 	{
@@ -182,3 +270,26 @@ int main(int ac, char	**av)
 	}
 	return (0);
 }
+//room[0]->1->
+//room[1]->0->2->
+//room[2]->1->10->
+//room[3]->2->5->11->10->
+//room[4]->0->5->11->
+//room[5]->6->11->10->
+//room[6]->5->7->
+//room[7]->3->6->
+//room[11]->3->5->
+//room[10]->2->5->
+
+
+//room[0]->1->
+//room[1]->0->2->
+//room[2]->1->10->
+//room[3]->2->5->11->10->
+//room[4]->0->5->11->
+//room[5]->6->11->10->
+//room[6]->5->7->
+//room[7]->6->10->
+//room[11]->3->5->
+//room[10]->2->5->7->
+//at-h6%
