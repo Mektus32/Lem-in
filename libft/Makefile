@@ -98,7 +98,8 @@ SRC	=	ft_atoi.c \
 		ft_list_remove_free_if.c \
 		ft_strtolower.c \
 		ft_max.c \
-		ft_min.c
+		ft_min.c \
+		ft_isdigonly.c
 
 OBJ = $(addprefix $(OBJDIR), $(SRC:.c=.o))
 

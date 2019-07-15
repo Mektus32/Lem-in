@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="lem"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/ojessi/Desktop/lem/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/lem/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/lem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/lem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/lem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/ojessi/Desktop/lem/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/lem/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/lem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/lem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/lem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/ojessi/Desktop/lem/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/lem/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/lem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/lem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/lem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lem">
+				<Option output="/Users/ojessi/Desktop/lem/cmake-build-debug/lem" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ojessi/Desktop/lem/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/ojessi/Desktop/lem/."/>
+					<Add directory="/Users/ojessi/Desktop/lem/ft_printf"/>
+					<Add directory="/Users/ojessi/Desktop/lem/ft_printf/includes"/>
+					<Add directory="/Users/ojessi/Desktop/lem/ft_printf/src"/>
+					<Add directory="/Users/ojessi/Desktop/lem/includes"/>
+					<Add directory="/Users/ojessi/Desktop/lem/libft"/>
+					<Add directory="/Users/ojessi/Desktop/lem/libft/includes"/>
+					<Add directory="/Users/ojessi/Desktop/lem/src"/>
+					<Add directory="/Users/ojessi/Desktop/lem/vizualizer"/>
+					<Add directory="/Users/ojessi/Desktop/lem/vizualizer/src"/>
+					<Add directory="/Users/ojessi/Desktop/lem/vizualizer/includes"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/lem/cmake-build-debug/Makefile&quot;  VERBOSE=1 lem"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/lem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/lem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/lem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lem/fast">
+				<Option output="/Users/ojessi/Desktop/lem/cmake-build-debug/lem" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ojessi/Desktop/lem/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/ojessi/Desktop/lem/."/>
+					<Add directory="/Users/ojessi/Desktop/lem/ft_printf"/>
+					<Add directory="/Users/ojessi/Desktop/lem/ft_printf/includes"/>
+					<Add directory="/Users/ojessi/Desktop/lem/ft_printf/src"/>
+					<Add directory="/Users/ojessi/Desktop/lem/includes"/>
+					<Add directory="/Users/ojessi/Desktop/lem/libft"/>
+					<Add directory="/Users/ojessi/Desktop/lem/libft/includes"/>
+					<Add directory="/Users/ojessi/Desktop/lem/src"/>
+					<Add directory="/Users/ojessi/Desktop/lem/vizualizer"/>
+					<Add directory="/Users/ojessi/Desktop/lem/vizualizer/src"/>
+					<Add directory="/Users/ojessi/Desktop/lem/vizualizer/includes"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/lem/cmake-build-debug/Makefile&quot;  VERBOSE=1 lem/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/lem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/lem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/lem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/ojessi/Desktop/lem/ft_printf/includes/ft_printf.h">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/ft_printf/src/check_args.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/ft_printf/src/choise_spec.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/ft_printf/src/ft_free_strncpy.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/ft_printf/src/ft_printf.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/ft_printf/src/init_arg.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/ft_printf/src/print_digit.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/ft_printf/src/print_double.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/ft_printf/src/print_non_printabl.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/ft_printf/src/print_spec.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/ft_printf/src/print_spec_etc.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/ft_printf/src/print_xox.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/ft_printf/src/settings.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/includes/ft_printf.h">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/includes/lem_in.h">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/includes/libft.h">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_abs.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_absf.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_atoi.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_bzero.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_count_words.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_free_join.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_free_strjoin_duo.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_free_strjoin_rev.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_frtwarr.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_ftoa.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_isalnum.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_isalpha.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_isascii.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_isdigit.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_isdigonly.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_isprint.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_isspace.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_itoa.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_list_add.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_list_foreach_if.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_list_push_back.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_list_remove_free_if.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_lstadd.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_lstaddback.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_lstdel.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_lstdelone.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_lstiter.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_lstmap.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_lstnew.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_ltoa.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_ltoa_base.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_max.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_memalloc.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_memccpy.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_memchr.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_memcmp.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_memcpy.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_memdel.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_memmove.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_memset.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_min.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_pow.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_putchar.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_putchar_fd.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_putendl.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_putendl_fd.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_putnbr.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_putnbr_fd.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_putstr.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_putstr_fd.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_setbackground_fd.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strcat.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strchr.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strclr.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strcmp.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strcpy.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strdel.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strdup.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strequ.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_striter.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_striteri.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strjoin.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strlcat.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strlcpy.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strlen.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strmap.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strmapi.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strncat.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strncmp.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strncpy.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strnequ.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strnew.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strnstr.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strrchr.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strrev.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strsplit.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strstr.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strsub.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strtolower.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_strtrim.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_tolower.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_toupper.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_truncf.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_ultoa.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/ft_ultoa_base.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/get_next_line.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/includes/get_next_line.h">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/libft/includes/libft.h">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/src/main.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/vizualizer/includes/libft.h">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/vizualizer/includes/vizualizer.h">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/vizualizer/src/dop_funct.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/vizualizer/src/draw.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/vizualizer/src/funct_rooms.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/vizualizer/src/funct_turn.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/vizualizer/src/keyhook.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/vizualizer/src/read.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/vizualizer/src/visu.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

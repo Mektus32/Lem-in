@@ -12,10 +12,10 @@
 
 .PHONY: all, clean, fclean, re, obj, red, grn, off
 
-NAME = lem-in
+NAME = Lem-in
 
 # src / obj files
-SRC = main.c
+SRC = main.c \
 
 OBJ = $(addprefix $(OBJDIR), $(SRC:.c=.o))
 
