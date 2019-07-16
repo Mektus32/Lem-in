@@ -170,8 +170,8 @@ void ft_new_room(t_map *map, t_list_i *sh)
 			ft_list_add_back_down(&map->link_new, ft_list_new_down(sh->content + map->c_room));
 			// в конец исходного СС - нынешнего АУТ добавим ИН
 			ft_list_add_back_i(&(ft_list_i_head(sh->content, map->link_new)->next), ft_list_new_i(sh->content + map->c_room));
-			//должна удалить из АУТА в след комнату на пути
-			ft_remove_list_if(&(ft_list_i_head(sh->content, map->link_new)->next) , sh->next->content);
+			//должна удалить из АУТА в пред комнату на пути
+			ft_remove_list_if(&(ft_list_i_head(sh->content, map->link_new)->next) , r_pred);
 			//вместо неё должна из нового ин идти в старую комнату(предыдущую) пути
 			//больше из ИН ничего не выходит
 			ft_list_add_back_i(&(ft_list_i_head(sh->content + map->c_room, map->link_new)->next), ft_list_new_i(r_pred));
@@ -190,14 +190,16 @@ void ft_new_room(t_map *map, t_list_i *sh)
 				while(tek_next)
 				{
 
-					//если была связь на комнату
-					if (tek_next->content == sh->content )//&&  tek_content <= map->c_room
+					//если была связь на комнату и комната не в пути && sh->next->content != 
+					if (tek_next->content == sh->content &&  tek_content != sh->next->content)//
 					{
 						// перезапишим старую связь в новую комнату
 						//ft_list_add_back_i(&(ft_list_i_head(sh->content +  map->c_room, map->link_new)->next), ft_list_new_i(tek_content));
 						//и из комныты запишем на ИН
 						ft_list_add_back_i(&(ft_list_i_head(tek_content, map->link_new)->next),ft_list_new_i(sh->content + map->c_room));
 						//из комнаты удалим на АУТ
+						//если она не следующая в пути
+						//if (tek_content != sh->next->content)
 						ft_remove_list_if(&(ft_list_i_head(tek_content, map->link_new)->next) , sh->content);
 						//
 						//ft_remove_list_if(&(ft_list_i_head(tek_content, map->link_new)->next) , sh->content + map->c_room);
