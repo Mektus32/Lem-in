@@ -148,7 +148,7 @@ void ft_new_room(t_map *map, t_list_i *sh)
 	int 	tek_content;
 	t_list_i *tek_next;
 	t_list_i *sh_tmp;
-	int r_pred;
+	int r_pred;//предыдущее значение пути
 
 	r_pred = sh->content;
 	//исключая первую и последнюю вершину
@@ -161,21 +161,15 @@ void ft_new_room(t_map *map, t_list_i *sh)
 		//если оставшихся связей больше 1, удаляем существующую и заменяем 2умя новыми (in - out)
 		if (ft_list_len_i(ft_list_i_head(sh->content, map->link_new)->next) > 1)
 		{
-			//tek_i = ft_list_i_head(sh->content, map->link_new)->next;
-
-			// в 2 новые записываем существовавшие связи
-			//in = ft_list_new_i(sh->content + map->c_room);
-
 			// добавить ИН - комнату в лист линк нью
 			ft_list_add_back_down(&map->link_new, ft_list_new_down(sh->content + map->c_room));
 			// в конец исходного СС - нынешнего АУТ добавим ИН
 			ft_list_add_back_i(&(ft_list_i_head(sh->content, map->link_new)->next), ft_list_new_i(sh->content + map->c_room));
-			//должна удалить из АУТА в пред комнату на пути
+			//должна удалить из АУТА в пред комнату на пути - эта связь теперь из ИН (след.действие)
 			ft_remove_list_if(&(ft_list_i_head(sh->content, map->link_new)->next) , r_pred);
 			//вместо неё должна из нового ин идти в старую комнату(предыдущую) пути
 			//больше из ИН ничего не выходит
 			ft_list_add_back_i(&(ft_list_i_head(sh->content + map->c_room, map->link_new)->next), ft_list_new_i(r_pred));
-
 			// (для всех комнат, которые ссфлались на текущую - заменить на ссылание в ИН)
 			// а ссылку на тукущую из комнаты убрать
 			tek_down = map->link_new;
@@ -189,32 +183,17 @@ void ft_new_room(t_map *map, t_list_i *sh)
 				tek_next = tek_down->next;//список в котором ищем ссылки на комнату из пути, что б поменять их на ин
 				while(tek_next)
 				{
-
-					//если была связь на комнату и комната не в пути && sh->next->content != 
+				//если была связь на комнату и комната не следующая в пути
 					if (tek_next->content == sh->content &&  tek_content != sh->next->content)//
 					{
-						// перезапишим старую связь в новую комнату
-						//ft_list_add_back_i(&(ft_list_i_head(sh->content +  map->c_room, map->link_new)->next), ft_list_new_i(tek_content));
-						//и из комныты запишем на ИН
+						// перезапишим связь из ссылки на АУТ в новую комнату - ссулку на ИН
 						ft_list_add_back_i(&(ft_list_i_head(tek_content, map->link_new)->next),ft_list_new_i(sh->content + map->c_room));
 						//из комнаты удалим на АУТ
-						//если она не следующая в пути
-						//if (tek_content != sh->next->content)
-						ft_remove_list_if(&(ft_list_i_head(tek_content, map->link_new)->next) , sh->content);
-						//
-						//ft_remove_list_if(&(ft_list_i_head(tek_content, map->link_new)->next) , sh->content + map->c_room);
-
-//						while (sh_tmp)
-//						{
-//							ft_remove_list_if(&(ft_list_i_head(sh->content, map->link_new)->next) , sh_tmp->content);
-//							sh_tmp = sh_tmp->next;
-//						}
-						//break ;
+						ft_remove_list_if(&(ft_list_i_head(tek_content, map->link_new)->next), sh->content);
 					}
 					tek_next = tek_next->next;
 				}
 				tek_down = tek_down->down;
-
 				i++;
 			}
 		}
@@ -268,6 +247,7 @@ int main(int ac, char	**av)
 		ft_printf("\n\n");
 		ft_pri_cop(map);
 		//ft_bfs_k(map, 2);
+		// НАДО ЕЩЕ ПРОЙТИ БФСОМ для нахождения нового пути
 	}
 	else// и все почистить бы
 	{
