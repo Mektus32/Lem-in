@@ -21,22 +21,14 @@ void	ft_room_color(t_room **list, int cont, t_ob *ob)
 	weight = 1;
 	height = 1;
 	if (cont == 0)
-	{
 		(*list)->image = mlx_xpm_file_to_image(ob->mlx_ptr, ROOMA, &weight,
 											   &height);
-		printf("all\n");
-	}
-	else if (cont == 1) {
+	else if (cont == 1)
 		(*list)->image = mlx_xpm_file_to_image(ob->mlx_ptr, ROOMS, &weight,
 											   &height);
-		printf("start\n");
-	}
 	else
-		{
 		(*list)->image = mlx_xpm_file_to_image(ob->mlx_ptr, ROOME, &weight,
 											   &height);
-		printf("end\n");
-		}
 }
 
 t_room	*ft_create_room(char *line, int cont, t_ob *ob)
@@ -53,11 +45,11 @@ t_room	*ft_create_room(char *line, int cont, t_ob *ob)
 		i++;
 	list->name = ft_strsub(line, 0, i);
 	i++;
-	list->x = (ft_atoi(line + i) * 40) % 2100;
+	list->x = ABS((ft_atoi(line + i) * 3)) % 2100 + 20;
 	while (ft_isdigit(line[i]))
 		i++;
 	i++;
-	list->y = (ft_atoi(line + i) * 40) % 1200;
+	list->y = ABS((ft_atoi(line + i) * 3)) % 1200 + 20;
 	list->cont = cont;
 	ft_room_color(&list, cont, ob);
 	free(line);

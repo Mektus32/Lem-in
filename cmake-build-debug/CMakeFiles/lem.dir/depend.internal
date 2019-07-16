@@ -297,15 +297,14 @@ CMakeFiles/lem.dir/libft/get_next_line.c.o
  ../libft/includes/libft.h
  /Users/ojessi/Desktop/lem/libft/get_next_line.c
 CMakeFiles/lem.dir/src/main.c.o
+ ../includes/ft_printf.h
+ ../includes/lem_in.h
+ ../includes/libft.h
  /Users/ojessi/Desktop/lem/src/main.c
 CMakeFiles/lem.dir/vizualizer/src/dop_funct.c.o
  ../vizualizer/includes/libft.h
  ../vizualizer/includes/vizualizer.h
  /Users/ojessi/Desktop/lem/vizualizer/src/dop_funct.c
-CMakeFiles/lem.dir/vizualizer/src/draw.c.o
- ../vizualizer/includes/libft.h
- ../vizualizer/includes/vizualizer.h
- /Users/ojessi/Desktop/lem/vizualizer/src/draw.c
 CMakeFiles/lem.dir/vizualizer/src/funct_rooms.c.o
  ../vizualizer/includes/libft.h
  ../vizualizer/includes/vizualizer.h
@@ -314,10 +313,10 @@ CMakeFiles/lem.dir/vizualizer/src/funct_turn.c.o
  ../vizualizer/includes/libft.h
  ../vizualizer/includes/vizualizer.h
  /Users/ojessi/Desktop/lem/vizualizer/src/funct_turn.c
-CMakeFiles/lem.dir/vizualizer/src/keyhook.c.o
+CMakeFiles/lem.dir/vizualizer/src/get_coor.c.o
  ../vizualizer/includes/libft.h
  ../vizualizer/includes/vizualizer.h
- /Users/ojessi/Desktop/lem/vizualizer/src/keyhook.c
+ /Users/ojessi/Desktop/lem/vizualizer/src/get_coor.c
 CMakeFiles/lem.dir/vizualizer/src/read.c.o
  ../vizualizer/includes/libft.h
  ../vizualizer/includes/vizualizer.h

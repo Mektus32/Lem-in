@@ -29,6 +29,11 @@ int 	keyboard(int key, void *param)
 	ob = param;
 	if (key == 53)
 		exit(0);
+	if (key == 124)
+	{
+		ob->cur = ft_move_turn_next(ob->cur, 1);
+		ft_draw_turn(ob);
+	}
 	return (0);
 }
 

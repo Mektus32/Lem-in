@@ -28,6 +28,11 @@ void	ft_next_read(t_ob *ob, char *line)
 	}
 	else if (line[0] == 'L')
 		ft_push_back_turn(&ob->turn, line);
+	else if (ft_isdigonly(line))
+	{
+		ob->ants = ft_atoi(line);
+		free(line);
+	}
 	else
 		free(line);
 }

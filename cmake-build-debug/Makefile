@@ -2850,6 +2850,33 @@ vizualizer/src/draw.c.s:
 	$(MAKE) -f CMakeFiles/lem.dir/build.make CMakeFiles/lem.dir/vizualizer/src/draw.c.s
 .PHONY : vizualizer/src/draw.c.s
 
+vizualizer/src/draw_line.o: vizualizer/src/draw_line.c.o
+
+.PHONY : vizualizer/src/draw_line.o
+
+# target to build an object file
+vizualizer/src/draw_line.c.o:
+	$(MAKE) -f CMakeFiles/lem.dir/build.make CMakeFiles/lem.dir/vizualizer/src/draw_line.c.o
+.PHONY : vizualizer/src/draw_line.c.o
+
+vizualizer/src/draw_line.i: vizualizer/src/draw_line.c.i
+
+.PHONY : vizualizer/src/draw_line.i
+
+# target to preprocess a source file
+vizualizer/src/draw_line.c.i:
+	$(MAKE) -f CMakeFiles/lem.dir/build.make CMakeFiles/lem.dir/vizualizer/src/draw_line.c.i
+.PHONY : vizualizer/src/draw_line.c.i
+
+vizualizer/src/draw_line.s: vizualizer/src/draw_line.c.s
+
+.PHONY : vizualizer/src/draw_line.s
+
+# target to generate assembly for a file
+vizualizer/src/draw_line.c.s:
+	$(MAKE) -f CMakeFiles/lem.dir/build.make CMakeFiles/lem.dir/vizualizer/src/draw_line.c.s
+.PHONY : vizualizer/src/draw_line.c.s
+
 vizualizer/src/funct_rooms.o: vizualizer/src/funct_rooms.c.o
 
 .PHONY : vizualizer/src/funct_rooms.o
@@ -2903,6 +2930,33 @@ vizualizer/src/funct_turn.s: vizualizer/src/funct_turn.c.s
 vizualizer/src/funct_turn.c.s:
 	$(MAKE) -f CMakeFiles/lem.dir/build.make CMakeFiles/lem.dir/vizualizer/src/funct_turn.c.s
 .PHONY : vizualizer/src/funct_turn.c.s
+
+vizualizer/src/get_coor.o: vizualizer/src/get_coor.c.o
+
+.PHONY : vizualizer/src/get_coor.o
+
+# target to build an object file
+vizualizer/src/get_coor.c.o:
+	$(MAKE) -f CMakeFiles/lem.dir/build.make CMakeFiles/lem.dir/vizualizer/src/get_coor.c.o
+.PHONY : vizualizer/src/get_coor.c.o
+
+vizualizer/src/get_coor.i: vizualizer/src/get_coor.c.i
+
+.PHONY : vizualizer/src/get_coor.i
+
+# target to preprocess a source file
+vizualizer/src/get_coor.c.i:
+	$(MAKE) -f CMakeFiles/lem.dir/build.make CMakeFiles/lem.dir/vizualizer/src/get_coor.c.i
+.PHONY : vizualizer/src/get_coor.c.i
+
+vizualizer/src/get_coor.s: vizualizer/src/get_coor.c.s
+
+.PHONY : vizualizer/src/get_coor.s
+
+# target to generate assembly for a file
+vizualizer/src/get_coor.c.s:
+	$(MAKE) -f CMakeFiles/lem.dir/build.make CMakeFiles/lem.dir/vizualizer/src/get_coor.c.s
+.PHONY : vizualizer/src/get_coor.c.s
 
 vizualizer/src/keyhook.o: vizualizer/src/keyhook.c.o
 
@@ -3297,12 +3351,18 @@ help:
 	@echo "... vizualizer/src/draw.o"
 	@echo "... vizualizer/src/draw.i"
 	@echo "... vizualizer/src/draw.s"
+	@echo "... vizualizer/src/draw_line.o"
+	@echo "... vizualizer/src/draw_line.i"
+	@echo "... vizualizer/src/draw_line.s"
 	@echo "... vizualizer/src/funct_rooms.o"
 	@echo "... vizualizer/src/funct_rooms.i"
 	@echo "... vizualizer/src/funct_rooms.s"
 	@echo "... vizualizer/src/funct_turn.o"
 	@echo "... vizualizer/src/funct_turn.i"
 	@echo "... vizualizer/src/funct_turn.s"
+	@echo "... vizualizer/src/get_coor.o"
+	@echo "... vizualizer/src/get_coor.i"
+	@echo "... vizualizer/src/get_coor.s"
 	@echo "... vizualizer/src/keyhook.o"
 	@echo "... vizualizer/src/keyhook.i"
 	@echo "... vizualizer/src/keyhook.s"

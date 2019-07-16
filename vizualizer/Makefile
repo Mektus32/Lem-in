@@ -17,6 +17,8 @@ SRC =   visu.c \
 		read.c \
 		draw.c \
 		keyhook.c \
+		get_coor.c \
+		draw_line.c \
 		dop_funct.c \
 		funct_turn.c \
 		funct_rooms.c \

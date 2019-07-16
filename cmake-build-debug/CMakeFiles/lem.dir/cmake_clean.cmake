@@ -105,6 +105,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/lem.dir/vizualizer/src/dop_funct.c.o"
   "CMakeFiles/lem.dir/vizualizer/src/draw.c.o"
   "CMakeFiles/lem.dir/vizualizer/src/keyhook.c.o"
+  "CMakeFiles/lem.dir/vizualizer/src/draw_line.c.o"
+  "CMakeFiles/lem.dir/vizualizer/src/get_coor.c.o"
   "lem.pdb"
   "lem"
 )

@@ -429,10 +429,16 @@
 		<Unit filename="/Users/ojessi/Desktop/lem/vizualizer/src/draw.c">
 			<Option target="lem"/>
 		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/vizualizer/src/draw_line.c">
+			<Option target="lem"/>
+		</Unit>
 		<Unit filename="/Users/ojessi/Desktop/lem/vizualizer/src/funct_rooms.c">
 			<Option target="lem"/>
 		</Unit>
 		<Unit filename="/Users/ojessi/Desktop/lem/vizualizer/src/funct_turn.c">
+			<Option target="lem"/>
+		</Unit>
+		<Unit filename="/Users/ojessi/Desktop/lem/vizualizer/src/get_coor.c">
 			<Option target="lem"/>
 		</Unit>
 		<Unit filename="/Users/ojessi/Desktop/lem/vizualizer/src/keyhook.c">

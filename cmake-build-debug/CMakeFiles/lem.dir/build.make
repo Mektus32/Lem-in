@@ -1435,6 +1435,32 @@ CMakeFiles/lem.dir/vizualizer/src/keyhook.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem.dir/vizualizer/src/keyhook.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ojessi/Desktop/lem/vizualizer/src/keyhook.c -o CMakeFiles/lem.dir/vizualizer/src/keyhook.c.s
 
+CMakeFiles/lem.dir/vizualizer/src/draw_line.c.o: CMakeFiles/lem.dir/flags.make
+CMakeFiles/lem.dir/vizualizer/src/draw_line.c.o: ../vizualizer/src/draw_line.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ojessi/Desktop/lem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/lem.dir/vizualizer/src/draw_line.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem.dir/vizualizer/src/draw_line.c.o   -c /Users/ojessi/Desktop/lem/vizualizer/src/draw_line.c
+
+CMakeFiles/lem.dir/vizualizer/src/draw_line.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem.dir/vizualizer/src/draw_line.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ojessi/Desktop/lem/vizualizer/src/draw_line.c > CMakeFiles/lem.dir/vizualizer/src/draw_line.c.i
+
+CMakeFiles/lem.dir/vizualizer/src/draw_line.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem.dir/vizualizer/src/draw_line.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ojessi/Desktop/lem/vizualizer/src/draw_line.c -o CMakeFiles/lem.dir/vizualizer/src/draw_line.c.s
+
+CMakeFiles/lem.dir/vizualizer/src/get_coor.c.o: CMakeFiles/lem.dir/flags.make
+CMakeFiles/lem.dir/vizualizer/src/get_coor.c.o: ../vizualizer/src/get_coor.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ojessi/Desktop/lem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/lem.dir/vizualizer/src/get_coor.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem.dir/vizualizer/src/get_coor.c.o   -c /Users/ojessi/Desktop/lem/vizualizer/src/get_coor.c
+
+CMakeFiles/lem.dir/vizualizer/src/get_coor.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem.dir/vizualizer/src/get_coor.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ojessi/Desktop/lem/vizualizer/src/get_coor.c > CMakeFiles/lem.dir/vizualizer/src/get_coor.c.i
+
+CMakeFiles/lem.dir/vizualizer/src/get_coor.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem.dir/vizualizer/src/get_coor.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ojessi/Desktop/lem/vizualizer/src/get_coor.c -o CMakeFiles/lem.dir/vizualizer/src/get_coor.c.s
+
 # Object files for target lem
 lem_OBJECTS = \
 "CMakeFiles/lem.dir/ft_printf/src/check_args.c.o" \
@@ -1542,7 +1568,9 @@ lem_OBJECTS = \
 "CMakeFiles/lem.dir/vizualizer/src/funct_turn.c.o" \
 "CMakeFiles/lem.dir/vizualizer/src/dop_funct.c.o" \
 "CMakeFiles/lem.dir/vizualizer/src/draw.c.o" \
-"CMakeFiles/lem.dir/vizualizer/src/keyhook.c.o"
+"CMakeFiles/lem.dir/vizualizer/src/keyhook.c.o" \
+"CMakeFiles/lem.dir/vizualizer/src/draw_line.c.o" \
+"CMakeFiles/lem.dir/vizualizer/src/get_coor.c.o"
 
 # External object files for target lem
 lem_EXTERNAL_OBJECTS =
@@ -1653,9 +1681,11 @@ lem: CMakeFiles/lem.dir/vizualizer/src/funct_turn.c.o
 lem: CMakeFiles/lem.dir/vizualizer/src/dop_funct.c.o
 lem: CMakeFiles/lem.dir/vizualizer/src/draw.c.o
 lem: CMakeFiles/lem.dir/vizualizer/src/keyhook.c.o
+lem: CMakeFiles/lem.dir/vizualizer/src/draw_line.c.o
+lem: CMakeFiles/lem.dir/vizualizer/src/get_coor.c.o
 lem: CMakeFiles/lem.dir/build.make
 lem: CMakeFiles/lem.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ojessi/Desktop/lem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Linking C executable lem"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ojessi/Desktop/lem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Linking C executable lem"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lem.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

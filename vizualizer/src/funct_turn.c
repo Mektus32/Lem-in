@@ -18,7 +18,7 @@ t_turn	*ft_create_turn(char *line, t_turn *prev)
 
 	if (!(list = (t_turn*)malloc(sizeof(t_turn))))
 		return (NULL);
-	list->str = line;
+	list->matr = ft_strsplit(line, ' ');
 	list->next = NULL;
 	list->prev = prev;
 	return (list);

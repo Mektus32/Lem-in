@@ -25,9 +25,16 @@
 # include <stdio.h>
 # include <fcntl.h>
 
+typedef	struct		s_coor
+{
+	int		x;
+	int 	y;
+	int 	f;
+}					t_coor;
+
 typedef	struct		s_turn
 {
-	char 			*str;
+	char 			**matr;
 	struct	s_turn	*next;
 	struct	s_turn	*prev;
 }					t_turn;
@@ -51,10 +58,7 @@ typedef struct		s_room
 
 typedef struct		s_image
 {
-	void	*img_ptr;
-	char 	*img_data;
 	void	*img_ant;
-	void	*img_room;
 	void	*img_background;
 	int 	bpp;
 	int 	size_line;
@@ -67,9 +71,12 @@ typedef struct		s_ob
 	int 	fd;
 	void	*mlx_ptr;
 	void	*win_ptr;
+	int 	ants;
+	t_coor	*arr;
 	t_room	*rooms;
 	t_image	*image;
 	t_turn	*turn;
+	t_turn	*cur;
 }					t_ob;
 
 int					ft_read(t_ob *ob);
@@ -88,5 +95,13 @@ char 				*ft_super_strrev(char *line);
 void				ft_draw(t_ob *ob);
 void				ft_draw_rooms(t_ob *ob);
 void				ft_room_color(t_room **list, int cont, t_ob *ob);
+void 				Brezenhem(int x0, int y0, int x1, int y1, t_ob *ob);//
+int					ft_get_y_room(t_room *room, char *name);
+int					ft_get_x_room(t_room *room, char *name);
+void				ft_draw_turn(t_ob *ob);
+int					ft_get_y_room_cont(t_room *room, int cont);
+int					ft_get_x_room_cont(t_room *room, int cont);
+void				ft_init_arr(t_ob *ob);
+int					ft_put_move_ant(int *x0, int *y0, int x1, int y1, int f);
 
 #endif

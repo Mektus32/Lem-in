@@ -22,5 +22,7 @@ int 	ft_isdigonly(char *str)
 	while (str[++i] != '\0')
 		if (!ft_isdigit(str[i]) && !ft_isspace(str[i]))
 			return (0);
-	return (1);
+	if (len > 0)
+		return (1);
+	return (0);
 }

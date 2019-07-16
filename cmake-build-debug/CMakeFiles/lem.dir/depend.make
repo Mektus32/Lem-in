@@ -296,15 +296,14 @@ CMakeFiles/lem.dir/libft/get_next_line.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/lem.dir/libft/get_next_line.c.o: ../libft/includes/libft.h
 CMakeFiles/lem.dir/libft/get_next_line.c.o: ../libft/get_next_line.c
 
+CMakeFiles/lem.dir/src/main.c.o: ../includes/ft_printf.h
+CMakeFiles/lem.dir/src/main.c.o: ../includes/lem_in.h
+CMakeFiles/lem.dir/src/main.c.o: ../includes/libft.h
 CMakeFiles/lem.dir/src/main.c.o: ../src/main.c
 
 CMakeFiles/lem.dir/vizualizer/src/dop_funct.c.o: ../vizualizer/includes/libft.h
 CMakeFiles/lem.dir/vizualizer/src/dop_funct.c.o: ../vizualizer/includes/vizualizer.h
 CMakeFiles/lem.dir/vizualizer/src/dop_funct.c.o: ../vizualizer/src/dop_funct.c
-
-CMakeFiles/lem.dir/vizualizer/src/draw.c.o: ../vizualizer/includes/libft.h
-CMakeFiles/lem.dir/vizualizer/src/draw.c.o: ../vizualizer/includes/vizualizer.h
-CMakeFiles/lem.dir/vizualizer/src/draw.c.o: ../vizualizer/src/draw.c
 
 CMakeFiles/lem.dir/vizualizer/src/funct_rooms.c.o: ../vizualizer/includes/libft.h
 CMakeFiles/lem.dir/vizualizer/src/funct_rooms.c.o: ../vizualizer/includes/vizualizer.h
@@ -314,9 +313,9 @@ CMakeFiles/lem.dir/vizualizer/src/funct_turn.c.o: ../vizualizer/includes/libft.h
 CMakeFiles/lem.dir/vizualizer/src/funct_turn.c.o: ../vizualizer/includes/vizualizer.h
 CMakeFiles/lem.dir/vizualizer/src/funct_turn.c.o: ../vizualizer/src/funct_turn.c
 
-CMakeFiles/lem.dir/vizualizer/src/keyhook.c.o: ../vizualizer/includes/libft.h
-CMakeFiles/lem.dir/vizualizer/src/keyhook.c.o: ../vizualizer/includes/vizualizer.h
-CMakeFiles/lem.dir/vizualizer/src/keyhook.c.o: ../vizualizer/src/keyhook.c
+CMakeFiles/lem.dir/vizualizer/src/get_coor.c.o: ../vizualizer/includes/libft.h
+CMakeFiles/lem.dir/vizualizer/src/get_coor.c.o: ../vizualizer/includes/vizualizer.h
+CMakeFiles/lem.dir/vizualizer/src/get_coor.c.o: ../vizualizer/src/get_coor.c
 
 CMakeFiles/lem.dir/vizualizer/src/read.c.o: ../vizualizer/includes/libft.h
 CMakeFiles/lem.dir/vizualizer/src/read.c.o: ../vizualizer/includes/vizualizer.h

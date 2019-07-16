@@ -130,4 +130,6 @@ add_executable(lem
         vizualizer/src/funct_turn.c
         vizualizer/src/dop_funct.c
         vizualizer/src/draw.c
-        vizualizer/src/keyhook.c)
+        vizualizer/src/keyhook.c
+        vizualizer/src/draw_line.c
+        vizualizer/src/get_coor.c)
