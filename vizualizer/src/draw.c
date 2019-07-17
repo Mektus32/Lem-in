@@ -86,7 +86,6 @@ void	ft_draw_all(t_ob *ob)
 	t_room	*room;
 	int 	i;
 
-
 	mlx_clear_window(ob->mlx_ptr, ob->win_ptr);
 	mlx_put_image_to_window(ob->mlx_ptr, ob->win_ptr, ob->image->img_background
 	,0 ,0);
@@ -107,24 +106,18 @@ void	ft_draw_all(t_ob *ob)
 							ob->arr[i].x - 25, ob->arr[i].y - 25);
 		//printf("ant{%d} [%d,%d]\n", i, ob->arr[i].x, ob->arr[i].y);
 	}
+//	sleep(1);
 }
 
 void	ft_draw_turn(t_ob *ob)
 {
 	int 	i;
 	t_turn	*cur;
-	int 	f;
-	int 	j;
+	int static	j;
 
-	f = 1;
 	cur = ob->cur;
-	j = 0;
-	while (f && cur)
-	{
-		f = 0;
-		i = 0;
-//		ft_draw_all(ob);
-		while (cur->matr[i])
+	i = 0;
+		while (cur && cur->matr[i])
 		{
 			if (ob->arr[ft_atoi(cur->matr[i] + 1) - 1].x !=
 			ft_get_x_room(ob->rooms, ft_strchr(cur->matr[i], '-') + 1) ||
@@ -132,10 +125,9 @@ void	ft_draw_turn(t_ob *ob)
 					ft_strchr(cur->matr[i], '-') + 1))
 			{
 				ob->arr[ft_atoi(cur->matr[i] + 1) - 1].f = ft_put_move_ant(&ob->arr[ft_atoi(cur->matr[i] + 1) - 1].x, &ob->arr[ft_atoi(cur->matr[i] + 1) - 1].y, ft_get_x_room(ob->rooms, ft_strchr(cur->matr[i], '-') + 1), ft_get_y_room(ob->rooms, ft_strchr(cur->matr[i], '-') + 1), ob->arr[ft_atoi(cur->matr[i] + 1) - 1].f);
-				f = 1;
 			}
-//			mlx_put_image_to_window(ob->mlx_ptr, ob->win_ptr, ob->image->img_ant,
-//									ob->arr[ft_atoi(cur->matr[i] + 1) - 1].x - 25, ob->arr[ft_atoi(cur->matr[i] + 1) - 1].y - 25);
+
+			//ft_draw_all(ob);
 			i++;
 		}
 		if (j == 5)
@@ -144,11 +136,6 @@ void	ft_draw_turn(t_ob *ob)
 			j = 0;
 		}
 		j++;
-//		usleep(1000);
-	}
-	i = -1;
-	while (++i < ob->ants)
-		ob->arr[i].f = 0;
 }
 
 void	ft_draw(t_ob *ob)
@@ -162,8 +149,11 @@ void	ft_draw(t_ob *ob)
 	&weidth, &height);
 	ob->image->img_ant = mlx_xpm_file_to_image(ob->mlx_ptr, ANT,
 			&weidth, &height);
+//	mlx_put_image_to_window(ob->mlx_ptr, ob->win_ptr, ob->image->img_background
+//	,0 ,0);
 	ob->cur = ob->turn;
 	ft_draw_turn(ob);
+	//printf("int draw ob->cur->[%p]\n", ob->cur);
 	key_hook(ob);
 	mlx_loop(ob->mlx_ptr);
 }

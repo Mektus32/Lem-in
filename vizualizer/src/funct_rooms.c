@@ -45,11 +45,11 @@ t_room	*ft_create_room(char *line, int cont, t_ob *ob)
 		i++;
 	list->name = ft_strsub(line, 0, i);
 	i++;
-	list->x = ABS((ft_atoi(line + i) * 3)) % 2100 + 20;
+	list->x = ABS((ft_atoi(line + i) * 3)) % 2100 + 150;
 	while (ft_isdigit(line[i]))
 		i++;
 	i++;
-	list->y = ABS((ft_atoi(line + i) * 3)) % 1200 + 20;
+	list->y = ABS((ft_atoi(line + i) * 3)) % 1200 + 150;
 	list->cont = cont;
 	ft_room_color(&list, cont, ob);
 	free(line);

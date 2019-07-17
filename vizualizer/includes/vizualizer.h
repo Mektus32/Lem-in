@@ -103,5 +103,6 @@ int					ft_get_y_room_cont(t_room *room, int cont);
 int					ft_get_x_room_cont(t_room *room, int cont);
 void				ft_init_arr(t_ob *ob);
 int					ft_put_move_ant(int *x0, int *y0, int x1, int y1, int f);
+void				ft_draw_menu(t_ob *ob);
 
 #endif
