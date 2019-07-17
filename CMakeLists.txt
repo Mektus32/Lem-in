@@ -136,4 +136,7 @@ add_executable(School21_Lem_in
         src/main.c
         src/valid.c
         src/free.c
-        src/ft_bfs_k.c)
+        src/ft_bfs_k.c
+        src/check_n_path.c
+        src/ft_print.c
+        src/suurballe.c)

@@ -2769,6 +2769,33 @@ src/bfs.c.s:
 	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/bfs.c.s
 .PHONY : src/bfs.c.s
 
+src/check_n_path.o: src/check_n_path.c.o
+
+.PHONY : src/check_n_path.o
+
+# target to build an object file
+src/check_n_path.c.o:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.o
+.PHONY : src/check_n_path.c.o
+
+src/check_n_path.i: src/check_n_path.c.i
+
+.PHONY : src/check_n_path.i
+
+# target to preprocess a source file
+src/check_n_path.c.i:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.i
+.PHONY : src/check_n_path.c.i
+
+src/check_n_path.s: src/check_n_path.c.s
+
+.PHONY : src/check_n_path.s
+
+# target to generate assembly for a file
+src/check_n_path.c.s:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.s
+.PHONY : src/check_n_path.c.s
+
 src/free.o: src/free.c.o
 
 .PHONY : src/free.o
@@ -2877,6 +2904,33 @@ src/ft_list_i.c.s:
 	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.s
 .PHONY : src/ft_list_i.c.s
 
+src/ft_print.o: src/ft_print.c.o
+
+.PHONY : src/ft_print.o
+
+# target to build an object file
+src/ft_print.c.o:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/ft_print.c.o
+.PHONY : src/ft_print.c.o
+
+src/ft_print.i: src/ft_print.c.i
+
+.PHONY : src/ft_print.i
+
+# target to preprocess a source file
+src/ft_print.c.i:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/ft_print.c.i
+.PHONY : src/ft_print.c.i
+
+src/ft_print.s: src/ft_print.c.s
+
+.PHONY : src/ft_print.s
+
+# target to generate assembly for a file
+src/ft_print.c.s:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/ft_print.c.s
+.PHONY : src/ft_print.c.s
+
 src/liba.o: src/liba.c.o
 
 .PHONY : src/liba.o
@@ -2957,6 +3011,33 @@ src/main.s: src/main.c.s
 src/main.c.s:
 	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/main.c.s
 .PHONY : src/main.c.s
+
+src/suurballe.o: src/suurballe.c.o
+
+.PHONY : src/suurballe.o
+
+# target to build an object file
+src/suurballe.c.o:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/suurballe.c.o
+.PHONY : src/suurballe.c.o
+
+src/suurballe.i: src/suurballe.c.i
+
+.PHONY : src/suurballe.i
+
+# target to preprocess a source file
+src/suurballe.c.i:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/suurballe.c.i
+.PHONY : src/suurballe.c.i
+
+src/suurballe.s: src/suurballe.c.s
+
+.PHONY : src/suurballe.s
+
+# target to generate assembly for a file
+src/suurballe.c.s:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/suurballe.c.s
+.PHONY : src/suurballe.c.s
 
 src/valid.o: src/valid.c.o
 
@@ -3288,6 +3369,9 @@ help:
 	@echo "... src/bfs.o"
 	@echo "... src/bfs.i"
 	@echo "... src/bfs.s"
+	@echo "... src/check_n_path.o"
+	@echo "... src/check_n_path.i"
+	@echo "... src/check_n_path.s"
 	@echo "... src/free.o"
 	@echo "... src/free.i"
 	@echo "... src/free.s"
@@ -3300,6 +3384,9 @@ help:
 	@echo "... src/ft_list_i.o"
 	@echo "... src/ft_list_i.i"
 	@echo "... src/ft_list_i.s"
+	@echo "... src/ft_print.o"
+	@echo "... src/ft_print.i"
+	@echo "... src/ft_print.s"
 	@echo "... src/liba.o"
 	@echo "... src/liba.i"
 	@echo "... src/liba.s"
@@ -3309,6 +3396,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/suurballe.o"
+	@echo "... src/suurballe.i"
+	@echo "... src/suurballe.s"
 	@echo "... src/valid.o"
 	@echo "... src/valid.i"
 	@echo "... src/valid.s"

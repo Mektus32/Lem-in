@@ -398,6 +398,9 @@
 		<Unit filename="/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/bfs.c">
 			<Option target="School21_Lem_in"/>
 		</Unit>
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/check_n_path.c">
+			<Option target="School21_Lem_in"/>
+		</Unit>
 		<Unit filename="/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/free.c">
 			<Option target="School21_Lem_in"/>
 		</Unit>
@@ -410,6 +413,9 @@
 		<Unit filename="/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_list_i.c">
 			<Option target="School21_Lem_in"/>
 		</Unit>
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_print.c">
+			<Option target="School21_Lem_in"/>
+		</Unit>
 		<Unit filename="/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/liba.c">
 			<Option target="School21_Lem_in"/>
 		</Unit>
@@ -417,6 +423,9 @@
 			<Option target="School21_Lem_in"/>
 		</Unit>
 		<Unit filename="/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/main.c">
+			<Option target="School21_Lem_in"/>
+		</Unit>
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/suurballe.c">
 			<Option target="School21_Lem_in"/>
 		</Unit>
 		<Unit filename="/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/valid.c">

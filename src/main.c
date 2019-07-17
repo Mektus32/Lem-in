@@ -18,6 +18,7 @@ int main(int ac, char	**av)
 	t_map	*map;
 	char	*str;
 	t_list_i *sh;
+	t_list_i *sh_2;
 	t_list_i *sh_1;//копия
 	t_list_i *link;//связи ля конкретной комнаты
 
@@ -41,6 +42,8 @@ int main(int ac, char	**av)
 //		ft_pri_sh(map);
 		ft_pri(map);
 		map->link_new = ft_copy_list_down(map->link);
+		map->link_copy = ft_copy_list_down(map->link);
+
 		ft_printf("\n\n");
 //		ft_pri_cop(map);
 
@@ -56,8 +59,24 @@ int main(int ac, char	**av)
 		ft_printf("\n\n");
 		ft_pri_cop(map);
 		// надо найти одинаковые ребра (разумеется, разнонаправленные и удалить их - в map->link_copy)
+		sh_2  = bfs_k_path(map, NULL, NULL);
+//printf("sh_1 = \n");
+//pr_list(sh_1);
+//
+//		printf("sh_2 = \n");
+//		pr_list(sh_2);
+//изменяет линк копи   map->link_new = ft_copy_list_down(map->link_copy);
 		ft_del_shared_path(map, sh_1, bfs_k_path(map, NULL, NULL));
-		//ft_bfs_k(map, 2);
+
+
+		printf("new_path  = \n");
+		ft_pri_cop(map);
+		t_list_down *path_2;
+
+		//Два путя не ищет в новом графе
+		//path_2 = ft_bfs_k(map, 2);
+		//ft_print_all_path(path_2 );
+
 		// НАДО ЕЩЕ ПРОЙТИ БФСОМ для нахождения нового пути
 	}
 	else// и все почистить бы

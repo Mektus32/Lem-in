@@ -1,5 +1,23 @@
 #include "lem_in.h"
 
+void ft_print_all_path(t_list_down *path_all)
+{
+	t_list_i *tmp_p;
+
+	path_all = path_all->down;
+	while (path_all)
+	{
+		printf("len_p = %d", path_all->content);
+		tmp_p = path_all->next;
+		while (tmp_p)
+		{
+			printf("p - %d", tmp_p->content);
+			tmp_p = tmp_p->next;
+		}
+		path_all = path_all->down;
+	}
+}
+
 void	ft_pri(t_map *map)
 {
 	t_list_down	*tmp;

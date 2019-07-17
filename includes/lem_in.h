@@ -57,6 +57,7 @@ typedef struct		s_map
 	int 			c_ant;//кол-во муравьев
 	t_list_down		*link;//лист - столбец для указания связей
 	t_list_down  	*link_new;//новые ссылки после удвление путей
+	t_list_down		*link_copy;
 	t_room			*rooms;//лист всех комнат
 	t_list_i		*sh;//кротчайший путь // вроде бы можно удалить?!(мы не используем)
 	int				len_sh;//длина кратчайшего пути
@@ -128,6 +129,27 @@ t_list_i			*ft_list_copy_i(t_list_i *head);
 void				ft_remove_list_if(t_list_i **head, int content);
 void				ft_add_list_if(t_list_i **head, int content, t_list_i *new);
 void				ft_list_revers(t_list_i **begin_list);
+	//check_n_path.c
+int	ft_max_count_path(t_map *map);
+int ft_check_path_n(t_list_down *two_path, t_map *map);
 
+//free.c
+void 	ft_free_list_i(t_list_i **head);
+void	ft_free_list_down(t_list_down **head);
+void	ft_free_first_in_two_path(t_list_down **first);
+void	ft_free_list_room(t_room **head);
+void	ft_free_map(t_map **map);
+// ft_print.c
 
+void ft_print_all_path(t_list_down *path_all);
+void	ft_pri(t_map *map);
+void	ft_pri_cop(t_map *map);
+void	ft_pri_sh(t_map *map);
+void pr_list(t_list_i *new);
+
+// suurballe.c
+void ft_new_room(t_map *map, t_list_i *sh);
+void ft_del_shared_path(t_map *map, t_list_i *sh, t_list_i *rev_2);
+
+//
 #endif

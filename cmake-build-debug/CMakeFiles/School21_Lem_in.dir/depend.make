@@ -298,6 +298,11 @@ CMakeFiles/School21_Lem_in.dir/src/bfs.c.o: ../includes/lem_in.h
 CMakeFiles/School21_Lem_in.dir/src/bfs.c.o: ../includes/libft.h
 CMakeFiles/School21_Lem_in.dir/src/bfs.c.o: ../src/bfs.c
 
+CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.o: ../includes/ft_printf.h
+CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.o: ../includes/lem_in.h
+CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.o: ../includes/libft.h
+CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.o: ../src/check_n_path.c
+
 CMakeFiles/School21_Lem_in.dir/src/free.c.o: ../includes/ft_printf.h
 CMakeFiles/School21_Lem_in.dir/src/free.c.o: ../includes/lem_in.h
 CMakeFiles/School21_Lem_in.dir/src/free.c.o: ../includes/libft.h
@@ -318,6 +323,11 @@ CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.o: ../includes/lem_in.h
 CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.o: ../includes/libft.h
 CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.o: ../src/ft_list_i.c
 
+CMakeFiles/School21_Lem_in.dir/src/ft_print.c.o: ../includes/ft_printf.h
+CMakeFiles/School21_Lem_in.dir/src/ft_print.c.o: ../includes/lem_in.h
+CMakeFiles/School21_Lem_in.dir/src/ft_print.c.o: ../includes/libft.h
+CMakeFiles/School21_Lem_in.dir/src/ft_print.c.o: ../src/ft_print.c
+
 CMakeFiles/School21_Lem_in.dir/src/liba.c.o: ../includes/ft_printf.h
 CMakeFiles/School21_Lem_in.dir/src/liba.c.o: ../includes/lem_in.h
 CMakeFiles/School21_Lem_in.dir/src/liba.c.o: ../includes/libft.h
@@ -332,6 +342,11 @@ CMakeFiles/School21_Lem_in.dir/src/main.c.o: ../includes/ft_printf.h
 CMakeFiles/School21_Lem_in.dir/src/main.c.o: ../includes/lem_in.h
 CMakeFiles/School21_Lem_in.dir/src/main.c.o: ../includes/libft.h
 CMakeFiles/School21_Lem_in.dir/src/main.c.o: ../src/main.c
+
+CMakeFiles/School21_Lem_in.dir/src/suurballe.c.o: ../includes/ft_printf.h
+CMakeFiles/School21_Lem_in.dir/src/suurballe.c.o: ../includes/lem_in.h
+CMakeFiles/School21_Lem_in.dir/src/suurballe.c.o: ../includes/libft.h
+CMakeFiles/School21_Lem_in.dir/src/suurballe.c.o: ../src/suurballe.c
 
 CMakeFiles/School21_Lem_in.dir/src/valid.c.o: ../includes/ft_printf.h
 CMakeFiles/School21_Lem_in.dir/src/valid.c.o: ../includes/lem_in.h

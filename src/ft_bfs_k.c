@@ -17,6 +17,8 @@ t_list_i	*ft_path_k(t_map *map, int *dist)
 	t_list_i *start;
 	t_list_i *path;
 	t_list_i *tmp_i;
+	int tmp_n;
+	int i;
 
 	//обратный путь начинается с последней комнаты
 	path = ft_list_new_i(map->c_room);
@@ -24,17 +26,39 @@ t_list_i	*ft_path_k(t_map *map, int *dist)
 	start = path;
 	while (path && path->content != 0)// пока не придем в комнату старта ищем путь
 	{
-		tmp_i = (ft_list_i_head(path->content, map->link_new))->next;
-		while (tmp_i)// ищем комнату с весом на 1 меньше, чем текущая
-		{//если предыдущих ячеек несколько нам не важно, тк путь все = будет кротчайший
-			if (dist[tmp_i->content] == (dist[path->content] - 1))
+		//найдем dest с весом dist[path->content] - 1) и если из него есть ссылка в насБ добавим путь
+		i = 0;
+		while ((map->c_room) * 2 > i)
+		{
+
+			if (dist[i] == (dist[path->content] - 1))
 			{
-				ft_list_add_back_i(&path, ft_list_new_i(tmp_i->content));
-				break ; // добавили одну комнату и успокоились - переходим к ней
+				//есть ли из i-ой комнаты ссылка на нас?
+				tmp_n = (ft_list_i_head(i, map->link_new))->content;
+				tmp_i = (ft_list_i_head(i, map->link_new))->next;
+
+				while (tmp_i)
+				{
+					if (tmp_i->content == path->content)
+					{
+						ft_list_add_back_i(&path, ft_list_new_i(tmp_n));
+						break ;
+					}
+					tmp_i = tmp_i->next;
+				}
 			}
-			tmp_i = tmp_i->next;
+			i++;
 		}
 		path = path->next;//переход к комнате, которую добавили
+	}
+
+	//ft_list_revers(&start);
+	path = start;
+	while(path)
+	{
+		if (path->content > map->c_room)
+			path->content -= map->c_room;
+		path = path->next;
 	}
 	ft_list_revers(&start);
 	free(dist);
@@ -52,13 +76,13 @@ t_list_i 		*bfs_k_path(t_map *map, t_list_i *cant_go, t_list_down *path_down)
 	int 		len;
 
 	len = 0;
-	dist = (int*)malloc(sizeof(int) * (map->c_room + 1));
+	dist = (int*)malloc(sizeof(int) * (2*map->c_room + 1));
 	i = 0;
-	while (i <= map->c_room)
-		dist[i++] = map->c_room + 1;
+	while (i <= 2*map->c_room)
+		dist[i++] = 2*map->c_room + 1;
 	i = 0;
 	//есди комната в списке занятых, дам ей вес -1, что б больше не ходить по ней
-	while (i < map->c_room)
+	while (i < 2*map->c_room)
 	{
 		if (find_room(cant_go, i) && i != 0)
 			dist[i] = -1;
@@ -82,7 +106,11 @@ t_list_i 		*bfs_k_path(t_map *map, t_list_i *cant_go, t_list_down *path_down)
 		{
 			//если в комнате, которую мы проверяем растояние от начала больше, чем от соседа которого мы можем дотянуться
 			if (dist[tmp_i->content] > dist[order->content] + 1 && (tmp_i->content != order->content))
+			{
 				dist[tmp_i->content] = dist[order->content] + 1;
+//				if (tmp_i->content > map->c_room)
+//					dist[tmp_i->content - map->c_room] = dist[order->content] + 1;
+			}
 			if (tmp_i->content == map->c_room)//нашли короткий путь, если пришли в последнюю комнату
 				len = dist[tmp_i->content]; // надо выходить из цикла while(order && !len)
 			//для каждого узла добавляем очередь соседей если нет в запрещеном списке
