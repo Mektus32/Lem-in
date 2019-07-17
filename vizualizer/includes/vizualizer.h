@@ -22,7 +22,6 @@
 
 # include "libft.h"
 # include "mlx.h"
-# include <stdio.h>
 # include <fcntl.h>
 
 typedef	struct		s_coor
@@ -60,18 +59,17 @@ typedef struct		s_image
 {
 	void	*img_ant;
 	void	*img_background;
-	int 	bpp;
-	int 	size_line;
-	int 	endian;
 }					t_image;
 
 typedef struct		s_ob
 {
-	int 	count_rooms;
+	int 	c_rooms;
 	int 	fd;
 	void	*mlx_ptr;
 	void	*win_ptr;
 	int 	ants;
+	int 	stop;
+	int 	speed;
 	t_coor	*arr;
 	t_room	*rooms;
 	t_image	*image;
@@ -95,14 +93,15 @@ char 				*ft_super_strrev(char *line);
 void				ft_draw(t_ob *ob);
 void				ft_draw_rooms(t_ob *ob);
 void				ft_room_color(t_room **list, int cont, t_ob *ob);
-void 				Brezenhem(int x0, int y0, int x1, int y1, t_ob *ob);//
+void				ft_draw_links(int arr[4], t_ob *ob);
 int					ft_get_y_room(t_room *room, char *name);
 int					ft_get_x_room(t_room *room, char *name);
 void				ft_draw_turn(t_ob *ob);
 int					ft_get_y_room_cont(t_room *room, int cont);
 int					ft_get_x_room_cont(t_room *room, int cont);
 void				ft_init_arr(t_ob *ob);
-int					ft_put_move_ant(int *x0, int *y0, int x1, int y1, int f);
+int					ft_put_move_ant(int *x0, int *y0, int arr[2], int f);
 void				ft_draw_menu(t_ob *ob);
+void				ft_draw_all(t_ob *ob);
 
 #endif

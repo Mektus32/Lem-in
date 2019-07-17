@@ -12,60 +12,30 @@
 
 #include "vizualizer.h"
 
-//void	ft_draw_turn(t_ob *ob)
-//{
-//	t_turn	*turn;
-////	int 	i;
-//
-//	turn = ob->turn;
-//	while (turn)
-//	{
-//		mlx_clear_window(ob->mlx_ptr, ob->win_ptr);
-//		mlx_put_image_to_window(ob->mlx_ptr, ob->win_ptr, ob->image->img_background,
-//								0, 0);
-//		ft_draw_rooms(ob);
-//		ft_put_move_ant(100, 100, 2100, 1000, ob);
-//		turn = turn->next;
-//	}
-//}
-//
-//void	ft_draw_rooms(t_ob *ob)
-//{
-//	t_room	*room;
-//	t_neib	*neib;
-//	int 	i;
-//
-//	room = ob->rooms;
-//	while (room)
-//	{
-//		neib = room->next;
-//		while (neib)
-//		{
-//			Brezenhem(room->x, room->y, ft_get_x_room(ob->rooms, neib->name),
-//					ft_get_y_room(ob->rooms, neib->name), ob);
-//			printf("{%s} [%d,%d] -> {%s} [%d,%d]\n", room->name, room->x, room->y, neib->name,
-//					ft_get_x_room(room, neib->name), ft_get_y_room(room, neib->name));
-//			neib = neib->next;
-//		}
-//		room = room->down;
-//	}
-//	i = 0;
-//	room = ob->rooms;
-//	while (room)
-//	{
-//		mlx_put_image_to_window(ob->mlx_ptr, ob->win_ptr, room->image,
-//								room->x - 25, room->y - 25);
-//		mlx_string_put(ob->mlx_ptr, ob->win_ptr, room->x - 5, room->y - 10, 0x000000, room->name);
-//		i++;
-//		printf("room[%s]-x[%d]-y[%d]\n", room->name, room->x, room->y);
-//		room = room->down;
-//	}
-//}
+void	ft_draw_menu(t_ob *ob)
+{
+	const char 	*ants = ft_free_strjoin_rev("Ants = ", ft_itoa(ob->ants));
+	const char 	*room = ft_free_strjoin_rev("Rooms = ", ft_itoa(ob->c_rooms));
+	const char 	*sp = ft_free_strjoin_rev("Speed = ", ft_itoa(ob->speed));
+
+	mlx_string_put(ob->mlx_ptr, ob->win_ptr, 10, 25, 0xD75728, "Menu");
+	mlx_string_put(ob->mlx_ptr, ob->win_ptr, 10, 50, 0xD75728, (char*)ants);
+	mlx_string_put(ob->mlx_ptr, ob->win_ptr, 10, 75, 0xD75728, (char*)room);
+	mlx_string_put(ob->mlx_ptr, ob->win_ptr, 10, 100, 0x2ECC30, (char*)sp);
+	mlx_string_put(ob->mlx_ptr, ob->win_ptr, 10, 125, 0xD75728,
+	"Space = Pause");
+	mlx_string_put(ob->mlx_ptr, ob->win_ptr, 10, 150, 0xD75728,
+	"Restart = R");
+	free((void*)ants);
+	free((void*)room);
+	free((void*)sp);
+}
 
 void	ft_draw_lines(t_ob *ob)
 {
 	t_room	*room;
 	t_neib	*neib;
+	int 	arr[4];
 
 	room = ob->rooms;
 	while (room)
@@ -73,8 +43,11 @@ void	ft_draw_lines(t_ob *ob)
 		neib = room->next;
 		while (neib)
 		{
-			Brezenhem(room->x, room->y, ft_get_x_room(ob->rooms, neib->name),
-					ft_get_y_room(ob->rooms, neib->name), ob);
+			arr[0] = room->x;
+			arr[1] = room->y;
+			arr[2] = ft_get_x_room(ob->rooms, neib->name);
+			arr[3] = ft_get_y_room(ob->rooms, neib->name);
+			ft_draw_links(arr, ob);
 			neib = neib->next;
 		}
 		room = room->down;
@@ -101,59 +74,43 @@ void	ft_draw_all(t_ob *ob)
 	}
 	i = -1;
 	while (++i < ob->ants)
-	{
 		mlx_put_image_to_window(ob->mlx_ptr, ob->win_ptr, ob->image->img_ant,
 							ob->arr[i].x - 25, ob->arr[i].y - 25);
-		//printf("ant{%d} [%d,%d]\n", i, ob->arr[i].x, ob->arr[i].y);
-	}
-//	sleep(1);
+	ft_draw_menu(ob);
 }
 
 void	ft_draw_turn(t_ob *ob)
 {
 	int 	i;
 	t_turn	*cur;
-	int static	j;
+	int static	j = -1;
+	int 		arr[2];
 
 	cur = ob->cur;
-	i = 0;
-		while (cur && cur->matr[i])
+	i = -1;
+	while (cur && cur->matr[++i])
+		if (ob->arr[ft_atoi(cur->matr[i] + 1) - 1].x !=
+		ft_get_x_room(ob->rooms, ft_strchr(cur->matr[i], '-') + 1) ||
+		ob->arr[ft_atoi(cur->matr[i] + 1) - 1].y != ft_get_y_room(ob->rooms,
+		ft_strchr(cur->matr[i], '-') + 1))
 		{
-			if (ob->arr[ft_atoi(cur->matr[i] + 1) - 1].x !=
-			ft_get_x_room(ob->rooms, ft_strchr(cur->matr[i], '-') + 1) ||
-			ob->arr[ft_atoi(cur->matr[i] + 1) - 1].y != ft_get_y_room(ob->rooms,
-					ft_strchr(cur->matr[i], '-') + 1))
-			{
-				ob->arr[ft_atoi(cur->matr[i] + 1) - 1].f = ft_put_move_ant(&ob->arr[ft_atoi(cur->matr[i] + 1) - 1].x, &ob->arr[ft_atoi(cur->matr[i] + 1) - 1].y, ft_get_x_room(ob->rooms, ft_strchr(cur->matr[i], '-') + 1), ft_get_y_room(ob->rooms, ft_strchr(cur->matr[i], '-') + 1), ob->arr[ft_atoi(cur->matr[i] + 1) - 1].f);
-			}
-
-			//ft_draw_all(ob);
-			i++;
+			arr[0] = ft_get_x_room(ob->rooms, ft_strchr(cur->matr[i], '-') + 1);
+			arr[1] = ft_get_y_room(ob->rooms, ft_strchr(cur->matr[i], '-') + 1);
+			ob->arr[ft_atoi(cur->matr[i] + 1) - 1].f =
+			ft_put_move_ant(&ob->arr[ft_atoi(cur->matr[i] + 1) - 1].x,
+			&ob->arr[ft_atoi(cur->matr[i] + 1) - 1].y, arr,
+			ob->arr[ft_atoi(cur->matr[i] + 1) - 1].f);
 		}
-		if (j == 5)
+			if (++j == ob->speed)
 		{
 			ft_draw_all(ob);
-			j = 0;
+			j = -1;
 		}
-		j++;
 }
 
 void	ft_draw(t_ob *ob)
 {
-	int 	weidth;
-	int 	height;
-
-	weidth = WIDTH;
-	height = HEIGHT;
-	ob->image->img_background = mlx_xpm_file_to_image(ob->mlx_ptr, BACKGROUND,
-	&weidth, &height);
-	ob->image->img_ant = mlx_xpm_file_to_image(ob->mlx_ptr, ANT,
-			&weidth, &height);
-//	mlx_put_image_to_window(ob->mlx_ptr, ob->win_ptr, ob->image->img_background
-//	,0 ,0);
-	ob->cur = ob->turn;
-	ft_draw_turn(ob);
-	//printf("int draw ob->cur->[%p]\n", ob->cur);
+	ft_draw_all(ob);
 	key_hook(ob);
 	mlx_loop(ob->mlx_ptr);
 }

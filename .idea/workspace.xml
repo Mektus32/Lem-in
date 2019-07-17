@@ -14,14 +14,12 @@
     <list default="true" id="11ed4ac2-07b7-421f-b64e-72e9e1aeb2f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vizualizer/includes/vizualizer.h" beforeDir="false" afterPath="$PROJECT_DIR$/vizualizer/includes/vizualizer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vizualizer/obj/draw.o" beforeDir="false" afterPath="$PROJECT_DIR$/vizualizer/obj/draw.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vizualizer/obj/funct_rooms.o" beforeDir="false" afterPath="$PROJECT_DIR$/vizualizer/obj/funct_rooms.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vizualizer/obj/funct_turn.o" beforeDir="false" afterPath="$PROJECT_DIR$/vizualizer/obj/funct_turn.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vizualizer/obj/keyhook.o" beforeDir="false" afterPath="$PROJECT_DIR$/vizualizer/obj/keyhook.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vizualizer/out_put" beforeDir="false" afterPath="$PROJECT_DIR$/vizualizer/out_put" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vizualizer/src/draw.c" beforeDir="false" afterPath="$PROJECT_DIR$/vizualizer/src/draw.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vizualizer/src/funct_rooms.c" beforeDir="false" afterPath="$PROJECT_DIR$/vizualizer/src/funct_rooms.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vizualizer/src/draw_line.c" beforeDir="false" afterPath="$PROJECT_DIR$/vizualizer/src/draw_line.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vizualizer/src/keyhook.c" beforeDir="false" afterPath="$PROJECT_DIR$/vizualizer/src/keyhook.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vizualizer/vizualizer" beforeDir="false" afterPath="$PROJECT_DIR$/vizualizer/vizualizer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vizualizer/src/read.c" beforeDir="false" afterPath="$PROJECT_DIR$/vizualizer/src/read.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vizualizer/src/visu.c" beforeDir="false" afterPath="$PROJECT_DIR$/vizualizer/src/visu.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,26 +41,26 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/vizualizer/src/visu.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="940">
-                      <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/vizualizer/src/draw.c">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="-55">
-                      <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
+                    <state relative-caret-position="585">
+                      <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
                     </state>
                   </provider>
                 </entry>
               </file>
               <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/vizualizer/src/draw.c">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="778">
+                      <caret line="101" column="12" selection-start-line="101" selection-start-column="12" selection-end-line="101" selection-end-column="12" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/vizualizer/src/keyhook.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="955">
-                      <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+                    <state relative-caret-position="615">
+                      <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
                     </state>
                   </provider>
                 </entry>
@@ -79,8 +77,8 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/vizualizer/src/draw_line.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="975">
-                      <caret line="65" column="19" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
+                    <state relative-caret-position="637">
+                      <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
                     </state>
                   </provider>
                 </entry>
@@ -88,8 +86,8 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/vizualizer/src/read.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="480">
-                      <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+                    <state relative-caret-position="315">
+                      <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
                     </state>
                   </provider>
                 </entry>
@@ -106,7 +104,7 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/vizualizer/src/funct_turn.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="855">
+                    <state relative-caret-position="740">
                       <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
                     </state>
                   </provider>
@@ -115,8 +113,8 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/vizualizer/src/funct_rooms.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="608">
-                      <caret line="51" column="55" selection-start-line="51" selection-start-column="55" selection-end-line="51" selection-end-column="55" />
+                    <state relative-caret-position="765">
+                      <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="49" />
                     </state>
                   </provider>
                 </entry>
@@ -128,8 +126,17 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/vizualizer/out_put">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="435">
-                      <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+                    <state relative-caret-position="645">
+                      <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/main.c">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="525">
+                      <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
                     </state>
                   </provider>
                 </entry>
@@ -143,8 +150,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/vizualizer/includes/vizualizer.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="491">
-                  <caret line="73" column="17" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
+                <state relative-caret-position="860">
+                  <caret line="102" column="73" selection-start-line="102" selection-start-column="73" selection-end-line="102" selection-end-column="73" />
+                  <folding>
+                    <element signature="e#1158#1177#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -176,20 +186,20 @@
         <option value="$PROJECT_DIR$/vizualizer/includes/libft.h" />
         <option value="$PROJECT_DIR$/vizualizer/src/funct.c" />
         <option value="$PROJECT_DIR$/vizualizer/src/dop_funct.c" />
-        <option value="$PROJECT_DIR$/src/main.c" />
-        <option value="$PROJECT_DIR$/vizualizer/out_put" />
         <option value="$PROJECT_DIR$/vizualizer/src/funct_turn.c" />
         <option value="$PROJECT_DIR$/vizualizer/Makefile" />
         <option value="$PROJECT_DIR$/vizualizer/src/get_coor.c" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/libft/ft_isdigonly.c" />
-        <option value="$PROJECT_DIR$/vizualizer/src/read.c" />
-        <option value="$PROJECT_DIR$/vizualizer/src/draw_line.c" />
         <option value="$PROJECT_DIR$/vizualizer/src/funct_rooms.c" />
-        <option value="$PROJECT_DIR$/vizualizer/includes/vizualizer.h" />
-        <option value="$PROJECT_DIR$/vizualizer/src/visu.c" />
-        <option value="$PROJECT_DIR$/vizualizer/src/draw.c" />
+        <option value="$PROJECT_DIR$/src/main.c" />
+        <option value="$PROJECT_DIR$/vizualizer/out_put" />
+        <option value="$PROJECT_DIR$/vizualizer/src/read.c" />
         <option value="$PROJECT_DIR$/vizualizer/src/keyhook.c" />
+        <option value="$PROJECT_DIR$/vizualizer/src/visu.c" />
+        <option value="$PROJECT_DIR$/vizualizer/includes/vizualizer.h" />
+        <option value="$PROJECT_DIR$/vizualizer/src/draw_line.c" />
+        <option value="$PROJECT_DIR$/vizualizer/src/draw.c" />
       </list>
     </option>
   </component>
@@ -305,12 +315,12 @@
       <workItem from="1563178059572" duration="22420000" />
       <workItem from="1563273805858" duration="19227000" />
       <workItem from="1563356552198" duration="591000" />
-      <workItem from="1563358410606" duration="7131000" />
+      <workItem from="1563358410606" duration="12351000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51105000" />
+    <option name="totallyTimeSpent" value="56325000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -328,9 +338,9 @@
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.15515961" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.20341499" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32962137" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.32962137" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -517,13 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libft/ft_isdigonly.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -535,27 +538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1710">
           <caret line="114" column="26" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vizualizer/src/get_coor.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vizualizer/src/draw_line.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" column="19" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vizualizer/src/dop_funct.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -573,59 +555,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vizualizer/out_put">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+        <state relative-caret-position="645">
+          <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vizualizer/src/get_coor.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vizualizer/src/read.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        <state relative-caret-position="315">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vizualizer/src/dop_funct.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vizualizer/src/funct_turn.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
+        <state relative-caret-position="740">
           <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vizualizer/includes/vizualizer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="73" column="17" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vizualizer/src/funct_rooms.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="51" column="55" selection-start-line="51" selection-start-column="55" selection-end-line="51" selection-end-column="55" />
+        <state relative-caret-position="765">
+          <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vizualizer/src/visu.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="940">
-          <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vizualizer/src/draw.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-55">
-          <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
+        <state relative-caret-position="585">
+          <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vizualizer/src/keyhook.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="955">
-          <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+        <state relative-caret-position="615">
+          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vizualizer/includes/vizualizer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="860">
+          <caret line="102" column="73" selection-start-line="102" selection-start-column="73" selection-end-line="102" selection-end-column="73" />
+          <folding>
+            <element signature="e#1158#1177#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vizualizer/src/draw_line.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vizualizer/src/draw.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="778">
+          <caret line="101" column="12" selection-start-line="101" selection-start-column="12" selection-end-line="101" selection-end-column="12" />
         </state>
       </provider>
     </entry>

@@ -12,34 +12,6 @@
 
 #include "vizualizer.h"
 
-void	ft_print_list(t_ob *ob)
-{
-	t_room	*room;
-	t_neib	*neib;
-//	t_turn	*turn;
-
-	room = ob->rooms;
-	while (room)
-	{
-		printf("room[%s, %d]->", room->name, room->cont);
-		neib = room->next;
-		while (neib)
-		{
-			printf("%s->", neib->name);
-			neib = neib->next;
-		}
-		printf("\n");
-		room = room->down;
-	}
-//	printf("\n\n");
-//	turn = ob->turn;
-//	while (turn)
-//	{
-//		printf("%s\n", turn->str);
-//		turn = turn->next;
-//	}
-}
-
 void	ft_init_arr(t_ob *ob)
 {
 	int 	i;
@@ -57,21 +29,32 @@ void	ft_init_arr(t_ob *ob)
 		ob->arr[i].y = y;
 		ob->arr[i].f = 0;
 	}
+	ob->speed = 5;
+	ob->cur = ob->turn;
+	ob->stop = 0;
+	ft_draw_all(ob);
 }
 
 int 	main(void)
 {
 	t_ob *ob;
+	int 	width;
+	int 	height;
 
+	width = WIDTH;
+	height = HEIGHT;
 	ob = ft_memalloc(sizeof(t_ob));
 	ob->fd = open("/Users/ojessi/Desktop/lem/vizualizer/out_put", O_RDONLY);
 	ob->mlx_ptr = mlx_init();
 	ob->win_ptr = mlx_new_window(ob->mlx_ptr, WIDTH, HEIGHT, "Best Lem-in");
 	ob->image = (t_image *) malloc(sizeof(t_image));
+	ob->image->img_background = mlx_xpm_file_to_image(ob->mlx_ptr, BACKGROUND,
+													  &width, &height);
+	ob->image->img_ant = mlx_xpm_file_to_image(ob->mlx_ptr, ANT,
+											   &width, &height);
 	if (ft_read(ob))
 		return (0);
 	ft_init_arr(ob);
-	ft_print_list(ob);
 	ft_draw(ob);
 	return (0);
 }

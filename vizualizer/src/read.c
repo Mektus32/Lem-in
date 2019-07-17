@@ -19,12 +19,14 @@ void	ft_next_read(t_ob *ob, char *line)
 		free(line);
 		get_next_line(ob->fd, &line);
 		ft_push_back_room(&ob->rooms, ft_create_room(line, 1, ob));
+		ob->c_rooms++;
 	}
 	else if (!ft_strcmp(line, "##end"))
 	{
 		free(line);
 		get_next_line(ob->fd, &line);
 		ft_push_back_room(&ob->rooms, ft_create_room(line, -1, ob));
+		ob->c_rooms++;
 	}
 	else if (line[0] == 'L')
 		ft_push_back_turn(&ob->turn, line);
@@ -49,7 +51,10 @@ int		ft_read(t_ob *ob)
 			return (1);
 		}
 		else if (line[0] != '#' && ft_count_words(line) == 3)
+		{
 			ft_push_back_room(&ob->rooms, ft_create_room(line, 0, ob));
+			ob->c_rooms++;
+		}
 		else if (line[0] != '#' && ft_count_words(line) == 1 &&
 		!ft_isdigonly(line))
 		{

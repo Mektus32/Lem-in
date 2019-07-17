@@ -11,78 +11,77 @@
 /* ************************************************************************** */
 
 #include "vizualizer.h"
+#define ABS(Value) (Value < 0 ? -(Value) : Value)
 
-void Brezenhem(int x0, int y0, int x1, int y1, t_ob *ob)
+void	ft_while_1(int arr[4], int fun[5], t_ob *ob)
 {
-	int A, B;
-	A = y1 - y0;
-	B = x0 - x1;
-	int signa, signb;
-	if (A < 0) signa = -1;
-	else signa = 1;
-	if (B < 0) signb = -1;
-	else signb = 1;
-	int f = 0;
-	mlx_pixel_put(ob->mlx_ptr, ob->win_ptr, x0, y0, 0xFFFFFF);
-	int x = x0, y = y0;
-	if ((abs(A) <= abs(B)))
+	while (fun[2] != arr[2] || fun[3] != arr[3])
 	{
-		do {
-			f += A*signa;
-			if (f > 0)
-			{
-				f -= B*signb;
-				y += signa;
-			}
-			x -= signb;
-			mlx_pixel_put(ob->mlx_ptr, ob->win_ptr, x, y, 0xFFFFFF);
-		} while (x != x1 || y != y1);
-	}
-	else
-	{
-		do {
-			f += B*signb;
-			if (f > 0) {
-				f -= A*signa;
-				x -= signb;
-			}
-			y += signa;
-			mlx_pixel_put(ob->mlx_ptr, ob->win_ptr, x, y, 0xFFFFFF);
-		} while (x != x1 || y != y1);
+		fun[4] += fun[0] * (fun[0] < 0 ? -1 : 1);
+		if (fun[4] > 0)
+		{
+			fun[4] -= fun[1] * (fun[1] < 0 ? -1 : 1);
+			fun[3] += fun[0] < 0 ? -1 : 1;
+		}
+		fun[2] -= fun[1] < 0 ? -1 : 1;
+		mlx_pixel_put(ob->mlx_ptr, ob->win_ptr, fun[2], fun[3], 0xFFFFFF);
 	}
 }
 
-int		ft_put_move_ant(int *x0, int *y0, int x1, int y1, int f)
+void	ft_while_2(int arr[4], int fun[5], t_ob *ob)
 {
-	int A, B, sign;
-	A = y1 - *y0;
-	B = *x0 - x1;
-	if (abs(A) > abs(B)) sign = 1;
-	else sign = -1;
-	int signa, signb;
-	if (A < 0) signa = -1;
-	else signa = 1;
-	if (B < 0) signb = -1;
-	else signb = 1;
-	if (sign == -1)
+	while (fun[2] != arr[2] || fun[3] != arr[3])
 	{
-		f += A*signa;
+		fun[4] += fun[1] * (fun[1] < 0 ? -1 : 1);
+		if (fun[4] > 0) {
+			fun[4] -= fun[0] * (fun[0] < 0 ? -1 : 1);
+			fun[2] -= fun[1] < 0 ? -1 : 1;
+		}
+		fun[3] += fun[0] < 0 ? -1 : 1;
+		mlx_pixel_put(ob->mlx_ptr, ob->win_ptr, fun[2], fun[3], 0xFFFFFF);
+	}
+}
+
+void ft_draw_links(int arr[4], t_ob *ob)
+{
+	int 	fun[5];
+
+	fun[0] = arr[3] - arr[1];
+	fun[1] = arr[0] - arr[2];
+	fun[2] = arr[0];
+	fun[3] = arr[1];
+	fun[4] = 0;
+	mlx_pixel_put(ob->mlx_ptr, ob->win_ptr, arr[0], arr[1], 0xFFFFFF);
+	if ((ABS(fun[0]) <= ABS(fun[1])))
+		ft_while_1(arr, fun, ob);
+	else
+		ft_while_2(arr, fun, ob);
+}
+
+int		ft_put_move_ant(int *x0, int *y0, int arr[2], int f)
+{
+	int A, B;
+	A = arr[1] - *y0;
+	B = *x0 - arr[0];
+	if (ABS(A) <= ABS(B))
+	{
+		f += A * (A < 0 ? -1 : 1);
 		if (f > 0)
 		{
-			f -= B*signb;
-			*y0 += signa;
+			f -= B * (B < 0 ? -1 : 1);
+			*y0 += A < 0 ? -1 : 1;
 		}
-		*x0 -= signb;
+		*x0 -= B < 0 ? -1 : 1;
 		return (f);
 	}
 	else
 	{
-		f += B*signb;
+		f += B* (B < 0 ? -1 : 1);
 		if (f > 0) {
-			f -= A*signa;
-			*x0 -= signb;
+			f -= A * (A < 0 ? -1 : 1);
+			*x0 -= B < 0 ? -1 : 1;
 		}
-		*y0 += signa;
+		*y0 += A < 0 ? -1 : 1;
 		return (f);
 	}
 }

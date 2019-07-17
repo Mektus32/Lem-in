@@ -24,30 +24,14 @@ int		expose(void *param)
 
 int 	keyboard(int key, t_ob *ob)
 {
-	int 	i;
-	t_turn	*cur;
-
-	cur = ob->cur;
 	if (key == 53)
 		exit(0);
-	if (key == 124)
-	{
-		i = 0;
-		while (cur && cur->matr[i])
-		{
-			if (ob->arr[ft_atoi(cur->matr[i] + 1) - 1].x !=
-				ft_get_x_room(ob->rooms, ft_strchr(cur->matr[i], '-') + 1) ||
-				ob->arr[ft_atoi(cur->matr[i] + 1) - 1].y != ft_get_y_room(ob->rooms,
-																		  ft_strchr(cur->matr[i], '-') + 1))
-				return (0);
-			i++;
-		}
-		ob->cur = ft_move_turn_next(ob->cur, 1);
-		ft_draw_turn(ob);
-		i = -1;
-		while (++i < ob->ants)
-			ob->arr[i].f = 0;
-	}
+	(key == 124 && ob->speed < 30 && ob->stop)? ob->speed++ : 0;
+	(key == 123 && ob->speed > 1 && ob->stop) ? ob->speed-- : 0;
+	if (key == 49)
+		ob->stop = (ob->stop + 1) % 2;
+	if (key == 15)
+		ft_init_arr(ob);
 	return (0);
 }
 
@@ -58,21 +42,19 @@ int 	draw(t_ob *ob)
 	int 	k;
 
 	cur = ob->cur;
-	i = 0;
+	i = -1;
 	k = 0;
-	while (cur && cur->matr[i])
-	{
+	while (cur && cur->matr[++i])
 		if (ob->arr[ft_atoi(cur->matr[i] + 1) - 1].x ==
-			ft_get_x_room(ob->rooms, ft_strchr(cur->matr[i], '-') + 1) &&
-			ob->arr[ft_atoi(cur->matr[i] + 1) - 1].y == ft_get_y_room(ob->rooms,
-																	  ft_strchr(cur->matr[i], '-') + 1))
+		ft_get_x_room(ob->rooms, ft_strchr(cur->matr[i], '-') + 1) &&
+		ob->arr[ft_atoi(cur->matr[i] + 1) - 1].y == ft_get_y_room(ob->rooms,
+		ft_strchr(cur->matr[i], '-') + 1))
 			k++;
 
-		i++;
-	}
 	if (k == i)
 		ob->cur = ft_move_turn_next(ob->cur, 1);
-	ft_draw_turn(ob);
+	if (ob->stop)
+		ft_draw_turn(ob);
 	return (0);
 }
 
