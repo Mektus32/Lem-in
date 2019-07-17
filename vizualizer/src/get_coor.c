@@ -12,7 +12,7 @@
 
 #include "vizualizer.h"
 
-int 	ft_get_x_room(t_room *room, char *name)
+int		ft_get_x_room(t_room *room, char *name)
 {
 	t_room	*list;
 
@@ -26,7 +26,7 @@ int 	ft_get_x_room(t_room *room, char *name)
 	return (-100);
 }
 
-int 	ft_get_y_room(t_room *room, char *name)
+int		ft_get_y_room(t_room *room, char *name)
 {
 	t_room *list;
 
@@ -40,7 +40,7 @@ int 	ft_get_y_room(t_room *room, char *name)
 	return (-100);
 }
 
-int 	ft_get_x_room_cont(t_room *room, int cont)
+int		ft_get_x_room_cont(t_room *room, int cont)
 {
 	t_room	*list;
 
@@ -54,7 +54,7 @@ int 	ft_get_x_room_cont(t_room *room, int cont)
 	return (-100);
 }
 
-int 	ft_get_y_room_cont(t_room *room, int cont)
+int		ft_get_y_room_cont(t_room *room, int cont)
 {
 	t_room	*list;
 

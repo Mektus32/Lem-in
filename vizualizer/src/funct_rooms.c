@@ -13,28 +13,10 @@
 #include "vizualizer.h"
 #define ABS(Value) (Value < 0 ? -(Value) : Value)
 
-void	ft_room_color(t_room **list, int cont, t_ob *ob)
-{
-	int 	weight;
-	int 	height;
-
-	weight = 1;
-	height = 1;
-	if (cont == 0)
-		(*list)->image = mlx_xpm_file_to_image(ob->mlx_ptr, ROOMA, &weight,
-											   &height);
-	else if (cont == 1)
-		(*list)->image = mlx_xpm_file_to_image(ob->mlx_ptr, ROOMS, &weight,
-											   &height);
-	else
-		(*list)->image = mlx_xpm_file_to_image(ob->mlx_ptr, ROOME, &weight,
-											   &height);
-}
-
 t_room	*ft_create_room(char *line, int cont, t_ob *ob)
 {
 	t_room	*list;
-	int 	i;
+	int		i;
 
 	if (!(list = (t_room*)malloc(sizeof(t_room))))
 		return (NULL);
@@ -119,7 +101,7 @@ t_neib	*ft_push_back_neib(t_neib **head, t_neib *new)
 
 t_room	*ft_add_neib(t_room **head, char *line)
 {
-	int 	i;
+	int		i;
 	t_room	*list;
 
 	if (!head || !*head)
@@ -132,12 +114,11 @@ t_room	*ft_add_neib(t_room **head, char *line)
 	{
 		if (!ft_strncmp(list->name, line, i))
 		{
-			ft_push_back_neib(&list->next, ft_create_neib(ft_strdup(line + i + 1)));
-			//free(line);
+			ft_push_back_neib(&list->next,
+					ft_create_neib(ft_strdup(line + i + 1)));
 			return (list);
 		}
 		list = list->down;
 	}
-	//free(line);
 	return (NULL);
 }

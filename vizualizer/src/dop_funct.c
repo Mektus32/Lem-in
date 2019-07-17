@@ -14,9 +14,9 @@
 
 char	*ft_super_strrev(char *line)
 {
-	int 	i;
+	int		i;
 	char	*part1;
-	char 	*part2;
+	char	*part2;
 
 	i = 0;
 	while (line[i] != '-')
@@ -26,4 +26,22 @@ char	*ft_super_strrev(char *line)
 	part2 = ft_strjoin(line + i, "-");
 	free(line);
 	return (ft_free_strjoin_duo(part2, part1));
+}
+
+void	ft_room_color(t_room **list, int cont, t_ob *ob)
+{
+	int		weight;
+	int		height;
+
+	weight = 1;
+	height = 1;
+	if (cont == 0)
+		(*list)->image = mlx_xpm_file_to_image(ob->mlx_ptr, ROOMA, &weight,
+				&height);
+	else if (cont == 1)
+		(*list)->image = mlx_xpm_file_to_image(ob->mlx_ptr, ROOMS, &weight,
+				&height);
+	else
+		(*list)->image = mlx_xpm_file_to_image(ob->mlx_ptr, ROOME, &weight,
+				&height);
 }

@@ -14,13 +14,14 @@
 
 void	ft_draw_menu(t_ob *ob)
 {
-	const char 	*ants = ft_free_strjoin_rev("Ants = ", ft_itoa(ob->ants));
-	const char 	*room = ft_free_strjoin_rev("Rooms = ", ft_itoa(ob->c_rooms));
-	const char 	*sp = ft_free_strjoin_rev("Speed = ", ft_itoa(ob->speed));
+	const	char	*ants = ft_free_strjoin_rev("Ants = ", ft_itoa(ob->ants));
+	char			*room;
+	const	char	*sp = ft_free_strjoin_rev("Speed = ", ft_itoa(ob->speed));
 
+	room = ft_free_strjoin_rev("Rooms = ", ft_itoa(ob->c_rooms));
 	mlx_string_put(ob->mlx_ptr, ob->win_ptr, 10, 25, 0xD75728, "Menu");
 	mlx_string_put(ob->mlx_ptr, ob->win_ptr, 10, 50, 0xD75728, (char*)ants);
-	mlx_string_put(ob->mlx_ptr, ob->win_ptr, 10, 75, 0xD75728, (char*)room);
+	mlx_string_put(ob->mlx_ptr, ob->win_ptr, 10, 75, 0xD75728, room);
 	mlx_string_put(ob->mlx_ptr, ob->win_ptr, 10, 100, 0x2ECC30, (char*)sp);
 	mlx_string_put(ob->mlx_ptr, ob->win_ptr, 10, 125, 0xD75728,
 	"Space = Pause");
@@ -35,7 +36,7 @@ void	ft_draw_lines(t_ob *ob)
 {
 	t_room	*room;
 	t_neib	*neib;
-	int 	arr[4];
+	int		arr[4];
 
 	room = ob->rooms;
 	while (room)
@@ -57,19 +58,19 @@ void	ft_draw_lines(t_ob *ob)
 void	ft_draw_all(t_ob *ob)
 {
 	t_room	*room;
-	int 	i;
+	int		i;
 
 	mlx_clear_window(ob->mlx_ptr, ob->win_ptr);
-	mlx_put_image_to_window(ob->mlx_ptr, ob->win_ptr, ob->image->img_background
-	,0 ,0);
+	mlx_put_image_to_window(ob->mlx_ptr, ob->win_ptr, ob->image->img_background,
+			0, 0);
 	ft_draw_lines(ob);
 	room = ob->rooms;
 	while (room)
 	{
 		mlx_put_image_to_window(ob->mlx_ptr, ob->win_ptr, room->image,
 				room->x - 25, room->y - 25);
-		mlx_string_put(ob->mlx_ptr, ob->win_ptr, room->x - 5, room->y - 10, 0x000000,
-				room->name);
+		mlx_string_put(ob->mlx_ptr, ob->win_ptr, room->x - 5, room->y - 10,
+				0x000000, room->name);
 		room = room->down;
 	}
 	i = -1;
@@ -81,10 +82,10 @@ void	ft_draw_all(t_ob *ob)
 
 void	ft_draw_turn(t_ob *ob)
 {
-	int 	i;
-	t_turn	*cur;
-	int static	j = -1;
-	int 		arr[2];
+	int				i;
+	t_turn			*cur;
+	static int		j = -1;
+	int				arr[2];
 
 	cur = ob->cur;
 	i = -1;
@@ -101,11 +102,11 @@ void	ft_draw_turn(t_ob *ob)
 			&ob->arr[ft_atoi(cur->matr[i] + 1) - 1].y, arr,
 			ob->arr[ft_atoi(cur->matr[i] + 1) - 1].f);
 		}
-			if (++j == ob->speed)
-		{
-			ft_draw_all(ob);
-			j = -1;
-		}
+	if (++j == ob->speed)
+	{
+		ft_draw_all(ob);
+		j = -1;
+	}
 }
 
 void	ft_draw(t_ob *ob)

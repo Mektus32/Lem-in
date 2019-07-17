@@ -14,9 +14,9 @@
 
 void	ft_init_arr(t_ob *ob)
 {
-	int 	i;
-	int 	x;
-	int 	y;
+	int		i;
+	int		x;
+	int		y;
 
 	if (!(ob->arr = ft_memalloc(sizeof(t_coor) * ob->ants)))
 		return ;
@@ -35,23 +35,23 @@ void	ft_init_arr(t_ob *ob)
 	ft_draw_all(ob);
 }
 
-int 	main(void)
+int		main(void)
 {
-	t_ob *ob;
-	int 	width;
-	int 	height;
+	t_ob	*ob;
+	int		width;
+	int		height;
 
 	width = WIDTH;
 	height = HEIGHT;
 	ob = ft_memalloc(sizeof(t_ob));
-	ob->fd = open("/Users/ojessi/Desktop/lem/vizualizer/out_put", O_RDONLY);
+	ob->fd = 0;
 	ob->mlx_ptr = mlx_init();
 	ob->win_ptr = mlx_new_window(ob->mlx_ptr, WIDTH, HEIGHT, "Best Lem-in");
-	ob->image = (t_image *) malloc(sizeof(t_image));
+	ob->image = (t_image*)malloc(sizeof(t_image));
 	ob->image->img_background = mlx_xpm_file_to_image(ob->mlx_ptr, BACKGROUND,
-													  &width, &height);
+			&width, &height);
 	ob->image->img_ant = mlx_xpm_file_to_image(ob->mlx_ptr, ANT,
-											   &width, &height);
+			&width, &height);
 	if (ft_read(ob))
 		return (0);
 	ft_init_arr(ob);

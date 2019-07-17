@@ -22,11 +22,11 @@ int		expose(void *param)
 	return (0);
 }
 
-int 	keyboard(int key, t_ob *ob)
+int		keyboard(int key, t_ob *ob)
 {
 	if (key == 53)
 		exit(0);
-	(key == 124 && ob->speed < 30 && ob->stop)? ob->speed++ : 0;
+	(key == 124 && ob->speed < 30 && ob->stop) ? ob->speed++ : 0;
 	(key == 123 && ob->speed > 1 && ob->stop) ? ob->speed-- : 0;
 	if (key == 49)
 		ob->stop = (ob->stop + 1) % 2;
@@ -35,11 +35,11 @@ int 	keyboard(int key, t_ob *ob)
 	return (0);
 }
 
-int 	draw(t_ob *ob)
+int		draw(t_ob *ob)
 {
 	t_turn	*cur;
-	int 	i;
-	int 	k;
+	int		i;
+	int		k;
 
 	cur = ob->cur;
 	i = -1;
@@ -50,7 +50,6 @@ int 	draw(t_ob *ob)
 		ob->arr[ft_atoi(cur->matr[i] + 1) - 1].y == ft_get_y_room(ob->rooms,
 		ft_strchr(cur->matr[i], '-') + 1))
 			k++;
-
 	if (k == i)
 		ob->cur = ft_move_turn_next(ob->cur, 1);
 	if (ob->stop)

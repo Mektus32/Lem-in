@@ -41,10 +41,9 @@ void	ft_next_read(t_ob *ob, char *line)
 
 int		ft_read(t_ob *ob)
 {
-	char 	*line;
+	char	*line;
 
 	while (get_next_line(ob->fd, &line) > 0)
-	{
 		if (ft_strstr(line, "ERROR"))
 		{
 			free(line);
@@ -65,6 +64,5 @@ int		ft_read(t_ob *ob)
 		}
 		else
 			ft_next_read(ob, line);
-	}
 	return (0);
 }

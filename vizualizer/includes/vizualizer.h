@@ -27,20 +27,20 @@
 typedef	struct		s_coor
 {
 	int		x;
-	int 	y;
-	int 	f;
+	int		y;
+	int		f;
 }					t_coor;
 
 typedef	struct		s_turn
 {
-	char 			**matr;
-	struct	s_turn	*next;
-	struct	s_turn	*prev;
+	char			**matr;
+	struct s_turn	*next;
+	struct s_turn	*prev;
 }					t_turn;
 
 typedef	struct		s_neib
 {
-	char 	*name;
+	char			*name;
 	struct s_neib	*next;
 }					t_neib;
 
@@ -48,9 +48,9 @@ typedef struct		s_room
 {
 	void			*image;
 	char			*name;
-	int 			cont;
-	int 			x;
-	int 			y;
+	int				cont;
+	int				x;
+	int				y;
 	struct s_room	*down;
 	t_neib			*next;
 }					t_room;
@@ -63,13 +63,13 @@ typedef struct		s_image
 
 typedef struct		s_ob
 {
-	int 	c_rooms;
-	int 	fd;
+	int		c_rooms;
+	int		fd;
 	void	*mlx_ptr;
 	void	*win_ptr;
-	int 	ants;
-	int 	stop;
-	int 	speed;
+	int		ants;
+	int		stop;
+	int		speed;
 	t_coor	*arr;
 	t_room	*rooms;
 	t_image	*image;
@@ -89,7 +89,7 @@ t_turn				*ft_create_turn(char *line, t_turn *prev);
 t_turn				*ft_push_back_turn(t_turn **head, char *line);
 t_turn				*ft_move_turn_next(t_turn *cur, int	step);
 t_turn				*ft_move_turn_prev(t_turn *cur, int step);
-char 				*ft_super_strrev(char *line);
+char				*ft_super_strrev(char *line);
 void				ft_draw(t_ob *ob);
 void				ft_draw_rooms(t_ob *ob);
 void				ft_room_color(t_room **list, int cont, t_ob *ob);

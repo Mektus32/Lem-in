@@ -50,9 +50,9 @@ t_turn	*ft_push_back_turn(t_turn **head, char *line)
 	return (list);
 }
 
-t_turn	*ft_move_turn_next(t_turn *cur, int	step)
+t_turn	*ft_move_turn_next(t_turn *cur, int step)
 {
-	int 	i;
+	int		i;
 
 	i = -1;
 	while (cur->next && ++i < step)
@@ -62,7 +62,7 @@ t_turn	*ft_move_turn_next(t_turn *cur, int	step)
 
 t_turn	*ft_move_turn_prev(t_turn *cur, int step)
 {
-	int 	i;
+	int		i;
 
 	i = -1;
 	while (cur->prev && ++i < step)

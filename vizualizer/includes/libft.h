@@ -113,6 +113,6 @@ void				ft_list_remove_free_if(t_list **begin_list, int elem);
 int					get_next_line(int fd, char **line);
 int					ft_max(int a, int b);
 int					ft_min(int a, int b);
-int 				ft_isdigonly(char *str);
+int					ft_isdigonly(char *str);
 
 #endif
