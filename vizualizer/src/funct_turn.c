@@ -21,6 +21,7 @@ t_turn	*ft_create_turn(char *line, t_turn *prev)
 	list->matr = ft_strsplit(line, ' ');
 	list->next = NULL;
 	list->prev = prev;
+	free(line);
 	return (list);
 }
 

@@ -6,7 +6,7 @@
 /*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 17:32:12 by ojessi            #+#    #+#             */
-/*   Updated: 2019/07/16 13:53:30 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/07/17 18:55:43 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	ft_init_arr(t_ob *ob)
 	int		x;
 	int		y;
 
+	ob->arr ? free(ob->arr) : 0;
 	if (!(ob->arr = ft_memalloc(sizeof(t_coor) * ob->ants)))
 		return ;
 	y = ft_get_y_room_cont(ob->rooms, 1);
