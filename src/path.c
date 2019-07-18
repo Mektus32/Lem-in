@@ -69,14 +69,14 @@ t_list_i *one_big_path(t_map *map)
 	big_path = ft_list_new_i(tek_down->next->content);
 	while(tek_down)
 	{
-		tek_path = tek_down->next->next;
-		while (tek_path->next)
+		tek_path = tek_down->next;
+		while (tek_path)
 		{
 			ft_list_add_back_i(&big_path, ft_list_new_i(tek_path->content));
 			tek_path = tek_path->next;
 		}
 		tek_down = tek_down->down;
 	}
-	ft_list_add_back_i(&big_path, ft_list_new_i(tek_path->content));
+	//ft_list_add_back_i(&big_path, ft_list_new_i(tek_path->content));
 	return (big_path);
 }
