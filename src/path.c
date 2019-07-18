@@ -1,3 +1,39 @@
+void main_path(t_map *map)
+{
+	int	k; //кол-во путей
+	t_list_i *sh;
+	t_list_i *sh_2;
+	int win;
+
+	
+	win = 1;
+	sh = ft_bfs(map);
+	k = 1;
+	//при первом проходе длина время первого стостояния
+	map->two_path = ft_list_new_down(map->c_ant + ft_list_len_i(sh));
+	ft_list_add_back_down(&map->two_path,ft_list_new_down(ft_list_len_i(sh)));
+	ft_list_add_back_down(&map->two_path, ft_list_new_pointer_down(sh));
+	// пытаемся найти новый путь, если получаем выигрыш - продолжаем
+	while (win)
+	{
+		k++;
+		del_link_path(map);
+		// можно ж перезаписать большой путь сюда
+		sh = one_big_path(map);
+		ft_new_room(map);
+		sh_2  = bfs_k_path(map, NULL, NULL);
+		//ГДЕТО РЕВЕРСНУТЬ ПУТЬ НАДО
+		ft_del_shared_path(map, sh, sh_2);
+		map->two_path->right = ft_bfs_k(map, k);
+		if (win = ft_check_path_n(map))
+		{
+			map->two_path->right->content = win;
+			//удаляем предыдущее состояние
+			ft_free_first_in_two_path(&map->two_path);
+		}
+	}
+}
+
 //удалить нужно все ссылки состоянниея 1-ого, всех путей которые есть
 void	del_link_path(t_map *map)
 {
