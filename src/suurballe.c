@@ -65,31 +65,28 @@ void ft_new_room(t_map *map, t_list_i *sh)
 //найдем общие ребра и удалим из link_copy
 void ft_del_shared_path(t_map *map, t_list_i *sh, t_list_i *rev_2)
 {
+	t_list_i	*rev_2_c;
+	ft_list_revers(&rev_2);
+
 
 	while (sh->next)
 	{
-		while (rev_2->next)
+		rev_2_c = ft_list_copy_i(rev_2);
+		while (rev_2_c->next)
 		{
+
 			//если текущее и след совпадают
-			if (sh->content == rev_2->content && sh->next->content == (rev_2->next->content - map->c_room))
+			if (sh->content == rev_2_c->content && sh->next->content == (rev_2_c->next->content))
 			{	//удаляем одинаковые ребра из пути
 				ft_remove_list_if(&(ft_list_i_head(sh->content, map->link_copy)->next), sh->next->content);
+				printf("da %d, %d", sh->content, sh->next->content);
 			}
-			rev_2 = rev_2->next;
+			rev_2_c = rev_2_c->next;
 		}
+		//ft_free_list_i(&rev_2_c);
 		sh = sh->next;
 	}
 	//удаляем связи где комнаты ин и аут
 	ft_free_list_down(&map->link_new);
 	map->link_new = ft_copy_list_down(map->link_copy);
-	//найдем два новых путя
-//	ft_bfs_k(map, 2);
-//	//записать их надо
-////		ft_list_add_back_right_down(&map->two_path, ft_list_new_down(ft_list_len_i(sh)));
-////		ft_list_add_back_down(&map->two_path, ft_list_new_pointer_down(sh));
-//	//и сравнить
-//	if (ft_check_path_n(map->two_path, map) != 0)
-//	{
-//		//запоминаем эти два новых пути и продолжаем искать след.......
-//	}
 }
