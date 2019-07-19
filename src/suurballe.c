@@ -66,6 +66,7 @@ void ft_new_room(t_map *map, t_list_i *sh)
 void ft_del_shared_path(t_map *map, t_list_i *sh, t_list_i *rev_2)
 {
 
+	ft_list_revers(&rev_2);
 	while (sh->next)
 	{
 		while (rev_2->next)
