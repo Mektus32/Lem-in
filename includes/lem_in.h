@@ -149,6 +149,8 @@ void pr_list(t_list_i *new);
 
 // suurballe.c
 void ft_new_room(t_map *map, t_list_i *sh);
+
+// удаляет инверсные пути в link_new
 void ft_del_shared_path(t_map *map, t_list_i *sh, t_list_i *rev_2);
 	//path.c
 void main_path(t_map *map);
