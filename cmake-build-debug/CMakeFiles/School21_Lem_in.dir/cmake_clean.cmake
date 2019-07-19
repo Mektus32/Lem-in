@@ -108,6 +108,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.o"
   "CMakeFiles/School21_Lem_in.dir/src/ft_print.c.o"
   "CMakeFiles/School21_Lem_in.dir/src/suurballe.c.o"
+  "CMakeFiles/School21_Lem_in.dir/src/path.c.o"
   "School21_Lem_in.pdb"
   "School21_Lem_in"
 )

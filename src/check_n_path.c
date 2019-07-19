@@ -44,14 +44,15 @@ int ft_check_path_n(t_list_down *two_path, t_map *map)
 	//кол-во путей в новом стостоянии
 	path_new = two_path->right;
 	//path_new->content; пока равен 0, надо перезаписать тужа время
-	c_path = ft_list_len_down(path_new);
+	// - 1 потому что комнату создаем комнату -10
+	c_path = ft_list_len_down(path_new) - 1;
 	//
 	d = (int *)malloc(sizeof(int) * c_path);
 	path_new = path_new->down;
 	//переходим к 1ому пути в состоянии
 	k = 0;
 	//заполним длины из структуры
-	while (path_new)
+	while (path_new->next)
 	{
 		d[k++] = path_new->content;
 		path_new = path_new->down;
@@ -75,6 +76,7 @@ int ft_check_path_n(t_list_down *two_path, t_map *map)
 			k++;
 		}
 	}
+	printf("c_path = %d\n", c_path);
 	//время которое потребуется для прохода этого состояния
 	//округляет инт к меньшему значению
 	//добавляем 1, если колличество муравьев не 0 осталось

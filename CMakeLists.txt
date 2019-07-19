@@ -139,4 +139,5 @@ add_executable(School21_Lem_in
         src/ft_bfs_k.c
         src/check_n_path.c
         src/ft_print.c
-        src/suurballe.c)
+        src/suurballe.c
+        src/path.c)

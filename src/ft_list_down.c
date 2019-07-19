@@ -96,6 +96,7 @@ t_list_down	*ft_list_new_pointer_down(t_list_i *next)
 	return (list);
 }
 
+//создает даун и в некст записывает лист
 t_list_down	*ft_list_new_pointer_content_down(t_list_i *next, int content)
 {
 	t_list_down	*list;

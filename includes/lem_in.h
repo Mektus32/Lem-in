@@ -88,7 +88,7 @@ t_list_i			*ft_path(t_map *map, int *dist);
 
 	// (ft_bfs_k.c)
 t_list_down			*ft_bfs_k(t_map *map, int k);
-t_list_i 			*bfs_k_path(t_map *map, t_list_i *cant_go, t_list_down *path_down);
+t_list_i 			*bfs_k_path(t_map *map, t_list_i *cant_go);
 t_list_i			*ft_path_k(t_map *map, int *dist);
 int 				find_room(t_list_i *room, int num);
 	// (liba.c)
@@ -149,7 +149,13 @@ void pr_list(t_list_i *new);
 
 // suurballe.c
 void ft_new_room(t_map *map, t_list_i *sh);
+
+// удаляет инверсные пути в link_new
 void ft_del_shared_path(t_map *map, t_list_i *sh, t_list_i *rev_2);
+	//path.c
+void main_path(t_map *map);
+void	del_link_path(t_map *map);
+t_list_i *one_big_path(t_map *map);
 
 //
 #endif

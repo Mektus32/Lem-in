@@ -39,7 +39,7 @@
 			</Target>
 			<Target title="School21_Lem_in">
 				<Option output="/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/School21_Lem_in" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug"/>
+				<Option working_dir=""/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -63,7 +63,7 @@
 			</Target>
 			<Target title="School21_Lem_in/fast">
 				<Option output="/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/School21_Lem_in" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug"/>
+				<Option working_dir=""/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -423,6 +423,9 @@
 			<Option target="School21_Lem_in"/>
 		</Unit>
 		<Unit filename="/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/main.c">
+			<Option target="School21_Lem_in"/>
+		</Unit>
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/path.c">
 			<Option target="School21_Lem_in"/>
 		</Unit>
 		<Unit filename="/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/suurballe.c">

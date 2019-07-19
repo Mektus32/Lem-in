@@ -343,6 +343,11 @@ CMakeFiles/School21_Lem_in.dir/src/main.c.o
  ../includes/lem_in.h
  ../includes/libft.h
  /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/main.c
+CMakeFiles/School21_Lem_in.dir/src/path.c.o
+ ../includes/ft_printf.h
+ ../includes/lem_in.h
+ ../includes/libft.h
+ /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/path.c
 CMakeFiles/School21_Lem_in.dir/src/suurballe.c.o
  ../includes/ft_printf.h
  ../includes/lem_in.h

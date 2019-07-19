@@ -343,6 +343,11 @@ CMakeFiles/School21_Lem_in.dir/src/main.c.o: ../includes/lem_in.h
 CMakeFiles/School21_Lem_in.dir/src/main.c.o: ../includes/libft.h
 CMakeFiles/School21_Lem_in.dir/src/main.c.o: ../src/main.c
 
+CMakeFiles/School21_Lem_in.dir/src/path.c.o: ../includes/ft_printf.h
+CMakeFiles/School21_Lem_in.dir/src/path.c.o: ../includes/lem_in.h
+CMakeFiles/School21_Lem_in.dir/src/path.c.o: ../includes/libft.h
+CMakeFiles/School21_Lem_in.dir/src/path.c.o: ../src/path.c
+
 CMakeFiles/School21_Lem_in.dir/src/suurballe.c.o: ../includes/ft_printf.h
 CMakeFiles/School21_Lem_in.dir/src/suurballe.c.o: ../includes/lem_in.h
 CMakeFiles/School21_Lem_in.dir/src/suurballe.c.o: ../includes/libft.h

@@ -76,7 +76,8 @@ int main(int ac, char	**av)
 
 // 		//Два путя не ищет в новом графе
 // 		//path_2 = ft_bfs_k(map, 2);
-// 		//ft_print_all_path(path_2 );
+		ft_printf("=============");
+ 		ft_print_all_path(map->two_path);
 
 // 		// НАДО ЕЩЕ ПРОЙТИ БФСОМ для нахождения нового пути
 	}

@@ -3012,6 +3012,33 @@ src/main.c.s:
 	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/path.o: src/path.c.o
+
+.PHONY : src/path.o
+
+# target to build an object file
+src/path.c.o:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/path.c.o
+.PHONY : src/path.c.o
+
+src/path.i: src/path.c.i
+
+.PHONY : src/path.i
+
+# target to preprocess a source file
+src/path.c.i:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/path.c.i
+.PHONY : src/path.c.i
+
+src/path.s: src/path.c.s
+
+.PHONY : src/path.s
+
+# target to generate assembly for a file
+src/path.c.s:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/path.c.s
+.PHONY : src/path.c.s
+
 src/suurballe.o: src/suurballe.c.o
 
 .PHONY : src/suurballe.o
@@ -3396,6 +3423,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/path.o"
+	@echo "... src/path.i"
+	@echo "... src/path.s"
 	@echo "... src/suurballe.o"
 	@echo "... src/suurballe.i"
 	@echo "... src/suurballe.s"

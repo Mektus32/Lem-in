@@ -66,20 +66,24 @@ void ft_new_room(t_map *map, t_list_i *sh)
 void ft_del_shared_path(t_map *map, t_list_i *sh, t_list_i *rev_2)
 {
 	t_list_i	*rev_2_c;
-	ft_list_revers(&rev_2);
 
+	map->link_copy = ft_copy_list_down(map->link);
+	//ft_list_revers(&rev_2);
 
 	while (sh->next)
 	{
 		rev_2_c = ft_list_copy_i(rev_2);
+		ft_list_revers(&rev_2_c);
 		while (rev_2_c->next)
 		{
 
 			//если текущее и след совпадают
 			if (sh->content == rev_2_c->content && sh->next->content == (rev_2_c->next->content))
-			{	//удаляем одинаковые ребра из пути
+			{	//удаляем инверсные ребра из пути
+				//printf("da %d, %d", sh->content, sh->next->content);
 				ft_remove_list_if(&(ft_list_i_head(sh->content, map->link_copy)->next), sh->next->content);
-				printf("da %d, %d", sh->content, sh->next->content);
+				ft_remove_list_if(&(ft_list_i_head(sh->next->content, map->link_copy)->next), sh->content);
+
 			}
 			rev_2_c = rev_2_c->next;
 		}
@@ -88,5 +92,11 @@ void ft_del_shared_path(t_map *map, t_list_i *sh, t_list_i *rev_2)
 	}
 	//удаляем связи где комнаты ин и аут
 	ft_free_list_down(&map->link_new);
+	//ft_free_list_down(&map->link_copy);
 	map->link_new = ft_copy_list_down(map->link_copy);
+	//map->link_new =
+//	ft_printf("link_copy\n");
+//	ft_pri_cop(map);
+//	ft_printf("link_copy_end\n");
+
 }
