@@ -17,9 +17,10 @@ t_list_i	*ft_list_new_i(int content)
 {
 	t_list_i	*list;
 
-	list = NULL;
-	list = (t_list_i*)malloc(sizeof(t_list_i));
-	if (!list)
+//	list = NULL;
+//	list =
+
+	if (!(list = (t_list_i*)malloc(sizeof(t_list_i))))
 		return (NULL);
 	if (!content)
 	{
@@ -34,21 +35,27 @@ t_list_i	*ft_list_new_i(int content)
 }
 
 //Добавление эдемента списка в конец
-void	ft_list_add_back_i(t_list_i **alst, t_list_i *new)
+void	ft_list_add_back_i(t_list_i **lst_a, t_list_i *new)
 {
 	t_list_i *list;
 
-	if (!alst)
+	if (!(lst_a))
 		return ;
-	list = *alst;
-	if (*alst)
+	list = *lst_a;
+	if (*lst_a)
 	{
-		while (list->next)
+		while (list->next) {
+			//ft_printf("[%p]->", list);
 			list = list->next;
+
+		}
 		list->next = new;
+		//ft_printf("p = %p \n", list);
 	}
 	else
-		*alst = new;
+		*lst_a = new;
+	//ft_printf("[%p]\n", list);
+	//list ? ft_printf("[%p]\n", list->next) : 0;
 }
 
 /* Функция удаления элемента из списка типа t_list_i при равенстве "content" */
@@ -149,4 +156,18 @@ t_list_i	*ft_list_copy_i(t_list_i *head)
 		head = head->next;
 	}
 	return (copy);
+}
+
+void ft_list_add_back_i_if_not(t_list_i **lst_a, int content, t_list_i *all_order)
+{
+	t_list_i *tmp_lst;
+
+	tmp_lst = all_order;
+	while (tmp_lst)
+	{
+		if (tmp_lst->content == content)
+			return ;
+		tmp_lst = tmp_lst ->next;
+	}
+	ft_list_add_back_i(lst_a, ft_list_new_i(content));
 }

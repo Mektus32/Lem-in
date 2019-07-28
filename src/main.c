@@ -23,7 +23,7 @@ int main(int ac, char	**av)
 	t_list_i *link;//связи ля конкретной комнаты
 
 	//str = "/Users/ojessi/Desktop/Arina/test_3";//;ac;
-	str = "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/a_test";
+	str = "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/test_5";
 	//str = av[1];
 	map = (t_map*)malloc(sizeof(t_map));
 	map->rooms = NULL;
@@ -78,7 +78,7 @@ int main(int ac, char	**av)
 // 		//path_2 = ft_bfs_k(map, 2);
 		ft_printf("=============");
  		ft_print_all_path(map->two_path);
-
+		ant_in_room(map);
 // 		// НАДО ЕЩЕ ПРОЙТИ БФСОМ для нахождения нового пути
 	}
 	else// и все почистить бы

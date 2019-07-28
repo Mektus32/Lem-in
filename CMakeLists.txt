@@ -11,25 +11,10 @@ add_executable(School21_Lem_in
         ft_printf/includes/ft_printf.h
         ft_printf/src/check_args.c
         ft_printf/src/choise_spec.c
-       # ft_printf/src/ft_atoi.c
-       # ft_printf/src/ft_free_strjoin_duo.c
-       # ft_printf/src/ft_free_strjoin_rev.c
-        ft_printf/src/ft_free_strncpy.c
-       # ft_printf/src/ft_ftoa.c
-        #ft_printf/src/ft_itoa.c
-      #  ft_printf/src/ft_ltoa.c
-       # ft_printf/src/ft_ltoa_base.c
-        #ft_printf/src/ft_memset.c
         ft_printf/src/ft_printf.c
-     #   ft_printf/src/ft_strchr.c
-      #  ft_printf/src/ft_strdup.c
-     #   ft_printf/src/ft_strjoin.c
-       # ft_printf/src/ft_strlen.c
-      #  ft_printf/src/ft_strncmp.c
-      #  ft_printf/src/ft_strnew.c
-      #  ft_printf/src/ft_strtolower.c
-       # ft_printf/src/ft_ultoa.c
-       # ft_printf/src/ft_ultoa_base.c
+
+        ft_printf/src/ft_free_strncpy.c
+
         ft_printf/src/init_arg.c
         ft_printf/src/print_digit.c
         ft_printf/src/print_double.c
@@ -129,15 +114,15 @@ add_executable(School21_Lem_in
         libft/ft_ultoa_base.c
         libft/get_next_line.c
         src/bfs.c
+        src/check_n_path.c
+        src/free.c
+        src/ft_bfs_k.c
         src/ft_list_down.c
         src/ft_list_i.c
+        src/ft_print.c
         src/liba.c
         src/list_room.c
         src/main.c
-        src/valid.c
-        src/free.c
-        src/ft_bfs_k.c
-        src/check_n_path.c
-        src/ft_print.c
+        src/path.c
         src/suurballe.c
-        src/path.c)
+        src/valid.c src/ant_room.c)

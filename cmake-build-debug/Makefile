@@ -2742,6 +2742,33 @@ libft/get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/libft/get_next_line.c.s
 .PHONY : libft/get_next_line.c.s
 
+src/ant_room.o: src/ant_room.c.o
+
+.PHONY : src/ant_room.o
+
+# target to build an object file
+src/ant_room.c.o:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/ant_room.c.o
+.PHONY : src/ant_room.c.o
+
+src/ant_room.i: src/ant_room.c.i
+
+.PHONY : src/ant_room.i
+
+# target to preprocess a source file
+src/ant_room.c.i:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/ant_room.c.i
+.PHONY : src/ant_room.c.i
+
+src/ant_room.s: src/ant_room.c.s
+
+.PHONY : src/ant_room.s
+
+# target to generate assembly for a file
+src/ant_room.c.s:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/ant_room.c.s
+.PHONY : src/ant_room.c.s
+
 src/bfs.o: src/bfs.c.o
 
 .PHONY : src/bfs.o
@@ -3393,6 +3420,9 @@ help:
 	@echo "... libft/get_next_line.o"
 	@echo "... libft/get_next_line.i"
 	@echo "... libft/get_next_line.s"
+	@echo "... src/ant_room.o"
+	@echo "... src/ant_room.i"
+	@echo "... src/ant_room.s"
 	@echo "... src/bfs.o"
 	@echo "... src/bfs.i"
 	@echo "... src/bfs.s"

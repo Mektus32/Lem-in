@@ -18,7 +18,7 @@ void ft_new_room(t_map *map, t_list_i *sh)
 		sh_tmp = sh;
 		//проверяем комнату в пути
 		//если оставшихся связей больше 1, удаляем существующую и заменяем 2умя новыми (in - out)
-		if (ft_list_len_i(ft_list_i_head(sh->content, map->link_new)->next) > 1)
+		if (ft_list_len_i(ft_list_i_head(sh->content, map->link_new)->next) > 1 && sh->content != 0 &&  sh->content != map->c_room)
 		{
 			// добавить ИН - комнату в лист линк нью
 			ft_list_add_back_down(&map->link_new, ft_list_new_down(sh->content + map->c_room));

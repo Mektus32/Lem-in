@@ -13,8 +13,9 @@ void main_path(t_map *map)
 	k = 1;
 	//при первом проходе длина время первого стостояния
 	map->two_path = ft_list_new_down(map->c_ant + ft_list_len_i(sh));
-	ft_list_add_back_down(&map->two_path,ft_list_new_down(ft_list_len_i(sh)));
+	ft_list_add_back_down(&map->two_path, ft_list_new_down(ft_list_len_i(sh)));
 	map->two_path->down->next = sh;
+	sh = NULL;
 	//ft_list_add_back_down(&map->two_path, ft_list_new_pointer_down(sh));
 	// пытаемся найти новый путь, если получаем выигрыш - продолжаем
 	while (win)
@@ -30,15 +31,16 @@ void main_path(t_map *map)
 		{
 			ft_del_shared_path(map, sh, sh_2);
 
-		//map->two_path->right = ft_bfs_k(map, k);
-		ft_list_add_back_right_down(&map->two_path, ft_bfs_k(map, k));
-		if ((win = ft_check_path_n(map->two_path, map)))
-		{
-			printf("win = %d\n", win);
-			map->two_path->right->content = win;
-			//удаляем предыдущее состояние
-			ft_free_first_in_two_path(&map->two_path);
-		}
+			//map->two_path->right = ft_bfs_k(map, k);
+			ft_list_add_back_right_down(&map->two_path, ft_bfs_k(map, k));
+			if ((win = ft_check_path_n(map->two_path, map)))
+			{
+				ft_printf("win = %d\n", win);
+				map->two_path->right->content = win;
+				//удаляем предыдущее состояние
+				if (win > 0)
+					ft_free_first_in_two_path(&map->two_path);
+			}
 		}
 		else
 			return ;

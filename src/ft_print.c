@@ -4,7 +4,7 @@ void ft_print_all_path(t_list_down *path_all)
 {
 	t_list_i *tmp_p;
 
-	printf("cont -time = %d\n", path_all->content);
+	printf("cont - time = %d\n", path_all->content);
 	path_all = path_all->down;
 	while (path_all)
 	{
@@ -15,6 +15,7 @@ void ft_print_all_path(t_list_down *path_all)
 			printf("p - %d", tmp_p->content);
 			tmp_p = tmp_p->next;
 		}
+		printf("\n");
 		path_all = path_all->down;
 	}
 }

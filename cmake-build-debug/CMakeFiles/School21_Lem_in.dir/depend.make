@@ -293,6 +293,11 @@ CMakeFiles/School21_Lem_in.dir/libft/get_next_line.c.o: ../libft/includes/get_ne
 CMakeFiles/School21_Lem_in.dir/libft/get_next_line.c.o: ../libft/includes/libft.h
 CMakeFiles/School21_Lem_in.dir/libft/get_next_line.c.o: ../libft/get_next_line.c
 
+CMakeFiles/School21_Lem_in.dir/src/ant_room.c.o: ../includes/ft_printf.h
+CMakeFiles/School21_Lem_in.dir/src/ant_room.c.o: ../includes/lem_in.h
+CMakeFiles/School21_Lem_in.dir/src/ant_room.c.o: ../includes/libft.h
+CMakeFiles/School21_Lem_in.dir/src/ant_room.c.o: ../src/ant_room.c
+
 CMakeFiles/School21_Lem_in.dir/src/bfs.c.o: ../includes/ft_printf.h
 CMakeFiles/School21_Lem_in.dir/src/bfs.c.o: ../includes/lem_in.h
 CMakeFiles/School21_Lem_in.dir/src/bfs.c.o: ../includes/libft.h

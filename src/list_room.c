@@ -54,10 +54,21 @@ void ft_push_back_room(t_room **head, t_room *new)
 		*head = new;
 }
 //добавление комнаты в начало
-void	ft_list_add_room(t_room **alst, t_room *new)
+void	ft_list_add_room(t_room **lst_a, t_room *new)
 {
-	if (!alst)
+	if (!lst_a)
 		return ;
-	new->next = *alst;
-	*alst = new;
+	new->next = *lst_a;
+	*lst_a = new;
+}
+
+char *ft_name_room(t_room *a_lst, int num)
+{
+	while (a_lst)
+	{
+		if (a_lst->number == num)
+			return (a_lst->name);
+		a_lst = a_lst-> next;
+	}
+	return (1);
 }

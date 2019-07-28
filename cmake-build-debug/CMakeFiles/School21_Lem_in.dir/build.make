@@ -83,22 +83,9 @@ CMakeFiles/School21_Lem_in.dir/ft_printf/src/choise_spec.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/ft_printf/src/choise_spec.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/src/choise_spec.c -o CMakeFiles/School21_Lem_in.dir/ft_printf/src/choise_spec.c.s
 
-CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
-CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.o: ../ft_printf/src/ft_free_strncpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/src/ft_free_strncpy.c
-
-CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/src/ft_free_strncpy.c > CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.i
-
-CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/src/ft_free_strncpy.c -o CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.s
-
 CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_printf.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
 CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_printf.c.o: ../ft_printf/src/ft_printf.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_printf.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_printf.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_printf.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/src/ft_printf.c
 
 CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_printf.c.i: cmake_force
@@ -108,6 +95,19 @@ CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_printf.c.i: cmake_force
 CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_printf.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_printf.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/src/ft_printf.c -o CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_printf.c.s
+
+CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
+CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.o: ../ft_printf/src/ft_free_strncpy.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/src/ft_free_strncpy.c
+
+CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/src/ft_free_strncpy.c > CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.i
+
+CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/ft_printf/src/ft_free_strncpy.c -o CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.s
 
 CMakeFiles/School21_Lem_in.dir/ft_printf/src/init_arg.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
 CMakeFiles/School21_Lem_in.dir/ft_printf/src/init_arg.c.o: ../ft_printf/src/init_arg.c
@@ -1331,87 +1331,22 @@ CMakeFiles/School21_Lem_in.dir/src/bfs.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/src/bfs.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/bfs.c -o CMakeFiles/School21_Lem_in.dir/src/bfs.c.s
 
-CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
-CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.o: ../src/ft_list_down.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_list_down.c
+CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
+CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.o: ../src/check_n_path.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/check_n_path.c
 
-CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_list_down.c > CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.i
+CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/check_n_path.c > CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.i
 
-CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_list_down.c -o CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.s
-
-CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
-CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.o: ../src/ft_list_i.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_list_i.c
-
-CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_list_i.c > CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.i
-
-CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_list_i.c -o CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.s
-
-CMakeFiles/School21_Lem_in.dir/src/liba.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
-CMakeFiles/School21_Lem_in.dir/src/liba.c.o: ../src/liba.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/School21_Lem_in.dir/src/liba.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/src/liba.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/liba.c
-
-CMakeFiles/School21_Lem_in.dir/src/liba.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_Lem_in.dir/src/liba.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/liba.c > CMakeFiles/School21_Lem_in.dir/src/liba.c.i
-
-CMakeFiles/School21_Lem_in.dir/src/liba.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/src/liba.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/liba.c -o CMakeFiles/School21_Lem_in.dir/src/liba.c.s
-
-CMakeFiles/School21_Lem_in.dir/src/list_room.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
-CMakeFiles/School21_Lem_in.dir/src/list_room.c.o: ../src/list_room.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/School21_Lem_in.dir/src/list_room.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/src/list_room.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/list_room.c
-
-CMakeFiles/School21_Lem_in.dir/src/list_room.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_Lem_in.dir/src/list_room.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/list_room.c > CMakeFiles/School21_Lem_in.dir/src/list_room.c.i
-
-CMakeFiles/School21_Lem_in.dir/src/list_room.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/src/list_room.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/list_room.c -o CMakeFiles/School21_Lem_in.dir/src/list_room.c.s
-
-CMakeFiles/School21_Lem_in.dir/src/main.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
-CMakeFiles/School21_Lem_in.dir/src/main.c.o: ../src/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/School21_Lem_in.dir/src/main.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/src/main.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/main.c
-
-CMakeFiles/School21_Lem_in.dir/src/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_Lem_in.dir/src/main.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/main.c > CMakeFiles/School21_Lem_in.dir/src/main.c.i
-
-CMakeFiles/School21_Lem_in.dir/src/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/src/main.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/main.c -o CMakeFiles/School21_Lem_in.dir/src/main.c.s
-
-CMakeFiles/School21_Lem_in.dir/src/valid.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
-CMakeFiles/School21_Lem_in.dir/src/valid.c.o: ../src/valid.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/School21_Lem_in.dir/src/valid.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/src/valid.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/valid.c
-
-CMakeFiles/School21_Lem_in.dir/src/valid.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_Lem_in.dir/src/valid.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/valid.c > CMakeFiles/School21_Lem_in.dir/src/valid.c.i
-
-CMakeFiles/School21_Lem_in.dir/src/valid.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/src/valid.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/valid.c -o CMakeFiles/School21_Lem_in.dir/src/valid.c.s
+CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/check_n_path.c -o CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.s
 
 CMakeFiles/School21_Lem_in.dir/src/free.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
 CMakeFiles/School21_Lem_in.dir/src/free.c.o: ../src/free.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/School21_Lem_in.dir/src/free.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/School21_Lem_in.dir/src/free.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/src/free.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/free.c
 
 CMakeFiles/School21_Lem_in.dir/src/free.c.i: cmake_force
@@ -1424,7 +1359,7 @@ CMakeFiles/School21_Lem_in.dir/src/free.c.s: cmake_force
 
 CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
 CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.o: ../src/ft_bfs_k.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_bfs_k.c
 
 CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.i: cmake_force
@@ -1435,22 +1370,35 @@ CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_bfs_k.c -o CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.s
 
-CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
-CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.o: ../src/check_n_path.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/check_n_path.c
+CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
+CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.o: ../src/ft_list_down.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_list_down.c
 
-CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/check_n_path.c > CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.i
+CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_list_down.c > CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.i
 
-CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/check_n_path.c -o CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.s
+CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_list_down.c -o CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.s
+
+CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
+CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.o: ../src/ft_list_i.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_list_i.c
+
+CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_list_i.c > CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.i
+
+CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_list_i.c -o CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.s
 
 CMakeFiles/School21_Lem_in.dir/src/ft_print.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
 CMakeFiles/School21_Lem_in.dir/src/ft_print.c.o: ../src/ft_print.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/School21_Lem_in.dir/src/ft_print.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/School21_Lem_in.dir/src/ft_print.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/src/ft_print.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_print.c
 
 CMakeFiles/School21_Lem_in.dir/src/ft_print.c.i: cmake_force
@@ -1460,6 +1408,58 @@ CMakeFiles/School21_Lem_in.dir/src/ft_print.c.i: cmake_force
 CMakeFiles/School21_Lem_in.dir/src/ft_print.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/src/ft_print.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ft_print.c -o CMakeFiles/School21_Lem_in.dir/src/ft_print.c.s
+
+CMakeFiles/School21_Lem_in.dir/src/liba.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
+CMakeFiles/School21_Lem_in.dir/src/liba.c.o: ../src/liba.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/School21_Lem_in.dir/src/liba.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/src/liba.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/liba.c
+
+CMakeFiles/School21_Lem_in.dir/src/liba.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_Lem_in.dir/src/liba.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/liba.c > CMakeFiles/School21_Lem_in.dir/src/liba.c.i
+
+CMakeFiles/School21_Lem_in.dir/src/liba.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/src/liba.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/liba.c -o CMakeFiles/School21_Lem_in.dir/src/liba.c.s
+
+CMakeFiles/School21_Lem_in.dir/src/list_room.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
+CMakeFiles/School21_Lem_in.dir/src/list_room.c.o: ../src/list_room.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/School21_Lem_in.dir/src/list_room.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/src/list_room.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/list_room.c
+
+CMakeFiles/School21_Lem_in.dir/src/list_room.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_Lem_in.dir/src/list_room.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/list_room.c > CMakeFiles/School21_Lem_in.dir/src/list_room.c.i
+
+CMakeFiles/School21_Lem_in.dir/src/list_room.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/src/list_room.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/list_room.c -o CMakeFiles/School21_Lem_in.dir/src/list_room.c.s
+
+CMakeFiles/School21_Lem_in.dir/src/main.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
+CMakeFiles/School21_Lem_in.dir/src/main.c.o: ../src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/School21_Lem_in.dir/src/main.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/src/main.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/main.c
+
+CMakeFiles/School21_Lem_in.dir/src/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_Lem_in.dir/src/main.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/main.c > CMakeFiles/School21_Lem_in.dir/src/main.c.i
+
+CMakeFiles/School21_Lem_in.dir/src/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/src/main.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/main.c -o CMakeFiles/School21_Lem_in.dir/src/main.c.s
+
+CMakeFiles/School21_Lem_in.dir/src/path.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
+CMakeFiles/School21_Lem_in.dir/src/path.c.o: ../src/path.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/School21_Lem_in.dir/src/path.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/src/path.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/path.c
+
+CMakeFiles/School21_Lem_in.dir/src/path.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_Lem_in.dir/src/path.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/path.c > CMakeFiles/School21_Lem_in.dir/src/path.c.i
+
+CMakeFiles/School21_Lem_in.dir/src/path.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/src/path.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/path.c -o CMakeFiles/School21_Lem_in.dir/src/path.c.s
 
 CMakeFiles/School21_Lem_in.dir/src/suurballe.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
 CMakeFiles/School21_Lem_in.dir/src/suurballe.c.o: ../src/suurballe.c
@@ -1474,25 +1474,38 @@ CMakeFiles/School21_Lem_in.dir/src/suurballe.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/src/suurballe.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/suurballe.c -o CMakeFiles/School21_Lem_in.dir/src/suurballe.c.s
 
-CMakeFiles/School21_Lem_in.dir/src/path.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
-CMakeFiles/School21_Lem_in.dir/src/path.c.o: ../src/path.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/School21_Lem_in.dir/src/path.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/src/path.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/path.c
+CMakeFiles/School21_Lem_in.dir/src/valid.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
+CMakeFiles/School21_Lem_in.dir/src/valid.c.o: ../src/valid.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/School21_Lem_in.dir/src/valid.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/src/valid.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/valid.c
 
-CMakeFiles/School21_Lem_in.dir/src/path.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_Lem_in.dir/src/path.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/path.c > CMakeFiles/School21_Lem_in.dir/src/path.c.i
+CMakeFiles/School21_Lem_in.dir/src/valid.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_Lem_in.dir/src/valid.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/valid.c > CMakeFiles/School21_Lem_in.dir/src/valid.c.i
 
-CMakeFiles/School21_Lem_in.dir/src/path.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/src/path.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/path.c -o CMakeFiles/School21_Lem_in.dir/src/path.c.s
+CMakeFiles/School21_Lem_in.dir/src/valid.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/src/valid.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/valid.c -o CMakeFiles/School21_Lem_in.dir/src/valid.c.s
+
+CMakeFiles/School21_Lem_in.dir/src/ant_room.c.o: CMakeFiles/School21_Lem_in.dir/flags.make
+CMakeFiles/School21_Lem_in.dir/src/ant_room.c.o: ../src/ant_room.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/School21_Lem_in.dir/src/ant_room.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/School21_Lem_in.dir/src/ant_room.c.o   -c /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ant_room.c
+
+CMakeFiles/School21_Lem_in.dir/src/ant_room.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/School21_Lem_in.dir/src/ant_room.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ant_room.c > CMakeFiles/School21_Lem_in.dir/src/ant_room.c.i
+
+CMakeFiles/School21_Lem_in.dir/src/ant_room.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/School21_Lem_in.dir/src/ant_room.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/src/ant_room.c -o CMakeFiles/School21_Lem_in.dir/src/ant_room.c.s
 
 # Object files for target School21_Lem_in
 School21_Lem_in_OBJECTS = \
 "CMakeFiles/School21_Lem_in.dir/ft_printf/src/check_args.c.o" \
 "CMakeFiles/School21_Lem_in.dir/ft_printf/src/choise_spec.c.o" \
-"CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.o" \
 "CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_printf.c.o" \
+"CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.o" \
 "CMakeFiles/School21_Lem_in.dir/ft_printf/src/init_arg.c.o" \
 "CMakeFiles/School21_Lem_in.dir/ft_printf/src/print_digit.c.o" \
 "CMakeFiles/School21_Lem_in.dir/ft_printf/src/print_double.c.o" \
@@ -1587,26 +1600,27 @@ School21_Lem_in_OBJECTS = \
 "CMakeFiles/School21_Lem_in.dir/libft/ft_ultoa_base.c.o" \
 "CMakeFiles/School21_Lem_in.dir/libft/get_next_line.c.o" \
 "CMakeFiles/School21_Lem_in.dir/src/bfs.c.o" \
+"CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.o" \
+"CMakeFiles/School21_Lem_in.dir/src/free.c.o" \
+"CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.o" \
 "CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.o" \
 "CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.o" \
+"CMakeFiles/School21_Lem_in.dir/src/ft_print.c.o" \
 "CMakeFiles/School21_Lem_in.dir/src/liba.c.o" \
 "CMakeFiles/School21_Lem_in.dir/src/list_room.c.o" \
 "CMakeFiles/School21_Lem_in.dir/src/main.c.o" \
-"CMakeFiles/School21_Lem_in.dir/src/valid.c.o" \
-"CMakeFiles/School21_Lem_in.dir/src/free.c.o" \
-"CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.o" \
-"CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.o" \
-"CMakeFiles/School21_Lem_in.dir/src/ft_print.c.o" \
+"CMakeFiles/School21_Lem_in.dir/src/path.c.o" \
 "CMakeFiles/School21_Lem_in.dir/src/suurballe.c.o" \
-"CMakeFiles/School21_Lem_in.dir/src/path.c.o"
+"CMakeFiles/School21_Lem_in.dir/src/valid.c.o" \
+"CMakeFiles/School21_Lem_in.dir/src/ant_room.c.o"
 
 # External object files for target School21_Lem_in
 School21_Lem_in_EXTERNAL_OBJECTS =
 
 School21_Lem_in: CMakeFiles/School21_Lem_in.dir/ft_printf/src/check_args.c.o
 School21_Lem_in: CMakeFiles/School21_Lem_in.dir/ft_printf/src/choise_spec.c.o
-School21_Lem_in: CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.o
 School21_Lem_in: CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_printf.c.o
+School21_Lem_in: CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.o
 School21_Lem_in: CMakeFiles/School21_Lem_in.dir/ft_printf/src/init_arg.c.o
 School21_Lem_in: CMakeFiles/School21_Lem_in.dir/ft_printf/src/print_digit.c.o
 School21_Lem_in: CMakeFiles/School21_Lem_in.dir/ft_printf/src/print_double.c.o
@@ -1701,21 +1715,22 @@ School21_Lem_in: CMakeFiles/School21_Lem_in.dir/libft/ft_ultoa.c.o
 School21_Lem_in: CMakeFiles/School21_Lem_in.dir/libft/ft_ultoa_base.c.o
 School21_Lem_in: CMakeFiles/School21_Lem_in.dir/libft/get_next_line.c.o
 School21_Lem_in: CMakeFiles/School21_Lem_in.dir/src/bfs.c.o
+School21_Lem_in: CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.o
+School21_Lem_in: CMakeFiles/School21_Lem_in.dir/src/free.c.o
+School21_Lem_in: CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.o
 School21_Lem_in: CMakeFiles/School21_Lem_in.dir/src/ft_list_down.c.o
 School21_Lem_in: CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.o
+School21_Lem_in: CMakeFiles/School21_Lem_in.dir/src/ft_print.c.o
 School21_Lem_in: CMakeFiles/School21_Lem_in.dir/src/liba.c.o
 School21_Lem_in: CMakeFiles/School21_Lem_in.dir/src/list_room.c.o
 School21_Lem_in: CMakeFiles/School21_Lem_in.dir/src/main.c.o
-School21_Lem_in: CMakeFiles/School21_Lem_in.dir/src/valid.c.o
-School21_Lem_in: CMakeFiles/School21_Lem_in.dir/src/free.c.o
-School21_Lem_in: CMakeFiles/School21_Lem_in.dir/src/ft_bfs_k.c.o
-School21_Lem_in: CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.o
-School21_Lem_in: CMakeFiles/School21_Lem_in.dir/src/ft_print.c.o
-School21_Lem_in: CMakeFiles/School21_Lem_in.dir/src/suurballe.c.o
 School21_Lem_in: CMakeFiles/School21_Lem_in.dir/src/path.c.o
+School21_Lem_in: CMakeFiles/School21_Lem_in.dir/src/suurballe.c.o
+School21_Lem_in: CMakeFiles/School21_Lem_in.dir/src/valid.c.o
+School21_Lem_in: CMakeFiles/School21_Lem_in.dir/src/ant_room.c.o
 School21_Lem_in: CMakeFiles/School21_Lem_in.dir/build.make
 School21_Lem_in: CMakeFiles/School21_Lem_in.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Linking C executable School21_Lem_in"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Linking C executable School21_Lem_in"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/School21_Lem_in.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

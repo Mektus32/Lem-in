@@ -37,6 +37,16 @@ typedef struct			s_list_down
 
 }						t_list_down;
 
+typedef struct			s_list_path
+{
+	int					num_ant;
+	char				*name_room;
+	struct s_list_path	*next;
+	struct s_list_path	*prev; // из каждого столбца в право начинается лист (t_list_down).
+
+}						t_list_path;
+
+
 //структура каждой комнаты
 typedef struct		s_room
 {
@@ -102,27 +112,30 @@ int					ft_max_mass(int *mass); // максимальное в массиве in
 //ф для списка комнат
 t_room				*ft_create_ele(char *line, int number);
 void				ft_push_back_room(t_room **head, t_room *new);
-void				ft_list_add_room(t_room **alst, t_room *new);
-
+void				ft_list_add_room(t_room **a_lst, t_room *new);
+char 				*ft_name_room(t_room *a_lst, int num);
 	//ft_list_down.c
 
-t_list_down			*ft_list_i_head(int num, t_list_down *alst);
+t_list_down			*ft_list_i_head(int num, t_list_down *a_lst);
 t_list_down			*ft_list_new_down(int content);
-void				ft_list_add_back_down(t_list_down **alst, t_list_down *new);
+void				ft_list_add_back_down(t_list_down **a_lst, t_list_down *new);
 t_list_down			*ft_list_new_pointer_down(t_list_i *next);
-void				ft_list_add_back_right_down(t_list_down **alst, t_list_down *new);
+void				ft_list_add_back_right_down(t_list_down **a_lst, t_list_down *new);
 t_list_down			*ft_list_new_pointer_content_down(t_list_i *next, int content);
 int					ft_list_len_down(t_list_down *path);
 void				ft_free_first_in_two_path(t_list_down **first);
 void				ft_free_list_i(t_list_i **head);
 void				ft_free_list_down(t_list_down **head);
 t_list_down			*ft_copy_list_down(t_list_down *head);
+void	ft_list_add_back_down_next(t_list_down **a_lst, t_list_i *new);
 
 
 	// (ft_list_i.c)
 //ф для работы с односвязным списком
 t_list_i			*ft_list_new_i(int content);
-void				ft_list_add_back_i(t_list_i **alst, t_list_i *new);
+void	ft_list_add_back_i(t_list_i **lst_a, t_list_i *new);
+void ft_list_add_back_i_if_not(t_list_i **lst_a, int content, t_list_i *all_order);
+
 int					ft_list_len_i(t_list_i *head);
 t_list_i			*ft_list_copy_i(t_list_i *head);
 
@@ -157,5 +170,7 @@ void main_path(t_map *map);
 void	del_link_path(t_map *map);
 t_list_i *one_big_path(t_map *map);
 
-//
+//ant_room
+void ant_in_room(t_map *map);
+
 #endif

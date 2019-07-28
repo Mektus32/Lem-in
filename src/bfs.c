@@ -50,6 +50,7 @@ t_list_i	*ft_bfs(t_map *map)
 	//длина кротчайшего пути - она наверно не нужна len внесена в структуру нам по ней все равно придется
 	//выбирать количество путей от муравьев; 
 	t_list_i *order;
+	t_list_i *all_order;
 	t_list_down *tmp;
 	t_list_i *tmp_i; //я поэтому из ft_list_i_head хотела возвращать сразу t_list_i, что б 2 раза одно и тоже не писать
 	
@@ -59,6 +60,7 @@ t_list_i	*ft_bfs(t_map *map)
 		dist[i++] = map->c_room + 1;
 	//начинаем очередь в очередь добавляем все вершины, которые встретелись на пути
 	order = ft_list_new_i(0);
+	all_order = ft_list_new_i(0);
 	dist[0] = 0;
 	// будем продолжать пока есть очередь или пока не нашли кратчайший путь (нашли комнатц энд)
 	while (order && !(map->len_sh))
@@ -77,11 +79,16 @@ t_list_i	*ft_bfs(t_map *map)
 			if (tmp_i->content == map->c_room)//нашли короткий путь, если пришли в последнюю комнату
 				map->len_sh = dist[tmp_i->content]; // надо выходить из цикла while(order && !len)
 			else //для каждого узла добавляем очередь соседей
-				ft_list_add_back_i(&order, ft_list_new_i(tmp_i->content));
+			{
+				ft_list_add_back_i_if_not(&order, tmp_i->content, all_order);
+				ft_list_add_back_i(&all_order, ft_list_new_i(tmp_i->content));
+
+			}
 			tmp_i = tmp_i->next;
 		}
 		//free(tmp);
 		order = order->next;
+		//ft_printf("%d = ",order->content);
 	}
 	if (map->len_sh == 0) //если длина осталась нулевой
 	{

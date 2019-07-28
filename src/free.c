@@ -27,6 +27,7 @@ void 	ft_free_list_i(t_list_i **head)
 		del = list;
 		list = list->next;
 		free(del);
+		del = NULL;
 	}
 	*head = NULL;
 }
@@ -47,6 +48,7 @@ void	ft_free_list_down(t_list_down **head)
 		list = list->down;
 		ft_free_list_i(&del->next);
 		free(del);
+		del = NULL;
 	}
 	*head = NULL;
 }
@@ -63,7 +65,8 @@ void	ft_free_first_in_two_path(t_list_down **first)
 	if (!(*first)->down)
 		return ;
 	list = (*first)->down;
-	ft_free_list_down(&list);
+	//ft_free_list_down(&list);
+	free(list);
 	del = *first;
 	*first = (*first)->right;
 	free(del);

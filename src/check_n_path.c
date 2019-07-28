@@ -80,8 +80,8 @@ int ft_check_path_n(t_list_down *two_path, t_map *map)
 	//время которое потребуется для прохода этого состояния
 	//округляет инт к меньшему значению
 	//добавляем 1, если колличество муравьев не 0 осталось
-	t_now = len_max + n_ant/c_path + ((n_ant == 0) ? 0 : 1);
-	if (t_now < t1)//выбираем этот путь
+	t_now = len_max + n_ant/c_path + ((n_ant == 0 || (n_ant % c_path == 0)) ? 0 : 1);
+	if (t_now <= t1 && map->c_ant >= c_path)//выбираем этот путь
 		return (t_now);
 	return (0);
 }
