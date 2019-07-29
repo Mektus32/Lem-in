@@ -22,8 +22,7 @@ int main(int ac, char	**av)
 	t_list_i *sh_1;//копия
 	t_list_i *link;//связи ля конкретной комнаты
 
-	//str = "/Users/ojessi/Desktop/Arina/test_3";//;ac;
-	str = "/Users/qgilbert/Desktop/lem_in/five/School21-Lem-in/test_5";
+	str = "../test_3";
 	//str = av[1];
 	map = (t_map*)malloc(sizeof(t_map));
 	map->rooms = NULL;

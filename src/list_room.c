@@ -70,5 +70,5 @@ char *ft_name_room(t_room *a_lst, int num)
 			return (a_lst->name);
 		a_lst = a_lst-> next;
 	}
-	return (1);
+	return (NULL);
 }
