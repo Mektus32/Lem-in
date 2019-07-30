@@ -6,7 +6,7 @@
 #    By: ojessi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/30 16:17:00 by ojessi            #+#    #+#              #
-#    Updated: 2019/06/30 16:40:46 by ojessi           ###   ########.fr        #
+#    Updated: 2019/07/30 10:26:18 by ojessi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ NAME = lem-in
 
 # src / obj files
 SRC = main.c valid.c bfs.c list_room.c liba.c ft_list_i.c ft_list_down.c ft_bfs_k.c \
-    check_n_path.c free.c ft_print.c suurballe.c \
+    check_n_path.c free.c ft_print.c suurballe.c ant_room.c\
     path.c
 
 OBJ = $(addprefix $(OBJDIR), $(SRC:.c=.o))

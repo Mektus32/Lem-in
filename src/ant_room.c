@@ -77,6 +77,49 @@ t_list_path	*ft_list_add_back_path(t_list_path **head, int num_ant, char *name)
 //		*lst_a = new;
 //}
 
+void	ft_move_ant_in_path(t_list_path *path)
+{
+	t_list_path	*list;
+
+	if (!path)
+		return ;
+	list = path;
+	while (list->next)
+		list = list->next;
+	while (list->prev)
+	{
+		if (list->prev->num_ant != 0)
+		{
+			list->num_ant = list->prev->num_ant;
+			ft_printf("L%d-%s ", list->prev->num_ant, list->name_room);
+			list->prev->num_ant = 0;
+		}
+		list = list->prev;
+	}
+}
+
+void	ft_pars_ant(t_map *map, t_list_path *paths, int count)
+{
+	int 	i;
+	int 	j;
+
+	i = 1;
+	while (i < map->c_ant + 1)
+	{
+		j = -1;
+		while (++j < count)
+		{
+			ft_move_ant_in_path(paths[j].next);
+			if (paths[j].num_ant > 0)
+			{
+				paths[j].num_ant--;
+				paths[j].next->num_ant = i;
+				i++;
+			}
+		}
+		ft_printf("\n");
+	}
+}
 
 void ant_in_room(t_map *map)
 {
@@ -156,52 +199,47 @@ void ant_in_room(t_map *map)
 	}
 	i = 0;
 	c_ant = map ->c_ant;
-	k = 1;
-	// для каждого пути
-	while (i < c_path)
-	{
-		//в комнату в которой встречаем первый 0 передвигаем муравья
-		path_n = tmp_path + i;
-		while (path_n->next->num_ant != 0)
-			path_n = path_n->next;
-		path_n = path_n->next;
-		if (tmp_path[i].num_ant && k <= c_ant)// берем муравья и помещаем его в комнату
-		{
-			path_n->num_ant = k++;
-			tmp_path[i].num_ant -= 1;
-		}
-		else // берем муравья из пред комнаты
-		{
-			path_n->num_ant = path_n->prev->num_ant;
-			path_n->prev->num_ant = 0;
-		}
-		//пока сзади не кончаются муравьи переставляем их местами
-		path_n_tmp = path_n->prev;
-		while (path_n_tmp && path_n_tmp->prev && path_n_tmp->prev->num_ant != 0)
-		{
-			path_n->prev->num_ant = path_n_tmp->prev->num_ant;
-			path_n_tmp->prev->num_ant = 0;
-			path_n_tmp = path_n_tmp->prev;
-		}
-		// печатаем все комнаты где не 0 (начинаем с конца)
-		path_n = tmp_path + i;
-		while (path_n->num_ant != 0)
-			path_n = path_n->next;
-		while (path_n && path_n->num_ant)
-		{
-			printf("L%d-%s ",path_n->num_ant, path_n->name_room);
-			path_n = path_n->prev;
-		}
-		i++;
-		printf("\n");
-
-
-	}
-
-
-
-
-	}
+	ft_pars_ant(map, tmp_path, c_path);
+//	k = 1;
+//	// для каждого пути
+//	while (i < c_path)
+//	{
+//		//в комнату в которой встречаем первый 0 передвигаем муравья
+//		path_n = tmp_path + i;
+//		while (path_n->next->num_ant != 0)
+//			path_n = path_n->next;
+//		path_n = path_n->next;
+//		if (tmp_path[i].num_ant && k <= c_ant)// берем муравья и помещаем его в комнату
+//		{
+//			path_n->num_ant = k++;
+//			tmp_path[i].num_ant -= 1;
+//		}
+//		else // берем муравья из пред комнаты
+//		{
+//			path_n->num_ant = path_n->prev->num_ant;
+//			path_n->prev->num_ant = 0;
+//		}
+//		//пока сзади не кончаются муравьи переставляем их местами
+//		path_n_tmp = path_n->prev;
+//		while (path_n_tmp && path_n_tmp->prev && path_n_tmp->prev->num_ant != 0)
+//		{
+//			path_n->prev->num_ant = path_n_tmp->prev->num_ant;
+//			path_n_tmp->prev->num_ant = 0;
+//			path_n_tmp = path_n_tmp->prev;
+//		}
+//		// печатаем все комнаты где не 0 (начинаем с конца)
+//		path_n = tmp_path + i;
+//		while (path_n->num_ant != 0)
+//			path_n = path_n->next;
+//		while (path_n && path_n->num_ant)
+//		{
+//			printf("L%d-%s ",path_n->num_ant, path_n->name_room);
+//			path_n = path_n->prev;
+//		}
+//		i++;
+//		printf("\n");
+//	}
+}
 
 
 
