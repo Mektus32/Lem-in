@@ -77,6 +77,25 @@ t_list_path	*ft_list_add_back_path(t_list_path **head, int num_ant, char *name)
 //		*lst_a = new;
 //}
 
+int		ft_count_ant(t_list_path *path)
+{
+		int			j;
+		t_list_path	*list;
+
+		if (!path)
+			return (1);
+		j = 0;
+		list = path->next;
+		while (list)
+		{
+			if (list->num_ant != 0)
+				j++;
+			list = list->next;
+		}
+		return (j);
+
+}
+
 void	ft_move_ant_in_path(t_list_path *path)
 {
 	t_list_path	*list;
@@ -109,15 +128,27 @@ void	ft_pars_ant(t_map *map, t_list_path *paths, int count)
 		j = -1;
 		while (++j < count)
 		{
-			ft_move_ant_in_path(paths[j].next);
+
 			if (paths[j].num_ant > 0)
 			{
 				paths[j].num_ant--;
 				paths[j].next->num_ant = i;
 				i++;
 			}
+			ft_move_ant_in_path(paths[j].next);
 		}
 		ft_printf("\n");
+	}
+	j = 0;
+	while (j != count)
+	{
+		j = 0;
+		i = -1;
+		while (++i < count)
+		{
+			j += ((ft_count_ant(&paths[i]) == 1) ? 1 : 0);
+			ft_move_ant_in_path(&paths[i]);
+		}
 	}
 }
 
@@ -199,6 +230,7 @@ void ant_in_room(t_map *map)
 	}
 	i = 0;
 	c_ant = map ->c_ant;
+	ft_printf("paths->[%d]\n", c_path);
 	ft_pars_ant(map, tmp_path, c_path);
 //	k = 1;
 //	// для каждого пути
