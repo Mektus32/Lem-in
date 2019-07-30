@@ -49,13 +49,13 @@ int		ft_read(t_ob *ob)
 			free(line);
 			return (1);
 		}
-		else if (line[0] != '#' && ft_count_words(line) == 3)
+		else if (line[0] != '#' && ft_count_words(line) == 3 && line[0] != 'L')
 		{
 			ft_push_back_room(&ob->rooms, ft_create_room(line, 0, ob));
 			ob->c_rooms++;
 		}
 		else if (line[0] != '#' && ft_count_words(line) == 1 &&
-		!ft_isdigonly(line))
+			!ft_isdigonly(line) && line[0] != 'L')
 		{
 			ft_add_neib(&ob->rooms, line);
 			ft_super_strrev(line);

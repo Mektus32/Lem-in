@@ -20,6 +20,8 @@
 # define ROOME "images/room_t.xpm"
 # define ROOMA "images/room_s.xpm"
 
+# include <stdio.h>
+
 # include "libft.h"
 # include "mlx.h"
 # include <fcntl.h>
