@@ -2,12 +2,11 @@
 
 void main_path(t_map *map)
 {
-	int	k; //кол-во путей
-	t_list_i *sh;
-	t_list_i *sh_2;
-	int win;
+	int			k; //кол-во путей
+	t_list_i	*sh;
+	t_list_i	*sh_2;
+	int			win;
 
-	
 	win = 1;
 	sh = ft_bfs(map);
 	k = 1;
@@ -30,8 +29,6 @@ void main_path(t_map *map)
 		if (sh_2)
 		{
 			ft_del_shared_path(map, sh, sh_2);
-
-			//map->two_path->right = ft_bfs_k(map, k);
 			ft_list_add_back_right_down(&map->two_path, ft_bfs_k(map, k));
 			if ((win = ft_check_path_n(map->two_path, map)))
 			{

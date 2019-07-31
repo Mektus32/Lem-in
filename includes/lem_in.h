@@ -20,11 +20,11 @@
 # include "ft_printf.h"
 
 //односвязный список, в таком хранятся комнаты, кротчайший путь, очередь обхода.
-typedef struct		s_list_i
+typedef struct			s_list_i
 {
-	int			content;
-	struct s_list_i	*next;
-}					t_list_i;
+	int					content;
+	struct s_list_i		*next;
+}						t_list_i;
 
 //для построение связей между комнатами.
 //вниз обход по всем комнатам, в контенте соответсвенно хранится номер комнаты
@@ -48,17 +48,15 @@ typedef struct			s_list_path
 
 
 //структура каждой комнаты
-typedef struct		s_room
+typedef struct			s_room
 {
-	int				x;//координаты комнаты
-	int				y;
-	char			*name;
-	int				number;// у первой №0, у последней № c_room
-	int 			par_num;
-	int 			dist;
-	struct s_room	*next;
-
-}					t_room;
+	int					x;//координаты комнаты
+	int					y;
+	char				*name;
+	int					number;// у первой №0, у последней № c_room
+	struct s_room		*next;
+	int					dist;
+}						t_room;
 //главная структура, которую везде передавать
 typedef struct		s_map
 {

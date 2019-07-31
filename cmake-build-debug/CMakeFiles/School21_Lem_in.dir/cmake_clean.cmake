@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/School21_Lem_in.dir/ft_printf/src/check_args.c.o"
   "CMakeFiles/School21_Lem_in.dir/ft_printf/src/choise_spec.c.o"
-  "CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_printf.c.o"
   "CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_free_strncpy.c.o"
+  "CMakeFiles/School21_Lem_in.dir/ft_printf/src/ft_printf.c.o"
   "CMakeFiles/School21_Lem_in.dir/ft_printf/src/init_arg.c.o"
   "CMakeFiles/School21_Lem_in.dir/ft_printf/src/print_digit.c.o"
   "CMakeFiles/School21_Lem_in.dir/ft_printf/src/print_double.c.o"
@@ -96,6 +96,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/School21_Lem_in.dir/libft/ft_ultoa.c.o"
   "CMakeFiles/School21_Lem_in.dir/libft/ft_ultoa_base.c.o"
   "CMakeFiles/School21_Lem_in.dir/libft/get_next_line.c.o"
+  "CMakeFiles/School21_Lem_in.dir/src/ant_room.c.o"
   "CMakeFiles/School21_Lem_in.dir/src/bfs.c.o"
   "CMakeFiles/School21_Lem_in.dir/src/check_n_path.c.o"
   "CMakeFiles/School21_Lem_in.dir/src/free.c.o"
@@ -109,7 +110,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/School21_Lem_in.dir/src/path.c.o"
   "CMakeFiles/School21_Lem_in.dir/src/suurballe.c.o"
   "CMakeFiles/School21_Lem_in.dir/src/valid.c.o"
-  "CMakeFiles/School21_Lem_in.dir/src/ant_room.c.o"
   "School21_Lem_in.pdb"
   "School21_Lem_in"
 )
