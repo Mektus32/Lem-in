@@ -53,7 +53,10 @@ t_list_i	*ft_bfs(t_map *map)
 	t_list_i *all_order;
 	t_list_down *tmp;
 	t_list_i *tmp_i; //я поэтому из ft_list_i_head хотела возвращать сразу t_list_i, что б 2 раза одно и тоже не писать
-	
+
+	t_list_i *order_start;
+	t_list_i *all_order_start;
+
 	dist = (int*)malloc(sizeof(int) * (map->c_room + 1));
 	i = 0;
 	while (i <= map->c_room)
@@ -61,6 +64,8 @@ t_list_i	*ft_bfs(t_map *map)
 	//начинаем очередь в очередь добавляем все вершины, которые встретелись на пути
 	order = ft_list_new_i(0);
 	all_order = ft_list_new_i(0);
+	order_start = order;
+	all_order_start = all_order;
 	dist[0] = 0;
 	// будем продолжать пока есть очередь или пока не нашли кратчайший путь (нашли комнатц энд)
 	while (order && !(map->len_sh))
@@ -90,10 +95,14 @@ t_list_i	*ft_bfs(t_map *map)
 		order = order->next;
 		//ft_printf("%d = ",order->content);
 	}
+
+	ft_free_list_i(&order_start);
+	ft_free_list_i(&all_order_start);
+	//ft_free_list_i(&tmp_i_start);
 	if (map->len_sh == 0) //если длина осталась нулевой
 	{
-		free(order);//знаю что не чищу
-		free (dist);
+		//знаю что не чищу
+		free(dist);
 		printf("no path\n");
 		return (NULL);
 	}

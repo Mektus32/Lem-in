@@ -87,7 +87,11 @@ int	check_room(t_map *map)
 						ft_list_add_room(&map->rooms, ft_create_ele(line, 0));
 					}
 					else
+					{
+
+
 						return (0);
+					}
 				}
 				else
 				{
@@ -212,3 +216,4 @@ int created_links(char *line, t_map *map)
 	}
 	return (st);
 }
+//

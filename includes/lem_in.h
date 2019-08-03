@@ -150,6 +150,7 @@ void	ft_free_list_down(t_list_down **head);
 void	ft_free_first_in_two_path(t_list_down **first);
 void	ft_free_list_room(t_room **head);
 void	ft_free_map(t_map **map);
+void free_tmp_path(t_list_path **path_i, int c_path);
 // ft_print.c
 
 void ft_print_all_path(t_list_down *path_all);

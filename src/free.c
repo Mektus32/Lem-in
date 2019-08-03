@@ -12,6 +12,27 @@
 
 #include "lem_in.h"
 
+void free_tmp_path(t_list_path **path_i, int c_path)
+{
+	int	i;
+	t_list_path *del;
+	t_list_path *tmp_i;
+
+	i = 0;
+	while (i < c_path)
+	{
+		tmp_i = *(path_i + i);
+		while (tmp_i)
+		{
+			del = tmp_i;
+			tmp_i = tmp_i->next;
+			free(del->name_room);
+			free(del);
+		}
+		i++;
+	}
+}
+
 void 	ft_free_list_i(t_list_i **head)
 {
 	t_list_i	*list;
@@ -26,7 +47,8 @@ void 	ft_free_list_i(t_list_i **head)
 	{
 		del = list;
 		list = list->next;
-		free(del);
+		if (del)
+			free(del);
 		del = NULL;
 	}
 	*head = NULL;
@@ -36,6 +58,7 @@ void	ft_free_list_down(t_list_down **head)
 {
 	t_list_down	*del;
 	t_list_down	*list;
+	t_list_i *del_i;
 
 	if (!head)
 		return ;
@@ -45,8 +68,11 @@ void	ft_free_list_down(t_list_down **head)
 	while (list)
 	{
 		del = list;
+		del_i = list->next;
 		list = list->down;
-		ft_free_list_i(&del->next);
+
+		if (del_i)
+			ft_free_list_i(&del_i);
 		free(del);
 		del = NULL;
 	}
@@ -57,6 +83,9 @@ void	ft_free_first_in_two_path(t_list_down **first)
 {
 	t_list_down	*list;
 	t_list_down	*del;
+	t_list_down	*del_d;
+	t_list_down	*del_r;
+	t_list_i	*del_n;
 
 	if (!first)
 		return ;
@@ -64,14 +93,45 @@ void	ft_free_first_in_two_path(t_list_down **first)
 		return ;
 	if (!(*first)->down)
 		return ;
-	list = (*first)->down;
-	//if (list)
-	//	ft_free_list_down(&list);
+	list = (*first);
+	while (list)
+	{
+		del_d = list->down;
+		del_r = list->right;
+		del_n = list->next;
+		list = list->down;
+//		if (del_n)
+//			ft_free_list_i(&del_n);
+		if (del_d)
+			ft_free_list_down(&del_d);
+		if (del_r)
+			ft_free_list_down(&del_r);
+	}
 	free(list);
 	del = *first;
 	*first = (*first)->right;
 	free(del);
 }
+
+//void	ft_free_first_in_two_path(t_list_down **first)
+//{
+//	t_list_down	*list;
+//	t_list_down	*del;
+//
+//	if (!first)
+//		return ;
+//	if (!*first)
+//		return ;
+//	if (!(*first)->down)
+//		return ;
+//	list = (*first)->down;
+//	if (list)
+//		ft_free_list_down(&list);
+//	free(list);
+//	del = *first;
+//	*first = (*first)->right;
+//	free(del);
+//}
 
 void	ft_free_list_room(t_room **head)
 {
@@ -87,7 +147,14 @@ void	ft_free_list_room(t_room **head)
 	{
 		del = list;
 		list = list->next;
-		free(del->name);
+//		printf("len = %d", ft_strlen(del->name));
+//		if (del->name && ft_strlen(del->name) > 0)
+//		{
+//			free(del->name);
+//
+//		}
+//		else
+//			del->name = NULL;
 		free(del);
 	}
 	*head = NULL;
@@ -102,12 +169,19 @@ void	ft_free_map(t_map **map)
 	if (!*map)
 		return ;
 	tmp = *map;
-	ft_free_list_down(&tmp->link);
-	ft_free_list_down(&tmp->link_new);
-	ft_free_list_down(&tmp->link_copy);
-	ft_free_list_room(&tmp->rooms);
+	if (tmp->sh)
+		ft_free_list_i(&tmp->sh);
+	if (tmp->link)
+		ft_free_list_down(&tmp->link);
+	if (tmp->link_new)
+		ft_free_list_down(&tmp->link_new);
+	if (tmp->link_copy)
+		ft_free_list_down(&tmp->link_copy);
+	if (tmp->rooms)
+		ft_free_list_room(&tmp->rooms);
+
 	ft_free_first_in_two_path(&tmp->two_path);
-	//ft_free_first_in_two_path(&tmp->two_path);
+	ft_free_first_in_two_path(&tmp->two_path);
 	free(*map);
 	*map = NULL;
 }

@@ -19,11 +19,13 @@ int main(int ac, char	**av)
 	t_map	*map;
 	char	*str;
 
-	str = "./test_3";
+	str = "./test";
 	//str = av[1];
 	map = (t_map*)malloc(sizeof(t_map));
 	map->rooms = NULL;
 	map->link = NULL;
+	map->link_copy = NULL;
+	map->link_new = NULL;
 	map->sh = NULL;
 	map->two_path = NULL;
 	fd = open(str, O_RDONLY);
@@ -31,7 +33,7 @@ int main(int ac, char	**av)
 	{
 		main_path(map);
 		ant_in_room(map);
-		//ft_free_map(&map);
+		ft_free_map(&map);
 	}
 	else// и все почистить бы
 	{
