@@ -1,16 +1,46 @@
 #include "lem_in.h"
 
+/*
+ * ищет заданное кол-во к путей
+ * если путь выиграшный очищаем предыдущий
+ *
+ * */
+
+int main_path_2(t_map *map, int win, int k)
+{
+	t_list_i	*sh_big;
+	t_list_i	*sh_k;
+
+	del_link_path(map);
+	sh_big = one_big_path(map);
+	ft_new_room(map, sh_big);
+	sh_k  = bfs_k_path(map, NULL);
+	if (sh_k)
+	{
+		ft_del_shared_path(map, sh_big, sh_k);
+		ft_list_add_back_right_down(&map->two_path, ft_bfs_k(map, k));
+		if ((win = ft_check_path_n(map->two_path, map)))
+		{
+			map->two_path->right->content = win;
+			if (win > 0)//удаляем предыдущее состояние
+				ft_free_first_in_two_path(&map->two_path);
+		}
+	}
+	else
+		win = 0;
+	ft_free_list_i(&sh_k);
+	ft_free_list_i(&sh_big);
+	return (win);
+}
+
 void main_path(t_map *map)
 {
 	int			k; //кол-во путей
-	t_list_i	*sh;
-	t_list_i	*sh_big;
-	t_list_i	*sh_2;
 	int			win;
+	t_list_i	*sh;
 
 	win = 1;
 	sh = ft_bfs(map);
-
 	//при первом проходе длина время первого стостояния
 	map->two_path = ft_list_new_down(map->c_ant + ft_list_len_i(sh));
 	ft_list_add_back_down(&map->two_path, ft_list_new_down(ft_list_len_i(sh)));
@@ -18,38 +48,7 @@ void main_path(t_map *map)
 	// пытаемся найти новый путь, если получаем выигрыш - продолжаем
 	k = 1;
 	while (map->two_path->down->next && win)
-	{
-		k++;
-		del_link_path(map);
-		// можно ж перезаписать большой путь сюда
-		sh_big = one_big_path(map);
-		ft_new_room(map, sh_big);
-		sh_2  = bfs_k_path(map, NULL);
-		//ГДЕТО РЕВЕРСНУТЬ ПУТЬ НАДО
-		if (sh_2)
-		{
-			ft_del_shared_path(map, sh_big, sh_2);
-			ft_list_add_back_right_down(&map->two_path, ft_bfs_k(map, k));
-			if ((win = ft_check_path_n(map->two_path, map)))
-			{
-				ft_printf("win = %d\n", win);
-				map->two_path->right->content = win;
-				//удаляем предыдущее состояние
-				if (win > 0)
-				{
-					ft_free_first_in_two_path(&map->two_path);
-					ft_free_list_i(&sh_big);
-					ft_free_list_i(&sh_2);
-				}
-			}
-		}
-		else
-		{
-			ft_free_list_i(&sh_big);
-			return ;
-		}
-
-	}
+		win = main_path_2(map, win, ++k);
 }
 
 //удалить нужно все ссылки состоянниея 1-ого, всех путей которые есть
@@ -59,7 +58,6 @@ void	del_link_path(t_map *map)
 	t_list_down *tek_down_start;
 	t_list_i	*tek_path;
 	t_list_i	*tek_path_start;
-
 
 	//сделаем копию всех оригинальных ссылок
 	map->link_new = ft_copy_list_down(map->link);

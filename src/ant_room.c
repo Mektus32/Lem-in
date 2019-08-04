@@ -164,7 +164,6 @@ void ant_in_room(t_map *map)
 	int k;
 	int f;
 	int 	c_ant;
-	int len;
 
 	t_list_down *tmp;
 	t_list_path *tmp_path;
@@ -182,7 +181,6 @@ void ant_in_room(t_map *map)
 	while (i < c_path)
 	{
 		d[i] = tmp->content;//длина каждого пути
-		len = d[i];
 		k = 0;
 		tmp_i = tmp->next;
 		// для каждой комнаты в итом пути запишем связи на след и пред комнату

@@ -1,0 +1,14 @@
+L1-3 L2-1 
+L1-4 L3-3 L2-5 L4-1 
+L1-2 L3-4 L5-3 L2-6 L4-5 L6-1 
+L1-end L3-2 L5-4 L7-3 L2-end L4-6 L6-5 L8-1 
+L3-end L5-2 L7-4 L9-3 L4-end L6-6 L8-5 L10-1 
+L5-end L7-2 L9-4 L11-3 L6-end L8-6 L10-5 L12-1 
+L7-end L9-2 L11-4 L13-3 L8-end L10-6 L12-5 L14-1 
+L9-end L11-2 L13-4 L15-3 L10-end L12-6 L14-5 L16-1 
+L11-end L13-2 L15-4 L17-3 L12-end L14-6 L16-5 L18-1 
+L13-end L15-2 L17-4 L14-end L16-6 L18-5 
+L15-end L17-2 L16-end L18-6 
+L17-end L18-end 
+
+c_path = 2

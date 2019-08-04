@@ -1,12 +1,14 @@
 #include "lem_in.h"
-
+/*
+ * сoздает новые комнаты
+ *
+ *
+*/
 void ft_new_room(t_map *map, t_list_i *sh)
 {
 	t_list_down *tek_down;
-	t_list_i *in;//c_room + номер комнаты
 	int 	tek_content;
 	t_list_i *tek_next;
-	t_list_i *sh_tmp;
 	int r_pred;//предыдущее значение пути
 
 	r_pred = sh->content;
@@ -15,7 +17,6 @@ void ft_new_room(t_map *map, t_list_i *sh)
 	//! tmp
 	while (sh->next)
 	{
-		sh_tmp = sh;
 		//проверяем комнату в пути
 		//если оставшихся связей больше 1, удаляем существующую и заменяем 2умя новыми (in - out)
 		if (ft_list_len_i(ft_list_i_head(sh->content, map->link_new)->next) > 1 && sh->content != 0 &&  sh->content != map->c_room)
@@ -92,11 +93,6 @@ void ft_del_shared_path(t_map *map, t_list_i *sh, t_list_i *rev_2)
 	}
 	//удаляем связи где комнаты ин и аут
 	ft_free_list_down(&map->link_new);
-	//ft_free_list_down(&map->link_copy);
 	map->link_new = ft_copy_list_down(map->link_copy);
-	//map->link_new =
-//	ft_printf("link_copy\n");
-//	ft_pri_cop(map);
-//	ft_printf("link_copy_end\n");
 
 }

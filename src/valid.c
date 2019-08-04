@@ -82,25 +82,15 @@ int	check_room(t_map *map)
 				{//добавляем в начало сразу
 					ft_strdel(&line);
 					if (get_next_line(map->fd, &line) > 0)
-					{
-						//ft_printf("%s\n", line);
 						ft_list_add_room(&map->rooms, ft_create_ele(line, 0));
-					}
 					else
-					{
-
-
 						return (0);
-					}
 				}
 				else
 				{
 					ft_strdel(&line);
 					if (get_next_line(map->fd, &line) > 0)
-					{
-						//ft_printf("%s\n", line);
 						last_room = ft_create_ele(line, -1);
-					}
 					else
 						return (0);
 				}

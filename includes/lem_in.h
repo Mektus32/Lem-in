@@ -104,7 +104,7 @@ int 				find_room(t_list_i *room, int num);
 
 int					ft_len_int(int num);
 int					ft_max_mass(int *mass); // максимальное в массиве int
-
+int *make_mass(int k);
 
 	//(list_room.c)
 //ф для списка комнат

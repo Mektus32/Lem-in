@@ -42,35 +42,15 @@ t_list_i	*ft_path(t_map *map, int *dist)
 	return (start);
 }
 
-//0 если не найдкм ни одного пути
-t_list_i	*ft_bfs(t_map *map)
+
+void ft_bfs_2(t_map *map, t_list_i *order, t_list_i *all_order, int *dist)
 {
-	int i;
-	int *dist; //массив интов - расстояние от старта
-	//длина кротчайшего пути - она наверно не нужна len внесена в структуру нам по ней все равно придется
-	//выбирать количество путей от муравьев; 
-	t_list_i *order;
-	t_list_i *all_order;
-	t_list_down *tmp;
-	t_list_i *tmp_i; //я поэтому из ft_list_i_head хотела возвращать сразу t_list_i, что б 2 раза одно и тоже не писать
+	t_list_down	*tmp;
+	t_list_i	*tmp_i;
 
-	t_list_i *order_start;
-	t_list_i *all_order_start;
-
-	dist = (int*)malloc(sizeof(int) * (map->c_room + 1));
-	i = 0;
-	while (i <= map->c_room)
-		dist[i++] = map->c_room + 1;
-	//начинаем очередь в очередь добавляем все вершины, которые встретелись на пути
-	order = ft_list_new_i(0);
-	all_order = ft_list_new_i(0);
-	order_start = order;
-	all_order_start = all_order;
-	dist[0] = 0;
-	// будем продолжать пока есть очередь или пока не нашли кратчайший путь (нашли комнатц энд)
 	while (order && !(map->len_sh))
 	{
-		//возвращаем ссылку на комнату 
+		//возвращаем ссылку на комнату
 		tmp = ft_list_i_head(order->content, map->link);
 		tmp_i = tmp->next;//надо пропустить себя же ! ЗАПИСЬ НИЖЕ РАБОТАЕТ -2строки =)
 		//tmp_i = ft_list_i_head(order->content, map->link)->next;
@@ -87,21 +67,71 @@ t_list_i	*ft_bfs(t_map *map)
 			{
 				ft_list_add_back_i_if_not(&order, tmp_i->content, all_order);
 				ft_list_add_back_i(&all_order, ft_list_new_i(tmp_i->content));
-
 			}
 			tmp_i = tmp_i->next;
 		}
-		//free(tmp);
 		order = order->next;
-		//ft_printf("%d = ",order->content);
 	}
 
+}
+
+
+//0 если не найдкм ни одного пути
+t_list_i	*ft_bfs(t_map *map)
+{
+
+	//длина кротчайшего пути - она наверно не нужна len внесена в структуру нам по ней все равно придется
+	//выбирать количество путей от муравьев;
+	t_list_i *order;
+	t_list_i *all_order;
+
+	t_list_i *order_start;
+	t_list_i *all_order_start;
+
+	int *dist; //массив интов - расстояние от старта
+	dist = make_mass(map->c_room);
+
+
+
+	//начинаем очередь в очередь добавляем все вершины, которые встретелись на пути
+	order = ft_list_new_i(0);
+	all_order = ft_list_new_i(0);
+	order_start = order;
+	all_order_start = all_order;
+
+	// будем продолжать пока есть очередь или пока не нашли кратчайший путь (нашли комнатц энд)
+//	while (order && !(map->len_sh))
+//	{
+//		//возвращаем ссылку на комнату
+//		tmp = ft_list_i_head(order->content, map->link);
+//		tmp_i = tmp->next;//надо пропустить себя же ! ЗАПИСЬ НИЖЕ РАБОТАЕТ -2строки =)
+//		//tmp_i = ft_list_i_head(order->content, map->link)->next;
+//		//пока есть комнаты(tmp), связанные с комнатой в очереди
+//		//перезаписываем расстояние, если до этого оно было больше
+//		while (tmp_i && map->len_sh == 0)
+//		{
+//			//если в комнате, которую мы проверяем растояние от начала больше, чем от соседа которого мы можем дотянуться
+//			if (dist[tmp_i->content] > dist[order->content] + 1 && (tmp_i->content != order->content))
+//				dist[tmp_i->content] = dist[order->content] + 1;
+//			if (tmp_i->content == map->c_room)//нашли короткий путь, если пришли в последнюю комнату
+//				map->len_sh = dist[tmp_i->content]; // надо выходить из цикла while(order && !len)
+//			else //для каждого узла добавляем очередь соседей
+//			{
+//				ft_list_add_back_i_if_not(&order, tmp_i->content, all_order);
+//				ft_list_add_back_i(&all_order, ft_list_new_i(tmp_i->content));
+//
+//			}
+//			tmp_i = tmp_i->next;
+//		}
+//		order = order->next;
+//	}
+	ft_bfs_2(map, order, all_order, dist);
 	ft_free_list_i(&order_start);
 	ft_free_list_i(&all_order_start);
 	//ft_free_list_i(&tmp_i_start);
 	if (map->len_sh == 0) //если длина осталась нулевой
 	{
-		//знаю что не чищу
+
 		free(dist);
 		printf("no path\n");
 		return (NULL);

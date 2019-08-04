@@ -12,13 +12,10 @@
 
 #include "lem_in.h"
 
-//Создание нового элемента списка
+/*Создание нового элемента списка*/
 t_list_i	*ft_list_new_i(int content)
 {
 	t_list_i	*list;
-
-//	list = NULL;
-//	list =
 
 	if (!(list = (t_list_i*)malloc(sizeof(t_list_i))))
 		return (NULL);
@@ -34,7 +31,7 @@ t_list_i	*ft_list_new_i(int content)
 	return (list);
 }
 
-//Добавление эдемента списка в конец
+/*Добавление эдемента списка в конец*/
 void	ft_list_add_back_i(t_list_i **lst_a, t_list_i *new)
 {
 	t_list_i *list;
@@ -45,17 +42,13 @@ void	ft_list_add_back_i(t_list_i **lst_a, t_list_i *new)
 	if (*lst_a)
 	{
 		while (list->next) {
-			//ft_printf("[%p]->", list);
 			list = list->next;
 
 		}
 		list->next = new;
-		//ft_printf("p = %p \n", list);
 	}
 	else
 		*lst_a = new;
-	//ft_printf("[%p]\n", list);
-	//list ? ft_printf("[%p]\n", list->next) : 0;
 }
 
 /* Функция удаления элемента из списка типа t_list_i при равенстве "content" */

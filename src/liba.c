@@ -42,3 +42,16 @@ int ft_max_mass(int *mass)
 	}
 	return (max);
 }
+
+int *make_mass(int k)
+{
+	int i;
+	int *dist;
+
+	dist = (int*)malloc(sizeof(int) * (k + 1));
+	i = 0;
+	while (i <= k)
+		dist[i++] = k + 1;
+	dist[0] = 0;
+	return (dist);
+}

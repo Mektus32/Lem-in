@@ -51,6 +51,7 @@ void 	ft_free_list_i(t_list_i **head)
 			free(del);
 		del = NULL;
 	}
+	list = NULL;
 	*head = NULL;
 }
 
@@ -68,7 +69,10 @@ void	ft_free_list_down(t_list_down **head)
 	while (list)
 	{
 		del = list;
-		del_i = list->next;
+		if (list->next)
+			del_i = list->next;
+		else
+			del_i = NULL;
 		list = list->down;
 
 		if (del_i)
@@ -76,6 +80,7 @@ void	ft_free_list_down(t_list_down **head)
 		free(del);
 		del = NULL;
 	}
+	list = NULL;
 	*head = NULL;
 }
 
@@ -96,16 +101,22 @@ void	ft_free_first_in_two_path(t_list_down **first)
 	list = (*first);
 	while (list)
 	{
-		del_d = list->down;
-		del_r = list->right;
-		del_n = list->next;
+		if (list->down)
+			del_d = list->down;
+		else
+			del_d = NULL;
+		if (list->right)
+			del_r = list->right;
+		if (list->next)
+			del_n = list->next;
 		list = list->down;
 //		if (del_n)
 //			ft_free_list_i(&del_n);
-		if (del_d)
-			ft_free_list_down(&del_d);
-		if (del_r)
-			ft_free_list_down(&del_r);
+	//	if (del_d)
+			//if (( del_d->down || del_d->next))
+		//	ft_free_list_down(&del_d);
+	//	if (del_r)
+	//		ft_free_list_down(&del_r);
 	}
 	free(list);
 	del = *first;
@@ -160,14 +171,13 @@ void	ft_free_list_room(t_room **head)
 	*head = NULL;
 }
 
-void	ft_free_map(t_map **map)
-{
-	t_map	*tmp;
+void	ft_free_map(t_map **map) {
+	t_map *tmp;
 
 	if (!map)
-		return ;
+		return;
 	if (!*map)
-		return ;
+		return;
 	tmp = *map;
 	if (tmp->sh)
 		ft_free_list_i(&tmp->sh);
@@ -183,5 +193,4 @@ void	ft_free_map(t_map **map)
 	ft_free_first_in_two_path(&tmp->two_path);
 	ft_free_first_in_two_path(&tmp->two_path);
 	free(*map);
-	*map = NULL;
 }

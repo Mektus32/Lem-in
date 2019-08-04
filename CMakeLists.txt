@@ -12,9 +12,12 @@ add_executable(School21_Lem_in
         ft_printf/src/check_args.c
         ft_printf/src/choise_spec.c
 
-
         ft_printf/src/ft_free_strncpy.c
+
+
+
         ft_printf/src/ft_printf.c
+
         ft_printf/src/init_arg.c
         ft_printf/src/print_digit.c
         ft_printf/src/print_double.c
