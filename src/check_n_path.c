@@ -2,7 +2,6 @@
 
 int	ft_max_count_path(t_map *map)
 {
-	int max_count_path;
 	int to_end;
 	int from_start;
 	t_list_i *tmp;

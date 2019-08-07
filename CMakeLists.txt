@@ -129,4 +129,4 @@ add_executable(School21_Lem_in
         src/main.c
         src/path.c
         src/suurballe.c
-        src/valid.c)
+        src/valid.c src/list_path.c)

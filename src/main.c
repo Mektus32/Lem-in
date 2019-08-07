@@ -19,6 +19,8 @@ int main(int ac, char	**av)
 	t_map	*map;
 	char	*str;
 
+	ac = 0;
+	av = NULL;
 	str = "./test";
 	//str = av[1];
 	map = (t_map*)malloc(sizeof(t_map));
@@ -33,7 +35,7 @@ int main(int ac, char	**av)
 	{
 		main_path(map);
 		ant_in_room(map);
-		//ft_free_map(&map);
+		ft_free_map(&map);
 	}
 	else// и все почистить бы
 	{

@@ -17,7 +17,7 @@ NAME = lem-in
 # src / obj files
 SRC = main.c valid.c bfs.c list_room.c liba.c ft_list_i.c ft_list_down.c ft_bfs_k.c \
     check_n_path.c free.c ft_print.c suurballe.c ant_room.c\
-    path.c
+    path.c list_path.c
 
 OBJ = $(addprefix $(OBJDIR), $(SRC:.c=.o))
 
@@ -45,7 +45,7 @@ OBJDIR = ./obj/
 all: $(NAME)
 
 $(NAME): obj $(FT_LIB) $(PR_LIB) grn $(OBJ)
-	@$(CC) $(OBJ) $(PR_LNK) $(FT_LNK) -lm -o $(NAME)
+	@$(CC) $(CFLAGS) $(OBJ) $(PR_LNK) $(FT_LNK) -lm -o $(NAME)
 	@echo "\x1b[0m"
 
 red:
@@ -67,7 +67,7 @@ $(PR_LIB):
 	@make -C $(PR)
 
 $(OBJDIR)%.o:$(SRCDIR)%.c
-	$(CC)  $(PR_INC) $(FT_INC) $(INCDIR) -o $@ -c $<
+	$(CC) $(CFLAGS)  $(PR_INC) $(FT_INC) $(INCDIR) -o $@ -c $<
 
 clean: red
 	/bin/rm -rf $(OBJDIR)

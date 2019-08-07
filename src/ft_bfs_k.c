@@ -1,17 +1,7 @@
 #include "lem_in.h"
 
-//есть ли клмната в списке?
-int find_room(t_list_i *room, int num)
-{
-	while (room)
-	{
-		if (room->content == num)
-			return (1);
-		room = room->next;
-	}
-	return (0);
-}
 
+/*обход*/
 t_list_i	*ft_path_k(t_map *map, int *dist)
 {
 	t_list_i *start;
@@ -20,16 +10,12 @@ t_list_i	*ft_path_k(t_map *map, int *dist)
 	int tmp_n;
 	int i;
 	int f;
-
 	//обратный путь начинается с последней комнаты
 	path = ft_list_new_i(map->c_room);
-	//ссылка на начало, что б вернуть
-	start = path;
-
+	start = path; /*не потерять ссылку на начало*/
 	while (path && path->content != 0)// пока не придем в комнату старта ищем путь
 	{
 		f = 1;
-		//найдем dest с весом dist[path->content] - 1) и если из него есть ссылка в насБ добавим путь
 		i = 0;
 		while ((map->c_room) * 2 > i && f)
 		{
@@ -39,12 +25,12 @@ t_list_i	*ft_path_k(t_map *map, int *dist)
 				//есть ли из i-ой комнаты ссылка на нас?
 				tmp_n = (ft_list_i_head(i, map->link_new))->content;
 				tmp_i = (ft_list_i_head(i, map->link_new))->next;
-
 				while (tmp_i)
 				{
 					if (tmp_i->content == path->content)
 					{
-						ft_list_add_back_i(&path, ft_list_new_i(tmp_n));
+						ft_list_add_back_i_one(&path, tmp_n);
+						//ft_free_list_i(&tmp_n);
 						f = 0;
 						break ;
 					}
@@ -53,12 +39,10 @@ t_list_i	*ft_path_k(t_map *map, int *dist)
 			}
 			i++;
 		}
-		path = path->next;//переход к комнате, которую добавили
+		path = path->next;/*переход к комнате, которую добавили*/
 	}
-
-	//ft_list_revers(&start);
 	path = start;
-	while(path)
+	while(path) /*если это созаданная комната*/
 	{
 		if (path->content > map->c_room)
 			path->content -= map->c_room;
@@ -82,37 +66,30 @@ int bfs_k_path_2(t_map *map, t_list_i *order, t_list_i *all_order, int *dist)
 	{
 		f = 1;
 		tmp_i = ft_list_i_head(order->content, map->link_new)->next;
-		//tmp_i = tmp->next;//надо пропустить себя же ! ЗАПИСЬ НИЖЕ РАБОТАЕТ -2строки =)
-		//tmp_i = ft_list_i_head(order->content, map->link)->next;
 		//пока есть комнаты(tmp), связанные с комнатой в очереди
 		//перезаписываем расстояние, если до этого оно было больше
 		while (tmp_i && len == 0 && f)
 		{
 			//если в комнате, которую мы проверяем растояние от начала больше, чем от соседа которого мы можем дотянуться
 			if (dist[tmp_i->content] > dist[order->content] + 1 && (tmp_i->content != order->content))
-			{
-
 				dist[tmp_i->content] = dist[order->content] + 1;
-//				if (tmp_i->content > map->c_room)
-//					dist[tmp_i->content - map->c_room] = dist[order->content] + 1;
-			}
 			if (tmp_i->content == map->c_room)//нашли короткий путь, если пришли в последнюю комнату
 			{
 				len = dist[tmp_i->content]; // надо выходить из цикла while(order && !len)
 				f = 0;
-				//ft_printf("bfs_k_path /// %d %d %d %d %d = \n",len, tmp_i->content, dist[tmp_i->content], dist[order->content], order->content);
 			}
 				//для каждого узла добавляем очередь соседей если нет в запрещеном списке
 			else if (dist[tmp_i->content] != -1 && find_room(order ,tmp_i->content) == 0)
 			{
 				ft_list_add_back_i_if_not(&order, tmp_i->content, all_order);//ft_list_add_back_i(&order, ft_list_new_i(tmp_i->content));
-				ft_list_add_back_i(&all_order, ft_list_new_i(tmp_i->content));
+				ft_list_add_back_i_one(&all_order, tmp_i->content);
+
 			}
 			tmp_i = tmp_i->next;
 		}
-		//free(tmp);
 		order = order->next;
 	}
+//	ft_free_list_down(&map->link_new);
 	return(len);
 
 
@@ -124,10 +101,9 @@ t_list_i 		*bfs_k_path(t_map *map, t_list_i *cant_go)
 {
 	int			i;
 	int len;
-	int 		*dist; //массив интов - расстояние от старта
+	int 		*dist; /*массив расстояний от комнаты старта*/
 	t_list_i 	*order;
 	t_list_i *all_order;
-
 	t_list_i *order_start;
 	t_list_i *all_order_start;
 
@@ -147,7 +123,6 @@ t_list_i 		*bfs_k_path(t_map *map, t_list_i *cant_go)
 	order_start = order;
 	all_order_start = all_order;
 	dist[0] = 0;
-
 	// будем продолжать пока есть очередь или пока не нашли кратчайший путь (нашли комнатц энд)
 	len = bfs_k_path_2(map, order, all_order, dist);
 	ft_free_list_i(&order_start);
@@ -182,24 +157,18 @@ t_list_down		*ft_bfs_k(t_map *map, int k)
 	path_tek = NULL;
 	while (p < k && (path_tek = bfs_k_path(map, cant_go)))
 	{
-		//самого себя можно передаь для записи длины?
-		//pr_list(path_tek);
-
-		//ft_list_add_back_down(&path_down, ft_list_new_pointer_down(path_tek));
 		ft_list_add_back_down_next(&path_down, path_tek);
-		//ft_list_add_back_i(&tmp->down->next, path_tek);//path_down->down->next = path_tek;
-		//ft_print_all_path(path_down);
 		tmp->down->content = ft_list_len_i(path_tek);
-		//ft_list_add_back_down(&path_down,)
-		//дополним список по которому нельзя ходить
+		//ft_list_add_back_i(&cant_go, path_tek);/* дополним список по которому нельзя ходить */
 		ft_list_add_back_i(&cant_go, path_tek);
+		ft_free_list_i(&path_tek);
+		//ft_fr
 		path_tek = NULL;
 		ft_list_add_back_down(&path_down, ft_list_new_down(-10));//path_down->down = (t_list_down*)malloc(sizeof(t_list_down));
-		//path_down->down->next = NULL;
 		tmp = tmp->down;
 		p++;
 	}
-
+	ft_free_list_i(&cant_go);
 	return (path_down);
 }
 

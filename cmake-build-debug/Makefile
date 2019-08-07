@@ -2985,6 +2985,33 @@ src/liba.c.s:
 	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/liba.c.s
 .PHONY : src/liba.c.s
 
+src/list_path.o: src/list_path.c.o
+
+.PHONY : src/list_path.o
+
+# target to build an object file
+src/list_path.c.o:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/list_path.c.o
+.PHONY : src/list_path.c.o
+
+src/list_path.i: src/list_path.c.i
+
+.PHONY : src/list_path.i
+
+# target to preprocess a source file
+src/list_path.c.i:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/list_path.c.i
+.PHONY : src/list_path.c.i
+
+src/list_path.s: src/list_path.c.s
+
+.PHONY : src/list_path.s
+
+# target to generate assembly for a file
+src/list_path.c.s:
+	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/src/list_path.c.s
+.PHONY : src/list_path.c.s
+
 src/list_room.o: src/list_room.c.o
 
 .PHONY : src/list_room.o
@@ -3447,6 +3474,9 @@ help:
 	@echo "... src/liba.o"
 	@echo "... src/liba.i"
 	@echo "... src/liba.s"
+	@echo "... src/list_path.o"
+	@echo "... src/list_path.i"
+	@echo "... src/list_path.s"
 	@echo "... src/list_room.o"
 	@echo "... src/list_room.i"
 	@echo "... src/list_room.s"

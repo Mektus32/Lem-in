@@ -152,8 +152,10 @@ int check_links(char *line, t_map *map)
 					// если нашли комнаты запихиваем в список (для каждой комнаты свой)
 					first = ft_list_i_head(start->number, map->link);
 					second = ft_list_i_head(tmp->number, map->link);
-					ft_list_add_back_i(&first->next, ft_list_new_i(tmp->number));
-					ft_list_add_back_i(&second->next, ft_list_new_i(start->number));
+					ft_list_add_back_i_one(&first->next, tmp->number);
+					ft_list_add_back_i_one(&second->next, start->number);
+//					ft_list_add_back_i(&first->next, ft_list_new_i(tmp->number));
+//					ft_list_add_back_i(&second->next, ft_list_new_i(start->number));
 					return (1);
 				}
 				tmp = tmp->next;

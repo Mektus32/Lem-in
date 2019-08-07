@@ -20,19 +20,35 @@ t_list_i	*ft_list_new_i(int content)
 	if (!(list = (t_list_i*)malloc(sizeof(t_list_i))))
 		return (NULL);
 	if (!content)
-	{
 		list->content = 0;
-	}
 	else
-	{
 		list->content = content;
-	}
 	list->next = NULL;
 	return (list);
 }
+/* добавление в список копию второго */
+//void ft_lst_plus_copy(t_list_i **lst_a, t_list_i *new)
+//{
+//	t_list_i *list;
+//
+//	list = *lst_a;
+//
+//
+//
+//	while (list->next)
+//		list = list->next;
+//	while (new)
+//	{
+//		list->next = ft_list_new_i(new->content);
+//		list = list->next;
+//		new = new->next;
+//	}
+//
+//}
+
 
 /*Добавление эдемента списка в конец*/
-void	ft_list_add_back_i(t_list_i **lst_a, t_list_i *new)
+void	ft_list_add_back_i_one(t_list_i **lst_a, int content)
 {
 	t_list_i *list;
 
@@ -41,15 +57,44 @@ void	ft_list_add_back_i(t_list_i **lst_a, t_list_i *new)
 	list = *lst_a;
 	if (*lst_a)
 	{
-		while (list->next) {
+		while (list->next)
 			list = list->next;
-
-		}
-		list->next = new;
+		list->next = ft_list_new_i(content);
 	}
 	else
-		*lst_a = new;
+		*lst_a = ft_list_new_i(content);
 }
+void	ft_list_add_back_i(t_list_i **lst_a, t_list_i *new)
+{
+	t_list_i *list;
+
+	if (!(lst_a))
+		return ;
+	list = *lst_a;
+	if (!new)
+		return ;
+	if (*lst_a)
+	{
+		while (list->next)
+			list = list->next;
+		list->next = ft_list_new_i(new->content);
+		new = new->next;
+	}
+	else
+	{
+		*(lst_a) = ft_list_new_i(new->content);
+		list = *lst_a;
+		new = new->next;
+	}
+	while (new)
+	{
+		list->next = ft_list_new_i(new->content);
+		list = list->next;
+		new = new->next;
+	}
+
+}
+
 
 /* Функция удаления элемента из списка типа t_list_i при равенстве "content" */
 void	ft_remove_list_if(t_list_i **head, int content)
@@ -136,18 +181,18 @@ int		ft_list_len_i(t_list_i *head)
 }
 
 /* Функция копирования списка i */
-t_list_i	*ft_list_copy_i(t_list_i *head)
+t_list_i	* ft_list_copy_i(t_list_i *head)
 {
 	t_list_i	*copy;
 
 	copy = NULL;
 	if (!head)
 		return (NULL);
-	while (head)
-	{
-		ft_list_add_back_i(&copy, ft_list_new_i(head->content));
-		head = head->next;
-	}
+//	while (head)
+//	{
+		ft_list_add_back_i(&copy, head);
+//		head = head->next;
+//	}
 	return (copy);
 }
 
@@ -162,5 +207,5 @@ void ft_list_add_back_i_if_not(t_list_i **lst_a, int content, t_list_i *all_orde
 			return ;
 		tmp_lst = tmp_lst ->next;
 	}
-	ft_list_add_back_i(lst_a, ft_list_new_i(content));
+	ft_list_add_back_i_one(lst_a, content);
 }

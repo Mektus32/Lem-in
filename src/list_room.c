@@ -72,3 +72,15 @@ char *ft_name_room(t_room *a_lst, int num)
 	}
 	return (NULL);
 }
+
+//есть ли клмната в списке?
+int find_room(t_list_i *room, int num)
+{
+	while (room)
+	{
+		if (room->content == num)
+			return (1);
+		room = room->next;
+	}
+	return (0);
+}

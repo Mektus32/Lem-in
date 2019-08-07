@@ -70,7 +70,8 @@ void	del_link_path(t_map *map)
 		tek_path_start = tek_path;
 		while (tek_path && tek_path->next)
 		{
-			ft_remove_list_if(&(ft_list_i_head(tek_path->content, map->link_new)->next), tek_path->next->content);
+			ft_remove_list_if(&(ft_list_i_head(tek_path->content, map->link_new)->next),
+					tek_path->next->content);
 			tek_path = tek_path->next;
 		}
 		ft_free_list_i(&tek_path_start);
@@ -93,9 +94,11 @@ t_list_i *one_big_path(t_map *map)
 	while(tek_down)
 	{
 		tek_path = tek_down->next;
+//		ft_list_add_back_i(&big_path, tek_path);
 		while (tek_path)
 		{
-			ft_list_add_back_i(&big_path, ft_list_new_i(tek_path->content));
+			if (tek_path->content > 0)
+				ft_list_add_back_i_one(&big_path, tek_path->content);
 			tek_path = tek_path->next;
 		}
 		tek_down = tek_down->down;

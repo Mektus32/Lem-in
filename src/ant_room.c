@@ -1,51 +1,5 @@
 #include "lem_in.h"
 
-t_list_path	*ft_list_new_path(int num_ant, char *name, t_list_path *prev)
-{
-	t_list_path	*list;
-
-	if (!(list = (t_list_path*)malloc(sizeof(t_list_path))))
-		return (NULL);
-	list->num_ant = num_ant;
-	list->name_room = name;
-	list->next = NULL;
-	list->prev = prev;
-	//free(line);
-	return (list);
-}
-
-t_list_path	*ft_list_add_back_path(t_list_path **head, int num_ant, char *name)
-{
-	t_list_path	*list;
-	t_list_path	*tmp;
-
-	if (!head)
-		return (NULL);
-	list = *head;
-	if (list)
-	{
-		tmp = NULL;
-		while (list && list->next)
-		{
-			tmp = list;
-			list = list->next;
-		}
-		if (tmp && tmp->next)
-			list->next = ft_list_new_path(num_ant, name, tmp->next);
-		else
-			list->next = ft_list_new_path(num_ant, name, NULL);
-
-	}
-	else
-	{
-		list = ft_list_new_path(num_ant, name, NULL);
-		*head = list;
-	}
-//	(*head)->next->next ? printf("name[%s]\n", (*head)->next->next->name_room) : 0;
-	return (list);
-}
-
-
 int		ft_count_ant(t_list_path *path)
 {
 		int			j;
@@ -79,15 +33,12 @@ void	ft_move_ant_in_path(t_list_path *path)
 		list->num_ant = 0;
 		list->num_ant = list->prev->num_ant;
 		if (list->prev->num_ant != 0)
-		{
-
-
 			ft_printf("L%d-%s ", list->prev->num_ant, list->name_room);
-
-		}
-
+//		if (list->prev && list->prev->num_ant != 0)
+//			ft_printf(" ");
 		list->prev->num_ant = 0;
 		list = list->prev;
+
 	}
 }
 
@@ -132,28 +83,6 @@ void	ft_pars_ant(t_map *map, t_list_path *paths, int count)
 
 	}
 }
-
-t_list_path *path_n_mass(int c_path)
-{
-	t_list_path *tmp_path;
-	int i;
-
-	tmp_path = (t_list_path*)malloc(sizeof(t_list_path) * (c_path));
-	i = 0;
-	while (i < c_path)
-	{
-		tmp_path[i].name_room = 0;
-		tmp_path[i].next = NULL;
-		tmp_path[i].num_ant = 0;
-		tmp_path[i].prev = NULL;
-		i++;
-	}
-
-
-	return (tmp_path);
-
-}
-
 
 
 void ant_in_room(t_map *map)
@@ -218,6 +147,7 @@ void ant_in_room(t_map *map)
 	}
 	free(d);
 	c_path = (tmp_path[i - 1].num_ant == 0 ? c_path - 1 : c_path);
+	map->c_path = c_path;
 	// начинаем расставлять муравьев в комнатам по порядку
 	// пока есть пути и кол-во муравьев в пути не 0 бернм мкравья и переносим его в след комнату, если комната не последняя
 	ft_pars_ant(map, tmp_path, c_path);

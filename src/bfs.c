@@ -30,7 +30,7 @@ t_list_i	*ft_path(t_map *map, int *dist)
 		{//если предыдущих ячеек несколько нам не важно, тк путь все = будет кротчайший
 			if (dist[tmp_i->content] == (dist[path->content] - 1))
 			{
-				ft_list_add_back_i(&path, ft_list_new_i(tmp_i->content));
+				ft_list_add_back_i_one(&path, tmp_i->content);
 				break ; // добавили одну комнату и успокоились - переходим к ней
 			}
 			tmp_i = tmp_i->next;
@@ -66,7 +66,7 @@ void ft_bfs_2(t_map *map, t_list_i *order, t_list_i *all_order, int *dist)
 			else //для каждого узла добавляем очередь соседей
 			{
 				ft_list_add_back_i_if_not(&order, tmp_i->content, all_order);
-				ft_list_add_back_i(&all_order, ft_list_new_i(tmp_i->content));
+				ft_list_add_back_i_one(&all_order, (tmp_i->content));
 			}
 			tmp_i = tmp_i->next;
 		}

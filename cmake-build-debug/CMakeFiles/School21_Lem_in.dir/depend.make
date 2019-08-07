@@ -338,6 +338,11 @@ CMakeFiles/School21_Lem_in.dir/src/liba.c.o: ../includes/lem_in.h
 CMakeFiles/School21_Lem_in.dir/src/liba.c.o: ../includes/libft.h
 CMakeFiles/School21_Lem_in.dir/src/liba.c.o: ../src/liba.c
 
+CMakeFiles/School21_Lem_in.dir/src/list_path.c.o: ../includes/ft_printf.h
+CMakeFiles/School21_Lem_in.dir/src/list_path.c.o: ../includes/lem_in.h
+CMakeFiles/School21_Lem_in.dir/src/list_path.c.o: ../includes/libft.h
+CMakeFiles/School21_Lem_in.dir/src/list_path.c.o: ../src/list_path.c
+
 CMakeFiles/School21_Lem_in.dir/src/list_room.c.o: ../includes/ft_printf.h
 CMakeFiles/School21_Lem_in.dir/src/list_room.c.o: ../includes/lem_in.h
 CMakeFiles/School21_Lem_in.dir/src/list_room.c.o: ../includes/libft.h

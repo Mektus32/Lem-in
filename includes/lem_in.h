@@ -70,6 +70,7 @@ typedef struct		s_map
 	t_list_i		*sh;//кротчайший путь // вроде бы можно удалить?!(мы не используем)
 	int				len_sh;//длина кратчайшего пути
 	t_list_down		*two_path;//
+	int 			c_path;
 }					t_map;
 
 
@@ -98,7 +99,7 @@ t_list_i			*ft_path(t_map *map, int *dist);
 t_list_down			*ft_bfs_k(t_map *map, int k);
 t_list_i 			*bfs_k_path(t_map *map, t_list_i *cant_go);
 t_list_i			*ft_path_k(t_map *map, int *dist);
-int 				find_room(t_list_i *room, int num);
+
 	// (liba.c)
 //ф, которые претендуют на звание стандартных 
 
@@ -112,6 +113,7 @@ t_room				*ft_create_ele(char *line, int number);
 void				ft_push_back_room(t_room **head, t_room *new);
 void				ft_list_add_room(t_room **a_lst, t_room *new);
 char 				*ft_name_room(t_room *a_lst, int num);
+int 				find_room(t_list_i *room, int num); /* 1 - если комната есть, 0 - иначе*/
 	//ft_list_down.c
 
 t_list_down			*ft_list_i_head(int num, t_list_down *a_lst);
@@ -130,6 +132,9 @@ void	ft_list_add_back_down_next(t_list_down **a_lst, t_list_i *new);
 
 	// (ft_list_i.c)
 //ф для работы с односвязным списком
+void ft_lst_plus_copy(t_list_i **lst_a, t_list_i *new);
+void	ft_list_add_back_i_one(t_list_i **lst_a, int content);
+
 t_list_i			*ft_list_new_i(int content);
 void	ft_list_add_back_i(t_list_i **lst_a, t_list_i *new);
 void ft_list_add_back_i_if_not(t_list_i **lst_a, int content, t_list_i *all_order);
@@ -140,6 +145,14 @@ t_list_i			*ft_list_copy_i(t_list_i *head);
 void				ft_remove_list_if(t_list_i **head, int content);
 void				ft_add_list_if(t_list_i **head, int content, t_list_i *new);
 void				ft_list_revers(t_list_i **begin_list);
+
+//list_path
+t_list_path	*ft_list_new_path(int num_ant, char *name, t_list_path *prev);
+t_list_path	*ft_list_add_back_path(t_list_path **head, int num_ant, char *name);
+t_list_path *path_n_mass(int c_path);
+
+
+
 	//check_n_path.c
 int	ft_max_count_path(t_map *map);
 int ft_check_path_n(t_list_down *two_path, t_map *map);
@@ -161,6 +174,7 @@ void pr_list(t_list_i *new);
 
 // suurballe.c
 void ft_new_room(t_map *map, t_list_i *sh);
+void ft_del_shared_path(t_map *map, t_list_i *sh, t_list_i *rev_2);
 
 // удаляет инверсные пути в link_new
 void ft_del_shared_path(t_map *map, t_list_i *sh, t_list_i *rev_2);
@@ -171,5 +185,8 @@ t_list_i *one_big_path(t_map *map);
 
 //ant_room
 void ant_in_room(t_map *map);
+void	ft_pars_ant(t_map *map, t_list_path *paths, int count);
+void	ft_move_ant_in_path(t_list_path *path);
+int		ft_count_ant(t_list_path *path);
 
 #endif
