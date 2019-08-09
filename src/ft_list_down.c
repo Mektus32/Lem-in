@@ -95,12 +95,13 @@ void	ft_list_add_back_down_next(t_list_down **a_lst, t_list_i *next)
 	{
 		while (list->down)
 			list = list->down;
-		list->next = ft_list_new_i(0);
-		list_next = list->next;
+//		list->next = ft_list_new_i(0);
+	//	list_next = list->next;
+		list->next = ft_list_copy_i(next);
 //		if (!(list_next = (t_list_i*)malloc(sizeof(t_list_i))))
 //			return ;
 		//list->content = ft_list_copy_i(next);
-		ft_list_add_back_i(&list_next, next);
+		//ft_list_add_back_i(&(list_next), next);
 		//пропустим 1 - длину пути
 		//list_next->next = next->next;
 		//list->next = list_next;

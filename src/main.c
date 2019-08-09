@@ -21,7 +21,7 @@ int main(int ac, char	**av)
 
 	ac = 0;
 	av = NULL;
-	str = "./test";
+	str = "../test";
 	//str = av[1];
 	map = (t_map*)malloc(sizeof(t_map));
 	map->rooms = NULL;

@@ -6,10 +6,11 @@
  *
  * */
 
-int main_path_2(t_map *map, int win, int k)
+int main_path_2(t_map *map,  int k)
 {
 	t_list_i	*sh_big;
 	t_list_i	*sh_k;
+	int			win;
 
 	del_link_path(map);
 	sh_big = one_big_path(map);
@@ -48,7 +49,7 @@ void main_path(t_map *map)
 	// пытаемся найти новый путь, если получаем выигрыш - продолжаем
 	k = 1;
 	while (map->two_path->down->next && win)
-		win = main_path_2(map, win, ++k);
+		win = main_path_2(map, ++k);
 }
 
 //удалить нужно все ссылки состоянниея 1-ого, всех путей которые есть

@@ -64,7 +64,7 @@ int ft_check_path_n(t_list_down *two_path, t_map *map)
 	{
 		k = 0;
 		f = 0;// что б знать что мы продолжаем муравьев раскидывать
-		while (d[k] && n_ant)
+		while (k < c_path && n_ant)
 		{
 			if (d[k] < len_max)
 			{

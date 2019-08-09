@@ -27,7 +27,6 @@ void free_tmp_path(t_list_path **path_i, int c_path)
 		{
 			del = tmp_i;
 			tmp_i = tmp_i->next;
-			//free(del->name_room);
 			free(del);
 		}
 		i++;

@@ -105,12 +105,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/School21_Lem_in.dir/src/ft_list_i.c.o"
   "CMakeFiles/School21_Lem_in.dir/src/ft_print.c.o"
   "CMakeFiles/School21_Lem_in.dir/src/liba.c.o"
+  "CMakeFiles/School21_Lem_in.dir/src/list_path.c.o"
   "CMakeFiles/School21_Lem_in.dir/src/list_room.c.o"
   "CMakeFiles/School21_Lem_in.dir/src/main.c.o"
   "CMakeFiles/School21_Lem_in.dir/src/path.c.o"
   "CMakeFiles/School21_Lem_in.dir/src/suurballe.c.o"
   "CMakeFiles/School21_Lem_in.dir/src/valid.c.o"
-  "CMakeFiles/School21_Lem_in.dir/src/list_path.c.o"
   "School21_Lem_in.pdb"
   "School21_Lem_in"
 )

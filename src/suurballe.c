@@ -39,7 +39,9 @@ void ft_new_room(t_map *map, t_list_i *sh)
 			//ft_list_add_back_i(&(ft_list_i_head(sh->content + map->c_room, map->link_new)->next), ft_list_new_i(r_pred));
 			// (для всех комнат, которые ссфлались на текущую - заменить на ссылание в ИН)
 			// а ссылку на тукущую из комнаты убрать
-			tek_down = map->link_new;
+			//tek_down = map->link_new;
+			tek_down = map->link;
+
 			//ПОКА есть комнаты в СС
 			int i;
 			i = 0;
@@ -80,14 +82,13 @@ void ft_del_shared_path(t_map *map, t_list_i *sh, t_list_i *rev_2)
 
 	map->link_copy = ft_copy_list_down(map->link);
 	//ft_list_revers(&rev_2);
-	rev_2_c = ft_list_new_i(rev_2->content);
-	ft_list_add_back_i(&rev_2_c, rev_2->next);
+	rev_2_c = ft_list_copy_i(rev_2);
 	//rev_start = rev_2_c;
 	ft_list_revers(&rev_2_c);
 	rev_start = rev_2_c;
 	while (sh->next)
 	{
-
+		rev_2_c = rev_start;
 		while (rev_2_c->next)
 		{
 			//если текущее и след совпадают
@@ -108,6 +109,6 @@ void ft_del_shared_path(t_map *map, t_list_i *sh, t_list_i *rev_2)
 	map->link_new = ft_copy_list_down(map->link_copy);
 	ft_free_list_down(&map->link_copy);
 	ft_free_list_i(&rev_start);
-	ft_free_list_i(&rev_2_c);
+	//ft_free_list_i(&rev_2_c);
 
 }

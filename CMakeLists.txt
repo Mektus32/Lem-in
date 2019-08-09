@@ -14,8 +14,6 @@ add_executable(School21_Lem_in
 
         ft_printf/src/ft_free_strncpy.c
 
-
-
         ft_printf/src/ft_printf.c
 
         ft_printf/src/init_arg.c
@@ -125,8 +123,9 @@ add_executable(School21_Lem_in
         src/ft_list_i.c
         src/ft_print.c
         src/liba.c
+        src/list_path.c
         src/list_room.c
         src/main.c
         src/path.c
         src/suurballe.c
-        src/valid.c src/list_path.c)
+        src/valid.c)
