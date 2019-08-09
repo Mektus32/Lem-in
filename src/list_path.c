@@ -10,7 +10,6 @@ t_list_path	*ft_list_new_path(int num_ant, char *name, t_list_path *prev)
 	list->name_room = name;
 	list->next = NULL;
 	list->prev = prev;
-	//free(line);
 	return (list);
 }
 

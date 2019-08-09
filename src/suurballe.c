@@ -80,10 +80,10 @@ void ft_del_shared_path(t_map *map, t_list_i *sh, t_list_i *rev_2)
 	t_list_i	*rev_2_c;
 	t_list_i	*rev_start;
 
+
+
 	map->link_copy = ft_copy_list_down(map->link);
-	//ft_list_revers(&rev_2);
 	rev_2_c = ft_list_copy_i(rev_2);
-	//rev_start = rev_2_c;
 	ft_list_revers(&rev_2_c);
 	rev_start = rev_2_c;
 	while (sh->next)
@@ -104,10 +104,14 @@ void ft_del_shared_path(t_map *map, t_list_i *sh, t_list_i *rev_2)
 		//ft_free_list_i(&rev_2_c);
 		sh = sh->next;
 	}
+
+
 	//удаляем связи где комнаты ин и аут
 	ft_free_list_down(&map->link_new);
 	map->link_new = ft_copy_list_down(map->link_copy);
 	ft_free_list_down(&map->link_copy);
+	//map->link_new = map->link_copy;
+
 	ft_free_list_i(&rev_start);
 	//ft_free_list_i(&rev_2_c);
 

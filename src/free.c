@@ -20,7 +20,7 @@ void free_tmp_path(t_list_path **path_i, int c_path)
 
 	i = 0;
 	tmp_i = *(path_i + i);
-	while (i < c_path && tmp_i)
+	while (i < c_path )
 	{
 		tmp_i = *(path_i + i);
 		while (tmp_i)
@@ -63,12 +63,12 @@ void	ft_free_list_down(t_list_down **head)
 	t_list_down	*list;
 	t_list_i *del_i;
 
+
 	if (!head)
 		return ;
 	if (!*head)
 		return ;
 	list = *head;
-
 	while (list)
 	{
 		del = list;
@@ -85,6 +85,7 @@ void	ft_free_list_down(t_list_down **head)
 	free(list);
 	list = NULL;
 	*head = list;
+
 }
 
 void	ft_free_first_in_two_path(t_list_down **first)
@@ -100,47 +101,18 @@ void	ft_free_first_in_two_path(t_list_down **first)
 	if (!(*first)->down)
 		return ;
 	list = (*first);
-
-//	del_n = list->down->next;
-//	if (del_n)
-//		ft_free_list_i(&del_n);
-//	del_n = NULL;
-//	while (list)
-//	{
-		if (list->down)
-		{
-			del_d = list->down;
-			ft_free_list_down(&del_d);
-			del_d = NULL;
-		}
-		else
-			del_d = NULL;
-//		list = list->down;
-//	}
+	if (list->down)
+	{
+		del_d = list->down;
+		ft_free_list_down(&del_d);
+		del_d = NULL;
+	}
+	else
+		del_d = NULL;
 	*first = (*first)->right;
 	free(list);
 
 }
-
-//void	ft_free_first_in_two_path(t_list_down **first)
-//{
-//	t_list_down	*list;
-//	t_list_down	*del;
-//
-//	if (!first)
-//		return ;
-//	if (!*first)
-//		return ;
-//	if (!(*first)->down)
-//		return ;
-//	list = (*first)->down;
-//	if (list)
-//		ft_free_list_down(&list);
-//	free(list);
-//	del = *first;
-//	*first = (*first)->right;
-//	free(del);
-//}
 
 void	ft_free_list_room(t_room **head)
 {

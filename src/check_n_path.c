@@ -57,7 +57,7 @@ int ft_check_path_n(t_list_down *two_path, t_map *map)
 		path_new = path_new->down;
 	}
 	n_ant = map->c_ant;
-	len_max = ft_max_mass(d);
+	len_max = ft_max_mass(d, c_path);
 	// до равновесия заполним все пути муравьями
 	f = 1;
 	while (n_ant > 0 && f)
@@ -75,6 +75,7 @@ int ft_check_path_n(t_list_down *two_path, t_map *map)
 			k++;
 		}
 	}
+	free(d);
 	//время которое потребуется для прохода этого состояния
 	//округляет инт к меньшему значению
 	//добавляем 1, если колличество муравьев не 0 осталось

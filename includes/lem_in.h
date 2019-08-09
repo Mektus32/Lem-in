@@ -104,7 +104,7 @@ t_list_i			*ft_path_k(t_map *map, int *dist);
 //ф, которые претендуют на звание стандартных 
 
 int					ft_len_int(int num);
-int					ft_max_mass(int *mass); // максимальное в массиве int
+int					ft_max_mass(int *mass, int k); // максимальное в массиве int
 int *make_mass(int k);
 
 	//(list_room.c)
@@ -125,7 +125,7 @@ t_list_down			*ft_list_new_pointer_content_down(t_list_i *next, int content);
 int					ft_list_len_down(t_list_down *path);
 void				ft_free_first_in_two_path(t_list_down **first);
 void				ft_free_list_i(t_list_i **head);
-void				ft_free_list_down(t_list_down **head);
+
 t_list_down			*ft_copy_list_down(t_list_down *head);
 void	ft_list_add_back_down_next(t_list_down **a_lst, t_list_i *new);
 

@@ -27,14 +27,14 @@ int		ft_len_int(int num)
 	return (len);
 }
 
-int ft_max_mass(int *mass)
+int ft_max_mass(int *mass, int k)
 {
 	int max;
 	int i;
 
 	i = 0;
 	max = mass[i++];
-	while (mass[i])
+	while (i < k)
 	{
 		if(mass[i] > max)
 			max = mass[i];

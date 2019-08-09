@@ -16,6 +16,7 @@ int main_path_2(t_map *map,  int k)
 	sh_big = one_big_path(map);
 	ft_new_room(map, sh_big);
 	sh_k  = bfs_k_path(map, NULL);
+	ft_free_list_down(&map->link_new);
 	if (sh_k)
 	{
 		ft_del_shared_path(map, sh_big, sh_k);
@@ -24,7 +25,11 @@ int main_path_2(t_map *map,  int k)
 		{
 			map->two_path->right->content = win;
 			if (win > 0)//удаляем предыдущее состояние
+			{
 				ft_free_first_in_two_path(&map->two_path);
+
+			}
+			ft_free_list_down(&map->link_new);
 		}
 	}
 	else
