@@ -19,10 +19,16 @@ int main(int ac, char	**av)
 	t_map	*map;
 	char	*str;
 
-	ac = 0;
-	av = NULL;
-	str = "./test";
-	//str = av[1];
+	if (ac == 1)
+	{
+		//fd = open("../testgenerator", O_RDONLY);
+		fd = 0;
+	}
+	else
+	{
+		str = av[1];
+		fd = open(str, O_RDONLY);
+	}
 	map = (t_map*)malloc(sizeof(t_map));
 	map->rooms = NULL;
 	map->link = NULL;
@@ -30,7 +36,6 @@ int main(int ac, char	**av)
 	map->link_new = NULL;
 	map->sh = NULL;
 	map->two_path = NULL;
-	fd = open(str, O_RDONLY);
 	if (make_map(fd, map) && check_room(map))
 	{
 		main_path(map);
