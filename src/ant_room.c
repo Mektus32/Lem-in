@@ -19,13 +19,13 @@ int		ft_count_ant(t_list_path *path)
 
 }
 
-void	ft_move_ant_in_path(t_list_path *path)
+void	ft_move_ant_in_path(t_list_path **path_a)
 {
 	t_list_path	*list;
 
-	if (!path)
+	if (!path_a)
 		return ;
-	list = path;
+	list = *path_a;
 	while (list->next)
 		list = list->next;
 	while (list->prev)
@@ -38,15 +38,19 @@ void	ft_move_ant_in_path(t_list_path *path)
 //			ft_printf(" ");
 		list->prev->num_ant = 0;
 		list = list->prev;
-
 	}
 }
 
-void	ft_pars_ant(t_map *map, t_list_path *paths, int count)
+void	ft_pars_ant(t_map *map, t_list_path **path_a, int count)
 {
 	int 	i;
 	int 	j;
+	t_list_path	*paths;
+	t_list_path	*paths_k;
 
+	if (!path_a || !*path_a)
+		return ;
+	paths = *path_a;
 	i = 1;
 	while (i < map->c_ant + 1)
 	{
@@ -60,7 +64,7 @@ void	ft_pars_ant(t_map *map, t_list_path *paths, int count)
 				paths[j].next->num_ant = i;
 				i++;
 			}
-			ft_move_ant_in_path(paths[j].next);
+			ft_move_ant_in_path(&paths[j].next);
 		}
 		ft_printf("\n");
 	}
@@ -73,7 +77,8 @@ void	ft_pars_ant(t_map *map, t_list_path *paths, int count)
 		{
 
 			j += ft_count_ant(&paths[i]);
-			ft_move_ant_in_path(&paths[i]);
+			paths_k = paths + i;
+			ft_move_ant_in_path(&paths_k);
 			//if (i == count)
 
 		}
@@ -98,7 +103,7 @@ void ant_in_room(t_map *map)
 	t_list_path *tmp_path;
 	t_list_path *path_n;
 	t_list_i	*tmp_i;
-	char *name_2;
+//	char *name_2;
 
 	c_path = ft_list_len_down(map->two_path); // тк последняя -10
 	c_path = (c_path == 1 ? c_path : c_path - 1);
@@ -107,19 +112,18 @@ void ant_in_room(t_map *map)
 	tmp = map->two_path->down;
 	i = 0;
 	// для каждого итого пути
-	while (i < c_path)
+	while (i < c_path && tmp)
 	{
 		d[i] = tmp->content;//длина каждого пути
 		k = 0;
 		tmp_i = tmp->next;
 		// для каждой комнаты в итом пути запишем связи на след и пред комнату
 		// в каждой комнате храним номер текущего муравья (0 изначально)
-		while (k < d[i])
+		while (k < d[i] && tmp_i)
 		{
 			path_n = NULL;
 			path_n = tmp_path + i;
-			name_2 = (ft_name_room(map->rooms, tmp_i->content));
-			ft_list_add_back_path(&path_n, 0, name_2);//всем комнатам раздадим 0 муравьев
+			ft_list_add_back_path(&path_n, 0, ft_name_room(map->rooms, tmp_i->content));//всем комнатам раздадим 0 муравьев
 			//tmp_path[i].num_ant = 0;// а то вдркг мусор лежать будет - кол-во муравьевБ которое пойдет по пути
 			tmp_i = tmp_i->next;
 			k++;
@@ -150,7 +154,10 @@ void ant_in_room(t_map *map)
 	map->c_path = c_path;
 	// начинаем расставлять муравьев в комнатам по порядку
 	// пока есть пути и кол-во муравьев в пути не 0 бернм мкравья и переносим его в след комнату, если комната не последняя
-	ft_pars_ant(map, tmp_path, c_path);
+	ft_pars_ant(map, &tmp_path, c_path);
 	free_tmp_path(&tmp_path, c_path);
+//	ft_printf("content1->[%s] content2->[%s]", tmp_path[0].next->next->next->name_room, tmp_path[1].next->next->next->name_room);
+
+	//free(tmp_path);
 }
 

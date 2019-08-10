@@ -24,7 +24,7 @@ t_list_path	*ft_list_add_back_path(t_list_path **head, int num_ant, char *name)
 	if (list)
 	{
 		tmp = NULL;
-		while (list && list->next)
+		while (list->next)
 		{
 			tmp = list;
 			list = list->next;
@@ -49,10 +49,10 @@ t_list_path	*ft_list_add_back_path(t_list_path **head, int num_ant, char *name)
 t_list_path *path_n_mass(int c_path)
 {
 	t_list_path *tmp_path;
-	t_list_path *tmp_null;
+//	t_list_path *tmp_null;
 	int i;
 
-	tmp_path = (t_list_path*)malloc(sizeof(t_list_path) * (c_path + 1));
+	tmp_path = (t_list_path*)malloc(sizeof(t_list_path) * (c_path));
 	i = 0;
 	while (i < c_path)
 	{
@@ -62,8 +62,8 @@ t_list_path *path_n_mass(int c_path)
 		tmp_path[i].prev = NULL;
 		i++;
 	}
-	tmp_null = (tmp_path + i);
-	tmp_null = NULL;
+//	tmp_null = (tmp_path + i);
+//	tmp_null = NULL;
 	return (tmp_path);
 
 }

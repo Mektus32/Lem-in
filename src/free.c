@@ -18,19 +18,25 @@ void free_tmp_path(t_list_path **path_i, int c_path)
 	t_list_path *del;
 	t_list_path *tmp_i;
 
+	if (!path_i || !*path_i)
+		return ;
 	i = 0;
-	tmp_i = *(path_i + i);
-	while (i < c_path )
+	while (i < c_path)
 	{
-		tmp_i = *(path_i + i);
+		tmp_i = *path_i + i;
+		tmp_i = tmp_i->next;
 		while (tmp_i)
 		{
 			del = tmp_i;
 			tmp_i = tmp_i->next;
+			//tmp_i ? tmp_i->prev = NULL : 0;
 			free(del);
+			del = NULL;
 		}
 		i++;
 	}
+	free(*path_i);
+	*path_i = NULL;
 }
 
 void 	ft_free_list_i(t_list_i **head)

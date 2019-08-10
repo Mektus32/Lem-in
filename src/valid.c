@@ -19,6 +19,7 @@ int		make_map(int fd, t_map *map)
 	char	*line;
 	int		i;
 
+	line = NULL;
 	map->fd = fd;
 	map->len_sh = 0;
 	map->c_room = 0;//кол - во комнат
@@ -38,10 +39,12 @@ int		make_map(int fd, t_map *map)
 			map->c_ant = ft_atoi(line);
 			// if (map->c_ant == 0)
 			// мне все-таки кажется, что ошибка /* Согласен */
-			ft_strdel(&line);
+//			ft_strdel(&line);
+			free(line);
 			return (1);
 		}
-		ft_strdel(&line);
+//		ft_strdel(&line);
+		free(line);
 		return (0);
 	}
 	return (0);

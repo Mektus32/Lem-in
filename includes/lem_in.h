@@ -185,8 +185,8 @@ t_list_i *one_big_path(t_map *map);
 
 //ant_room
 void ant_in_room(t_map *map);
-void	ft_pars_ant(t_map *map, t_list_path *paths, int count);
-void	ft_move_ant_in_path(t_list_path *path);
+void	ft_pars_ant(t_map *map, t_list_path **path_a, int count);
+void	ft_move_ant_in_path(t_list_path **path_a);
 int		ft_count_ant(t_list_path *path);
 
 #endif
