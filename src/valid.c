@@ -47,32 +47,29 @@ int		make_map(int fd, t_map *map)
 
 int is_elem(char *line)
 {
-	int i;
-	int num_1;
-	int num_2;
-	int p;
+	int		i;
+
 	if (!line || line[0] == '\0')
 		return (0);
 	i = 0;
 	//это имя
-	if (line[0] == 'L')
-		return (0);
-	if (ft_count_words(line) != 3)
+	if (line[0] == 'L' && ft_count_words(line) != 3)
 		return (0);
 	while (line[i] != ' ' && line[i] != '\0')
 		i++;
-	if (line[i] == '\0')
+	i++;
+	if (!ft_isdigit(line[i]))
 		return (0);
-	if (!ft_isdigit(line[i + 1]))
+	while (line[i] >= '0' && line[i] <= '9')
+		i++;
+	i++;
+	if (!ft_isdigit(line[i]))
 		return (0);
-	p = ft_atoi(line + (i + 1));
-	num_1 = ft_len_int(ft_atoi(line + (i + 1)));
-	if (!ft_isdigit(line[i + 2 + num_1]))
-		return (0);
-	num_2 = ft_len_int(ft_atoi(line + (i + 2 + num_1)));
-	if (num_2 + num_1 < 2)
-		return (0);
-	return (1);
+	while (line[i] >= '0' && line[i] <= '9')
+		i++;
+	if (i == ft_strlen(line))
+		return (1);
+	return (0);
 }
 
 /*
