@@ -67,7 +67,7 @@ $(PR_LIB):
 	@make -C $(PR)
 
 $(OBJDIR)%.o:$(SRCDIR)%.c
-	$(CC) $(CFLAGS)  $(PR_INC) $(FT_INC) $(INCDIR) -o $@ -c $<
+	$(CC) $(CFLAGS) $(PR_INC) $(FT_INC) $(INCDIR) -o $@ -c $<
 
 clean: red
 	/bin/rm -rf $(OBJDIR)

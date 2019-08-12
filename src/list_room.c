@@ -33,7 +33,7 @@ t_room	*ft_create_ele(char *line, int number)
 	room->number = number;
 	room->next = NULL;
 	room->dist = 0;
-	free(line);
+	ft_str_print_del(&line);
 	return (room);
 }
 //добавление комнаты в конец списка

@@ -40,8 +40,7 @@ int ft_check_path_n(t_list_down *two_path, t_map *map)
 	int len_max;//максимальная длина в массиве
 
 	t1 = two_path->content;
-	//кол-во путей в новом стостоянии
-	path_new = two_path->right;
+	path_new = two_path->right;//кол-во путей в новом стостоянии
 	//path_new->content; пока равен 0, надо перезаписать тужа время
 	// - 1 потому что комнату создаем комнату -10
 	c_path = ft_list_len_down(path_new) - 1;
@@ -79,8 +78,8 @@ int ft_check_path_n(t_list_down *two_path, t_map *map)
 	//время которое потребуется для прохода этого состояния
 	//округляет инт к меньшему значению
 	//добавляем 1, если колличество муравьев не 0 осталось
-	t_now = len_max + n_ant/c_path + ((n_ant == 0 || (n_ant % c_path == 0)) ? 0 : 1);
-	if (t_now <= t1 && map->c_ant >= c_path)//выбираем этот путь
+	t_now = len_max + n_ant/c_path + ((n_ant == 0 || (n_ant % c_path == 0)) ? 0 : 1) - c_path;
+	if (t_now < t1 && map->c_ant >= c_path)//выбираем этот путь
 		return (t_now);
 	return (0);
 }

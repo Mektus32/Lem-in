@@ -71,6 +71,7 @@ typedef struct		s_map
 	int				len_sh;//длина кратчайшего пути
 	t_list_down		*two_path;//
 	int 			c_path;
+	char			*str;
 }					t_map;
 
 
@@ -106,6 +107,8 @@ t_list_i			*ft_path_k(t_map *map, int *dist);
 int					ft_len_int(int num);
 int					ft_max_mass(int *mass, int k); // максимальное в массиве int
 int *make_mass(int k);
+void	ft_str_print_del(char **as);
+char *ft_check_cmd(int fd);
 
 	//(list_room.c)
 //ф для списка комнат

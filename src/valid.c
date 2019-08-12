@@ -22,32 +22,57 @@ int		make_map(int fd, t_map *map)
 	line = NULL;
 	map->fd = fd;
 	map->len_sh = 0;
-	map->c_room = 0;//кол - во комнат
-	map->rooms = NULL;//лист всех комнат
-	if (get_next_line(map->fd, &line) == 1)
+	map->c_room = 0;
+	map->rooms = NULL;
+
+	line = ft_check_cmd(map->fd);
+	if (line && !(ft_strequ(line, "##start") || ft_strequ(line, "##end")))
 	{
-		//ft_printf("%s\n", line);
 		i = 0;
 		while (ft_isdigit(line[i]))
 			i++;
-		// если кол-во чисел не совпадает с длинной строки
-		// кидаем ошибку.
-		// длина строки не может быть 0 тут, тк гнл вернул нам 1
-		/* Ты уверена что не может быть такого что там просто пробелы, которые не играют роли? */
 		if ((int)ft_strlen(line) == i)
 		{
 			map->c_ant = ft_atoi(line);
-			// if (map->c_ant == 0)
-			// мне все-таки кажется, что ошибка /* Согласен */
-//			ft_strdel(&line);
-			free(line);
+			ft_str_print_del(&line);
+			if (map->c_ant == 0 || map->c_ant >= 2147483647)
+				return (0);
 			return (1);
 		}
-//		ft_strdel(&line);
-		free(line);
+		ft_str_print_del(&line);
 		return (0);
 	}
 	return (0);
+}
+
+int is_elem(char *line)
+{
+	int i;
+	int num_1;
+	int num_2;
+	int p;
+	if (!line || line[0] == '\0')
+		return (0);
+	i = 0;
+	//это имя
+	if (line[0] == 'L')
+		return (0);
+	if (ft_count_words(line) != 3)
+		return (0);
+	while (line[i] != ' ' && line[i] != '\0')
+		i++;
+	if (line[i] == '\0')
+		return (0);
+	if (!ft_isdigit(line[i + 1]))
+		return (0);
+	p = ft_atoi(line + (i + 1));
+	num_1 = ft_len_int(ft_atoi(line + (i + 1)));
+	if (!ft_isdigit(line[i + 2 + num_1]))
+		return (0);
+	num_2 = ft_len_int(ft_atoi(line + (i + 2 + num_1)));
+	if (num_2 + num_1 < 2)
+		return (0);
+	return (1);
 }
 
 /*
@@ -74,59 +99,77 @@ int	check_room(t_map *map)
 
 	number = 1;
 	last_room = NULL;
-	while (get_next_line(map->fd, &line) > 0 && ft_strlen(line) >= 3)/* Почему именно 3? минимум же 5 получается, 3 символа и два пробела */
+	line = ft_check_cmd(map->fd);
+	while (line)
 	{
-		//ft_printf("%s\n", line);
-		if (ft_strnequ(line, "#", 1))
+		if (ft_strequ(line, "##start") || ft_strequ(line, "##end"))
 		{
-			if (ft_strequ(line, "##start") || ft_strequ(line, "##end"))
+			if (ft_strequ(line, "##start") == 1)//и еще не было перволй комнаты
 			{
-				if (ft_strequ(line, "##start") == 1)
-				{//добавляем в начало сразу
-					ft_strdel(&line);
-					if (get_next_line(map->fd, &line) > 0)
-						ft_list_add_room(&map->rooms, ft_create_ele(line, 0));
-					else
-						return (0);
+
+				ft_str_print_del(&line);
+				line = ft_check_cmd(map->fd);
+				if (line != NULL && is_elem(line) && ((map->rooms && map->rooms->number != 0) || map->rooms == NULL) )
+					ft_list_add_room(&map->rooms, ft_create_ele(line, 0));
+				else {
+					ft_str_print_del(&line);
+					return (0);
 				}
+			}
+			else if (last_room == NULL)
+			{
+					ft_str_print_del(&line);
+					line = ft_check_cmd(map->fd);
+				if (line != NULL && is_elem(line))
+					last_room = ft_create_ele(line, -1);
 				else
 				{
-					ft_strdel(&line);
-					if (get_next_line(map->fd, &line) > 0)
-						last_room = ft_create_ele(line, -1);
-					else
-						return (0);
+					ft_str_print_del(&line);
+					return (0);
 				}
 			}
 			else
-				ft_strdel(&line);
+			{
+				ft_str_print_del(&line);
+				return (0);
+			}
+			line = ft_check_cmd(map->fd);
 		}
-		/* Вместо ft_strstr наверное логичнее ft_strchr использовать */
 		else if (ft_strchr(line, '-') && ft_strchr(line, ' ') == NULL)
 		{
-			if (last_room) 
+			if (last_room)
 			{
 				last_room->number = number;
 				ft_push_back_room(&map->rooms, last_room);
 			}
-			else
+			else {
+				ft_str_print_del(&line);
 				return (0);
+			}
 			map->c_room = number;
-			// до ссылок все прошло успешно, переходим к ссылкам
 			return (created_links(line, map));
 		}
-		else
+		else if (is_elem(line))
 		{
 			ft_push_back_room(&map->rooms, ft_create_ele(line, number));
 			number++;
+			line = ft_check_cmd(map->fd);
+		}
+		else
+		{
+			ft_str_print_del(&line);
+			return (0);
 		}
 	}
+	ft_str_print_del(&line);
 	return (0);
 }
 
 /*
 ф. вызывается для каждой входной строки, где есть - и нет ' '
 заполняет ссылки в две стороны
+если не нашли одну из комнат - возвращает 0
+ start = map->rooms; - //находим комнату из строки до '-' во всем списке комнат
 */
 int check_links(char *line, t_map *map)
 {
@@ -138,7 +181,7 @@ int check_links(char *line, t_map *map)
 
 
 	start = map->rooms;
-	//находим комнату из строки до '-' во всем списке комнат
+
 	while (start)
 	{
 		len = ft_strlen(start->name);
@@ -150,21 +193,21 @@ int check_links(char *line, t_map *map)
 			tmp = map->rooms;
 			while (tmp)
 			{
-				if (ft_strequ(tmp->name, line + len + 1))
+				if (ft_strequ(tmp->name, line + len + 1) && tmp->number != start->number)
 				{
 					// если нашли комнаты запихиваем в список (для каждой комнаты свой)
 					first = ft_list_i_head(start->number, map->link);
 					second = ft_list_i_head(tmp->number, map->link);
-					ft_list_add_back_i_one(&first->next, tmp->number);
-					ft_list_add_back_i_one(&second->next, start->number);
-//					ft_list_add_back_i(&first->next, ft_list_new_i(tmp->number));
-//					ft_list_add_back_i(&second->next, ft_list_new_i(start->number));
+					ft_list_add_back_i_if_not(&first->next, tmp->number, first->next);
+					ft_list_add_back_i_if_not(&second->next, start->number, second->next);
+//					ft_list_add_back_i_one(&first->next, tmp->number);
+//					ft_list_add_back_i_one(&second->next, start->number);
 					return (1);
 				}
 				tmp = tmp->next;
 			}
 			return (0);//если комнаты закончились раньше, чем мы её нашли
-				
+
 		}
 		start = start->next;
 	}
@@ -180,20 +223,8 @@ int check_links(char *line, t_map *map)
 int created_links(char *line, t_map *map)
 {
 	t_room	*tmp;
-	int		st; // - статус, если что-то пошло не так в лайнах, вернем ошибку (0)
-	//создаем новый список под СТОЛБЕЦ
-	/* Ты опять создала массив, а ниже к нему обращаешься как к списку(при добавлении/копированиии элементов) */
-	/*
-	 * map->link = (t_list_down*)malloc(sizeof(t_list_down) * (map->c_room + 1));
-	 * i = 0;
-	 * //переписываем в список столбцов список комнат
-	 * while (i <= map->c_room)
-	 * {
-	 * 		ft_list_add_back_down(&map->link, ft_list_new_down(map->rooms->number));
-	 * 		map->rooms = map->rooms->next;
-	 * 		i++;
-	 * }
-	 */
+	int		st;
+
 	tmp = map->rooms;
 	while (tmp)
 	{
@@ -201,14 +232,25 @@ int created_links(char *line, t_map *map)
 		tmp = tmp->next;
 	}
 	st = check_links(line, map);
-	ft_strdel(&line);
-	while (get_next_line(map->fd, &line) && st)
+	if (st)
 	{
-		//ft_printf("%s\n", line);
+		ft_str_print_del(&line);
+
+	line = ft_check_cmd(map->fd);
+	while (line && st)//get_next_line(map->fd, &line)
+	{
 		if (!ft_strnequ(line, "#", 1))
 			st = check_links(line, map);
-		ft_strdel(&line);
+		else //значит старт или энд в линках
+		{
+			ft_str_print_del(&line);
+			return (0);
+		}
+		ft_str_print_del(&line);
+		line = ft_check_cmd(map->fd);
 	}
+	}
+	if (st == 0)
+		ft_str_print_del(&line);
 	return (st);
 }
-//

@@ -21,8 +21,9 @@ int main(int ac, char	**av)
 
 	if (ac == 1)
 	{
-		//fd = open("../testgenerator", O_RDONLY);
-		fd = 0;
+		//fd = /Users/qgilbert/Desktop/lem_in/six/School21-Lem-in/lem-in_test 2/tests/test_5.map
+		fd = open("../test", O_RDONLY);
+		//fd = 0;
 	}
 	else
 	{
@@ -36,16 +37,15 @@ int main(int ac, char	**av)
 	map->link_new = NULL;
 	map->sh = NULL;
 	map->two_path = NULL;
-	if (make_map(fd, map) && check_room(map))
+	if (make_map(fd, map) && check_room(map) && map->rooms->number == 0 && ft_list_i_head(map->c_room, map->link)->next != NULL )
 	{
 		main_path(map);
-		ant_in_room(map);
-		ft_free_map(&map);
+		if (map->two_path->down->content)
+			ant_in_room(map);
 	}
 	else
-	{
-		ft_printf("ERROR");
-	}
+		ft_printf("ERROR\n");
+	ft_free_map(&map);
 	return (0);
 }
 

@@ -19,9 +19,31 @@ int		ft_count_ant(t_list_path *path)
 
 }
 
+static int sum_ant(t_list_path **path_a, int c_path)
+{
+	int ant;
+	int i;
+	t_list_path *tmp_i;
+
+	ant = 0;
+	i = 0;
+	while (i < c_path)
+	{
+		tmp_i = *path_a + i;
+		tmp_i = tmp_i->next;
+		while (tmp_i)
+		{
+			ant += tmp_i->num_ant;
+			tmp_i = tmp_i->next;
+		}
+		i++;
+	}
+	return (ant);
+}
+
 void	ft_move_ant_in_path(t_list_path **path_a)
 {
-	t_list_path	*list;
+	t_list_path		*list;
 
 	if (!path_a)
 		return ;
@@ -33,18 +55,34 @@ void	ft_move_ant_in_path(t_list_path **path_a)
 		list->num_ant = 0;
 		list->num_ant = list->prev->num_ant;
 		if (list->prev->num_ant != 0)
+		{
 			ft_printf("L%d-%s ", list->prev->num_ant, list->name_room);
-//		if (list->prev && list->prev->num_ant != 0)
-//			ft_printf(" ");
+		}
 		list->prev->num_ant = 0;
 		list = list->prev;
 	}
+}
+
+int ft_len_path(t_list_path **path_a, int j)
+{
+	int len;
+	t_list_path *tmp;
+
+	len = 0;
+	tmp = *path_a + j;
+	while (tmp)
+	{
+		len++;
+		tmp = tmp->next;
+	}
+	return (len - 1);
 }
 
 void	ft_pars_ant(t_map *map, t_list_path **path_a, int count)
 {
 	int 	i;
 	int 	j;
+//	int k;
 	t_list_path	*paths;
 	t_list_path	*paths_k;
 
@@ -57,7 +95,7 @@ void	ft_pars_ant(t_map *map, t_list_path **path_a, int count)
 		j = -1;
 		while (++j < count)
 		{
-
+		//	k = paths[j].num_ant;
 			if (paths[j].num_ant > 0)
 			{
 				paths[j].num_ant--;
@@ -66,7 +104,8 @@ void	ft_pars_ant(t_map *map, t_list_path **path_a, int count)
 			}
 			ft_move_ant_in_path(&paths[j].next);
 		}
-		ft_printf("\n");
+		if (ft_len_path(&paths, j - 1) != 2)
+			ft_printf("\n");
 	}
 	j = 1;
 	while (j)
@@ -75,17 +114,14 @@ void	ft_pars_ant(t_map *map, t_list_path **path_a, int count)
 		i = -1;
 		while (++i < count)
 		{
-
 			j += ft_count_ant(&paths[i]);
 			paths_k = paths + i;
 			ft_move_ant_in_path(&paths_k);
-			//if (i == count)
-
 		}
-		if (j != 0 && i == count)
+		if (j != 0 && i == count && sum_ant(&paths, count) != 0)
+		{
 			ft_printf("\n");
-		//if (i == count - 1)
-
+		}
 	}
 }
 
@@ -124,7 +160,6 @@ void ant_in_room(t_map *map)
 			path_n = NULL;
 			path_n = tmp_path + i;
 			ft_list_add_back_path(&path_n, 0, ft_name_room(map->rooms, tmp_i->content));//всем комнатам раздадим 0 муравьев
-			//tmp_path[i].num_ant = 0;// а то вдркг мусор лежать будет - кол-во муравьевБ которое пойдет по пути
 			tmp_i = tmp_i->next;
 			k++;
 		}
@@ -132,13 +167,13 @@ void ant_in_room(t_map *map)
 		i++;
 	}
 	// надо посчитать количество муравье которое отправиться в каждую комнату tmp_path[i].num_ant
-	c_ant = map ->c_ant;
+	c_ant = map->c_ant;
 	i = 0;
 	while (i < c_path)
 	{
 		f = 0;
 
-		while ((tmp_path[i].num_ant + d[i]  < (map->two_path->content)) && c_ant)//tmp_path[i].num_ant <= len_max &&
+		while ((tmp_path[i].num_ant + d[i]  < (map->two_path->content + c_path)) && c_ant)//tmp_path[i].num_ant <= len_max &&
 		{
 			if (c_ant)
 			{
@@ -154,6 +189,7 @@ void ant_in_room(t_map *map)
 	map->c_path = c_path;
 	// начинаем расставлять муравьев в комнатам по порядку
 	// пока есть пути и кол-во муравьев в пути не 0 бернм мкравья и переносим его в след комнату, если комната не последняя
+	ft_printf("\n");
 	ft_pars_ant(map, &tmp_path, c_path);
 	free_tmp_path(&tmp_path, c_path);
 //	ft_printf("content1->[%s] content2->[%s]", tmp_path[0].next->next->next->name_room, tmp_path[1].next->next->next->name_room);

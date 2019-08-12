@@ -29,6 +29,8 @@ int ft_list_len_down(t_list_down *path)
 // возвращает ссылку на элемент s_list_i
 // от номера комнаты
 
+
+
 t_list_down *ft_list_i_head(int num, t_list_down *a_lst)
 {
 	t_list_down *list;

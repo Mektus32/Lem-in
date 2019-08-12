@@ -143,9 +143,9 @@ void	ft_free_list_room(t_room **head)
 }
 
 void	ft_free_map(t_map **map) {
-	t_map	*tmp;
+	t_map		*tmp;
 	t_list_down *tmp_down;
-	int		i;
+	int			i;
 
 	if (!map)
 		return;
@@ -163,13 +163,16 @@ void	ft_free_map(t_map **map) {
 	if (tmp->rooms)
 		ft_free_list_room(&tmp->rooms);
 	i = 0;
-	tmp_down = tmp->two_path->down;
-	while (i++ < (*map)->c_path)
-		tmp_down = tmp_down->down;
-	tmp_down = NULL;
 	if (tmp->two_path)
-		ft_free_first_in_two_path(&tmp->two_path);
-	if (tmp->two_path)
-		ft_free_first_in_two_path(&tmp->two_path);
+	{
+		tmp_down = tmp->two_path->down;
+		while (i++ < (*map)->c_path)
+			tmp_down = tmp_down->down;
+		tmp_down = NULL;
+		if (tmp->two_path)
+			ft_free_first_in_two_path(&tmp->two_path);
+		if (tmp->two_path)
+			ft_free_first_in_two_path(&tmp->two_path);
+	}
 	free(*map);
 }

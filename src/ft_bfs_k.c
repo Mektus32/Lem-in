@@ -138,6 +138,25 @@ t_list_i 		*bfs_k_path(t_map *map, t_list_i *cant_go)
 		return (ft_path_k(map, dist));
 }
 
+static  int path_not_in(t_list_i *path_1, t_list_i *path_2)
+{
+	t_list_i *path;
+
+
+	while(path_2->next)
+	{
+		path = path_1;
+		while (path->next)
+		{
+			if ((path_2->content == path->content) && (path_2->next->content == path->next->content))
+				return (0);
+			path = path->next;
+		}
+		path_2 = path_2->next;
+	}
+	// если не в списке 1
+	return (1);
+}
 
 //поиск к кратчайших путей
 t_list_down		*ft_bfs_k(t_map *map, int k)
@@ -155,7 +174,7 @@ t_list_down		*ft_bfs_k(t_map *map, int k)
 	cant_go = ft_list_new_i(0);//cant_go = (t_list_i*)malloc(sizeof(t_list_i));
 	//ft_pri_cop(map);
 	path_tek = NULL;
-	while (p < k && (path_tek = bfs_k_path(map, cant_go)))
+	while (p < k && (path_tek = bfs_k_path(map, cant_go)) && path_not_in(path_tek, cant_go) == 1)
 	{
 		ft_list_add_back_down_next(&path_down, path_tek);
 		tmp->down->content = ft_list_len_i(path_tek);

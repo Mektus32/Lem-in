@@ -25,10 +25,7 @@ int main_path_2(t_map *map,  int k)
 		{
 			map->two_path->right->content = win;
 			if (win > 0)//удаляем предыдущее состояние
-			{
 				ft_free_first_in_two_path(&map->two_path);
-
-			}
 			ft_free_list_down(&map->link_new);
 		}
 	}
