@@ -49,7 +49,6 @@ t_list_path	*ft_list_add_back_path(t_list_path **head, int num_ant, char *name)
 t_list_path *path_n_mass(int c_path)
 {
 	t_list_path *tmp_path;
-//	t_list_path *tmp_null;
 	int i;
 
 	tmp_path = (t_list_path*)malloc(sizeof(t_list_path) * (c_path));
@@ -62,8 +61,25 @@ t_list_path *path_n_mass(int c_path)
 		tmp_path[i].prev = NULL;
 		i++;
 	}
-//	tmp_null = (tmp_path + i);
-//	tmp_null = NULL;
 	return (tmp_path);
 
+}
+/*
+ * заполнение i-ого элемента массива двухсвязного списка
+ * для каждой комнаты в итом пути запишем связи на след и пред комнату
+ * всем комнатам раздадим 0 муравьев
+ * d_i = d[i] - длина каждого пути
+ * tmp_i - текущий путь без старта
+ * */
+void path_add_i(t_list_path *path_n,  int d_i, t_map *map, t_list_i *tmp_i)
+{
+    int k;
+
+    k = 0;
+    while (k < d_i && tmp_i)
+    {
+        ft_list_add_back_path(&path_n, 0, ft_name_room(map->rooms, tmp_i->content));
+        tmp_i = tmp_i->next;
+        k++;
+    }
 }

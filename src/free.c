@@ -98,7 +98,6 @@ void	ft_free_first_in_two_path(t_list_down **first)
 {
 	t_list_down	*list;
 	t_list_down	*del_d;
-//	t_list_i *del_n;
 
 	if (!first)
 		return ;
@@ -142,37 +141,3 @@ void	ft_free_list_room(t_room **head)
 	*head = NULL;
 }
 
-void	ft_free_map(t_map **map) {
-	t_map		*tmp;
-	t_list_down *tmp_down;
-	int			i;
-
-	if (!map)
-		return;
-	if (!*map)
-		return;
-	tmp = *map;
-	if (tmp->sh)
-		ft_free_list_i(&tmp->sh);
-	if (tmp->link)
-		ft_free_list_down(&tmp->link);
-	if (tmp->link_new)
-		ft_free_list_down(&tmp->link_new);
-	if (tmp->link_copy)
-		ft_free_list_down(&tmp->link_copy);
-	if (tmp->rooms)
-		ft_free_list_room(&tmp->rooms);
-	i = 0;
-	if (tmp->two_path)
-	{
-		tmp_down = tmp->two_path->down;
-		while (i++ < (*map)->c_path)
-			tmp_down = tmp_down->down;
-		tmp_down = NULL;
-		if (tmp->two_path)
-			ft_free_first_in_two_path(&tmp->two_path);
-		if (tmp->two_path)
-			ft_free_first_in_two_path(&tmp->two_path);
-	}
-	free(*map);
-}
