@@ -6,32 +6,13 @@ set(CMAKE_C_STANDARD 11)
 include_directories(ft_printf/includes)
 include_directories(includes)
 include_directories(libft/includes)
-include_directories(vizualizer/includes)
-include_directories(vizualizer/minilibx)
 
 add_executable(Lem_in
     ft_printf/includes/ft_printf.h
     ft_printf/src/check_args.c
     ft_printf/src/choise_spec.c
-    ft_printf/src/ft_atoi.c
-    ft_printf/src/ft_free_strjoin_duo.c
-    ft_printf/src/ft_free_strjoin_rev.c
     ft_printf/src/ft_free_strncpy.c
-    ft_printf/src/ft_ftoa.c
-    ft_printf/src/ft_itoa.c
-    ft_printf/src/ft_ltoa.c
-    ft_printf/src/ft_ltoa_base.c
-    ft_printf/src/ft_memset.c
     ft_printf/src/ft_printf.c
-    ft_printf/src/ft_strchr.c
-    ft_printf/src/ft_strdup.c
-    ft_printf/src/ft_strjoin.c
-    ft_printf/src/ft_strlen.c
-    ft_printf/src/ft_strncmp.c
-    ft_printf/src/ft_strnew.c
-    ft_printf/src/ft_strtolower.c
-    ft_printf/src/ft_ultoa.c
-    ft_printf/src/ft_ultoa_base.c
     ft_printf/src/init_arg.c
     ft_printf/src/print_digit.c
     ft_printf/src/print_double.c
@@ -150,25 +131,4 @@ add_executable(Lem_in
     src/suurballe.c
     src/valid.c
     src/valid_link.c
-    vizualizer/includes/libft.h
-    vizualizer/includes/vizualizer.h
-    vizualizer/minilibx/font.c
-    vizualizer/minilibx/mlx.h
-    vizualizer/minilibx/mlx_init_loop.m
-    vizualizer/minilibx/mlx_int.h
-    vizualizer/minilibx/mlx_int_str_to_wordtab.c
-    vizualizer/minilibx/mlx_new_image.m
-    vizualizer/minilibx/mlx_new_window.h
-    vizualizer/minilibx/mlx_new_window.m
-    vizualizer/minilibx/mlx_rgb.c
-    vizualizer/minilibx/mlx_shaders.c
-    vizualizer/minilibx/mlx_xpm.c
-    vizualizer/src/dop_funct.c
-    vizualizer/src/draw.c
-    vizualizer/src/draw_line.c
-    vizualizer/src/funct_rooms.c
-    vizualizer/src/funct_turn.c
-    vizualizer/src/get_coor.c
-    vizualizer/src/keyhook.c
-    vizualizer/src/read.c
-    vizualizer/src/visu.c)
+    src/liba_2.c)

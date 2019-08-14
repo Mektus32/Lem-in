@@ -13,19 +13,20 @@
 #include "lem_in.h"
 
 /*
- * путь, один от начала до конца по массиву расстояний от комнаты старта
- * находит обратный путь path и реверсит его
- * start - ссылка на начало, что б вернуть
- * tmp_i - связи текущей комнаты, ищем в них комнату с весом, меньшим чем в текущей на 1
- * если таких ячеек несколько нам не важно, тк путь все = будет кротчайший
- * */
-t_list_i *ft_path(t_map *map)
-{
-	t_list_i *start;
-	t_list_i *path;
-	t_list_i *tmp_i;
+** путь, один от начала до конца по массиву расстояний от комнаты старта
+** находит обратный путь path и реверсит его
+** start - ссылка на начало, что б вернуть
+** tmp_i - связи текущей комнаты, ищем в них комнату с весом,
+** меньшим чем в текущей на 1
+** если таких ячеек несколько нам не важно, тк путь все = будет кротчайший
+*/
 
-	//tmp_i = ft_list_i_head(map->c_room, map->link)->next;
+t_list_i	*ft_path(t_map *map)
+{
+	t_list_i	*start;
+	t_list_i	*path;
+	t_list_i	*tmp_i;
+
 	path = ft_list_new_i(map->c_room);
 	start = path;
 	while (path->content != 0)
@@ -48,27 +49,33 @@ t_list_i *ft_path(t_map *map)
 }
 
 /*
- * заполняет массив минимальных растояний от старта до текущей комнаты
- * ходим только по тем комнатам, которых не было в all_order,
- * что б не проходить несколько раз
- * */
-void ft_bfs_2(t_map *map, t_list_i *order, t_list_i *all_order)
+** заполняет массив минимальных растояний от старта до текущей комнаты
+** ходим только по тем комнатам, которых не было в all_order,
+** что б не проходить несколько раз
+** пока есть комнаты(tmp), связанные с комнатой в очереди
+** перезаписываем расстояние, если до этого оно было больше
+** если в комнате, которую мы проверяем растояние от начала больше,
+** чем от соседа которого мы можем дотянуться
+** нашли короткий путь, если пришли в последнюю комнату
+** надо выходить из цикла while(order && !len)
+** для каждого узла добавляем очередь соседей
+*/
+
+void		ft_bfs_2(t_map *map, t_list_i *order, t_list_i *all_order)
 {
 	t_list_i	*tmp_i;
 
 	while (order && !(map->len_sh))
 	{
 		tmp_i = ft_list_i_head(order->content, map->link)->next;
-		//пока есть комнаты(tmp), связанные с комнатой в очереди
-		//перезаписываем расстояние, если до этого оно было больше
 		while (tmp_i && map->len_sh == 0)
 		{
-			//если в комнате, которую мы проверяем растояние от начала больше, чем от соседа которого мы можем дотянуться
-			if (map->dist[tmp_i->content] > map->dist[order->content] + 1 && (tmp_i->content != order->content))
+			if (map->dist[tmp_i->content] > map->dist[order->content] + 1 &&
+				(tmp_i->content != order->content))
 				map->dist[tmp_i->content] = map->dist[order->content] + 1;
-			if (tmp_i->content == map->c_room)//нашли короткий путь, если пришли в последнюю комнату
-				map->len_sh = map->dist[tmp_i->content]; // надо выходить из цикла while(order && !len)
-			else //для каждого узла добавляем очередь соседей
+			if (tmp_i->content == map->c_room)
+				map->len_sh = map->dist[tmp_i->content];
+			else
 			{
 				ft_list_add_back_i_if_not(&order, tmp_i->content, all_order);
 				ft_list_add_back_i_one(&all_order, tmp_i->content);
@@ -79,23 +86,25 @@ void ft_bfs_2(t_map *map, t_list_i *order, t_list_i *all_order)
 	}
 }
 
-
 /*
- * bfs для одного пути
- * dist - массив интов - расстояние от старта
- * ft_bfs_2 - заполняет массив dist, изменяет map->len_sh на длину пути,
- * если он есть
- * ft_path - возвращает путь list_i
- * */
+** bfs для одного пути
+** dist - массив интов - расстояние от старта
+** ft_bfs_2 - заполняет массив dist, изменяет map->len_sh на длину пути,
+** если он есть
+** ft_path - возвращает путь list_i
+** начинаем очередь в очередь добавляем все вершины, которые встретелись на пути
+** если длина осталась нулевой !!! //free(dist);
+** найдем коротуий путь (реверс) и вернем 1 оттуда
+*/
+
 t_list_i	*ft_bfs(t_map *map)
 {
-	t_list_i    *order;
-	t_list_i    *all_order;
-	t_list_i    *order_start;
-	t_list_i    *all_order_start;
+	t_list_i	*order;
+	t_list_i	*all_order;
+	t_list_i	*order_start;
+	t_list_i	*all_order_start;
 
 	map->dist = make_mass(map->c_room);
-	//начинаем очередь в очередь добавляем все вершины, которые встретелись на пути
 	order = ft_list_new_i(0);
 	all_order = ft_list_new_i(0);
 	order_start = order;
@@ -103,13 +112,11 @@ t_list_i	*ft_bfs(t_map *map)
 	ft_bfs_2(map, order, all_order);
 	ft_free_list_i(&order_start);
 	ft_free_list_i(&all_order_start);
-	if (map->len_sh == 0) //если длина осталась нулевой
+	if (map->len_sh == 0)
 	{
-		//free(dist);
 		printf("no path\n");
 		return (NULL);
 	}
-	else //найдем коротуий путь (реверс) и вернем 1 оттуда
+	else
 		return (ft_path(map));
 }
-

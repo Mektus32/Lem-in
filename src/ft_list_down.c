@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_down.c                                     :+:      :+:    :+:   */
+/*   aft_list_down.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: qgilbert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/14 15:04:50 by ojessi            #+#    #+#             */
-/*   Updated: 2019/07/14 15:04:51 by ojessi           ###   ########.fr       */
+/*   Created: 2019/08/14 21:39:00 by qgilbert          #+#    #+#             */
+/*   Updated: 2019/08/14 21:39:02 by qgilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-//считаем колличество путей в состоянии
-int ft_list_len_down(t_list_down *path)
+int			ft_list_len_down(t_list_down *path)
 {
-	int k;
+	int	k;
 
 	k = 0;
-	while(path->down)
+	while (path->down)
 	{
 		k++;
 		path = path->down;
@@ -26,9 +25,7 @@ int ft_list_len_down(t_list_down *path)
 	return (k);
 }
 
-// возвращает ссылку на элемент s_list_i
-// от номера комнаты
-t_list_down *ft_list_i_head(int num, t_list_down *a_lst)
+t_list_down	*ft_list_i_head(int num, t_list_down *a_lst)
 {
 	t_list_down *list;
 
@@ -44,7 +41,6 @@ t_list_down *ft_list_i_head(int num, t_list_down *a_lst)
 	return (NULL);
 }
 
-// создание нового листа
 t_list_down	*ft_list_new_down(int content)
 {
 	t_list_down	*list;
@@ -60,9 +56,7 @@ t_list_down	*ft_list_new_down(int content)
 	return (list);
 }
 
-//добавление вниз нового элемента
-/* Функция добавления элемента в конец массива/списка в указатель "down" */
-void	ft_list_add_back_down(t_list_down **a_lst, t_list_down *new)
+void		ft_list_add_back_down(t_list_down **a_lst, t_list_down *new)
 {
 	t_list_down *list;
 

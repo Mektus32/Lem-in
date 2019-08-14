@@ -18,6 +18,7 @@ NAME = Lem-in
 SRC =	bfs.c \
 		main.c \
  		liba.c \
+ 		 		liba_2.c \
  		free.c \
  		path.c \
  		valid.c \

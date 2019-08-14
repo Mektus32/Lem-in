@@ -12,11 +12,11 @@
 
 #include "lem_in.h"
 
-void free_tmp_path(t_list_path **path_i, int c_path)
+void	free_tmp_path(t_list_path **path_i, int c_path)
 {
-	int	i;
-	t_list_path *del;
-	t_list_path *tmp_i;
+	int			i;
+	t_list_path	*del;
+	t_list_path	*tmp_i;
 
 	if (!path_i || !*path_i)
 		return ;
@@ -29,7 +29,6 @@ void free_tmp_path(t_list_path **path_i, int c_path)
 		{
 			del = tmp_i;
 			tmp_i = tmp_i->next;
-			//tmp_i ? tmp_i->prev = NULL : 0;
 			free(del);
 			del = NULL;
 		}
@@ -39,7 +38,7 @@ void free_tmp_path(t_list_path **path_i, int c_path)
 	*path_i = NULL;
 }
 
-void 	ft_free_list_i(t_list_i **head)
+void	ft_free_list_i(t_list_i **head)
 {
 	t_list_i	*list;
 	t_list_i	*del;
@@ -67,12 +66,9 @@ void	ft_free_list_down(t_list_down **head)
 {
 	t_list_down	*del;
 	t_list_down	*list;
-	t_list_i *del_i;
+	t_list_i	*del_i;
 
-
-	if (!head)
-		return ;
-	if (!*head)
+	if (!head || !*head)
 		return ;
 	list = *head;
 	while (list)
@@ -91,7 +87,6 @@ void	ft_free_list_down(t_list_down **head)
 	free(list);
 	list = NULL;
 	*head = list;
-
 }
 
 void	ft_free_first_in_two_path(t_list_down **first)
@@ -99,11 +94,7 @@ void	ft_free_first_in_two_path(t_list_down **first)
 	t_list_down	*list;
 	t_list_down	*del_d;
 
-	if (!first)
-		return ;
-	if (!*first)
-		return ;
-	if (!(*first)->down)
+	if (!first || !*first || !(*first)->down)
 		return ;
 	list = (*first);
 	if (list->down)
@@ -116,7 +107,6 @@ void	ft_free_first_in_two_path(t_list_down **first)
 		del_d = NULL;
 	*first = (*first)->right;
 	free(list);
-
 }
 
 void	ft_free_list_room(t_room **head)
@@ -140,4 +130,3 @@ void	ft_free_list_room(t_room **head)
 	}
 	*head = NULL;
 }
-

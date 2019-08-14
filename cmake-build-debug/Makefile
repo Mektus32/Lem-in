@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/ojessi/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Users/qgilbert/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/ojessi/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Users/qgilbert/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ojessi/Desktop/Lem-in
+CMAKE_SOURCE_DIR = /Users/qgilbert/Desktop/lem_in/seven
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ojessi/Desktop/Lem-in/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/ojessi/Desktop/Lem-in/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/ojessi/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Users/qgilbert/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/ojessi/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Users/qgilbert/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ojessi/Desktop/Lem-in/cmake-build-debug/CMakeFiles /Users/ojessi/Desktop/Lem-in/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/CMakeFiles /Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ojessi/Desktop/Lem-in/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -177,87 +177,6 @@ ft_printf/src/choise_spec.c.s:
 	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/choise_spec.c.s
 .PHONY : ft_printf/src/choise_spec.c.s
 
-ft_printf/src/ft_atoi.o: ft_printf/src/ft_atoi.c.o
-
-.PHONY : ft_printf/src/ft_atoi.o
-
-# target to build an object file
-ft_printf/src/ft_atoi.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_atoi.c.o
-.PHONY : ft_printf/src/ft_atoi.c.o
-
-ft_printf/src/ft_atoi.i: ft_printf/src/ft_atoi.c.i
-
-.PHONY : ft_printf/src/ft_atoi.i
-
-# target to preprocess a source file
-ft_printf/src/ft_atoi.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_atoi.c.i
-.PHONY : ft_printf/src/ft_atoi.c.i
-
-ft_printf/src/ft_atoi.s: ft_printf/src/ft_atoi.c.s
-
-.PHONY : ft_printf/src/ft_atoi.s
-
-# target to generate assembly for a file
-ft_printf/src/ft_atoi.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_atoi.c.s
-.PHONY : ft_printf/src/ft_atoi.c.s
-
-ft_printf/src/ft_free_strjoin_duo.o: ft_printf/src/ft_free_strjoin_duo.c.o
-
-.PHONY : ft_printf/src/ft_free_strjoin_duo.o
-
-# target to build an object file
-ft_printf/src/ft_free_strjoin_duo.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_free_strjoin_duo.c.o
-.PHONY : ft_printf/src/ft_free_strjoin_duo.c.o
-
-ft_printf/src/ft_free_strjoin_duo.i: ft_printf/src/ft_free_strjoin_duo.c.i
-
-.PHONY : ft_printf/src/ft_free_strjoin_duo.i
-
-# target to preprocess a source file
-ft_printf/src/ft_free_strjoin_duo.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_free_strjoin_duo.c.i
-.PHONY : ft_printf/src/ft_free_strjoin_duo.c.i
-
-ft_printf/src/ft_free_strjoin_duo.s: ft_printf/src/ft_free_strjoin_duo.c.s
-
-.PHONY : ft_printf/src/ft_free_strjoin_duo.s
-
-# target to generate assembly for a file
-ft_printf/src/ft_free_strjoin_duo.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_free_strjoin_duo.c.s
-.PHONY : ft_printf/src/ft_free_strjoin_duo.c.s
-
-ft_printf/src/ft_free_strjoin_rev.o: ft_printf/src/ft_free_strjoin_rev.c.o
-
-.PHONY : ft_printf/src/ft_free_strjoin_rev.o
-
-# target to build an object file
-ft_printf/src/ft_free_strjoin_rev.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_free_strjoin_rev.c.o
-.PHONY : ft_printf/src/ft_free_strjoin_rev.c.o
-
-ft_printf/src/ft_free_strjoin_rev.i: ft_printf/src/ft_free_strjoin_rev.c.i
-
-.PHONY : ft_printf/src/ft_free_strjoin_rev.i
-
-# target to preprocess a source file
-ft_printf/src/ft_free_strjoin_rev.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_free_strjoin_rev.c.i
-.PHONY : ft_printf/src/ft_free_strjoin_rev.c.i
-
-ft_printf/src/ft_free_strjoin_rev.s: ft_printf/src/ft_free_strjoin_rev.c.s
-
-.PHONY : ft_printf/src/ft_free_strjoin_rev.s
-
-# target to generate assembly for a file
-ft_printf/src/ft_free_strjoin_rev.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_free_strjoin_rev.c.s
-.PHONY : ft_printf/src/ft_free_strjoin_rev.c.s
-
 ft_printf/src/ft_free_strncpy.o: ft_printf/src/ft_free_strncpy.c.o
 
 .PHONY : ft_printf/src/ft_free_strncpy.o
@@ -285,141 +204,6 @@ ft_printf/src/ft_free_strncpy.c.s:
 	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_free_strncpy.c.s
 .PHONY : ft_printf/src/ft_free_strncpy.c.s
 
-ft_printf/src/ft_ftoa.o: ft_printf/src/ft_ftoa.c.o
-
-.PHONY : ft_printf/src/ft_ftoa.o
-
-# target to build an object file
-ft_printf/src/ft_ftoa.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_ftoa.c.o
-.PHONY : ft_printf/src/ft_ftoa.c.o
-
-ft_printf/src/ft_ftoa.i: ft_printf/src/ft_ftoa.c.i
-
-.PHONY : ft_printf/src/ft_ftoa.i
-
-# target to preprocess a source file
-ft_printf/src/ft_ftoa.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_ftoa.c.i
-.PHONY : ft_printf/src/ft_ftoa.c.i
-
-ft_printf/src/ft_ftoa.s: ft_printf/src/ft_ftoa.c.s
-
-.PHONY : ft_printf/src/ft_ftoa.s
-
-# target to generate assembly for a file
-ft_printf/src/ft_ftoa.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_ftoa.c.s
-.PHONY : ft_printf/src/ft_ftoa.c.s
-
-ft_printf/src/ft_itoa.o: ft_printf/src/ft_itoa.c.o
-
-.PHONY : ft_printf/src/ft_itoa.o
-
-# target to build an object file
-ft_printf/src/ft_itoa.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_itoa.c.o
-.PHONY : ft_printf/src/ft_itoa.c.o
-
-ft_printf/src/ft_itoa.i: ft_printf/src/ft_itoa.c.i
-
-.PHONY : ft_printf/src/ft_itoa.i
-
-# target to preprocess a source file
-ft_printf/src/ft_itoa.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_itoa.c.i
-.PHONY : ft_printf/src/ft_itoa.c.i
-
-ft_printf/src/ft_itoa.s: ft_printf/src/ft_itoa.c.s
-
-.PHONY : ft_printf/src/ft_itoa.s
-
-# target to generate assembly for a file
-ft_printf/src/ft_itoa.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_itoa.c.s
-.PHONY : ft_printf/src/ft_itoa.c.s
-
-ft_printf/src/ft_ltoa.o: ft_printf/src/ft_ltoa.c.o
-
-.PHONY : ft_printf/src/ft_ltoa.o
-
-# target to build an object file
-ft_printf/src/ft_ltoa.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_ltoa.c.o
-.PHONY : ft_printf/src/ft_ltoa.c.o
-
-ft_printf/src/ft_ltoa.i: ft_printf/src/ft_ltoa.c.i
-
-.PHONY : ft_printf/src/ft_ltoa.i
-
-# target to preprocess a source file
-ft_printf/src/ft_ltoa.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_ltoa.c.i
-.PHONY : ft_printf/src/ft_ltoa.c.i
-
-ft_printf/src/ft_ltoa.s: ft_printf/src/ft_ltoa.c.s
-
-.PHONY : ft_printf/src/ft_ltoa.s
-
-# target to generate assembly for a file
-ft_printf/src/ft_ltoa.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_ltoa.c.s
-.PHONY : ft_printf/src/ft_ltoa.c.s
-
-ft_printf/src/ft_ltoa_base.o: ft_printf/src/ft_ltoa_base.c.o
-
-.PHONY : ft_printf/src/ft_ltoa_base.o
-
-# target to build an object file
-ft_printf/src/ft_ltoa_base.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_ltoa_base.c.o
-.PHONY : ft_printf/src/ft_ltoa_base.c.o
-
-ft_printf/src/ft_ltoa_base.i: ft_printf/src/ft_ltoa_base.c.i
-
-.PHONY : ft_printf/src/ft_ltoa_base.i
-
-# target to preprocess a source file
-ft_printf/src/ft_ltoa_base.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_ltoa_base.c.i
-.PHONY : ft_printf/src/ft_ltoa_base.c.i
-
-ft_printf/src/ft_ltoa_base.s: ft_printf/src/ft_ltoa_base.c.s
-
-.PHONY : ft_printf/src/ft_ltoa_base.s
-
-# target to generate assembly for a file
-ft_printf/src/ft_ltoa_base.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_ltoa_base.c.s
-.PHONY : ft_printf/src/ft_ltoa_base.c.s
-
-ft_printf/src/ft_memset.o: ft_printf/src/ft_memset.c.o
-
-.PHONY : ft_printf/src/ft_memset.o
-
-# target to build an object file
-ft_printf/src/ft_memset.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_memset.c.o
-.PHONY : ft_printf/src/ft_memset.c.o
-
-ft_printf/src/ft_memset.i: ft_printf/src/ft_memset.c.i
-
-.PHONY : ft_printf/src/ft_memset.i
-
-# target to preprocess a source file
-ft_printf/src/ft_memset.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_memset.c.i
-.PHONY : ft_printf/src/ft_memset.c.i
-
-ft_printf/src/ft_memset.s: ft_printf/src/ft_memset.c.s
-
-.PHONY : ft_printf/src/ft_memset.s
-
-# target to generate assembly for a file
-ft_printf/src/ft_memset.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_memset.c.s
-.PHONY : ft_printf/src/ft_memset.c.s
-
 ft_printf/src/ft_printf.o: ft_printf/src/ft_printf.c.o
 
 .PHONY : ft_printf/src/ft_printf.o
@@ -446,249 +230,6 @@ ft_printf/src/ft_printf.s: ft_printf/src/ft_printf.c.s
 ft_printf/src/ft_printf.c.s:
 	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_printf.c.s
 .PHONY : ft_printf/src/ft_printf.c.s
-
-ft_printf/src/ft_strchr.o: ft_printf/src/ft_strchr.c.o
-
-.PHONY : ft_printf/src/ft_strchr.o
-
-# target to build an object file
-ft_printf/src/ft_strchr.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_strchr.c.o
-.PHONY : ft_printf/src/ft_strchr.c.o
-
-ft_printf/src/ft_strchr.i: ft_printf/src/ft_strchr.c.i
-
-.PHONY : ft_printf/src/ft_strchr.i
-
-# target to preprocess a source file
-ft_printf/src/ft_strchr.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_strchr.c.i
-.PHONY : ft_printf/src/ft_strchr.c.i
-
-ft_printf/src/ft_strchr.s: ft_printf/src/ft_strchr.c.s
-
-.PHONY : ft_printf/src/ft_strchr.s
-
-# target to generate assembly for a file
-ft_printf/src/ft_strchr.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_strchr.c.s
-.PHONY : ft_printf/src/ft_strchr.c.s
-
-ft_printf/src/ft_strdup.o: ft_printf/src/ft_strdup.c.o
-
-.PHONY : ft_printf/src/ft_strdup.o
-
-# target to build an object file
-ft_printf/src/ft_strdup.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_strdup.c.o
-.PHONY : ft_printf/src/ft_strdup.c.o
-
-ft_printf/src/ft_strdup.i: ft_printf/src/ft_strdup.c.i
-
-.PHONY : ft_printf/src/ft_strdup.i
-
-# target to preprocess a source file
-ft_printf/src/ft_strdup.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_strdup.c.i
-.PHONY : ft_printf/src/ft_strdup.c.i
-
-ft_printf/src/ft_strdup.s: ft_printf/src/ft_strdup.c.s
-
-.PHONY : ft_printf/src/ft_strdup.s
-
-# target to generate assembly for a file
-ft_printf/src/ft_strdup.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_strdup.c.s
-.PHONY : ft_printf/src/ft_strdup.c.s
-
-ft_printf/src/ft_strjoin.o: ft_printf/src/ft_strjoin.c.o
-
-.PHONY : ft_printf/src/ft_strjoin.o
-
-# target to build an object file
-ft_printf/src/ft_strjoin.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_strjoin.c.o
-.PHONY : ft_printf/src/ft_strjoin.c.o
-
-ft_printf/src/ft_strjoin.i: ft_printf/src/ft_strjoin.c.i
-
-.PHONY : ft_printf/src/ft_strjoin.i
-
-# target to preprocess a source file
-ft_printf/src/ft_strjoin.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_strjoin.c.i
-.PHONY : ft_printf/src/ft_strjoin.c.i
-
-ft_printf/src/ft_strjoin.s: ft_printf/src/ft_strjoin.c.s
-
-.PHONY : ft_printf/src/ft_strjoin.s
-
-# target to generate assembly for a file
-ft_printf/src/ft_strjoin.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_strjoin.c.s
-.PHONY : ft_printf/src/ft_strjoin.c.s
-
-ft_printf/src/ft_strlen.o: ft_printf/src/ft_strlen.c.o
-
-.PHONY : ft_printf/src/ft_strlen.o
-
-# target to build an object file
-ft_printf/src/ft_strlen.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_strlen.c.o
-.PHONY : ft_printf/src/ft_strlen.c.o
-
-ft_printf/src/ft_strlen.i: ft_printf/src/ft_strlen.c.i
-
-.PHONY : ft_printf/src/ft_strlen.i
-
-# target to preprocess a source file
-ft_printf/src/ft_strlen.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_strlen.c.i
-.PHONY : ft_printf/src/ft_strlen.c.i
-
-ft_printf/src/ft_strlen.s: ft_printf/src/ft_strlen.c.s
-
-.PHONY : ft_printf/src/ft_strlen.s
-
-# target to generate assembly for a file
-ft_printf/src/ft_strlen.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_strlen.c.s
-.PHONY : ft_printf/src/ft_strlen.c.s
-
-ft_printf/src/ft_strncmp.o: ft_printf/src/ft_strncmp.c.o
-
-.PHONY : ft_printf/src/ft_strncmp.o
-
-# target to build an object file
-ft_printf/src/ft_strncmp.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_strncmp.c.o
-.PHONY : ft_printf/src/ft_strncmp.c.o
-
-ft_printf/src/ft_strncmp.i: ft_printf/src/ft_strncmp.c.i
-
-.PHONY : ft_printf/src/ft_strncmp.i
-
-# target to preprocess a source file
-ft_printf/src/ft_strncmp.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_strncmp.c.i
-.PHONY : ft_printf/src/ft_strncmp.c.i
-
-ft_printf/src/ft_strncmp.s: ft_printf/src/ft_strncmp.c.s
-
-.PHONY : ft_printf/src/ft_strncmp.s
-
-# target to generate assembly for a file
-ft_printf/src/ft_strncmp.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_strncmp.c.s
-.PHONY : ft_printf/src/ft_strncmp.c.s
-
-ft_printf/src/ft_strnew.o: ft_printf/src/ft_strnew.c.o
-
-.PHONY : ft_printf/src/ft_strnew.o
-
-# target to build an object file
-ft_printf/src/ft_strnew.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_strnew.c.o
-.PHONY : ft_printf/src/ft_strnew.c.o
-
-ft_printf/src/ft_strnew.i: ft_printf/src/ft_strnew.c.i
-
-.PHONY : ft_printf/src/ft_strnew.i
-
-# target to preprocess a source file
-ft_printf/src/ft_strnew.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_strnew.c.i
-.PHONY : ft_printf/src/ft_strnew.c.i
-
-ft_printf/src/ft_strnew.s: ft_printf/src/ft_strnew.c.s
-
-.PHONY : ft_printf/src/ft_strnew.s
-
-# target to generate assembly for a file
-ft_printf/src/ft_strnew.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_strnew.c.s
-.PHONY : ft_printf/src/ft_strnew.c.s
-
-ft_printf/src/ft_strtolower.o: ft_printf/src/ft_strtolower.c.o
-
-.PHONY : ft_printf/src/ft_strtolower.o
-
-# target to build an object file
-ft_printf/src/ft_strtolower.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_strtolower.c.o
-.PHONY : ft_printf/src/ft_strtolower.c.o
-
-ft_printf/src/ft_strtolower.i: ft_printf/src/ft_strtolower.c.i
-
-.PHONY : ft_printf/src/ft_strtolower.i
-
-# target to preprocess a source file
-ft_printf/src/ft_strtolower.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_strtolower.c.i
-.PHONY : ft_printf/src/ft_strtolower.c.i
-
-ft_printf/src/ft_strtolower.s: ft_printf/src/ft_strtolower.c.s
-
-.PHONY : ft_printf/src/ft_strtolower.s
-
-# target to generate assembly for a file
-ft_printf/src/ft_strtolower.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_strtolower.c.s
-.PHONY : ft_printf/src/ft_strtolower.c.s
-
-ft_printf/src/ft_ultoa.o: ft_printf/src/ft_ultoa.c.o
-
-.PHONY : ft_printf/src/ft_ultoa.o
-
-# target to build an object file
-ft_printf/src/ft_ultoa.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_ultoa.c.o
-.PHONY : ft_printf/src/ft_ultoa.c.o
-
-ft_printf/src/ft_ultoa.i: ft_printf/src/ft_ultoa.c.i
-
-.PHONY : ft_printf/src/ft_ultoa.i
-
-# target to preprocess a source file
-ft_printf/src/ft_ultoa.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_ultoa.c.i
-.PHONY : ft_printf/src/ft_ultoa.c.i
-
-ft_printf/src/ft_ultoa.s: ft_printf/src/ft_ultoa.c.s
-
-.PHONY : ft_printf/src/ft_ultoa.s
-
-# target to generate assembly for a file
-ft_printf/src/ft_ultoa.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_ultoa.c.s
-.PHONY : ft_printf/src/ft_ultoa.c.s
-
-ft_printf/src/ft_ultoa_base.o: ft_printf/src/ft_ultoa_base.c.o
-
-.PHONY : ft_printf/src/ft_ultoa_base.o
-
-# target to build an object file
-ft_printf/src/ft_ultoa_base.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_ultoa_base.c.o
-.PHONY : ft_printf/src/ft_ultoa_base.c.o
-
-ft_printf/src/ft_ultoa_base.i: ft_printf/src/ft_ultoa_base.c.i
-
-.PHONY : ft_printf/src/ft_ultoa_base.i
-
-# target to preprocess a source file
-ft_printf/src/ft_ultoa_base.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_ultoa_base.c.i
-.PHONY : ft_printf/src/ft_ultoa_base.c.i
-
-ft_printf/src/ft_ultoa_base.s: ft_printf/src/ft_ultoa_base.c.s
-
-.PHONY : ft_printf/src/ft_ultoa_base.s
-
-# target to generate assembly for a file
-ft_printf/src/ft_ultoa_base.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/ft_printf/src/ft_ultoa_base.c.s
-.PHONY : ft_printf/src/ft_ultoa_base.c.s
 
 ft_printf/src/init_arg.o: ft_printf/src/init_arg.c.o
 
@@ -3552,6 +3093,33 @@ src/liba.c.s:
 	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/src/liba.c.s
 .PHONY : src/liba.c.s
 
+src/liba_2.o: src/liba_2.c.o
+
+.PHONY : src/liba_2.o
+
+# target to build an object file
+src/liba_2.c.o:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/src/liba_2.c.o
+.PHONY : src/liba_2.c.o
+
+src/liba_2.i: src/liba_2.c.i
+
+.PHONY : src/liba_2.i
+
+# target to preprocess a source file
+src/liba_2.c.i:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/src/liba_2.c.i
+.PHONY : src/liba_2.c.i
+
+src/liba_2.s: src/liba_2.c.s
+
+.PHONY : src/liba_2.s
+
+# target to generate assembly for a file
+src/liba_2.c.s:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/src/liba_2.c.s
+.PHONY : src/liba_2.c.s
+
 src/list_path.o: src/list_path.c.o
 
 .PHONY : src/list_path.o
@@ -3741,465 +3309,6 @@ src/valid_link.c.s:
 	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/src/valid_link.c.s
 .PHONY : src/valid_link.c.s
 
-vizualizer/minilibx/font.o: vizualizer/minilibx/font.c.o
-
-.PHONY : vizualizer/minilibx/font.o
-
-# target to build an object file
-vizualizer/minilibx/font.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/font.c.o
-.PHONY : vizualizer/minilibx/font.c.o
-
-vizualizer/minilibx/font.i: vizualizer/minilibx/font.c.i
-
-.PHONY : vizualizer/minilibx/font.i
-
-# target to preprocess a source file
-vizualizer/minilibx/font.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/font.c.i
-.PHONY : vizualizer/minilibx/font.c.i
-
-vizualizer/minilibx/font.s: vizualizer/minilibx/font.c.s
-
-.PHONY : vizualizer/minilibx/font.s
-
-# target to generate assembly for a file
-vizualizer/minilibx/font.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/font.c.s
-.PHONY : vizualizer/minilibx/font.c.s
-
-vizualizer/minilibx/mlx_init_loop.o: vizualizer/minilibx/mlx_init_loop.m.o
-
-.PHONY : vizualizer/minilibx/mlx_init_loop.o
-
-# target to build an object file
-vizualizer/minilibx/mlx_init_loop.m.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/mlx_init_loop.m.o
-.PHONY : vizualizer/minilibx/mlx_init_loop.m.o
-
-vizualizer/minilibx/mlx_init_loop.i: vizualizer/minilibx/mlx_init_loop.m.i
-
-.PHONY : vizualizer/minilibx/mlx_init_loop.i
-
-# target to preprocess a source file
-vizualizer/minilibx/mlx_init_loop.m.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/mlx_init_loop.m.i
-.PHONY : vizualizer/minilibx/mlx_init_loop.m.i
-
-vizualizer/minilibx/mlx_init_loop.s: vizualizer/minilibx/mlx_init_loop.m.s
-
-.PHONY : vizualizer/minilibx/mlx_init_loop.s
-
-# target to generate assembly for a file
-vizualizer/minilibx/mlx_init_loop.m.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/mlx_init_loop.m.s
-.PHONY : vizualizer/minilibx/mlx_init_loop.m.s
-
-vizualizer/minilibx/mlx_int_str_to_wordtab.o: vizualizer/minilibx/mlx_int_str_to_wordtab.c.o
-
-.PHONY : vizualizer/minilibx/mlx_int_str_to_wordtab.o
-
-# target to build an object file
-vizualizer/minilibx/mlx_int_str_to_wordtab.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/mlx_int_str_to_wordtab.c.o
-.PHONY : vizualizer/minilibx/mlx_int_str_to_wordtab.c.o
-
-vizualizer/minilibx/mlx_int_str_to_wordtab.i: vizualizer/minilibx/mlx_int_str_to_wordtab.c.i
-
-.PHONY : vizualizer/minilibx/mlx_int_str_to_wordtab.i
-
-# target to preprocess a source file
-vizualizer/minilibx/mlx_int_str_to_wordtab.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/mlx_int_str_to_wordtab.c.i
-.PHONY : vizualizer/minilibx/mlx_int_str_to_wordtab.c.i
-
-vizualizer/minilibx/mlx_int_str_to_wordtab.s: vizualizer/minilibx/mlx_int_str_to_wordtab.c.s
-
-.PHONY : vizualizer/minilibx/mlx_int_str_to_wordtab.s
-
-# target to generate assembly for a file
-vizualizer/minilibx/mlx_int_str_to_wordtab.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/mlx_int_str_to_wordtab.c.s
-.PHONY : vizualizer/minilibx/mlx_int_str_to_wordtab.c.s
-
-vizualizer/minilibx/mlx_new_image.o: vizualizer/minilibx/mlx_new_image.m.o
-
-.PHONY : vizualizer/minilibx/mlx_new_image.o
-
-# target to build an object file
-vizualizer/minilibx/mlx_new_image.m.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/mlx_new_image.m.o
-.PHONY : vizualizer/minilibx/mlx_new_image.m.o
-
-vizualizer/minilibx/mlx_new_image.i: vizualizer/minilibx/mlx_new_image.m.i
-
-.PHONY : vizualizer/minilibx/mlx_new_image.i
-
-# target to preprocess a source file
-vizualizer/minilibx/mlx_new_image.m.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/mlx_new_image.m.i
-.PHONY : vizualizer/minilibx/mlx_new_image.m.i
-
-vizualizer/minilibx/mlx_new_image.s: vizualizer/minilibx/mlx_new_image.m.s
-
-.PHONY : vizualizer/minilibx/mlx_new_image.s
-
-# target to generate assembly for a file
-vizualizer/minilibx/mlx_new_image.m.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/mlx_new_image.m.s
-.PHONY : vizualizer/minilibx/mlx_new_image.m.s
-
-vizualizer/minilibx/mlx_new_window.o: vizualizer/minilibx/mlx_new_window.m.o
-
-.PHONY : vizualizer/minilibx/mlx_new_window.o
-
-# target to build an object file
-vizualizer/minilibx/mlx_new_window.m.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/mlx_new_window.m.o
-.PHONY : vizualizer/minilibx/mlx_new_window.m.o
-
-vizualizer/minilibx/mlx_new_window.i: vizualizer/minilibx/mlx_new_window.m.i
-
-.PHONY : vizualizer/minilibx/mlx_new_window.i
-
-# target to preprocess a source file
-vizualizer/minilibx/mlx_new_window.m.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/mlx_new_window.m.i
-.PHONY : vizualizer/minilibx/mlx_new_window.m.i
-
-vizualizer/minilibx/mlx_new_window.s: vizualizer/minilibx/mlx_new_window.m.s
-
-.PHONY : vizualizer/minilibx/mlx_new_window.s
-
-# target to generate assembly for a file
-vizualizer/minilibx/mlx_new_window.m.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/mlx_new_window.m.s
-.PHONY : vizualizer/minilibx/mlx_new_window.m.s
-
-vizualizer/minilibx/mlx_rgb.o: vizualizer/minilibx/mlx_rgb.c.o
-
-.PHONY : vizualizer/minilibx/mlx_rgb.o
-
-# target to build an object file
-vizualizer/minilibx/mlx_rgb.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/mlx_rgb.c.o
-.PHONY : vizualizer/minilibx/mlx_rgb.c.o
-
-vizualizer/minilibx/mlx_rgb.i: vizualizer/minilibx/mlx_rgb.c.i
-
-.PHONY : vizualizer/minilibx/mlx_rgb.i
-
-# target to preprocess a source file
-vizualizer/minilibx/mlx_rgb.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/mlx_rgb.c.i
-.PHONY : vizualizer/minilibx/mlx_rgb.c.i
-
-vizualizer/minilibx/mlx_rgb.s: vizualizer/minilibx/mlx_rgb.c.s
-
-.PHONY : vizualizer/minilibx/mlx_rgb.s
-
-# target to generate assembly for a file
-vizualizer/minilibx/mlx_rgb.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/mlx_rgb.c.s
-.PHONY : vizualizer/minilibx/mlx_rgb.c.s
-
-vizualizer/minilibx/mlx_shaders.o: vizualizer/minilibx/mlx_shaders.c.o
-
-.PHONY : vizualizer/minilibx/mlx_shaders.o
-
-# target to build an object file
-vizualizer/minilibx/mlx_shaders.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/mlx_shaders.c.o
-.PHONY : vizualizer/minilibx/mlx_shaders.c.o
-
-vizualizer/minilibx/mlx_shaders.i: vizualizer/minilibx/mlx_shaders.c.i
-
-.PHONY : vizualizer/minilibx/mlx_shaders.i
-
-# target to preprocess a source file
-vizualizer/minilibx/mlx_shaders.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/mlx_shaders.c.i
-.PHONY : vizualizer/minilibx/mlx_shaders.c.i
-
-vizualizer/minilibx/mlx_shaders.s: vizualizer/minilibx/mlx_shaders.c.s
-
-.PHONY : vizualizer/minilibx/mlx_shaders.s
-
-# target to generate assembly for a file
-vizualizer/minilibx/mlx_shaders.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/mlx_shaders.c.s
-.PHONY : vizualizer/minilibx/mlx_shaders.c.s
-
-vizualizer/minilibx/mlx_xpm.o: vizualizer/minilibx/mlx_xpm.c.o
-
-.PHONY : vizualizer/minilibx/mlx_xpm.o
-
-# target to build an object file
-vizualizer/minilibx/mlx_xpm.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/mlx_xpm.c.o
-.PHONY : vizualizer/minilibx/mlx_xpm.c.o
-
-vizualizer/minilibx/mlx_xpm.i: vizualizer/minilibx/mlx_xpm.c.i
-
-.PHONY : vizualizer/minilibx/mlx_xpm.i
-
-# target to preprocess a source file
-vizualizer/minilibx/mlx_xpm.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/mlx_xpm.c.i
-.PHONY : vizualizer/minilibx/mlx_xpm.c.i
-
-vizualizer/minilibx/mlx_xpm.s: vizualizer/minilibx/mlx_xpm.c.s
-
-.PHONY : vizualizer/minilibx/mlx_xpm.s
-
-# target to generate assembly for a file
-vizualizer/minilibx/mlx_xpm.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/minilibx/mlx_xpm.c.s
-.PHONY : vizualizer/minilibx/mlx_xpm.c.s
-
-vizualizer/src/dop_funct.o: vizualizer/src/dop_funct.c.o
-
-.PHONY : vizualizer/src/dop_funct.o
-
-# target to build an object file
-vizualizer/src/dop_funct.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/dop_funct.c.o
-.PHONY : vizualizer/src/dop_funct.c.o
-
-vizualizer/src/dop_funct.i: vizualizer/src/dop_funct.c.i
-
-.PHONY : vizualizer/src/dop_funct.i
-
-# target to preprocess a source file
-vizualizer/src/dop_funct.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/dop_funct.c.i
-.PHONY : vizualizer/src/dop_funct.c.i
-
-vizualizer/src/dop_funct.s: vizualizer/src/dop_funct.c.s
-
-.PHONY : vizualizer/src/dop_funct.s
-
-# target to generate assembly for a file
-vizualizer/src/dop_funct.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/dop_funct.c.s
-.PHONY : vizualizer/src/dop_funct.c.s
-
-vizualizer/src/draw.o: vizualizer/src/draw.c.o
-
-.PHONY : vizualizer/src/draw.o
-
-# target to build an object file
-vizualizer/src/draw.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/draw.c.o
-.PHONY : vizualizer/src/draw.c.o
-
-vizualizer/src/draw.i: vizualizer/src/draw.c.i
-
-.PHONY : vizualizer/src/draw.i
-
-# target to preprocess a source file
-vizualizer/src/draw.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/draw.c.i
-.PHONY : vizualizer/src/draw.c.i
-
-vizualizer/src/draw.s: vizualizer/src/draw.c.s
-
-.PHONY : vizualizer/src/draw.s
-
-# target to generate assembly for a file
-vizualizer/src/draw.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/draw.c.s
-.PHONY : vizualizer/src/draw.c.s
-
-vizualizer/src/draw_line.o: vizualizer/src/draw_line.c.o
-
-.PHONY : vizualizer/src/draw_line.o
-
-# target to build an object file
-vizualizer/src/draw_line.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/draw_line.c.o
-.PHONY : vizualizer/src/draw_line.c.o
-
-vizualizer/src/draw_line.i: vizualizer/src/draw_line.c.i
-
-.PHONY : vizualizer/src/draw_line.i
-
-# target to preprocess a source file
-vizualizer/src/draw_line.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/draw_line.c.i
-.PHONY : vizualizer/src/draw_line.c.i
-
-vizualizer/src/draw_line.s: vizualizer/src/draw_line.c.s
-
-.PHONY : vizualizer/src/draw_line.s
-
-# target to generate assembly for a file
-vizualizer/src/draw_line.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/draw_line.c.s
-.PHONY : vizualizer/src/draw_line.c.s
-
-vizualizer/src/funct_rooms.o: vizualizer/src/funct_rooms.c.o
-
-.PHONY : vizualizer/src/funct_rooms.o
-
-# target to build an object file
-vizualizer/src/funct_rooms.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/funct_rooms.c.o
-.PHONY : vizualizer/src/funct_rooms.c.o
-
-vizualizer/src/funct_rooms.i: vizualizer/src/funct_rooms.c.i
-
-.PHONY : vizualizer/src/funct_rooms.i
-
-# target to preprocess a source file
-vizualizer/src/funct_rooms.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/funct_rooms.c.i
-.PHONY : vizualizer/src/funct_rooms.c.i
-
-vizualizer/src/funct_rooms.s: vizualizer/src/funct_rooms.c.s
-
-.PHONY : vizualizer/src/funct_rooms.s
-
-# target to generate assembly for a file
-vizualizer/src/funct_rooms.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/funct_rooms.c.s
-.PHONY : vizualizer/src/funct_rooms.c.s
-
-vizualizer/src/funct_turn.o: vizualizer/src/funct_turn.c.o
-
-.PHONY : vizualizer/src/funct_turn.o
-
-# target to build an object file
-vizualizer/src/funct_turn.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/funct_turn.c.o
-.PHONY : vizualizer/src/funct_turn.c.o
-
-vizualizer/src/funct_turn.i: vizualizer/src/funct_turn.c.i
-
-.PHONY : vizualizer/src/funct_turn.i
-
-# target to preprocess a source file
-vizualizer/src/funct_turn.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/funct_turn.c.i
-.PHONY : vizualizer/src/funct_turn.c.i
-
-vizualizer/src/funct_turn.s: vizualizer/src/funct_turn.c.s
-
-.PHONY : vizualizer/src/funct_turn.s
-
-# target to generate assembly for a file
-vizualizer/src/funct_turn.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/funct_turn.c.s
-.PHONY : vizualizer/src/funct_turn.c.s
-
-vizualizer/src/get_coor.o: vizualizer/src/get_coor.c.o
-
-.PHONY : vizualizer/src/get_coor.o
-
-# target to build an object file
-vizualizer/src/get_coor.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/get_coor.c.o
-.PHONY : vizualizer/src/get_coor.c.o
-
-vizualizer/src/get_coor.i: vizualizer/src/get_coor.c.i
-
-.PHONY : vizualizer/src/get_coor.i
-
-# target to preprocess a source file
-vizualizer/src/get_coor.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/get_coor.c.i
-.PHONY : vizualizer/src/get_coor.c.i
-
-vizualizer/src/get_coor.s: vizualizer/src/get_coor.c.s
-
-.PHONY : vizualizer/src/get_coor.s
-
-# target to generate assembly for a file
-vizualizer/src/get_coor.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/get_coor.c.s
-.PHONY : vizualizer/src/get_coor.c.s
-
-vizualizer/src/keyhook.o: vizualizer/src/keyhook.c.o
-
-.PHONY : vizualizer/src/keyhook.o
-
-# target to build an object file
-vizualizer/src/keyhook.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/keyhook.c.o
-.PHONY : vizualizer/src/keyhook.c.o
-
-vizualizer/src/keyhook.i: vizualizer/src/keyhook.c.i
-
-.PHONY : vizualizer/src/keyhook.i
-
-# target to preprocess a source file
-vizualizer/src/keyhook.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/keyhook.c.i
-.PHONY : vizualizer/src/keyhook.c.i
-
-vizualizer/src/keyhook.s: vizualizer/src/keyhook.c.s
-
-.PHONY : vizualizer/src/keyhook.s
-
-# target to generate assembly for a file
-vizualizer/src/keyhook.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/keyhook.c.s
-.PHONY : vizualizer/src/keyhook.c.s
-
-vizualizer/src/read.o: vizualizer/src/read.c.o
-
-.PHONY : vizualizer/src/read.o
-
-# target to build an object file
-vizualizer/src/read.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/read.c.o
-.PHONY : vizualizer/src/read.c.o
-
-vizualizer/src/read.i: vizualizer/src/read.c.i
-
-.PHONY : vizualizer/src/read.i
-
-# target to preprocess a source file
-vizualizer/src/read.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/read.c.i
-.PHONY : vizualizer/src/read.c.i
-
-vizualizer/src/read.s: vizualizer/src/read.c.s
-
-.PHONY : vizualizer/src/read.s
-
-# target to generate assembly for a file
-vizualizer/src/read.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/read.c.s
-.PHONY : vizualizer/src/read.c.s
-
-vizualizer/src/visu.o: vizualizer/src/visu.c.o
-
-.PHONY : vizualizer/src/visu.o
-
-# target to build an object file
-vizualizer/src/visu.c.o:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/visu.c.o
-.PHONY : vizualizer/src/visu.c.o
-
-vizualizer/src/visu.i: vizualizer/src/visu.c.i
-
-.PHONY : vizualizer/src/visu.i
-
-# target to preprocess a source file
-vizualizer/src/visu.c.i:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/visu.c.i
-.PHONY : vizualizer/src/visu.c.i
-
-vizualizer/src/visu.s: vizualizer/src/visu.c.s
-
-.PHONY : vizualizer/src/visu.s
-
-# target to generate assembly for a file
-vizualizer/src/visu.c.s:
-	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/vizualizer/src/visu.c.s
-.PHONY : vizualizer/src/visu.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -4215,63 +3324,12 @@ help:
 	@echo "... ft_printf/src/choise_spec.o"
 	@echo "... ft_printf/src/choise_spec.i"
 	@echo "... ft_printf/src/choise_spec.s"
-	@echo "... ft_printf/src/ft_atoi.o"
-	@echo "... ft_printf/src/ft_atoi.i"
-	@echo "... ft_printf/src/ft_atoi.s"
-	@echo "... ft_printf/src/ft_free_strjoin_duo.o"
-	@echo "... ft_printf/src/ft_free_strjoin_duo.i"
-	@echo "... ft_printf/src/ft_free_strjoin_duo.s"
-	@echo "... ft_printf/src/ft_free_strjoin_rev.o"
-	@echo "... ft_printf/src/ft_free_strjoin_rev.i"
-	@echo "... ft_printf/src/ft_free_strjoin_rev.s"
 	@echo "... ft_printf/src/ft_free_strncpy.o"
 	@echo "... ft_printf/src/ft_free_strncpy.i"
 	@echo "... ft_printf/src/ft_free_strncpy.s"
-	@echo "... ft_printf/src/ft_ftoa.o"
-	@echo "... ft_printf/src/ft_ftoa.i"
-	@echo "... ft_printf/src/ft_ftoa.s"
-	@echo "... ft_printf/src/ft_itoa.o"
-	@echo "... ft_printf/src/ft_itoa.i"
-	@echo "... ft_printf/src/ft_itoa.s"
-	@echo "... ft_printf/src/ft_ltoa.o"
-	@echo "... ft_printf/src/ft_ltoa.i"
-	@echo "... ft_printf/src/ft_ltoa.s"
-	@echo "... ft_printf/src/ft_ltoa_base.o"
-	@echo "... ft_printf/src/ft_ltoa_base.i"
-	@echo "... ft_printf/src/ft_ltoa_base.s"
-	@echo "... ft_printf/src/ft_memset.o"
-	@echo "... ft_printf/src/ft_memset.i"
-	@echo "... ft_printf/src/ft_memset.s"
 	@echo "... ft_printf/src/ft_printf.o"
 	@echo "... ft_printf/src/ft_printf.i"
 	@echo "... ft_printf/src/ft_printf.s"
-	@echo "... ft_printf/src/ft_strchr.o"
-	@echo "... ft_printf/src/ft_strchr.i"
-	@echo "... ft_printf/src/ft_strchr.s"
-	@echo "... ft_printf/src/ft_strdup.o"
-	@echo "... ft_printf/src/ft_strdup.i"
-	@echo "... ft_printf/src/ft_strdup.s"
-	@echo "... ft_printf/src/ft_strjoin.o"
-	@echo "... ft_printf/src/ft_strjoin.i"
-	@echo "... ft_printf/src/ft_strjoin.s"
-	@echo "... ft_printf/src/ft_strlen.o"
-	@echo "... ft_printf/src/ft_strlen.i"
-	@echo "... ft_printf/src/ft_strlen.s"
-	@echo "... ft_printf/src/ft_strncmp.o"
-	@echo "... ft_printf/src/ft_strncmp.i"
-	@echo "... ft_printf/src/ft_strncmp.s"
-	@echo "... ft_printf/src/ft_strnew.o"
-	@echo "... ft_printf/src/ft_strnew.i"
-	@echo "... ft_printf/src/ft_strnew.s"
-	@echo "... ft_printf/src/ft_strtolower.o"
-	@echo "... ft_printf/src/ft_strtolower.i"
-	@echo "... ft_printf/src/ft_strtolower.s"
-	@echo "... ft_printf/src/ft_ultoa.o"
-	@echo "... ft_printf/src/ft_ultoa.i"
-	@echo "... ft_printf/src/ft_ultoa.s"
-	@echo "... ft_printf/src/ft_ultoa_base.o"
-	@echo "... ft_printf/src/ft_ultoa_base.i"
-	@echo "... ft_printf/src/ft_ultoa_base.s"
 	@echo "... ft_printf/src/init_arg.o"
 	@echo "... ft_printf/src/init_arg.i"
 	@echo "... ft_printf/src/init_arg.s"
@@ -4590,6 +3648,9 @@ help:
 	@echo "... src/liba.o"
 	@echo "... src/liba.i"
 	@echo "... src/liba.s"
+	@echo "... src/liba_2.o"
+	@echo "... src/liba_2.i"
+	@echo "... src/liba_2.s"
 	@echo "... src/list_path.o"
 	@echo "... src/list_path.i"
 	@echo "... src/list_path.s"
@@ -4611,57 +3672,6 @@ help:
 	@echo "... src/valid_link.o"
 	@echo "... src/valid_link.i"
 	@echo "... src/valid_link.s"
-	@echo "... vizualizer/minilibx/font.o"
-	@echo "... vizualizer/minilibx/font.i"
-	@echo "... vizualizer/minilibx/font.s"
-	@echo "... vizualizer/minilibx/mlx_init_loop.o"
-	@echo "... vizualizer/minilibx/mlx_init_loop.i"
-	@echo "... vizualizer/minilibx/mlx_init_loop.s"
-	@echo "... vizualizer/minilibx/mlx_int_str_to_wordtab.o"
-	@echo "... vizualizer/minilibx/mlx_int_str_to_wordtab.i"
-	@echo "... vizualizer/minilibx/mlx_int_str_to_wordtab.s"
-	@echo "... vizualizer/minilibx/mlx_new_image.o"
-	@echo "... vizualizer/minilibx/mlx_new_image.i"
-	@echo "... vizualizer/minilibx/mlx_new_image.s"
-	@echo "... vizualizer/minilibx/mlx_new_window.o"
-	@echo "... vizualizer/minilibx/mlx_new_window.i"
-	@echo "... vizualizer/minilibx/mlx_new_window.s"
-	@echo "... vizualizer/minilibx/mlx_rgb.o"
-	@echo "... vizualizer/minilibx/mlx_rgb.i"
-	@echo "... vizualizer/minilibx/mlx_rgb.s"
-	@echo "... vizualizer/minilibx/mlx_shaders.o"
-	@echo "... vizualizer/minilibx/mlx_shaders.i"
-	@echo "... vizualizer/minilibx/mlx_shaders.s"
-	@echo "... vizualizer/minilibx/mlx_xpm.o"
-	@echo "... vizualizer/minilibx/mlx_xpm.i"
-	@echo "... vizualizer/minilibx/mlx_xpm.s"
-	@echo "... vizualizer/src/dop_funct.o"
-	@echo "... vizualizer/src/dop_funct.i"
-	@echo "... vizualizer/src/dop_funct.s"
-	@echo "... vizualizer/src/draw.o"
-	@echo "... vizualizer/src/draw.i"
-	@echo "... vizualizer/src/draw.s"
-	@echo "... vizualizer/src/draw_line.o"
-	@echo "... vizualizer/src/draw_line.i"
-	@echo "... vizualizer/src/draw_line.s"
-	@echo "... vizualizer/src/funct_rooms.o"
-	@echo "... vizualizer/src/funct_rooms.i"
-	@echo "... vizualizer/src/funct_rooms.s"
-	@echo "... vizualizer/src/funct_turn.o"
-	@echo "... vizualizer/src/funct_turn.i"
-	@echo "... vizualizer/src/funct_turn.s"
-	@echo "... vizualizer/src/get_coor.o"
-	@echo "... vizualizer/src/get_coor.i"
-	@echo "... vizualizer/src/get_coor.s"
-	@echo "... vizualizer/src/keyhook.o"
-	@echo "... vizualizer/src/keyhook.i"
-	@echo "... vizualizer/src/keyhook.s"
-	@echo "... vizualizer/src/read.o"
-	@echo "... vizualizer/src/read.i"
-	@echo "... vizualizer/src/read.s"
-	@echo "... vizualizer/src/visu.o"
-	@echo "... vizualizer/src/visu.i"
-	@echo "... vizualizer/src/visu.s"
 .PHONY : help
 
 

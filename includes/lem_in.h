@@ -65,7 +65,7 @@ typedef struct		s_map
 	int 			c_ant;//кол-во муравьев
 	t_list_down		*link;//лист - столбец для указания связей
 	t_list_down  	*link_new;//новые ссылки после удвление путей
-	t_list_down		*link_copy;
+//	t_list_down		*link_copy;
 	t_room			*rooms;//лист всех комнат
 	t_list_i		*sh;//кротчайший путь // вроде бы можно удалить?!(мы не используем)
 	int				len_sh;//длина кратчайшего пути
@@ -131,7 +131,7 @@ void ft_bfs_2(t_map *map, t_list_i *order, t_list_i *all_order);
  * ищет выиграш по времени от n путей
  */
 int ft_check_path_n(t_list_down *two_path, t_map *map);
-int ft_ant_in_path(int n_ant, int *d, int c_path, int len_max);
+int ft_ant_in_path(int n_ant, int c_path, int len_max, t_map *map);
 /**(ft_bfs_k.c)
  * step 3
  * bfs_k_path - ищет путь в новом графе
@@ -184,6 +184,8 @@ int					ft_max_mass(int *mass, int k);
 int                 *make_mass(int k);
 void                ft_str_print_del(char **as);
 char                *ft_check_cmd(int *fd);
+
+int *make_mass_cant_go(t_map *map, t_list_i *cant_go);
 /**(ft_list_i.c)
  * ф для работы с односвязным списком
  * ft_list_add_back_i_one - копирует только один элемент в конец
@@ -203,6 +205,9 @@ void ft_list_add_back_i_or_exit(t_list_i **lst_a, int content, t_list_i *all_ord
 void ft_list_add_back_i_if_not(t_list_i **lst_a, int content, t_list_i *all_order);
 /**(ft_list_down.c)
  * ф для работы с односвязным списком down
+ *ft_list_len_down - считаем колличество путей в состоянии
+ *ft_list_i_head - возвращает ссылку на элемент s_list_iот номера комнаты
+ *
  */
 int					ft_list_len_down(t_list_down *path);
 t_list_down			*ft_list_i_head(int num, t_list_down *a_lst);

@@ -27,7 +27,7 @@ int valid_map(int fd, t_map *map)
 {
     map->rooms = NULL;
     map->link = NULL;
-    map->link_copy = NULL;
+  //  map->link_copy = NULL;
     map->link_new = NULL;
     map->sh = NULL;
     map->two_path = NULL;
@@ -56,8 +56,8 @@ void	ft_free_map(t_map **map) {
         ft_free_list_down(&tmp->link);
     if (tmp->link_new)
         ft_free_list_down(&tmp->link_new);
-    if (tmp->link_copy)
-        ft_free_list_down(&tmp->link_copy);
+//    if (tmp->link_copy)
+//        ft_free_list_down(&tmp->link_copy);
     if (tmp->rooms)
         ft_free_list_room(&tmp->rooms);
     i = 0;
@@ -89,9 +89,9 @@ int main(int ac, char	**av)
 		}
 	}
 	else
-		fd = 0;//open("./a_test", O_RDONLY);
+		fd = open("../a_test", O_RDONLY);
 	map = (t_map*)malloc(sizeof(t_map));
-	ft_printf("fd = %d, ac = %d = \n",fd,  ac);
+	//ft_printf("fd = %d, ac = %d = \n",fd,  ac);
 	if (valid_map(fd, map))
 	{
 		main_path(map);

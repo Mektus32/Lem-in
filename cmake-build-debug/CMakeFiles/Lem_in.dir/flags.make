@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/ojessi/Desktop/Lem-in/ft_printf/includes -I/Users/ojessi/Desktop/Lem-in/includes -I/Users/ojessi/Desktop/Lem-in/libft/includes -I/Users/ojessi/Desktop/Lem-in/vizualizer/includes -I/Users/ojessi/Desktop/Lem-in/vizualizer/minilibx 
+C_INCLUDES = -I/Users/qgilbert/Desktop/lem_in/seven/ft_printf/includes -I/Users/qgilbert/Desktop/lem_in/seven/includes -I/Users/qgilbert/Desktop/lem_in/seven/libft/includes 
 
