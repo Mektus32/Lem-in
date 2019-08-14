@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(School21_Lem_in C)
+project(Lem_in C)
 
 set(CMAKE_C_STANDARD 11)
 
@@ -7,15 +7,12 @@ include_directories(ft_printf/includes)
 include_directories(includes)
 include_directories(libft/includes)
 
-add_executable(School21_Lem_in
+add_executable(Lem_in
         ft_printf/includes/ft_printf.h
         ft_printf/src/check_args.c
         ft_printf/src/choise_spec.c
-
         ft_printf/src/ft_free_strncpy.c
-
         ft_printf/src/ft_printf.c
-
         ft_printf/src/init_arg.c
         ft_printf/src/print_digit.c
         ft_printf/src/print_double.c
@@ -114,13 +111,16 @@ add_executable(School21_Lem_in
         libft/ft_ultoa.c
         libft/ft_ultoa_base.c
         libft/get_next_line.c
+        src/ant_in_room_2.c
         src/ant_room.c
         src/bfs.c
         src/check_n_path.c
         src/free.c
         src/ft_bfs_k.c
         src/ft_list_down.c
+        src/ft_list_down_2.c
         src/ft_list_i.c
+        src/ft_list_i_2.c
         src/ft_print.c
         src/liba.c
         src/list_path.c
@@ -128,4 +128,5 @@ add_executable(School21_Lem_in
         src/main.c
         src/path.c
         src/suurballe.c
-        src/valid.c)
+        src/valid.c
+        src/valid_link.c)

@@ -38,7 +38,7 @@ void ft_list_add_back_i_or_exit(t_list_i **lst_a, int content, t_list_i *all_ord
     while (tmp_lst)
     {
         if (tmp_lst->content == content)
-            return (is_not_valid("link alredy exist"));
+           is_not_valid("link alredy exist");
         tmp_lst = tmp_lst ->next;
     }
     ft_list_add_back_i_one(lst_a, content);

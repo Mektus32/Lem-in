@@ -14,29 +14,30 @@
 // заполним начальнуб струкруру map
 // проверим на валидность первую строку (кол-во муравьев)
 // ? если муравьев 0 кидать ошибку?
-int		make_ant(int fd, t_map *map)
+int make_ant(t_map *map)
 {
 	char	*line;
 	int		i;
+
 	line = NULL;
-	line = ft_check_cmd(map->fd);
+	line = ft_check_cmd(&map->fd);
 	if (line && !(ft_strequ(line, "##start") || ft_strequ(line, "##end")))
 	{
     	i = 0;
-		while (ft_isdigit(line[i]))
+		while (line[i] >= '0' && line[i] <= '9')
 			i++;
 		if ((int)ft_strlen(line) == i)
 		{
 			map->c_ant = ft_atoi(line);
 			ft_str_print_del(&line);
 			if (map->c_ant == 0 || map->c_ant >= 2147483647)
-				return (is_not_valid("ant_count err"));
+				return (is_not_valid("ant_count err\n"));
 			return (1);
 		}
 		ft_str_print_del(&line);
-		return (is_not_valid("no find ant_count"));
+		return (is_not_valid("no find ant_count\n"));
 	}
-	return (is_not_valid("no find ant_count"));
+	return (is_not_valid("no find ant_count\n"));
 }
 
 static int is_elem(char *line)
@@ -45,22 +46,22 @@ static int is_elem(char *line)
 
 	if (!line || line[0] == '\0')
 		return (0);
-	i = 0;
 	if (line[0] == 'L' && ft_count_words(line) != 3)
 		return (0);
+	i = 0;
 	while (line[i] != ' ' && line[i] != '\0')
 		i++;
 	i++;
-	if (!ft_isdigit(line[i]))
+	if (!(line[i] >= '0' && line[i] <= '9'))
 		return (0);
 	while (line[i] >= '0' && line[i] <= '9')
 		i++;
 	i++;
-	if (!ft_isdigit(line[i]))
+	if (!(line[i] >= '0' && line[i] <= '9'))
 		return (0);
 	while (line[i] >= '0' && line[i] <= '9')
 		i++;
-	if (i == ft_strlen(line))
+	if (i == (int)ft_strlen(line))
 		return (1);
 	return (0);
 }
@@ -83,31 +84,34 @@ static int is_elem(char *line)
 
 static int start_room(t_map *map, t_valid *val_id, char *line)
 {
-    val_id->start = (ft_strequ(line, "##start")  && val_id->end != 1) ? 1 : 4;
+    val_id->start = (val_id->end != 1 && ft_strequ(line, "##start")) ? 1 : 4;
     ft_str_print_del(&line);
-    line = ft_check_cmd(map->fd);
-    if (val_id->start == 1 && line != NULL && is_elem(line))
+    line = ft_check_cmd(&map->fd);
+    if (val_id->start == 1 && line && is_elem(line))
     {
         ft_list_add_room(&map->rooms, ft_create_ele(line, 0));
         val_id->start = 2;
     }
     else
         return(is_not_valid("start room_error"));
+    return (0);
 }
 
 static t_room  *end_room(t_map *map, t_valid *val_id, char *line)
 {
     t_room	*last_room;
+
+    last_room = NULL;
     val_id->end = (ft_strequ(line, "##end") && val_id->end == 0 && val_id->start != 1) ? 1 : 4;
     ft_str_print_del(&line);
-    line = ft_check_cmd(map->fd);
+    line = ft_check_cmd(&map->fd);
     if (val_id->end == 1 && line && is_elem(line))
     {
         last_room = ft_create_ele(line, -1);
         val_id->end = 2;
     }
     else
-        return(is_not_valid("end room_error"));
+        is_not_valid("end room_error");
     return (last_room);
 }
 
@@ -121,13 +125,12 @@ int	check_room(t_map *map)
     val_id->tek_num = 1;
     val_id->start = 0;
     val_id->end = 0;
-  //  val_id = {0, 0, 1};
 	last_room = NULL;
-	while (line = ft_check_cmd(map->fd))
+	while ((line = ft_check_cmd(&map->fd)))
     {
-	    if (ft_strequ(line, "##start") && val_id->start == 0)
+	    if (val_id->start == 0 && ft_strequ(line, "##start"))
             start_room(map, val_id, line);
-	    else if (ft_strequ(line, "##end") && val_id->end == 0)
+	    else if (val_id->end == 0 && ft_strequ(line, "##end"))
             last_room = end_room(map, val_id, line);
 	    else if (ft_strchr(line, '-') && ft_strchr(line, ' ') == NULL && last_room)
         {
@@ -141,4 +144,5 @@ int	check_room(t_map *map)
 	    else
 	        return (is_not_valid("room_error"));
     }
+	return (0);
 }

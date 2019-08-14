@@ -17,6 +17,7 @@ int is_not_valid(char *line)
     ft_printf("%s", line);
     ft_printf("ERROR\n");
     exit(0);
+    return (0);
 }
 /*
  * я решила не делать цикл по гнл, тк это дабавит лишних сравнений после  прохода условий,
@@ -34,7 +35,7 @@ int valid_map(int fd, t_map *map)
     map->len_sh = 0;
     map->c_room = 0;
     map->rooms = NULL;
-    make_ant(fd, map);
+	make_ant(map);
     check_room(map);
     return (1);
 }
@@ -78,24 +79,22 @@ int main(int ac, char	**av)
 {
 	int		fd;
 	t_map	*map;
-	char	*str;
 
-	if (ac == 1)
+	if (ac == 2)
 	{
-		//fd = /Users/qgilbert/Desktop/lem_in/six/School21-Lem-in/lem-in_test 2/tests/test_5.map
-		fd = open("../test", O_RDONLY);
-		//fd = 0;
+		if ((fd = open(av[1], O_RDONLY) < 0))
+		{
+			write(1, "Can't open file\n", 16);
+			exit(0);
+		}
 	}
 	else
-	{
-		str = av[1];
-		fd = open(str, O_RDONLY);
-	}
+		fd = 0;//open("./testgenerator", O_RDONLY);
 	map = (t_map*)malloc(sizeof(t_map));
     if (valid_map(fd, map))
 	{
 		main_path(map);
-        ft_printf("\n");
+        write(1, "\n", 1);
 		ant_in_room(map);
 	}
 	else

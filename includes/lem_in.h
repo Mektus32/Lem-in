@@ -102,7 +102,7 @@ void    ft_free_map(t_map **map);
  * created_links - создает ссылки(записывает по две связи для каждой комнаты)
  * check_links - оценивает валидность ссылок
  */
-int					make_ant(int fd, t_map *map);
+int make_ant(t_map *map);
 int					check_room(t_map *map);
 
 int					created_links(char *line, t_map *map, t_valid *val_id);
@@ -182,7 +182,7 @@ int					ft_len_int(int num);
 int					ft_max_mass(int *mass, int k);
 int                 *make_mass(int k);
 void                ft_str_print_del(char **as);
-char                *ft_check_cmd(int fd);
+char                *ft_check_cmd(int *fd);
 /**(ft_list_i.c)
  * ф для работы с односвязным списком
  * ft_list_add_back_i_one - копирует только один элемент в конец

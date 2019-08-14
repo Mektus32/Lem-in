@@ -50,54 +50,54 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/qgilbert/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Users/ojessi/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/qgilbert/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Users/ojessi/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/qgilbert/Desktop/lem_in/six/School21-Lem-in
+CMAKE_SOURCE_DIR = /Users/ojessi/Desktop/Lem-in
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/qgilbert/Desktop/lem_in/six/School21-Lem-in/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ojessi/Desktop/Lem-in/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/School21_Lem_in.dir
+# Target rules for target CMakeFiles/Lem_in.dir
 
 # All Build rule for target.
-CMakeFiles/School21_Lem_in.dir/all:
-	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/depend
-	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/qgilbert/Desktop/lem_in/six/School21-Lem-in/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target School21_Lem_in"
-.PHONY : CMakeFiles/School21_Lem_in.dir/all
+CMakeFiles/Lem_in.dir/all:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/depend
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ojessi/Desktop/Lem-in/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target Lem_in"
+.PHONY : CMakeFiles/Lem_in.dir/all
 
 # Include target in all.
-all: CMakeFiles/School21_Lem_in.dir/all
+all: CMakeFiles/Lem_in.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/School21_Lem_in.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/qgilbert/Desktop/lem_in/six/School21-Lem-in/cmake-build-debug/CMakeFiles 100
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/School21_Lem_in.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/qgilbert/Desktop/lem_in/six/School21-Lem-in/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/School21_Lem_in.dir/rule
+CMakeFiles/Lem_in.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ojessi/Desktop/Lem-in/cmake-build-debug/CMakeFiles 100
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Lem_in.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ojessi/Desktop/Lem-in/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/Lem_in.dir/rule
 
 # Convenience name for target.
-School21_Lem_in: CMakeFiles/School21_Lem_in.dir/rule
+Lem_in: CMakeFiles/Lem_in.dir/rule
 
-.PHONY : School21_Lem_in
-
-# clean rule for target.
-CMakeFiles/School21_Lem_in.dir/clean:
-	$(MAKE) -f CMakeFiles/School21_Lem_in.dir/build.make CMakeFiles/School21_Lem_in.dir/clean
-.PHONY : CMakeFiles/School21_Lem_in.dir/clean
+.PHONY : Lem_in
 
 # clean rule for target.
-clean: CMakeFiles/School21_Lem_in.dir/clean
+CMakeFiles/Lem_in.dir/clean:
+	$(MAKE) -f CMakeFiles/Lem_in.dir/build.make CMakeFiles/Lem_in.dir/clean
+.PHONY : CMakeFiles/Lem_in.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/Lem_in.dir/clean
 
 .PHONY : clean
 

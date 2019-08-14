@@ -63,7 +63,7 @@ int created_links(char *line, t_map *map, t_valid *val_id)
     }
     //зашла уже с лайном сюда - отдельно обработать приходится
     check_links(line, map);
-    while (line = ft_check_cmd(map->fd))
+    while ((line = ft_check_cmd(&map->fd)))
     {
         if (ft_strnequ(line, "#", 1))
             return (is_not_valid("end or start in link\n"));

@@ -56,19 +56,18 @@ int *make_mass(int k)
 	return (dist);
 }
 
-char *ft_check_cmd(int fd)
+char *ft_check_cmd(int *fd)
 {
 	char *line;
 
-	while (get_next_line(fd, &line) == 1)
+	while (get_next_line(*fd, &line) == 1)
 	{
-		if ((ft_strequ(line, "##start") || ft_strequ(line, "##end")))
-			return (line);
-		else if (ft_strnequ(line, "#", 1))
-		{
+		if (line[0] == '#' && line[1] != '#')
 			ft_str_print_del(&line);
-			line = NULL;
-		}
+//		if ((ft_strequ(line, "##start") || ft_strequ(line, "##end")))
+//			return (line);
+//		else if (ft_strnequ(line, "#", 1))
+//
 		else
 			return (line);
 	}
@@ -80,8 +79,6 @@ void	ft_str_print_del(char **as)
 	if (!as)
 		return ;
 	ft_printf("%s\n", *as);
-//	ft_putstr(*as);
-//	write(1, "\n", 1);
-	ft_memdel((void**)as);
+	free(*as);
 	*as = NULL;
 }
