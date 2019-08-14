@@ -82,16 +82,17 @@ int main(int ac, char	**av)
 
 	if (ac == 2)
 	{
-		if ((fd = open(av[1], O_RDONLY) < 0))
+		if ((fd = open(av[1], O_RDONLY)) < 0)
 		{
 			write(1, "Can't open file\n", 16);
 			exit(0);
 		}
 	}
 	else
-		fd = 0;//open("./testgenerator", O_RDONLY);
+		fd = 0;//open("./a_test", O_RDONLY);
 	map = (t_map*)malloc(sizeof(t_map));
-    if (valid_map(fd, map))
+	ft_printf("fd = %d, ac = %d = \n",fd,  ac);
+	if (valid_map(fd, map))
 	{
 		main_path(map);
         write(1, "\n", 1);

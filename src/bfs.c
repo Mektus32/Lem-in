@@ -19,7 +19,7 @@
  * tmp_i - связи текущей комнаты, ищем в них комнату с весом, меньшим чем в текущей на 1
  * если таких ячеек несколько нам не важно, тк путь все = будет кротчайший
  * */
-t_list_i	*ft_path(t_map *map, int *dist)
+t_list_i *ft_path(t_map *map)
 {
 	t_list_i *start;
 	t_list_i *path;
@@ -33,7 +33,7 @@ t_list_i	*ft_path(t_map *map, int *dist)
 		tmp_i = (ft_list_i_head(path->content, map->link))->next;
 		while (tmp_i)
 		{
-			if (dist[tmp_i->content] == (dist[path->content] - 1))
+			if (map->dist[tmp_i->content] == (map->dist[path->content] - 1))
 			{
 				ft_list_add_back_i_one(&path, tmp_i->content);
 				break ;
@@ -43,7 +43,7 @@ t_list_i	*ft_path(t_map *map, int *dist)
 		path = path->next;
 	}
 	ft_list_revers(&start);
-	free(dist);
+	free(map->dist);
 	return (start);
 }
 
@@ -52,7 +52,7 @@ t_list_i	*ft_path(t_map *map, int *dist)
  * ходим только по тем комнатам, которых не было в all_order,
  * что б не проходить несколько раз
  * */
-void ft_bfs_2(t_map *map, t_list_i *order, t_list_i *all_order, int *dist)
+void ft_bfs_2(t_map *map, t_list_i *order, t_list_i *all_order)
 {
 	t_list_i	*tmp_i;
 
@@ -64,14 +64,14 @@ void ft_bfs_2(t_map *map, t_list_i *order, t_list_i *all_order, int *dist)
 		while (tmp_i && map->len_sh == 0)
 		{
 			//если в комнате, которую мы проверяем растояние от начала больше, чем от соседа которого мы можем дотянуться
-			if (dist[tmp_i->content] > dist[order->content] + 1 && (tmp_i->content != order->content))
-				dist[tmp_i->content] = dist[order->content] + 1;
+			if (map->dist[tmp_i->content] > map->dist[order->content] + 1 && (tmp_i->content != order->content))
+				map->dist[tmp_i->content] = map->dist[order->content] + 1;
 			if (tmp_i->content == map->c_room)//нашли короткий путь, если пришли в последнюю комнату
-				map->len_sh = dist[tmp_i->content]; // надо выходить из цикла while(order && !len)
+				map->len_sh = map->dist[tmp_i->content]; // надо выходить из цикла while(order && !len)
 			else //для каждого узла добавляем очередь соседей
 			{
 				ft_list_add_back_i_if_not(&order, tmp_i->content, all_order);
-				ft_list_add_back_i_one(&all_order, (tmp_i->content));
+				ft_list_add_back_i_one(&all_order, tmp_i->content);
 			}
 			tmp_i = tmp_i->next;
 		}
@@ -89,28 +89,27 @@ void ft_bfs_2(t_map *map, t_list_i *order, t_list_i *all_order, int *dist)
  * */
 t_list_i	*ft_bfs(t_map *map)
 {
-    int         *dist;
 	t_list_i    *order;
 	t_list_i    *all_order;
 	t_list_i    *order_start;
 	t_list_i    *all_order_start;
 
-	dist = make_mass(map->c_room);
+	map->dist = make_mass(map->c_room);
 	//начинаем очередь в очередь добавляем все вершины, которые встретелись на пути
 	order = ft_list_new_i(0);
 	all_order = ft_list_new_i(0);
 	order_start = order;
 	all_order_start = all_order;
-	ft_bfs_2(map, order, all_order, dist);
+	ft_bfs_2(map, order, all_order);
 	ft_free_list_i(&order_start);
 	ft_free_list_i(&all_order_start);
 	if (map->len_sh == 0) //если длина осталась нулевой
 	{
-		free(dist);
+		//free(dist);
 		printf("no path\n");
 		return (NULL);
 	}
 	else //найдем коротуий путь (реверс) и вернем 1 оттуда
-		return (ft_path(map, dist));
+		return (ft_path(map));
 }
 

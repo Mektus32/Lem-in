@@ -43,9 +43,10 @@ void ft_list_add_back_i_or_exit(t_list_i **lst_a, int content, t_list_i *all_ord
     }
     ft_list_add_back_i_one(lst_a, content);
 }
-void ft_list_add_back_i_if_not(t_list_i **lst_a, int content, t_list_i *all_order)
+
+void	ft_list_add_back_i_if_not(t_list_i **lst_a, int content, t_list_i *all_order)
 {
-    t_list_i *tmp_lst;
+    t_list_i	*tmp_lst;
 
     tmp_lst = all_order;
     while (tmp_lst)

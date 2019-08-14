@@ -72,6 +72,7 @@ typedef struct		s_map
 	t_list_down		*two_path;//
 	int 			c_path;
 	char			*str;
+	int				*dist;
 }					t_map;
 /*
  * существование и хранение первой и последней комнаты
@@ -124,8 +125,8 @@ t_list_i *one_big_path(t_map *map);
  * ft_bfs_2 - заполняет dist (обход графа)
  */
 t_list_i			*ft_bfs(t_map *map);
-t_list_i			*ft_path(t_map *map, int *dist);
-void ft_bfs_2(t_map *map, t_list_i *order, t_list_i *all_order, int *dist);
+t_list_i *ft_path(t_map *map);
+void ft_bfs_2(t_map *map, t_list_i *order, t_list_i *all_order);
 /**(check_n_path.c)
  * ищет выиграш по времени от n путей
  */

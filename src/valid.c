@@ -84,7 +84,7 @@ static int is_elem(char *line)
 
 static int start_room(t_map *map, t_valid *val_id, char *line)
 {
-    val_id->start = (val_id->end != 1 && ft_strequ(line, "##start")) ? 1 : 4;
+    val_id->start = val_id->end != 1 ? 1 : 4;
     ft_str_print_del(&line);
     line = ft_check_cmd(&map->fd);
     if (val_id->start == 1 && line && is_elem(line))
@@ -102,7 +102,7 @@ static t_room  *end_room(t_map *map, t_valid *val_id, char *line)
     t_room	*last_room;
 
     last_room = NULL;
-    val_id->end = (ft_strequ(line, "##end") && val_id->end == 0 && val_id->start != 1) ? 1 : 4;
+    val_id->end = val_id->start != 1 ? 1 : 4;
     ft_str_print_del(&line);
     line = ft_check_cmd(&map->fd);
     if (val_id->end == 1 && line && is_elem(line))
@@ -132,7 +132,7 @@ int	check_room(t_map *map)
             start_room(map, val_id, line);
 	    else if (val_id->end == 0 && ft_strequ(line, "##end"))
             last_room = end_room(map, val_id, line);
-	    else if (ft_strchr(line, '-') && ft_strchr(line, ' ') == NULL && last_room)
+	    else if (last_room && ft_strchr(line, '-') && !ft_strchr(line, ' '))
         {
             last_room->number = val_id->tek_num;
             ft_push_back_room(&map->rooms, last_room);

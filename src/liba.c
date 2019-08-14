@@ -43,12 +43,12 @@ int ft_max_mass(int *mass, int k)
 	return (max);
 }
 
-int *make_mass(int k)
+int	*make_mass(int k)
 {
-	int i;
-	int *dist;
+	int	i;
+	int	*dist;
 
-	dist = (int*)malloc(sizeof(int) * (k + 1));
+	dist = (int*)malloc(sizeof(int) * k);
 	i = 0;
 	while (i <= k)
 		dist[i++] = k + 1;
@@ -62,12 +62,12 @@ char *ft_check_cmd(int *fd)
 
 	while (get_next_line(*fd, &line) == 1)
 	{
-		if (line[0] == '#' && line[1] != '#')
+//		if (line[0] == '#' && line[1] != '#')
+//			ft_str_print_del(&line);
+		if ((ft_strequ(line, "##start") || ft_strequ(line, "##end")))
+			return (line);
+		else if (line[0] == '#')
 			ft_str_print_del(&line);
-//		if ((ft_strequ(line, "##start") || ft_strequ(line, "##end")))
-//			return (line);
-//		else if (ft_strnequ(line, "#", 1))
-//
 		else
 			return (line);
 	}

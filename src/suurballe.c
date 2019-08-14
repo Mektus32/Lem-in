@@ -87,7 +87,8 @@ void ft_del_shared_path(t_map *map, t_list_i *sh, t_list_i *rev_2)
 	t_list_i	*rev_2_c;
 	t_list_i	*rev_start;
 
-	map->link_copy = ft_copy_list_down(map->link);
+	//map->link_copy = ft_copy_list_down(map->link);
+	map->link_new = ft_copy_list_down(map->link);
 	rev_2_c = ft_list_copy_i(rev_2);
 	ft_list_revers(&rev_2_c);
 	rev_start = rev_2_c;
@@ -99,16 +100,16 @@ void ft_del_shared_path(t_map *map, t_list_i *sh, t_list_i *rev_2)
 			//если текущее и след совпадают
 			if (sh->content == rev_2_c->content && sh->next->content == (rev_2_c->next->content))
 			{
-				ft_remove_list_if(&(ft_list_i_head(sh->content, map->link_copy)->next), sh->next->content);
-				ft_remove_list_if(&(ft_list_i_head(sh->next->content, map->link_copy)->next), sh->content);
+				ft_remove_list_if(&(ft_list_i_head(sh->content, map->link_new)->next), sh->next->content);
+				ft_remove_list_if(&(ft_list_i_head(sh->next->content, map->link_new)->next), sh->content);
 			}
 			rev_2_c = rev_2_c->next;
 		}
 		sh = sh->next;
 	}
 	//удаляем связи где комнаты ин и аут
-	ft_free_list_down(&map->link_new);
-	map->link_new = ft_copy_list_down(map->link_copy);
-	ft_free_list_down(&map->link_copy);
+	//ft_free_list_down(&map->link_new);
+	//map->link_new = ft_copy_list_down(map->link_copy);
+	//ft_free_list_down(&map->link_copy);
 	ft_free_list_i(&rev_start);
 }

@@ -25,14 +25,11 @@ t_room	*ft_create_ele(char *line, int number)
 	i = 0;
 	while (line[i] != ' ')
 		i++;
-	room->name = (char*)malloc(sizeof(char) * i + 1);
-	room->name[i] = '\0';
-	ft_strncpy(room->name, line, i);
-	room->x = ft_atoi(line + i + 1);
-	room->y = ft_atoi(line + ft_len_int(room->x) + i + 2);
+	room->name = ft_strsub(line, 0, i);
+	room->x = ft_atoi(line + ++i);
+	room->y = ft_atoi(line + ft_len_int(room->x) + ++i);
 	room->number = number;
 	room->next = NULL;
-	room->dist = 0;
 	ft_str_print_del(&line);
 	return (room);
 }

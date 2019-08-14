@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(Lem_in C)
+project(seven C)
 
 set(CMAKE_C_STANDARD 11)
 
@@ -7,7 +7,7 @@ include_directories(ft_printf/includes)
 include_directories(includes)
 include_directories(libft/includes)
 
-add_executable(Lem_in
+add_executable(seven
         ft_printf/includes/ft_printf.h
         ft_printf/src/check_args.c
         ft_printf/src/choise_spec.c

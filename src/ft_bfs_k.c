@@ -6,7 +6,7 @@
  * в ft_path направление ссылок дублируется, тут уже не подходит такой подход
  * тут надо проверять если ли ссылка из текущей комнаты на нашу
  * */
-static t_list_i	*ft_path_k(t_map *map, int *dist)
+static t_list_i *ft_path_k(t_map *map)
 {
 	t_list_i    *start;
 	t_list_i    *path;
@@ -22,7 +22,7 @@ static t_list_i	*ft_path_k(t_map *map, int *dist)
 		i = -1;
 		while ((map->c_room) * 2 > ++i && f)
 		{
-			if (dist[i] == (dist[path->content] - 1))
+			if (map->dist[i] == (map->dist[path->content] - 1))
 			{//есть ли из i-ой комнаты ссылка на нас?
 				tmp_i = (ft_list_i_head(i, map->link_new))->next;
 				while (tmp_i)
@@ -41,7 +41,8 @@ static t_list_i	*ft_path_k(t_map *map, int *dist)
 		path = path->next;/*переход к комнате, которую добавили*/
 	}
 	ft_list_revers(&start);
-	free(dist);
+	// !!!!!!!!!!!!!!!!!!!!
+	free(map->dist);
 	return (start);
 }
 /*
@@ -51,7 +52,7 @@ static t_list_i	*ft_path_k(t_map *map, int *dist)
  * 		//пока есть комнаты(tmp), связанные с комнатой в очереди
 		//перезаписываем расстояние, если до этого оно было больше
  * */
-static int bfs_k_path_2(t_map *map, t_list_i *order, t_list_i *all_order, int *dist)
+static int bfs_k_path_2(t_map *map, t_list_i *order, t_list_i *all_order)
 {
 	t_list_i 	*tmp_i;
 	int 		len;
@@ -64,12 +65,12 @@ static int bfs_k_path_2(t_map *map, t_list_i *order, t_list_i *all_order, int *d
 		while (tmp_i && len == 0)
 		{
 			//если в комнате, которую мы проверяем растояние от начала больше, чем от соседа которого мы можем дотянуться
-			if (dist[tmp_i->content] > dist[order->content] + 1 && (tmp_i->content != order->content))
-				dist[tmp_i->content] = dist[order->content] + 1;
+			if (map->dist[tmp_i->content] > map->dist[order->content] + 1 && (tmp_i->content != order->content))
+				map->dist[tmp_i->content] = map->dist[order->content] + 1;
 			if (tmp_i->content == map->c_room)//нашли короткий путь, если пришли в последнюю комнату
-				len = dist[tmp_i->content]; // надо выходить из цикла while(order && !len)
+				len = map->dist[tmp_i->content]; // надо выходить из цикла while(order && !len)
 				//для каждого узла добавляем очередь соседей если нет в запрещеном списке
-			else if (dist[tmp_i->content] != -1 && find_room(order ,tmp_i->content) == 0)
+			else if (map->dist[tmp_i->content] != -1 && find_room(order ,tmp_i->content) == 0)
 			{
 				ft_list_add_back_i_if_not(&order, tmp_i->content, all_order);
 				ft_list_add_back_i_one(&all_order, tmp_i->content);
@@ -88,20 +89,19 @@ static int bfs_k_path_2(t_map *map, t_list_i *order, t_list_i *all_order, int *d
 t_list_i 		*bfs_k_path(t_map *map, t_list_i *cant_go)
 {
 	int			i;
-	int len;
-	int 		*dist; /*массив расстояний от комнаты старта*/
-	t_list_i 	*order;
-	t_list_i *all_order;
-	t_list_i *order_start;
-	t_list_i *all_order_start;
+	int			len;
+	t_list_i	*order;
+	t_list_i	*all_order;
+	t_list_i	*order_start;
+	t_list_i	*all_order_start;
 
-	dist = make_mass(2*map->c_room);
+	map->dist = make_mass(2*map->c_room);
 	i = 0;
 	//есди комната в списке занятых, дам ей вес -1, что б больше не ходить по ней
 	while (i < 2*map->c_room)
 	{
 		if (find_room(cant_go, i) && i != 0 && i != map->c_room)
-			dist[i] = -1;
+			map->dist[i] = -1;
 		i++;
 	}
 	//начинаем очередь в очередь добавляем все вершины, которые встретелись на пути
@@ -109,20 +109,20 @@ t_list_i 		*bfs_k_path(t_map *map, t_list_i *cant_go)
 	all_order = ft_list_new_i(0);
 	order_start = order;
 	all_order_start = all_order;
-	dist[0] = 0;
+	map->dist[0] = 0;
 	// будем продолжать пока есть очередь или пока не нашли кратчайший путь (нашли комнатц энд)
-	len = bfs_k_path_2(map, order, all_order, dist);
+	len = bfs_k_path_2(map, order, all_order);
 	ft_free_list_i(&order_start);
 	ft_free_list_i(&all_order_start);
 	if (len == 0) //если длина осталась нулевой
 	{
-		free (dist);
+		free (map->dist);
 		if (map->two_path->content == 0)
 			ft_printf("no path\n");
 		return (NULL);
 	}
 	else //найдем коротуий путь (реверс)
-		return (ft_path_k(map, dist));
+		return (ft_path_k(map));
 }
 
 static  int path_not_in(t_list_i *path_1, t_list_i *path_2)

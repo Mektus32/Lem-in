@@ -65,14 +65,11 @@ int created_links(char *line, t_map *map, t_valid *val_id)
     check_links(line, map);
     while ((line = ft_check_cmd(&map->fd)))
     {
-        if (ft_strnequ(line, "#", 1))
+        if (line[0] == '#')
             return (is_not_valid("end or start in link\n"));
         check_links(line, map);
     }
-    if (!line && val_id->start == 2 && val_id->end == 2) /* &&
- * это было для какого то теста, но будет означать что нет пути
- * думаю можно убрать
-	ft_list_i_head(map->c_room, map->link)->next != NULL)*/
+    if (!line && val_id->start == 2 && val_id->end == 2)
     {
         free(val_id);
         return (1);
