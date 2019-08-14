@@ -6,7 +6,7 @@
 /*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 17:32:12 by ojessi            #+#    #+#             */
-/*   Updated: 2019/07/17 18:55:43 by ojessi           ###   ########.fr       */
+/*   Updated: 2019/08/14 19:39:33 by ojessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ int		main(void)
 	if (ft_read(ob))
 		return (0);
 	ft_init_arr(ob);
+	printf("check\n");
 	ft_draw(ob);
 	return (0);
 }

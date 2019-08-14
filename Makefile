@@ -6,7 +6,7 @@
 #    By: ojessi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/30 16:17:00 by ojessi            #+#    #+#              #
-#    Updated: 2019/06/30 16:40:46 by ojessi           ###   ########.fr        #
+#    Updated: 2019/08/14 19:31:45 by ojessi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,19 +15,38 @@
 NAME = Lem-in
 
 # src / obj files
-SRC = main.c \
+SRC =	bfs.c \
+		main.c \
+ 		liba.c \
+ 		free.c \
+ 		path.c \
+ 		valid.c \
+ 		ft_print.c \
+ 		ft_bfs_k.c \
+ 		ant_room.c \
+ 		list_path.c \
+ 		list_room.c \
+ 		suurballe.c \
+ 		ft_list_i.c \
+ 		valid_link.c \
+ 		ft_list_i_2.c \
+ 		ft_list_down.c \
+ 		check_n_path.c \
+ 		ant_in_room_2.c \
+ 		ft_list_down_2.c \
+
 
 OBJ = $(addprefix $(OBJDIR), $(SRC:.c=.o))
 
 # compiler
 CC = gcc
-CFLAGS = -Wextra -Wall -Werror -g
+CFLAGS = -Wextra -Wall -Werror
 
 # ft library
 FT = ./libft
 FT_LIB = $(addprefix $(FT), libft.a)
 FT_INC = -I ./libft
-FT_LNK = ./libft/libft.a # -l ft
+FT_LNK = ./libft/libft.a
 
 # printf library
 PR = ./ft_printf
@@ -43,7 +62,7 @@ OBJDIR = ./obj/
 all: $(NAME)
 
 $(NAME): obj $(FT_LIB) $(PR_LIB) grn $(OBJ)
-	@$(CC) $(OBJ) $(PR_LNK) $(FT_LNK) -lm -o $(NAME)
+	@$(CC) $(CFLAGS) $(OBJ) $(PR_LNK) $(FT_LNK) -lm -o $(NAME)
 	@echo "\x1b[0m"
 
 red:
