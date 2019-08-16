@@ -132,24 +132,24 @@ t_list_i		*bfs_k_path(t_map *map, t_list_i *cant_go)
 		return (ft_path_k(map));
 }
 
-static int		path_not_in(t_list_i *path_1, t_list_i *path_2)
-{
-	t_list_i	*path;
-
-	while (path_2->next)
-	{
-		path = path_1;
-		while (path->next)
-		{
-			if ((path_2->content == path->content) &&
-				(path_2->next->content == path->next->content))
-				return (0);
-			path = path->next;
-		}
-		path_2 = path_2->next;
-	}
-	return (1);
-}
+//static int		path_not_in(t_list_i *path_1, t_list_i *path_2)
+//{
+//	t_list_i	*path;
+//
+//	while (path_2->next)
+//	{
+//		path = path_1;
+//		while (path->next)
+//		{
+//			if ((path_2->content == path->content) &&
+//				(path_2->next->content == path->next->content))
+//				return (0);
+//			path = path->next;
+//		}
+//		path_2 = path_2->next;
+//	}
+//	return (1);
+//}
 
 /*
 ** step 4 - поиск к кратчайших путей
@@ -171,8 +171,7 @@ t_list_down		*ft_bfs_k(t_map *map, int k)
 	tmp = path_down;
 	c_g = ft_list_new_i(0);
 	p_t = NULL;
-	map->m = 1;
-	while (p < k && (p_t = bfs_k_path(map, c_g)) && path_not_in(p_t, c_g) == 1)
+	while (p < k && (p_t = bfs_k_path(map, c_g)) && !p_t->content)// && path_not_in(p_t, c_g) == 1
 	{
 		ft_list_add_back_down_next(&path_down, p_t);
 		tmp->down->content = ft_list_len_i(p_t);
