@@ -89,7 +89,7 @@ int main(int ac, char	**av)
 		}
 	}
 	else
-		fd = open("../a_test", O_RDONLY);
+		fd = 0;//open("../a_test", O_RDONLY);
 	map = (t_map*)malloc(sizeof(t_map));
 	//ft_printf("fd = %d, ac = %d = \n",fd,  ac);
 	if (valid_map(fd, map))

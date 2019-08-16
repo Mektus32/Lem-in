@@ -44,6 +44,7 @@ int main_path_2(t_map *map,  int k)
 	del_link_path(map);
 	sh_big = one_big_path(map);
 	ft_new_room(map, sh_big);
+	map->m = 2;
 	sh_k  = bfs_k_path(map, NULL);
 	ft_free_list_down(&map->link_new);
 	/*

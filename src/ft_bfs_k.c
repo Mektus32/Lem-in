@@ -35,7 +35,7 @@ static t_list_i	*ft_path_k(t_map *map)
 	{
 		f = 1;
 		i = -1;
-		while ((map->c_room) * 2 > ++i && f)
+		while ((map->c_room) * map->m > ++i && f)
 		{
 			if (map->dist[i] == (map->dist[path->content] - 1))
 			{
@@ -171,6 +171,7 @@ t_list_down		*ft_bfs_k(t_map *map, int k)
 	tmp = path_down;
 	c_g = ft_list_new_i(0);
 	p_t = NULL;
+	map->m = 1;
 	while (p < k && (p_t = bfs_k_path(map, c_g)) && path_not_in(p_t, c_g) == 1)
 	{
 		ft_list_add_back_down_next(&path_down, p_t);

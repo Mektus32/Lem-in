@@ -73,6 +73,7 @@ typedef struct		s_map
 	int 			c_path;
 	char			*str;
 	int				*dist;
+	int 			m;
 }					t_map;
 /*
  * существование и хранение первой и последней комнаты
