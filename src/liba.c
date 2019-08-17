@@ -48,7 +48,7 @@ int		*make_mass(int k)
 	int	i;
 	int	*dist;
 
-	dist = (int*)malloc(sizeof(int) * k);
+	dist = (int*)malloc(sizeof(int) * (k + 1));
 	i = 0;
 	while (i <= k)
 		dist[i++] = k + 1;
@@ -76,7 +76,7 @@ void	ft_str_print_del(char **as)
 {
 	if (!as)
 		return ;
-	ft_printf("%s\n", *as);
+	//ft_printf("%s\n", *as);
 	free(*as);
 	*as = NULL;
 }
