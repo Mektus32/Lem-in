@@ -111,17 +111,12 @@ static t_room	*end_room(t_map *map, t_valid *val_id, char *line)
 	return (last_room);
 }
 
-int				check_room(t_map *map)
+int				check_room(t_map *map, t_room *last_room)
 {
 	char	*line;
-	t_room	*last_room;
 	t_valid *val_id;
 
-	val_id = (t_valid*)malloc(sizeof(t_valid));
-	val_id->tek_num = 1;
-	val_id->start = 0;
-	val_id->end = 0;
-	last_room = NULL;
+	val_id = ft_create_val();
 	while ((line = ft_check_cmd(&map->fd)))
 	{
 		if (val_id->start == 0 && ft_strequ(line, "##start"))
@@ -132,7 +127,7 @@ int				check_room(t_map *map)
 		{
 			last_room->number = val_id->tek_num;
 			ft_push_back_room(&map->rooms, last_room);
-			map->c_room = val_id->tek_num;
+			map->c_r = val_id->tek_num;
 			return (created_links(line, map, val_id));
 		}
 		else if (is_elem(line))

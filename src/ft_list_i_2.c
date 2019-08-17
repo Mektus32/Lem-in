@@ -32,7 +32,7 @@ t_list_i	*ft_list_copy_i(t_list_i *head)
 	copy = NULL;
 	if (!head)
 		return (NULL);
-	copy = ft_list_new_i(head->content);
+	copy = ft_list_new_i(head->cnt);
 	if (head->next)
 	{
 		head = head->next;
@@ -49,11 +49,11 @@ void		ft_list_add_back_i_or_exit(t_list_i **lst_a,
 	tmp_lst = all_order;
 	while (tmp_lst)
 	{
-		if (tmp_lst->content == content)
+		if (tmp_lst->cnt == content)
 			is_not_valid("link alredy exist");
 		tmp_lst = tmp_lst->next;
 	}
-	ft_list_add_back_i_one(lst_a, content);
+	list_add_i1(lst_a, content);
 }
 
 void		ft_list_add_back_i_if_not(t_list_i **lst_a,
@@ -64,9 +64,9 @@ void		ft_list_add_back_i_if_not(t_list_i **lst_a,
 	tmp_lst = all_order;
 	while (tmp_lst)
 	{
-		if (tmp_lst->content == content)
+		if (tmp_lst->cnt == content)
 			return ;
 		tmp_lst = tmp_lst->next;
 	}
-	ft_list_add_back_i_one(lst_a, content);
+	list_add_i1(lst_a, content);
 }

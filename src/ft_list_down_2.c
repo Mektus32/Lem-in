@@ -69,7 +69,7 @@ t_list_down	*ft_copy_list_down(t_list_down *head)
 		one_down =
 				ft_list_new_pointer_content_down(ft_list_copy_i(head->next),
 						head->content);
-		ft_list_add_back_down(&copy, one_down);
+		list_add_down(&copy, one_down);
 		head = head->down;
 	}
 	return (copy);

@@ -26,13 +26,24 @@
 **se - second
 */
 
-int	check_links(char *line, t_map *map)
+static int	add_or_exit(char *line, t_map *map, t_room *s, t_room *t)
+{
+	t_list_down		*f;
+	t_list_down		*se;
+
+	f = i_head(s->number, map->link);
+	se = i_head(t->number, map->link);
+	ft_list_add_back_i_or_exit(&f->next, t->number, f->next);
+	ft_list_add_back_i_or_exit(&se->next, s->number, se->next);
+	ft_str_print_del(&line);
+	return (1);
+}
+
+int			check_links(char *line, t_map *map)
 {
 	t_room			*s;
 	t_room			*t;
 	int				l;
-	t_list_down		*f;
-	t_list_down		*se;
 
 	s = map->rooms;
 	while (s)
@@ -44,14 +55,7 @@ int	check_links(char *line, t_map *map)
 			while (t)
 			{
 				if (ft_strequ(t->name, line + l + 1) && t->number != s->number)
-				{
-					f = ft_list_i_head(s->number, map->link);
-					se = ft_list_i_head(t->number, map->link);
-					ft_list_add_back_i_or_exit(&f->next, t->number, f->next);
-					ft_list_add_back_i_or_exit(&se->next, s->number, se->next);
-					ft_str_print_del(&line);
-					return (1);
-				}
+					return (add_or_exit(line, map, s, t));
 				t = t->next;
 			}
 			return (is_not_valid("not room in link\n"));
@@ -67,14 +71,14 @@ int	check_links(char *line, t_map *map)
 **для каждой line, которая не коммент заполняем ссылки
 */
 
-int	created_links(char *line, t_map *map, t_valid *val_id)
+int			created_links(char *line, t_map *map, t_valid *val_id)
 {
 	t_room	*tmp;
 
 	tmp = map->rooms;
 	while (tmp)
 	{
-		ft_list_add_back_down(&map->link, ft_list_new_down(tmp->number));
+		list_add_down(&map->link, list_new_down(tmp->number));
 		tmp = tmp->next;
 	}
 	check_links(line, map);
@@ -90,4 +94,15 @@ int	created_links(char *line, t_map *map, t_valid *val_id)
 		return (1);
 	}
 	return (is_not_valid("no start or end\n"));
+}
+
+t_valid		*ft_create_val(void)
+{
+	t_valid	*val_id;
+
+	val_id = (t_valid*)malloc(sizeof(t_valid));
+	val_id->tek_num = 1;
+	val_id->start = 0;
+	val_id->end = 0;
+	return (val_id);
 }

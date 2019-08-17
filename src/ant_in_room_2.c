@@ -12,7 +12,7 @@
 
 #include "lem_in.h"
 
-static int		ft_count_ant(t_list_path *path)
+int				ft_count_ant(t_list_path *path)
 {
 	int			j;
 	t_list_path	*list;
@@ -30,7 +30,7 @@ static int		ft_count_ant(t_list_path *path)
 	return (j);
 }
 
-static int		sum_ant(t_list_path **path_a, int c_path)
+int				sum_ant(t_list_path **path_a, int c_path)
 {
 	int			ant;
 	int			i;
@@ -87,49 +87,4 @@ int				ft_len_path(t_list_path **path_a, int j)
 		tmp = tmp->next;
 	}
 	return (len - 1);
-}
-
-void			ft_pars_ant(t_map *map, t_list_path **path_a)
-{
-	int			i;
-	int			j;
-	t_list_path	*paths;
-	t_list_path	*paths_k;
-
-	if (!path_a || !*path_a)
-		return ;
-	paths = *path_a;
-	i = 1;
-	while (i < map->c_ant + 1)
-	{
-		j = -1;
-		while (++j < map->c_path)
-		{
-			if (paths[j].num_ant > 0)
-			{
-				paths[j].num_ant--;
-				paths[j].next->num_ant = i;
-				i++;
-			}
-			ft_move_ant_in_path(&paths[j].next);
-		}
-		if (ft_len_path(&paths, j - 1) != 2)
-			ft_printf("\n");
-	}
-	j = 1;
-	while (j)
-	{
-		j = 0;
-		i = -1;
-		while (++i < map->c_path)
-		{
-			j += ft_count_ant(&paths[i]);
-			paths_k = paths + i;
-			ft_move_ant_in_path(&paths_k);
-		}
-		if (j != 0 && i == map->c_path && sum_ant(&paths, map->c_path) != 0)
-		{
-			ft_printf("\n");
-		}
-	}
 }

@@ -27,16 +27,16 @@ t_list_i	*ft_path(t_map *map)
 	t_list_i	*path;
 	t_list_i	*tmp_i;
 
-	path = ft_list_new_i(map->c_room);
+	path = ft_list_new_i(map->c_r);
 	start = path;
-	while (path->content != 0)
+	while (path->cnt != 0)
 	{
-		tmp_i = (ft_list_i_head(path->content, map->link))->next;
+		tmp_i = (i_head(path->cnt, map->link))->next;
 		while (tmp_i)
 		{
-			if (map->dist[tmp_i->content] == (map->dist[path->content] - 1))
+			if (map->dist[tmp_i->cnt] == (map->dist[path->cnt] - 1))
 			{
-				ft_list_add_back_i_one(&path, tmp_i->content);
+				list_add_i1(&path, tmp_i->cnt);
 				break ;
 			}
 			tmp_i = tmp_i->next;
@@ -67,18 +67,18 @@ void		ft_bfs_2(t_map *map, t_list_i *order, t_list_i *all_order)
 
 	while (order && !(map->len_sh))
 	{
-		tmp_i = ft_list_i_head(order->content, map->link)->next;
+		tmp_i = i_head(order->cnt, map->link)->next;
 		while (tmp_i && map->len_sh == 0)
 		{
-			if (map->dist[tmp_i->content] > map->dist[order->content] + 1 &&
-				(tmp_i->content != order->content))
-				map->dist[tmp_i->content] = map->dist[order->content] + 1;
-			if (tmp_i->content == map->c_room)
-				map->len_sh = map->dist[tmp_i->content];
+			if (map->dist[tmp_i->cnt] > map->dist[order->cnt] + 1 &&
+				(tmp_i->cnt != order->cnt))
+				map->dist[tmp_i->cnt] = map->dist[order->cnt] + 1;
+			if (tmp_i->cnt == map->c_r)
+				map->len_sh = map->dist[tmp_i->cnt];
 			else
 			{
-				ft_list_add_back_i_if_not(&order, tmp_i->content, all_order);
-				ft_list_add_back_i_one(&all_order, tmp_i->content);
+				ft_list_add_back_i_if_not(&order, tmp_i->cnt, all_order);
+				list_add_i1(&all_order, tmp_i->cnt);
 			}
 			tmp_i = tmp_i->next;
 		}
@@ -104,7 +104,7 @@ t_list_i	*ft_bfs(t_map *map)
 	t_list_i	*order_start;
 	t_list_i	*all_order_start;
 
-	map->dist = make_mass(map->c_room);
+	map->dist = make_mass(map->c_r);
 	order = ft_list_new_i(0);
 	all_order = ft_list_new_i(0);
 	order_start = order;

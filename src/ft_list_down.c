@@ -25,7 +25,7 @@ int			ft_list_len_down(t_list_down *path)
 	return (k);
 }
 
-t_list_down	*ft_list_i_head(int num, t_list_down *a_lst)
+t_list_down	*i_head(int num, t_list_down *a_lst)
 {
 	t_list_down *list;
 
@@ -41,7 +41,7 @@ t_list_down	*ft_list_i_head(int num, t_list_down *a_lst)
 	return (NULL);
 }
 
-t_list_down	*ft_list_new_down(int content)
+t_list_down	*list_new_down(int content)
 {
 	t_list_down	*list;
 
@@ -56,7 +56,7 @@ t_list_down	*ft_list_new_down(int content)
 	return (list);
 }
 
-void		ft_list_add_back_down(t_list_down **a_lst, t_list_down *new)
+void		list_add_down(t_list_down **a_lst, t_list_down *new)
 {
 	t_list_down *list;
 

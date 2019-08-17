@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   liba.c                                             :+:      :+:    :+:   */
+/*   aliba.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ojessi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: qgilbert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/14 15:05:04 by ojessi            #+#    #+#             */
-/*   Updated: 2019/07/14 15:05:06 by ojessi           ###   ########.fr       */
+/*   Created: 2019/08/17 17:36:03 by qgilbert          #+#    #+#             */
+/*   Updated: 2019/08/17 17:36:04 by qgilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
-// ищем длину инта, для прохождение по строке
+
 int		ft_len_int(int num)
 {
 	int	len;
@@ -27,23 +27,23 @@ int		ft_len_int(int num)
 	return (len);
 }
 
-int ft_max_mass(int *mass, int k)
+int		ft_max_mass(int *mass, int k)
 {
-	int max;
-	int i;
+	int	max;
+	int	i;
 
 	i = 0;
 	max = mass[i++];
 	while (i < k)
 	{
-		if(mass[i] > max)
+		if (mass[i] > max)
 			max = mass[i];
 		i++;
 	}
 	return (max);
 }
 
-int	*make_mass(int k)
+int		*make_mass(int k)
 {
 	int	i;
 	int	*dist;
@@ -56,14 +56,12 @@ int	*make_mass(int k)
 	return (dist);
 }
 
-char *ft_check_cmd(int *fd)
+char	*ft_check_cmd(int *fd)
 {
-	char *line;
+	char	*line;
 
 	while (get_next_line(*fd, &line) == 1)
 	{
-//		if (line[0] == '#' && line[1] != '#')
-//			ft_str_print_del(&line);
 		if ((ft_strequ(line, "##start") || ft_strequ(line, "##end")))
 			return (line);
 		else if (line[0] == '#')

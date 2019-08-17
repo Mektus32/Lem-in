@@ -19,14 +19,14 @@ t_list_i		*ft_list_new_i(int content)
 	if (!(list = (t_list_i*)malloc(sizeof(t_list_i))))
 		return (NULL);
 	if (!content)
-		list->content = 0;
+		list->cnt = 0;
 	else
-		list->content = content;
+		list->cnt = content;
 	list->next = NULL;
 	return (list);
 }
 
-void			ft_list_add_back_i_one(t_list_i **lst_a, int content)
+void			list_add_i1(t_list_i **lst_a, int content)
 {
 	t_list_i	*list;
 
@@ -54,18 +54,18 @@ void			ft_list_add_back_i(t_list_i **lst_a, t_list_i *new)
 		return ;
 	while (list->next)
 		list = list->next;
-	list->next = ft_list_new_i(new->content);
+	list->next = ft_list_new_i(new->cnt);
 	list = list->next;
 	new = new->next;
 	while (new)
 	{
-		list->next = ft_list_new_i(new->content);
+		list->next = ft_list_new_i(new->cnt);
 		list = list->next;
 		new = new->next;
 	}
 }
 
-void			ft_remove_list_if(t_list_i **head, int content)
+void			del_lst_if(t_list_i **head, int content)
 {
 	t_list_i	*tmp;
 	t_list_i	*list;
@@ -73,7 +73,7 @@ void			ft_remove_list_if(t_list_i **head, int content)
 	if (!head || !*head)
 		return ;
 	list = *head;
-	if (list->content == content)
+	if (list->cnt == content)
 	{
 		list = list->next;
 		free(*head);
@@ -82,7 +82,7 @@ void			ft_remove_list_if(t_list_i **head, int content)
 	}
 	while (list)
 	{
-		if (list->content == content)
+		if (list->cnt == content)
 		{
 			tmp->next = list->next;
 			free(list);
