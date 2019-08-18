@@ -78,7 +78,7 @@ void		ft_bfs_2(t_map *map, t_list_i *order, t_list_i *all_order)
 			else
 			{
 				ft_list_add_back_i_if_not(&order, tmp_i->cnt, all_order);
-				list_add_i1(&all_order, tmp_i->cnt);
+				ft_list_add_back_i_if_not(&all_order, tmp_i->cnt, all_order);
 			}
 			tmp_i = tmp_i->next;
 		}

@@ -18,6 +18,8 @@
 # include "libft.h"
 # include "ft_printf.h"
 
+
+
 /*
 ** односвязный список, в таком хранятся комнаты,
 ** кротчайший путь, очередь обхода.
@@ -114,7 +116,7 @@ typedef struct			s_valid
 ** is_not_valid - exit, если не валид
 ** valid_map - валидность входных данных, инициализируя структуру map
 */
-
+t_list_down		*ft_bfs_k_new(t_map *map, int k);
 int						is_not_valid(char *line);
 int						valid_map(int fd, t_map *map);
 void					ft_free_map(t_map **map);

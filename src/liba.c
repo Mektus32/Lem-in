@@ -49,7 +49,7 @@ int		*make_mass(int k)
 	int	*dist;
 
 	dist = (int*)malloc(sizeof(int) * (k + 1));
-	i = 0;
+	i = 1;
 	while (i <= k)
 		dist[i++] = k + 1;
 	dist[0] = 0;

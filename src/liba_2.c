@@ -15,15 +15,14 @@
 int	*make_mass_cant_go(t_map *map, t_list_i *cant_go)
 {
 	int	*dist;
-	int	i;
 
 	dist = make_mass(map->m * map->c_r);
-	i = 0;
-	while (i < map->m * map->c_r)
+	while (cant_go)
 	{
-		if (find_room(cant_go, i) && i != 0 && i != map->c_r)
-			dist[i] = -1;
-		i++;
+		if (cant_go->cnt != 0 && cant_go->cnt != map->c_r )//&& i < map->m * map->c_r)
+			dist[cant_go->cnt] = -1;
+		cant_go = cant_go->next;
 	}
+	dist[0] = 0;
 	return (dist);
 }

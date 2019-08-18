@@ -74,6 +74,7 @@ int			main_path_2(t_map *map, int k)
 	if (sh_k)
 	{
 		ft_del_shared_path(map, sh_big, sh_k);
+		map->m = 1;
 		ft_list_add_back_right_down(&map->two_path, ft_bfs_k(map, k));
 		if ((win = ft_check_path_n(map->two_path, map)))
 		{

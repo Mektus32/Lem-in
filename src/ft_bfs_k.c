@@ -82,18 +82,16 @@ static int		bfs_k_path_2(t_map *map, t_list_i *order, t_list_i *all_order)
 	while (order && !len)
 	{
 		tmp_i = i_head(order->cnt, map->l_new)->next;
-		while (tmp_i && len == 0)
+		while (tmp_i && !len)
 		{
-			if (map->dist[tmp_i->cnt] > map->dist[order->cnt] + 1
-				&& (tmp_i->cnt != order->cnt))
+			if (map->dist[tmp_i->cnt] > map->dist[order->cnt] + 1 && (tmp_i->cnt != order->cnt))
 				map->dist[tmp_i->cnt] = map->dist[order->cnt] + 1;
 			if (tmp_i->cnt == map->c_r)
 				len = map->dist[tmp_i->cnt];
-			else if (map->dist[tmp_i->cnt] != -1 &&
-				find_room(order, tmp_i->cnt) == 0)
+			else if (map->dist[tmp_i->cnt] != -1 )
 			{
 				ft_list_add_back_i_if_not(&order, tmp_i->cnt, all_order);
-				list_add_i1(&all_order, tmp_i->cnt);
+				ft_list_add_back_i_if_not(&all_order, tmp_i->cnt, all_order);
 			}
 			tmp_i = tmp_i->next;
 		}
@@ -123,7 +121,6 @@ t_list_i		*bfs_k_path(t_map *map, t_list_i *cant_go)
 	all_order = ft_list_new_i(0);
 	order_start = order;
 	all_order_start = all_order;
-	map->dist[0] = 0;
 	len = bfs_k_path_2(map, order, all_order);
 	ft_free_list_i(&order_start);
 	ft_free_list_i(&all_order_start);
