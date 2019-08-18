@@ -60,8 +60,8 @@ static t_list_i	*ft_path_k(t_map *map)
 		}
 		path = path->next;
 	}
-	ft_list_revers(&start);
 	free(map->dist);
+	ft_list_revers(&start);
 	return (start);
 }
 
@@ -164,7 +164,6 @@ t_list_down		*ft_bfs_k(t_map *map, int k)
 		tmp->down->content = ft_list_len_i(p_t);
 		ft_list_add_back_i(&c_g, p_t);
 		ft_free_list_i(&p_t);
-		p_t = NULL;
 		list_add_down(&path_down, list_new_down(-10));
 		tmp = tmp->down;
 		p++;

@@ -323,10 +323,12 @@ void					ft_pars_ant(t_map *map, t_list_path **path_a);
 void					ft_move_ant_in_path(t_list_path **path_a);
 int						ft_len_path(t_list_path **path_a, int j);
 
-void					ft_print_all_path(t_list_down *path_all);
-void					ft_pri(t_map *map);
-void					ft_pri_cop(t_map *map);
-void					ft_pri_sh(t_map *map);
-void					pr_list(t_list_i *new);
+/*
+**void					ft_print_all_path(t_list_down *path_all);
+**void					ft_pri(t_map *map);
+**void					ft_pri_cop(t_map *map);
+**void					ft_pri_sh(t_map *map);
+**void					pr_list(t_list_i *new);
+*/
 
 #endif

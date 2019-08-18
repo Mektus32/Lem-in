@@ -76,7 +76,7 @@ void	ft_str_print_del(char **as)
 {
 	if (!as)
 		return ;
-	//ft_printf("%s\n", *as);
+	ft_printf("%s\n", *as);
 	free(*as);
 	*as = NULL;
 }
