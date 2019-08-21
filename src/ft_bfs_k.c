@@ -16,18 +16,15 @@ int				add_path_i(t_map *map, t_list_i *path, int i)
 {
 	t_list_i	*tmp_i;
 
-	if (map->dist[i] == (map->dist[path->cnt] - 1))
+	tmp_i = (i_head(i, map->l_new))->next;
+	while (tmp_i)
 	{
-		tmp_i = (i_head(i, map->l_new))->next;
-		while (tmp_i)
+		if (tmp_i->cnt == path->cnt)
 		{
-			if (tmp_i->cnt == path->cnt)
-			{
-				list_add_i1(&path, (i > map->c_r) ? i - map->c_r : i);
-				return (0);
-			}
-			tmp_i = tmp_i->next;
+			list_add_i1(&path, (i > map->c_r) ? i - map->c_r : i);
+			return (0);
 		}
+		tmp_i = tmp_i->next;
 	}
 	return (1);
 }
@@ -56,7 +53,10 @@ static t_list_i	*ft_path_k(t_map *map)
 		i = -1;
 		while ((map->c_r) * map->m > ++i && f)
 		{
-			f = add_path_i(map, path, i);
+			if (map->dist[i] == (map->dist[path->cnt] - 1))
+				f = add_path_i(map, path, i);
+			else
+				f = 1;
 		}
 		path = path->next;
 	}

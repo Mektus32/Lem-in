@@ -68,7 +68,7 @@ void		ft_bfs_2(t_map *map, t_list_i *order, t_list_i *all_order)
 	while (order && !(map->len_sh))
 	{
 		tmp_i = i_head(order->cnt, map->link)->next;
-		while (tmp_i && map->len_sh == 0)
+		while (tmp_i && !map->len_sh)
 		{
 			if (map->dist[tmp_i->cnt] > map->dist[order->cnt] + 1 &&
 				(tmp_i->cnt != order->cnt))

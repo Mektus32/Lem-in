@@ -54,9 +54,11 @@ void		ant_in_room(t_map *map)
 	int			i;
 	t_list_down *tmp;
 	t_list_path *tmp_path;
+	int			c_path;
 
 	map->c_path = ft_list_len_down(map->two_path);
 	map->c_path = (map->c_path == 1 ? map->c_path : map->c_path - 1);
+	c_path = map->c_path;
 	d = (int*)malloc(sizeof(int) * (map->c_path));
 	tmp_path = path_n_mass(map->c_path);
 	tmp = map->two_path->down;
@@ -72,7 +74,7 @@ void		ant_in_room(t_map *map)
 	map->c_path = (tmp_path[i - 1].num_ant) == 0 ?
 		map->c_path - 1 : map->c_path;
 	ft_pars_ant(map, &tmp_path);
-	free_tmp_path(&tmp_path, map->c_path);
+	free_tmp_path(&tmp_path, c_path);
 }
 
 static void	ft_pars_ant_2(t_map *map, t_list_path *paths, int i)

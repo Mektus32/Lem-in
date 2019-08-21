@@ -8,45 +8,45 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/ojessi/Desktop/Lem-in/cmake-build-debug"/>
+				<Option working_dir="/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/Lem-in/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/Lem-in/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/Lem-in/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/Lem-in/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/ojessi/Desktop/Lem-in/cmake-build-debug"/>
+				<Option working_dir="/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/Lem-in/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/Lem-in/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/Lem-in/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/Lem-in/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/ojessi/Desktop/Lem-in/cmake-build-debug"/>
+				<Option working_dir="/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/Lem-in/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/Lem-in/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/Lem-in/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/Lem-in/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="seven">
-				<Option output="/Users/ojessi/Desktop/Lem-in/cmake-build-debug/seven" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/ojessi/Desktop/Lem-in/cmake-build-debug"/>
+				<Option output="/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/seven" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/ojessi/Desktop/Lem-in/ft_printf/includes"/>
-					<Add directory="/Users/ojessi/Desktop/Lem-in/includes"/>
-					<Add directory="/Users/ojessi/Desktop/Lem-in/libft/includes"/>
+					<Add directory="/Users/qgilbert/Desktop/lem_in/seven/ft_printf/includes"/>
+					<Add directory="/Users/qgilbert/Desktop/lem_in/seven/includes"/>
+					<Add directory="/Users/qgilbert/Desktop/lem_in/seven/libft/includes"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -55,22 +55,22 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/Lem-in/cmake-build-debug/Makefile&quot;  VERBOSE=1 seven"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/Lem-in/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/Lem-in/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/Lem-in/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/Makefile&quot;  VERBOSE=1 seven"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="seven/fast">
-				<Option output="/Users/ojessi/Desktop/Lem-in/cmake-build-debug/seven" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/ojessi/Desktop/Lem-in/cmake-build-debug"/>
+				<Option output="/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/seven" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/ojessi/Desktop/Lem-in/ft_printf/includes"/>
-					<Add directory="/Users/ojessi/Desktop/Lem-in/includes"/>
-					<Add directory="/Users/ojessi/Desktop/Lem-in/libft/includes"/>
+					<Add directory="/Users/qgilbert/Desktop/lem_in/seven/ft_printf/includes"/>
+					<Add directory="/Users/qgilbert/Desktop/lem_in/seven/includes"/>
+					<Add directory="/Users/qgilbert/Desktop/lem_in/seven/libft/includes"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -79,380 +79,386 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/Lem-in/cmake-build-debug/Makefile&quot;  VERBOSE=1 seven/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/Lem-in/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/Lem-in/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ojessi/Desktop/Lem-in/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/Makefile&quot;  VERBOSE=1 seven/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/qgilbert/Desktop/lem_in/seven/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/ft_printf/includes/ft_printf.h">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/ft_printf/includes/ft_printf.h">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/ft_printf/src/check_args.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/ft_printf/src/check_args.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/ft_printf/src/choise_spec.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/ft_printf/src/choise_spec.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/ft_printf/src/ft_free_strncpy.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/ft_printf/src/ft_free_strncpy.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/ft_printf/src/ft_printf.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/ft_printf/src/ft_printf.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/ft_printf/src/init_arg.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/ft_printf/src/init_arg.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/ft_printf/src/print_digit.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/ft_printf/src/print_digit.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/ft_printf/src/print_double.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/ft_printf/src/print_double.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/ft_printf/src/print_non_printabl.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/ft_printf/src/print_non_printabl.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/ft_printf/src/print_spec.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/ft_printf/src/print_spec.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/ft_printf/src/print_spec_etc.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/ft_printf/src/print_spec_etc.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/ft_printf/src/print_xox.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/ft_printf/src/print_xox.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/ft_printf/src/settings.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/ft_printf/src/settings.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/includes/ft_printf.h">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/includes/ft_printf.h">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/includes/lem_in.h">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/includes/lem_in.h">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/includes/libft.h">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/includes/libft.h">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_abs.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_abs.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_absf.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_absf.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_atoi.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_atoi.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_bzero.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_bzero.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_count_words.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_count_words.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_free_join.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_free_join.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_free_strjoin_duo.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_free_strjoin_duo.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_free_strjoin_rev.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_free_strjoin_rev.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_frtwarr.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_frtwarr.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_ftoa.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_ftoa.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_isalnum.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_isalnum.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_isalpha.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_isalpha.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_isascii.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_isascii.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_isdigit.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_isdigit.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_isprint.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_isdigonly.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_isspace.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_isprint.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_itoa.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_isspace.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_list_add.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_itoa.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_list_foreach_if.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_list_add.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_list_push_back.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_list_foreach_if.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_list_remove_free_if.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_list_push_back.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_lstadd.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_list_remove_free_if.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_lstaddback.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_lstadd.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_lstdel.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_lstaddback.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_lstdelone.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_lstdel.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_lstiter.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_lstdelone.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_lstmap.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_lstiter.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_lstnew.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_lstmap.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_ltoa.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_lstnew.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_ltoa_base.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_ltoa.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_max.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_ltoa_base.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_memalloc.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_max.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_memccpy.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_memalloc.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_memchr.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_memccpy.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_memcmp.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_memchr.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_memcpy.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_memcmp.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_memdel.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_memcpy.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_memmove.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_memdel.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_memset.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_memmove.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_min.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_memset.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_pow.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_min.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_putchar.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_pow.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_putchar_fd.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_putchar.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_putendl.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_putchar_fd.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_putendl_fd.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_putendl.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_putnbr.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_putendl_fd.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_putnbr_fd.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_putnbr.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_putstr.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_putnbr_fd.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_putstr_fd.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_putstr.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_setbackground_fd.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_putstr_fd.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strcat.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_setbackground_fd.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strchr.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strcat.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strclr.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strchr.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strcmp.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strclr.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strcpy.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strcmp.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strdel.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strcpy.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strdup.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strdel.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strequ.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strdup.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_striter.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strequ.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_striteri.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_striter.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strjoin.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_striteri.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strlcat.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strjoin.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strlcpy.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strlcat.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strlen.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strlcpy.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strmap.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strlen.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strmapi.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strmap.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strncat.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strmapi.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strncmp.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strncat.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strncpy.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strncmp.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strnequ.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strncpy.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strnew.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strnequ.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strnstr.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strnew.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strrchr.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strnstr.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strrev.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strrchr.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strsplit.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strrev.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strstr.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strsplit.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strsub.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strstr.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strtolower.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strsub.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_strtrim.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strtolower.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_tolower.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_strtrim.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_toupper.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_tolower.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_truncf.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_toupper.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_ultoa.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_truncf.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/ft_ultoa_base.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_ultoa.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/get_next_line.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/ft_ultoa_base.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/includes/get_next_line.h">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/get_next_line.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/libft/includes/libft.h">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/includes/get_next_line.h">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/src/ant_in_room_2.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/libft/includes/libft.h">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/src/ant_room.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/src/ant_in_room_2.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/src/bfs.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/src/ant_room.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/src/check_n_path.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/src/bfs.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/src/free.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/src/check_n_path.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/src/ft_bfs_k.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/src/free.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/src/ft_list_down.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/src/ft_bfs_k.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/src/ft_list_down_2.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/src/ft_list_down.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/src/ft_list_i.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/src/ft_list_down_2.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/src/ft_list_i_2.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/src/ft_list_i.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/src/ft_print.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/src/ft_list_i_2.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/src/liba.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/src/ft_print.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/src/list_path.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/src/liba.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/src/list_room.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/src/liba_2.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/src/main.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/src/list_path.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/src/path.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/src/list_room.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/src/suurballe.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/src/main.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/src/valid.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/src/path.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/src/valid_link.c">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/src/suurballe.c">
 			<Option target="seven"/>
 		</Unit>
-		<Unit filename="/Users/ojessi/Desktop/Lem-in/CMakeLists.txt">
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/src/valid.c">
+			<Option target="seven"/>
+		</Unit>
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/src/valid_link.c">
+			<Option target="seven"/>
+		</Unit>
+		<Unit filename="/Users/qgilbert/Desktop/lem_in/seven/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

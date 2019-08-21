@@ -44,7 +44,7 @@ int		ft_ant_in_path(int n_ant, int c_path, int len_max, t_map *map)
 ** если муравьев не 0, +1
 */
 
-int		ft_check_path_n(t_list_down *two_path, t_map *map)
+int		ft_check_path_n(t_list_down *two_path, t_map *map, int n)
 {
 	t_list_down	*path_new;
 	int			n_ant;
@@ -52,7 +52,10 @@ int		ft_check_path_n(t_list_down *two_path, t_map *map)
 	int			t_now;
 	int			len_max;
 
-	path_new = two_path->right;
+	if (n == 1)
+		path_new = two_path->right;
+	else
+		path_new = two_path->right->right;
 	c_path = ft_list_len_down(path_new) - 1;
 	map->dist = (int *)malloc(sizeof(int) * c_path);
 	path_new = path_new->down;

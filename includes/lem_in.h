@@ -148,8 +148,8 @@ t_valid					*ft_create_val(void);
 
 int						main_path(t_map *map);
 int						main_path_2(t_map *map, int k);
-void					del_link_path(t_map *map);
-t_list_i				*one_big_path(t_map *map);
+void					del_link_path(t_map *map, int n);
+t_list_i				*one_big_path(t_map *map, int n);
 
 /*
 ** (bfs.c)
@@ -169,7 +169,7 @@ void					ft_bfs_2(t_map *map, t_list_i *order,
 ** ищет выиграш по времени от n путей
 */
 
-int						ft_check_path_n(t_list_down *two_path, t_map *map);
+int						ft_check_path_n(t_list_down *two_path, t_map *map, int n);
 int						ft_ant_in_path(int n_ant, int c_path,
 							int len_max, t_map *map);
 

@@ -86,7 +86,6 @@ int		main(int ac, char **av)
 	else
 		fd = 0;//open("../test_map", O_RDONLY);
 	map = (t_map*)malloc(sizeof(t_map));
-	//ft_printf("fd = %d, ac = %d = \n",fd,  ac);
 	if (valid_map(fd, map))
 	{
 		main_path(map);
