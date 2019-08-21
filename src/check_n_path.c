@@ -47,28 +47,26 @@ int		ft_ant_in_path(int n_ant, int c_path, int len_max, t_map *map)
 int		ft_check_path_n(t_list_down *two_path, t_map *map, int n)
 {
 	t_list_down	*path_new;
-	int			n_ant;
 	int			c_path;
 	int			t_now;
 	int			len_max;
 
-	if (n == 1)
-		path_new = two_path->right;
-	else
-		path_new = two_path->right->right;
+	path_new = two_path->right;
+	if (n == 2)
+		path_new = path_new->right;
 	c_path = ft_list_len_down(path_new) - 1;
 	map->dist = (int *)malloc(sizeof(int) * c_path);
 	path_new = path_new->down;
-	n_ant = 0;
+	n = 0;
 	while (path_new->next)
 	{
-		map->dist[n_ant++] = path_new->content;
+		map->dist[n++] = path_new->content;
 		path_new = path_new->down;
 	}
-	n_ant = map->c_ant;
+	n = map->c_ant;
 	len_max = ft_max_mass(map->dist, c_path);
-	n_ant = ft_ant_in_path(n_ant, c_path, len_max, map);
-	t_now = len_max + n_ant / c_path + ((n_ant == 0 || (n_ant % c_path == 0)) ?
+	n = ft_ant_in_path(n, c_path, len_max, map);
+	t_now = len_max + n / c_path + ((n == 0 || (n % c_path == 0)) ?
 			0 : 1) - c_path;
 	if (t_now < two_path->content && map->c_ant >= c_path)
 		return (t_now);

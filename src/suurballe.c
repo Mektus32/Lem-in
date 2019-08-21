@@ -109,6 +109,7 @@ void		ft_del_shared_path(t_map *map, t_list_i *sh, t_list_i *rev_2)
 	t_list_i	*rev_2c;
 	t_list_i	*rev_start;
 
+	ft_free_list_down(&map->l_new);
 	map->l_new = ft_copy_list_down(map->link);
 	rev_2c = ft_list_copy_i(rev_2);
 	ft_list_revers(&rev_2c);

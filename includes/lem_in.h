@@ -147,7 +147,7 @@ t_valid					*ft_create_val(void);
 */
 
 int						main_path(t_map *map);
-int						main_path_2(t_map *map, int k);
+int main_path_2(t_map *map, int k, int n, int win);
 void					del_link_path(t_map *map, int n);
 t_list_i				*one_big_path(t_map *map, int n);
 

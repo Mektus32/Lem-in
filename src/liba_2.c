@@ -19,7 +19,7 @@ int	*make_mass_cant_go(t_map *map, t_list_i *cant_go)
 	dist = make_mass(map->m * map->c_r);
 	while (cant_go)
 	{
-		if (cant_go->cnt != 0 && cant_go->cnt != map->c_r )//&& i < map->m * map->c_r)
+		if (cant_go->cnt != 0 && cant_go->cnt != map->c_r)
 			dist[cant_go->cnt] = -1;
 		cant_go = cant_go->next;
 	}
