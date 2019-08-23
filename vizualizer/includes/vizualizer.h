@@ -14,11 +14,11 @@
 # define VIZUALIZER_H
 # define WIDTH 2200
 # define HEIGHT 1300
-# define BACKGROUND "images/Earth.xpm"
-# define ANT "images/littleant2.xpm"
-# define ROOMS "images/room_f.xpm"
-# define ROOME "images/room_t.xpm"
-# define ROOMA "images/room_s.xpm"
+# define BACKGROUND "/Users/qgilbert/Desktop/lem_in/eight/vizualizer/images/Earth.xpm"
+# define ANT "/Users/qgilbert/Desktop/lem_in/eight/vizualizer/images/littleant2.xpm"
+# define ROOMS "/Users/qgilbert/Desktop/lem_in/eight/vizualizer/images/room_f.xpm"
+# define ROOME "/Users/qgilbert/Desktop/lem_in/eight/vizualizer/images/room_t.xpm"
+# define ROOMA "/Users/qgilbert/Desktop/lem_in/eight/vizualizer/images/room_s.xpm"
 
 # include <stdio.h>
 

@@ -81,9 +81,8 @@ int			main_path_2(t_map *map, int k, int n, int win)
 				ft_free_first_in_two_path(&map->two_path);
 			map->two_path->content = win;
 		}
-		else
-			if (n == 2)
-				ft_free_list_down(&map->two_path->right->right);
+		else if (n == 2)
+			ft_free_list_down(&map->two_path->right->right);
 	}
 	else
 		map->m = 0;

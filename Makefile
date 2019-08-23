@@ -12,7 +12,7 @@
 
 .PHONY: all, clean, fclean, re, obj, red, grn, off, vis
 
-NAME = Lem-in
+NAME = lem-in
 
 # src / obj files
 SRC =	bfs.c \
