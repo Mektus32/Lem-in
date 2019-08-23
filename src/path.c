@@ -69,9 +69,10 @@ int			main_path_2(t_map *map, int k, int n, int win)
 	t_list_i	*sh_k;
 
 	del_link_path(map, n);
+	sh_big = one_big_path(map, n);
 	if ((sh_k = bfs_k_path(map, NULL)))
 	{
-		ft_del_shared_path(map, sh_big = one_big_path(map, n), sh_k);
+		ft_del_shared_path(map, sh_big, sh_k);
 		ft_list_add_back_right_down(&map->two_path, ft_bfs_k(map, k));
 		if ((win = ft_check_path_n(map->two_path, map, 1)))
 		{
