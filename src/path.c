@@ -37,6 +37,7 @@ int			main_path(t_map *map)
 		{
 			map->m = 2;
 			win = main_path_2(map, ++k, 1, 0);
+			ft_free_list_down(&map->l_new);
 			if (win == 0 && (map->m = 2))
 				win = main_path_2(map, ++k, 2, 0);
 			ft_free_list_down(&map->l_new);
@@ -83,7 +84,6 @@ int			main_path_2(t_map *map, int k, int n, int win)
 		{
 			if (n == 2)
 				ft_free_list_down(&map->two_path->right->right);
-			ft_free_list_down(&map->two_path->right);
 		}
 	}
 	ft_free_list_i(&sh_k);

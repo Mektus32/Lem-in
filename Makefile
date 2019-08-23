@@ -6,11 +6,11 @@
 #    By: ojessi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/30 16:17:00 by ojessi            #+#    #+#              #
-#    Updated: 2019/08/14 19:31:45 by ojessi           ###   ########.fr        #
+#    Updated: 2019/08/23 11:08:59 by ojessi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-.PHONY: all, clean, fclean, re, obj, red, grn, off
+.PHONY: all, clean, fclean, re, obj, red, grn, off, vis
 
 NAME = Lem-in
 
@@ -18,11 +18,10 @@ NAME = Lem-in
 SRC =	bfs.c \
 		main.c \
  		liba.c \
- 		 		liba_2.c \
+ 		liba_2.c \
  		free.c \
  		path.c \
  		valid.c \
- 		ft_print.c \
  		ft_bfs_k.c \
  		ant_room.c \
  		list_path.c \
@@ -55,6 +54,9 @@ PR_LIB = $(addprefix $(PR), libftprintf.a)
 PR_INC = -I ./ft_printf
 PR_LNK = ./ft_printf/libftprintf.a
 
+# visual
+VI = ./vizualizer
+
 # directories
 SRCDIR = ./src/
 INCDIR = -I ./includes/
@@ -62,7 +64,7 @@ OBJDIR = ./obj/
 
 all: $(NAME)
 
-$(NAME): obj $(FT_LIB) $(PR_LIB) grn $(OBJ)
+$(NAME): obj $(FT_LIB) $(PR_LIB) grn $(OBJ) vis
 	@$(CC) $(CFLAGS) $(OBJ) $(PR_LNK) $(FT_LNK) -lm -o $(NAME)
 	@echo "\x1b[0m"
 
@@ -84,6 +86,9 @@ $(FT_LIB):
 $(PR_LIB):
 	@make -C $(PR)
 
+vis:
+	@make -C $(VI)
+
 $(OBJDIR)%.o:$(SRCDIR)%.c
 	$(CC) $(CFLAGS) $(PR_INC) $(FT_INC) $(INCDIR) -o $@ -c $<
 
@@ -91,10 +96,12 @@ clean: red
 	/bin/rm -rf $(OBJDIR)
 	@make -C $(FT) clean
 	@make -C $(PR) clean
+	@make -C $(VI) clean
 
 fclean: clean
 	/bin/rm -rf $(NAME)
 	make -C $(FT) fclean
 	make -C $(PR) fclean
+	make -C $(VI) fclean
 
 re: fclean all

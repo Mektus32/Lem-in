@@ -42,9 +42,7 @@ void	ft_free_map(t_map **map)
 	t_list_down	*tmp_down;
 	int			i;
 
-	if (!map)
-		return ;
-	if (!*map)
+	if (!map || !*map)
 		return ;
 	tmp = *map;
 	if (tmp->sh)
@@ -61,10 +59,7 @@ void	ft_free_map(t_map **map)
 		tmp_down = tmp->two_path->down;
 		while (i++ < (*map)->c_path)
 			tmp_down = tmp_down->down;
-		tmp_down = NULL;
-		if (tmp->two_path)
-			ft_free_first_in_two_path(&tmp->two_path);
-		if (tmp->two_path)
+		while (tmp->two_path)
 			ft_free_first_in_two_path(&tmp->two_path);
 	}
 	free(*map);
@@ -84,7 +79,7 @@ int		main(int ac, char **av)
 		}
 	}
 	else
-		fd = 0;//open("../test_map", O_RDONLY);
+		fd = 0;
 	map = (t_map*)malloc(sizeof(t_map));
 	if (valid_map(fd, map))
 	{

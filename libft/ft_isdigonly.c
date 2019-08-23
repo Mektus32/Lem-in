@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-int 	ft_isdigonly(char *str)
+int		ft_isdigonly(char *str)
 {
-	int 	i;
-	int 	len;
+	int		i;
+	int		len;
 
 	len = ft_strlen(str);
 	i = -1;
